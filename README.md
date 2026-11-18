@@ -1,10 +1,8 @@
-# Boujoy Xiaomi
+# Boujoy Personal Agent · Xiaomi Rear Display
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
-Run a personal assistant on a Mac and pair it with a Xiaomi phone. Main-screen control is the default. Compatible devices can also use a background display and rear-screen controls after setup.
-
-Boujoy connects a Mac-hosted assistant to the apps on your phone. Send it a task in chat. The Mac runs the agent, the phone reports what is on screen, and you can follow progress or take control. The project includes the Mac service, Android companion, pairing relay and local Markdown memory.
+Give the phone a task and keep the main screen for yourself. On compatible Xiaomi hardware, Boujoy can run an app on a background display while its rear-screen controls keep the assistant within reach. Start on the main screen, enable supported features when ready, and take control at any point.
 
 ### Try a read-only task
 
