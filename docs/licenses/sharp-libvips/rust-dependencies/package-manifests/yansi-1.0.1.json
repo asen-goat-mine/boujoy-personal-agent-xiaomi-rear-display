@@ -1,0 +1,60 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.63",
+    "name": "yansi",
+    "version": "1.0.1",
+    "authors": [
+      "Sergio Benitez <sb@sergio.bz>"
+    ],
+    "description": "A dead simple ANSI terminal color painting library.",
+    "documentation": "https://docs.rs/yansi",
+    "readme": "README.md",
+    "keywords": [
+      "ansi",
+      "terminal",
+      "color",
+      "format",
+      "paint"
+    ],
+    "categories": [
+      "command-line-interface"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/SergioBenitez/yansi",
+    "resolver": "2",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "all-features": true
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "is-terminal": {
+      "version": "0.4.11",
+      "optional": true
+    }
+  },
+  "features": {
+    "_nightly": [],
+    "alloc": [],
+    "default": [
+      "std"
+    ],
+    "detect-env": [
+      "std"
+    ],
+    "detect-tty": [
+      "is-terminal",
+      "std"
+    ],
+    "hyperlink": [
+      "std"
+    ],
+    "std": [
+      "alloc"
+    ]
+  }
+}

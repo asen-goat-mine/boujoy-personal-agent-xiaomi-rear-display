@@ -1,0 +1,11 @@
+{
+  "name": "chainsaw",
+  "version": "0.1.0",
+  "license": "MIT/X11",
+  "author": "James Halliday <mail@substack.net> (http://substack.net)",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/substack/node-chainsaw.git"
+  },
+  "originalPackageJsonSha256": "51910ad64abca4eb8c2c23abb2f713ba5220db89ed89c9fd198d27241a5a70ea"
+}

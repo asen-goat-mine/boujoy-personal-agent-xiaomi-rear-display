@@ -1,0 +1,100 @@
+{
+  "package": {
+    "edition": "2018",
+    "rust-version": "1.71",
+    "name": "cssparser",
+    "version": "0.37.0",
+    "authors": [
+      "Simon Sapin <simon.sapin@exyr.org>"
+    ],
+    "build": false,
+    "exclude": [
+      "src/css-parsing-tests/**",
+      "src/big-data-url.css"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Rust implementation of CSS Syntax Level 3",
+    "documentation": "https://docs.rs/cssparser/",
+    "readme": "README.md",
+    "keywords": [
+      "css",
+      "syntax",
+      "parser"
+    ],
+    "license": "MPL-2.0",
+    "repository": "https://github.com/servo/rust-cssparser"
+  },
+  "features": {
+    "bench": [],
+    "default": [
+      "fast_match_byte",
+      "fast_match_color"
+    ],
+    "fast_match_byte": [
+      "dep:cssparser-macros"
+    ],
+    "fast_match_color": [
+      "dep:phf"
+    ],
+    "skip_long_tests": []
+  },
+  "lib": {
+    "name": "cssparser",
+    "path": "src/lib.rs"
+  },
+  "dependencies": {
+    "cssparser-macros": {
+      "version": "0.7.0",
+      "optional": true
+    },
+    "dtoa-short": {
+      "version": "0.3"
+    },
+    "itoa": {
+      "version": "1.0"
+    },
+    "malloc_size_of": {
+      "version": "0.1",
+      "optional": true,
+      "default-features": false
+    },
+    "phf": {
+      "version": "0.13.1",
+      "features": [
+        "macros"
+      ],
+      "optional": true
+    },
+    "serde": {
+      "version": "1.0",
+      "features": [
+        "derive"
+      ],
+      "optional": true
+    },
+    "smallvec": {
+      "version": "1.0"
+    }
+  },
+  "dev-dependencies": {
+    "difference": {
+      "version": "2.0"
+    },
+    "encoding_rs": {
+      "version": "0.8"
+    },
+    "serde_json": {
+      "version": "1.0.25"
+    }
+  },
+  "profile": {
+    "profiling": {
+      "debug": 2,
+      "inherits": "release"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "package": {
+    "edition": "2024",
+    "rust-version": "1.92",
+    "name": "gdk-pixbuf-sys",
+    "version": "0.22.9",
+    "authors": [
+      "The gtk-rs Project Developers"
+    ],
+    "build": "build.rs",
+    "exclude": [
+      "gir-files/*"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "FFI bindings to libgdk_pixbuf-2.0",
+    "homepage": "https://gtk-rs.org/",
+    "readme": false,
+    "keywords": [
+      "gdk-pixbuf",
+      "ffi",
+      "gtk-rs",
+      "gnome"
+    ],
+    "license": "MIT",
+    "repository": "https://github.com/gtk-rs/gtk-rs-core",
+    "metadata": {
+      "system-deps": {
+        "gdk_pixbuf_2_0": {
+          "name": "gdk-pixbuf-2.0",
+          "version": "2.36.8",
+          "v2_40": {
+            "version": "2.40"
+          },
+          "v2_42": {
+            "version": "2.42"
+          },
+          "v2_44": {
+            "version": "2.43"
+          }
+        }
+      },
+      "docs": {
+        "rs": {
+          "rustdoc-args": [
+            "--generate-link-to-definition"
+          ],
+          "all-features": true
+        }
+      }
+    }
+  },
+  "features": {
+    "v2_40": [],
+    "v2_42": [
+      "v2_40"
+    ],
+    "v2_44": [
+      "v2_42"
+    ]
+  },
+  "lib": {
+    "name": "gdk_pixbuf_sys",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "abi",
+      "path": "tests/abi.rs"
+    }
+  ],
+  "dependencies": {
+    "gio-sys": {
+      "version": "0.22.0"
+    },
+    "glib-sys": {
+      "version": "0.22.0"
+    },
+    "gobject-sys": {
+      "version": "0.22.0"
+    },
+    "libc": {
+      "version": "0.2"
+    }
+  },
+  "dev-dependencies": {
+    "shell-words": {
+      "version": "1.0.0"
+    },
+    "tempfile": {
+      "version": "3"
+    }
+  },
+  "build-dependencies": {
+    "system-deps": {
+      "version": "9"
+    }
+  }
+}

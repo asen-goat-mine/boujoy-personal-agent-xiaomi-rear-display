@@ -1,0 +1,970 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-11-15",
+  "package": {
+    "name": "@img/sharp-libvips-darwin-arm64",
+    "version": "1.3.4",
+    "npmResolved": "https://registry.npmjs.org/@img/sharp-libvips-darwin-arm64/-/sharp-libvips-darwin-arm64-1.3.4.tgz",
+    "npmIntegrity": "sha512-5R89nBYiRdUlSWJxPhO+GVtaXzXSxKnRu/xqMn3KTA3L9EB9Oy/P+Nn2f2vlhPuUdy/Zusb2DarbyTpGCfEDuw==",
+    "licenseDeclaredByPackage": "LGPL-3.0-or-later",
+    "versions": {
+      "aom": "3.15.1",
+      "archive": "3.8.9",
+      "cairo": "1.18.6",
+      "cgif": "0.5.4",
+      "exif": "0.6.26",
+      "expat": "2.8.5",
+      "ffi": "3.8.0",
+      "fontconfig": "2.18.3",
+      "freetype": "2.14.3",
+      "fribidi": "1.0.17",
+      "glib": "2.90.0",
+      "harfbuzz": "14.5.0",
+      "heif": "1.23.5",
+      "highway": "1.4.0",
+      "imagequant": "2.4.1",
+      "lcms": "2.19.1",
+      "mozjpeg": "0826579",
+      "pango": "1.58.2",
+      "pixman": "0.46.4",
+      "png": "1.6.58",
+      "proxy-libintl": "0.5",
+      "rsvg": "2.63.2",
+      "tiff": "4.7.2",
+      "uhdr": "2.0.2",
+      "vips": "8.18.7",
+      "webp": "1.6.0",
+      "xml2": "2.15.4",
+      "zlib-ng": "2.3.3"
+    },
+    "observedVersionsJsonSha256": "e2611d5d854815a8b33c8a3d2ec649511a9596ccf16844e8eae7cf81e79881c4"
+  },
+  "upstream": {
+    "repository": "https://github.com/lovell/sharp-libvips",
+    "tag": "v1.3.4",
+    "tagObject": "158bf3bfb1e11de50032645873d52e5920c26986",
+    "commit": "ebb95f8add54eee8bed840e3fb587e4cbec857d7",
+    "sourceArchive": "https://github.com/lovell/sharp-libvips/archive/ebb95f8add54eee8bed840e3fb587e4cbec857d7.tar.gz",
+    "releaseAssetsAreNotCompleteSource": "The release asset npm-workspace.tar.xz contains prebuilt npm packages; obtain build sources and each component archive listed here."
+  },
+  "dynamicLinkEvidence": {
+    "method": "Read-only Mach-O LC_LOAD_DYLIB and LC_RPATH parsing",
+    "addon": "sharp-darwin-arm64-0.35.5.node",
+    "loadDylib": "@rpath/libvips-cpp.8.18.7.dylib",
+    "loaderRpath": "@loader_path/../../sharp-libvips-darwin-arm64/lib"
+  },
+  "files": [
+    {
+      "path": "GPL-3.0.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "sourceUrl": "https://www.gnu.org/licenses/gpl-3.0.txt",
+      "fixedCommitUrl": "https://www.gnu.org/licenses/gpl-3.0.txt",
+      "verbatim": true
+    },
+    {
+      "path": "LGPL-3.0.txt",
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+      "sourceUrl": "https://www.gnu.org/licenses/lgpl-3.0.txt",
+      "fixedCommitUrl": "https://www.gnu.org/licenses/lgpl-3.0.txt",
+      "verbatim": true
+    },
+    {
+      "path": "MPL-1.1.txt",
+      "sha256": "f849fc26a7a99981611a3a370e83078deb617d12a45776d6c4cada4d338be469",
+      "sourceUrl": "https://www.mozilla.org/media/MPL/1.1/index.txt",
+      "fixedCommitUrl": "https://www.mozilla.org/media/MPL/1.1/index.txt",
+      "verbatim": true
+    },
+    {
+      "path": "upstream-THIRD-PARTY-NOTICES.md",
+      "sha256": "6f0d5086e3bcbee12bcdacf5878b31d1104002aeecaeb241d3fff466108082fe",
+      "sourceUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/v1.3.4/THIRD-PARTY-NOTICES.md",
+      "fixedCommitUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/ebb95f8add54eee8bed840e3fb587e4cbec857d7/THIRD-PARTY-NOTICES.md",
+      "verbatim": true
+    },
+    {
+      "path": "upstream-Apache-2.0.txt",
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "sourceUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/v1.3.4/LICENSE",
+      "fixedCommitUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/ebb95f8add54eee8bed840e3fb587e4cbec857d7/LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "upstream-build/build.sh",
+      "sha256": "f32e344b1355b6bcf3836e7f25e2c2de7f25eefeb8c96d02711ad3fcea487488",
+      "sourceUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/v1.3.4/build.sh",
+      "fixedCommitUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/ebb95f8add54eee8bed840e3fb587e4cbec857d7/build.sh",
+      "verbatim": true
+    },
+    {
+      "path": "upstream-build/build/posix.sh",
+      "sha256": "333031b3b49bf1a16d0b9d6812d98f67c404218932ef8c0b389388524a524b36",
+      "sourceUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/v1.3.4/build/posix.sh",
+      "fixedCommitUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/ebb95f8add54eee8bed840e3fb587e4cbec857d7/build/posix.sh",
+      "verbatim": true
+    },
+    {
+      "path": "upstream-build/versions.properties",
+      "sha256": "c0ad634f7c2ac8994f831dd0bcb5c60043db7ba4ddd9cc2dbc3703b15f4ec7e5",
+      "sourceUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/v1.3.4/versions.properties",
+      "fixedCommitUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/ebb95f8add54eee8bed840e3fb587e4cbec857d7/versions.properties",
+      "verbatim": true
+    },
+    {
+      "path": "upstream-build/platforms/darwin-arm64v8/Toolchain.cmake",
+      "sha256": "752c37ab0b1b9401ec9cad4ef0d6588511b6a1011fe8789acba4066f65cccf99",
+      "sourceUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/v1.3.4/platforms/darwin-arm64v8/Toolchain.cmake",
+      "fixedCommitUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/ebb95f8add54eee8bed840e3fb587e4cbec857d7/platforms/darwin-arm64v8/Toolchain.cmake",
+      "verbatim": true
+    },
+    {
+      "path": "upstream-build/platforms/darwin-arm64v8/meson.ini",
+      "sha256": "d9143811fe878743bc874d92de848a87a2c9a334b0d39e34d49b56c0a025a5ee",
+      "sourceUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/v1.3.4/platforms/darwin-arm64v8/meson.ini",
+      "fixedCommitUrl": "https://raw.githubusercontent.com/lovell/sharp-libvips/ebb95f8add54eee8bed840e3fb587e4cbec857d7/platforms/darwin-arm64v8/meson.ini",
+      "verbatim": true
+    },
+    {
+      "path": "upstream-build/patches/glib-without-gregex.patch",
+      "sha256": "b1f2930a11292e529de137c7eb723850e0cc0969b1a2b0358196389312acd272",
+      "sourceUrl": "https://gist.github.com/kleisauke/284d685efa00908da99ea6afbaaf39ae/raw/bdad5489a61c217850631571caf57f5db6ea8b2c/glib-without-gregex.patch",
+      "verbatim": true,
+      "note": "Snapshot hash binds the fetched patch, including the PR endpoint which is not itself an immutable URL."
+    },
+    {
+      "path": "upstream-build/patches/mozjpeg-f90668e0.patch",
+      "sha256": "a65f87cadf3a6052e44d6314c906f6e2891352f82646b8a6f0b8fcf2c1891e7c",
+      "sourceUrl": "https://github.com/mozilla/mozjpeg/commit/f90668e0e4fb79c81e1f24a0ccc0e2090af761bf.patch",
+      "verbatim": true,
+      "note": "Snapshot hash binds the fetched patch, including the PR endpoint which is not itself an immutable URL."
+    },
+    {
+      "path": "upstream-build/patches/librsvg-9106011d.patch",
+      "sha256": "8b841d2ec8feb964fa76859075e0e0c41b69136ba143cf0d26469d9bebc19231",
+      "sourceUrl": "https://github.com/GNOME/librsvg/commit/9106011db93d701728ac2c9da50c9ab2c1bb5dc6.patch",
+      "verbatim": true,
+      "note": "Snapshot hash binds the fetched patch, including the PR endpoint which is not itself an immutable URL."
+    },
+    {
+      "path": "upstream-build/patches/libultrahdr-pr383.patch",
+      "sha256": "57658db2a11ae964755e513b01db21bcfa408c350b11b3a6ef9bc8576fb749ba",
+      "sourceUrl": "https://patch-diff.githubusercontent.com/raw/google/libultrahdr/pull/383.patch",
+      "verbatim": true,
+      "note": "Snapshot hash binds the fetched patch, including the PR endpoint which is not itself an immutable URL."
+    },
+    {
+      "path": "upstream-build/patches/libvips-cpp-soversion.patch",
+      "sha256": "256b7d6f8c973bb53b20cff5171c7117d6b35d3aa4e72d22cb906f4fe1e2c890",
+      "sourceUrl": "https://gist.githubusercontent.com/lovell/313a6901e9db1bf285f2a1f1180499e4/raw/3988223c7dfa4d22745d9392034b0117abef1446/libvips-cpp-soversion.patch",
+      "verbatim": true,
+      "note": "Snapshot hash binds the fetched patch, including the PR endpoint which is not itself an immutable URL."
+    },
+    {
+      "path": "components/aom/LICENSE",
+      "sha256": "4764a286d8b2faeaf42f4418e7d7a28d58fc8fd4d00a3d0a7f44b0a4099de7f2",
+      "sourceArchiveUrl": "https://storage.googleapis.com/aom-releases/libaom-3.15.1.tar.gz",
+      "sourceMember": "LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/aom/PATENTS",
+      "sha256": "661fb8e504744e95587b556b94a58343448300606a41bea8c7a9b97125696e61",
+      "sourceArchiveUrl": "https://storage.googleapis.com/aom-releases/libaom-3.15.1.tar.gz",
+      "sourceMember": "PATENTS",
+      "verbatim": true
+    },
+    {
+      "path": "components/aom/third_party/fastfeat/LICENSE",
+      "sha256": "499041ddee5227b6f29ca06c17803e5fe24d60f243c69635cd76b7ba08d0ddd5",
+      "sourceArchiveUrl": "https://storage.googleapis.com/aom-releases/libaom-3.15.1.tar.gz",
+      "sourceMember": "third_party/fastfeat/LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/aom/third_party/highway/LICENSE-BSD3",
+      "sha256": "d25e82e26acd42ca3ccc9993622631163425b869b9e16284226d534cff6470f2",
+      "sourceArchiveUrl": "https://storage.googleapis.com/aom-releases/libaom-3.15.1.tar.gz",
+      "sourceMember": "third_party/highway/LICENSE-BSD3",
+      "verbatim": true
+    },
+    {
+      "path": "components/aom/third_party/libwebm/LICENSE.TXT",
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+      "sourceArchiveUrl": "https://storage.googleapis.com/aom-releases/libaom-3.15.1.tar.gz",
+      "sourceMember": "third_party/libwebm/LICENSE.TXT",
+      "verbatim": true
+    },
+    {
+      "path": "components/aom/third_party/libwebm/PATENTS.TXT",
+      "sha256": "cc3273e0694ea5896145e0677699b53471b03ea43021ddc50e7923fbb9f5023c",
+      "sourceArchiveUrl": "https://storage.googleapis.com/aom-releases/libaom-3.15.1.tar.gz",
+      "sourceMember": "third_party/libwebm/PATENTS.TXT",
+      "verbatim": true
+    },
+    {
+      "path": "components/aom/third_party/libyuv/LICENSE",
+      "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f",
+      "sourceArchiveUrl": "https://storage.googleapis.com/aom-releases/libaom-3.15.1.tar.gz",
+      "sourceMember": "third_party/libyuv/LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/aom/third_party/vector/LICENSE",
+      "sha256": "ff6c857ce2708e87701323078aef115c1872a1f80a9649f86dc899b48083bc60",
+      "sourceArchiveUrl": "https://storage.googleapis.com/aom-releases/libaom-3.15.1.tar.gz",
+      "sourceMember": "third_party/vector/LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/aom/third_party/x86inc/LICENSE",
+      "sha256": "719d8fa235f2068e0ae6d6a7dceb0a7720d7840f0f0ebed29957989e6ded3cd8",
+      "sourceArchiveUrl": "https://storage.googleapis.com/aom-releases/libaom-3.15.1.tar.gz",
+      "sourceMember": "third_party/x86inc/LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/archive/COPYING",
+      "sha256": "30e556b3959e3985d66efefec5eaac51d4995053caa1d3cffe6eb916f146f229",
+      "sourceArchiveUrl": "https://github.com/libarchive/libarchive/releases/download/v3.8.9/libarchive-3.8.9.tar.xz",
+      "sourceMember": "COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/cairo/COPYING",
+      "sha256": "67228a9f7c5f9b67c58f556f1be178f62da4d9e2e6285318d8c74d567255abdf",
+      "sourceArchiveUrl": "https://cairographics.org/releases/cairo-1.18.6.tar.xz",
+      "sourceMember": "COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/cairo/COPYING-LGPL-2.1",
+      "sha256": "9e9e8608c4cdda51a78cc3a385f4ec9a2e4c96d5ecad74ac8bca5fca3e563b7d",
+      "sourceArchiveUrl": "https://cairographics.org/releases/cairo-1.18.6.tar.xz",
+      "sourceMember": "COPYING-LGPL-2.1",
+      "verbatim": true
+    },
+    {
+      "path": "components/cairo/COPYING-MPL-1.1",
+      "sha256": "53692a2ed6c6a2c6ec9b32dd0b820dfae91e0a1fcdf625ca9ed0bdf8705fcc4f",
+      "sourceArchiveUrl": "https://cairographics.org/releases/cairo-1.18.6.tar.xz",
+      "sourceMember": "COPYING-MPL-1.1",
+      "verbatim": true
+    },
+    {
+      "path": "components/cgif/LICENSE",
+      "sha256": "7264dede477abab4ac3fe8236beb8153845c04ccd33b18f281085087e219fc6d",
+      "sourceArchiveUrl": "https://github.com/dloebl/cgif/archive/v0.5.4.tar.gz",
+      "sourceMember": "LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/exif/COPYING",
+      "sha256": "36b6d3fa47916943fd5fec313c584784946047ec1337a78b440e5992cb595f89",
+      "sourceArchiveUrl": "https://github.com/libexif/libexif/releases/download/v0.6.26/libexif-0.6.26.tar.xz",
+      "sourceMember": "COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/expat/COPYING",
+      "sha256": "31b15de82aa19a845156169a17a5488bf597e561b2c318d159ed583139b25e87",
+      "sourceArchiveUrl": "https://github.com/libexpat/libexpat/releases/download/R_2_8_5/expat-2.8.5.tar.xz",
+      "sourceMember": "COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/ffi/LICENSE",
+      "sha256": "17b64dc60f3b6897a60f971e288b973f655c2edcdf08b25f3c3dd5549857881c",
+      "sourceArchiveUrl": "https://github.com/libffi/libffi/releases/download/v3.8.0/libffi-3.8.0.tar.gz",
+      "sourceMember": "LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/fontconfig/COPYING",
+      "sha256": "51a51aa9823704fd90bccc616cdd17ebabb5b2b3e9cbde886ca02c7002288067",
+      "sourceArchiveUrl": "https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/2.18.3/fontconfig-2.18.3.tar.gz",
+      "sourceMember": "COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/freetype/LICENSE.TXT",
+      "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b",
+      "sourceArchiveUrl": "https://github.com/freetype/freetype/archive/VER-2-14-3.tar.gz",
+      "sourceMember": "LICENSE.TXT",
+      "verbatim": true
+    },
+    {
+      "path": "components/freetype/docs/FTL.TXT",
+      "sha256": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f",
+      "sourceArchiveUrl": "https://github.com/freetype/freetype/archive/VER-2-14-3.tar.gz",
+      "sourceMember": "docs/FTL.TXT",
+      "verbatim": true
+    },
+    {
+      "path": "components/freetype/src/bdf/README",
+      "sha256": "7984455e7e5a9faba3797c8bf095fbe10cc846316b7320aff8c58402e22b82fe",
+      "sourceArchiveUrl": "https://github.com/freetype/freetype/archive/VER-2-14-3.tar.gz",
+      "sourceMember": "src/bdf/README",
+      "verbatim": true
+    },
+    {
+      "path": "components/freetype/src/gzip/zlib.h",
+      "sha256": "c86a25c27f74cb97b8fa07b175f479f063d5064ace9995b4684063643c81cf1b",
+      "sourceArchiveUrl": "https://github.com/freetype/freetype/archive/VER-2-14-3.tar.gz",
+      "sourceMember": "src/gzip/zlib.h",
+      "verbatim": true
+    },
+    {
+      "path": "components/freetype/src/pcf/README",
+      "sha256": "18d9782898d9eac04476e2f744678137b2a889689ed3e923e052fc396a86f86b",
+      "sourceArchiveUrl": "https://github.com/freetype/freetype/archive/VER-2-14-3.tar.gz",
+      "sourceMember": "src/pcf/README",
+      "verbatim": true
+    },
+    {
+      "path": "components/fribidi/COPYING",
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "sourceArchiveUrl": "https://github.com/fribidi/fribidi/releases/download/v1.0.17/fribidi-1.0.17.tar.xz",
+      "sourceMember": "COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/glib/LICENSES/AFL-2.0.txt",
+      "sha256": "7ecc7db84298adb05d2cf10339c63a5315a1c5c270a68d97d7d40a53b508ccde",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "sourceMember": "LICENSES/AFL-2.0.txt",
+      "verbatim": true
+    },
+    {
+      "path": "components/glib/LICENSES/Apache-2.0.txt",
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "sourceMember": "LICENSES/Apache-2.0.txt",
+      "verbatim": true
+    },
+    {
+      "path": "components/glib/LICENSES/CC-BY-SA-3.0.txt",
+      "sha256": "3f941b3b89cf7b8370ceb83cc76d2120d471b58735d8ca60238a751a48d7f72f",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "sourceMember": "LICENSES/CC-BY-SA-3.0.txt",
+      "verbatim": true
+    },
+    {
+      "path": "components/glib/LICENSES/CC0-1.0.txt",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "sourceMember": "LICENSES/CC0-1.0.txt",
+      "verbatim": true
+    },
+    {
+      "path": "components/glib/LICENSES/GPL-2.0-or-later.txt",
+      "sha256": "aaf135472f81c5b4a0dca9367e5bb5e9750032b5bebe5442b36e4c0a47430df3",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "sourceMember": "LICENSES/GPL-2.0-or-later.txt",
+      "verbatim": true
+    },
+    {
+      "path": "components/glib/LICENSES/LGPL-2.1-only.txt",
+      "sha256": "fa6f36630bb1e0c571d34b2bbdf188d08495c9dbf58f28cac112f303fc1f58fb",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "sourceMember": "LICENSES/LGPL-2.1-only.txt",
+      "verbatim": true
+    },
+    {
+      "path": "components/glib/LICENSES/LGPL-2.1-or-later.txt",
+      "sha256": "fa6f36630bb1e0c571d34b2bbdf188d08495c9dbf58f28cac112f303fc1f58fb",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "sourceMember": "LICENSES/LGPL-2.1-or-later.txt",
+      "verbatim": true
+    },
+    {
+      "path": "components/glib/LICENSES/LLVM-exception.txt",
+      "sha256": "e34c58338bd89d43e709e226610d8f32b3e3c47f4ad9a99a8dc1d4ac7842488e",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "sourceMember": "LICENSES/LLVM-exception.txt",
+      "verbatim": true
+    },
+    {
+      "path": "components/glib/LICENSES/LicenseRef-old-glib-tests.txt",
+      "sha256": "fb261b2d5dbe76c4850f90da763210bc385e52428df6bbfd7b06295ac8a32914",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "sourceMember": "LICENSES/LicenseRef-old-glib-tests.txt",
+      "verbatim": true
+    },
+    {
+      "path": "components/glib/LICENSES/MIT.txt",
+      "sha256": "b85dcd3e453d05982552c52b5fc9e0bdd6d23c6f8e844b984a88af32570b0cc0",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "sourceMember": "LICENSES/MIT.txt",
+      "verbatim": true
+    },
+    {
+      "path": "components/glib/LICENSES/MPL-1.1.txt",
+      "sha256": "6214f8b1300bb9f37b16ebc146f8f61af0187e0025042ff95c8b3030744a8795",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "sourceMember": "LICENSES/MPL-1.1.txt",
+      "verbatim": true
+    },
+    {
+      "path": "components/glib/subprojects/gvdb/COPYING",
+      "sha256": "bdbcdaa7858872393e9d6b216bbdc8a23e99d98dd6cdb7cda19458025b9e19fc",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "sourceMember": "subprojects/gvdb/COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/harfbuzz/COPYING",
+      "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64",
+      "sourceArchiveUrl": "https://github.com/harfbuzz/harfbuzz/archive/14.5.0.tar.gz",
+      "sourceMember": "COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/harfbuzz/src/ms-use/COPYING",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "sourceArchiveUrl": "https://github.com/harfbuzz/harfbuzz/archive/14.5.0.tar.gz",
+      "sourceMember": "src/ms-use/COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/heif/COPYING",
+      "sha256": "fa81ce652315b013359d6e8e4744335f31a50c7c192907176d3632f78a3b4596",
+      "sourceArchiveUrl": "https://github.com/strukturag/libheif/releases/download/v1.23.5/libheif-1.23.5.tar.gz",
+      "sourceMember": "COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/highway/LICENSE",
+      "sha256": "e340270d4f64384569a91d546acb5b094d69ce47f0c015db77abb74dc6f815af",
+      "sourceArchiveUrl": "https://github.com/google/highway/archive/1.4.0.tar.gz",
+      "sourceMember": "LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/imagequant/COPYRIGHT",
+      "sha256": "7391bfbcde4404cefb9849553362c3ab436f929f5cc1abb57071ec045590ee99",
+      "sourceArchiveUrl": "https://github.com/lovell/libimagequant/archive/v2.4.1.tar.gz",
+      "sourceMember": "COPYRIGHT",
+      "verbatim": true
+    },
+    {
+      "path": "components/lcms/LICENSE",
+      "sha256": "6dbd60437f8ef91d8de1f08ad75882547fd4931bfcc3566a0735f28db1484d31",
+      "sourceArchiveUrl": "https://github.com/mm2/Little-CMS/releases/download/lcms2.19.1/lcms2-2.19.1.tar.gz",
+      "sourceMember": "LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/lcms/utils/jpgicc/LICENSE_iccjpeg",
+      "sha256": "8baac37d14eed89b82ffcb041677dd701164eb5cc0f26e165fe47eb11afa0dca",
+      "sourceArchiveUrl": "https://github.com/mm2/Little-CMS/releases/download/lcms2.19.1/lcms2-2.19.1.tar.gz",
+      "sourceMember": "utils/jpgicc/LICENSE_iccjpeg",
+      "verbatim": true
+    },
+    {
+      "path": "components/mozjpeg/LICENSE.md",
+      "sha256": "96f5b328adbb78eeaaec6980d73fd558cb1e4d62560ed615646bc3cf5e532430",
+      "sourceArchiveUrl": "https://github.com/mozilla/mozjpeg/archive/0826579.tar.gz",
+      "sourceMember": "LICENSE.md",
+      "verbatim": true
+    },
+    {
+      "path": "components/mozjpeg/README.ijg",
+      "sha256": "f4a85f8677ca4e41b185c0a9f7c31a30ddb9ce43c561483ee92ef12db37c2a10",
+      "sourceArchiveUrl": "https://github.com/mozilla/mozjpeg/archive/0826579.tar.gz",
+      "sourceMember": "README.ijg",
+      "verbatim": true
+    },
+    {
+      "path": "components/pango/COPYING",
+      "sha256": "d245807f90032872d1438d741ed21e2490e1175dc8aa3afa5ddb6c8e529b58e5",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/pango/1.58/pango-1.58.2.tar.xz",
+      "sourceMember": "COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/pixman/COPYING",
+      "sha256": "fac9270f0987b96ff4533fca3548c633e02083cbba4a0172a3b149b2e4019793",
+      "sourceArchiveUrl": "https://cairographics.org/releases/pixman-0.46.4.tar.gz",
+      "sourceMember": "COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/png/LICENSE",
+      "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+      "sourceArchiveUrl": "https://github.com/pnggroup/libpng/archive/v1.6.58.tar.gz",
+      "sourceMember": "LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/proxy-libintl/COPYING",
+      "sha256": "d245807f90032872d1438d741ed21e2490e1175dc8aa3afa5ddb6c8e529b58e5",
+      "sourceArchiveUrl": "https://github.com/frida/proxy-libintl/archive/0.5.tar.gz",
+      "sourceMember": "COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/rsvg/COPYING.LIB",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/librsvg/2.63/librsvg-2.63.2.tar.xz",
+      "sourceMember": "COPYING.LIB",
+      "verbatim": true
+    },
+    {
+      "path": "components/rsvg/librsvg-rebind/LICENSE",
+      "sha256": "f9c4c77baa3828004ee54b8a4f2db2e88ed44a6237a493965bf551fac0fcb62d",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/librsvg/2.63/librsvg-2.63.2.tar.xz",
+      "sourceMember": "librsvg-rebind/LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/tiff/LICENSE.md",
+      "sha256": "0e27c2382d7b8147972bbb746e04059a1152c8d0fda9d03ef1399d1a433c4ade",
+      "sourceArchiveUrl": "https://gitlab.com/libtiff/libtiff/-/archive/v4.7.2/libtiff-v4.7.2.tar.gz",
+      "sourceMember": "LICENSE.md",
+      "verbatim": true
+    },
+    {
+      "path": "components/tiff/doc/project/license.rst",
+      "sha256": "02e86af3b805e0f2075ebb5ac512831f6ab2a97ddeb186de076c418956418ba1",
+      "sourceArchiveUrl": "https://gitlab.com/libtiff/libtiff/-/archive/v4.7.2/libtiff-v4.7.2.tar.gz",
+      "sourceMember": "doc/project/license.rst",
+      "verbatim": true
+    },
+    {
+      "path": "components/uhdr/LICENSE",
+      "sha256": "c9247b5cb07866938643cc238292434e6f2af8642e1fce10771c0e4cc7909316",
+      "sourceArchiveUrl": "https://github.com/google/libultrahdr/archive/v2.0.2.tar.gz",
+      "sourceMember": "LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/uhdr/LICENSE-APACHE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "sourceArchiveUrl": "https://github.com/google/libultrahdr/archive/v2.0.2.tar.gz",
+      "sourceMember": "LICENSE-APACHE",
+      "verbatim": true
+    },
+    {
+      "path": "components/uhdr/LICENSE-MIT",
+      "sha256": "029624bf1488ed7b8c92727d267c95f588c9c12fa6932c207884c2641a7e9d37",
+      "sourceArchiveUrl": "https://github.com/google/libultrahdr/archive/v2.0.2.tar.gz",
+      "sourceMember": "LICENSE-MIT",
+      "verbatim": true
+    },
+    {
+      "path": "components/uhdr/adobe-hdr-gain-map-license/NOTICE",
+      "sha256": "746d8c9c414b335bb7c9615918a15a6489a4dcc1c5c3aac2bda410d1072c332a",
+      "sourceArchiveUrl": "https://github.com/google/libultrahdr/archive/v2.0.2.tar.gz",
+      "sourceMember": "adobe-hdr-gain-map-license/NOTICE",
+      "verbatim": true
+    },
+    {
+      "path": "components/uhdr/third_party/image_io/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "sourceArchiveUrl": "https://github.com/google/libultrahdr/archive/v2.0.2.tar.gz",
+      "sourceMember": "third_party/image_io/LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/vips/LICENSE",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "sourceArchiveUrl": "https://github.com/libvips/libvips/releases/download/v8.18.7/vips-8.18.7.tar.xz",
+      "sourceMember": "LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "components/vips/libvips/foreign/libnsgif/COPYING",
+      "sha256": "1469b759cf18e43c6e1b4ff892307d3962cbbb337ac497620d6690a219fad10c",
+      "sourceArchiveUrl": "https://github.com/libvips/libvips/releases/download/v8.18.7/vips-8.18.7.tar.xz",
+      "sourceMember": "libvips/foreign/libnsgif/COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/webp/COPYING",
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+      "sourceArchiveUrl": "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz",
+      "sourceMember": "COPYING",
+      "verbatim": true
+    },
+    {
+      "path": "components/webp/PATENTS",
+      "sha256": "cc3273e0694ea5896145e0677699b53471b03ea43021ddc50e7923fbb9f5023c",
+      "sourceArchiveUrl": "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz",
+      "sourceMember": "PATENTS",
+      "verbatim": true
+    },
+    {
+      "path": "components/xml2/Copyright",
+      "sha256": "5d4873884a890122a4b9b20ad56ac6f7da1d796a5bfcf04a427970ac96217626",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.4.tar.xz",
+      "sourceMember": "Copyright",
+      "verbatim": true
+    },
+    {
+      "path": "components/xml2/result/html-tokenizer/NOTICE",
+      "sha256": "d6a2cb265a0a249a234b89eeffa7f316ebe5bff546672a0a2b1a861dd2238460",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.4.tar.xz",
+      "sourceMember": "result/html-tokenizer/NOTICE",
+      "verbatim": true
+    },
+    {
+      "path": "components/zlib-ng/LICENSE.md",
+      "sha256": "6c9f0d975b41afaa34d22f55bb8986ce69e5cb7ad327cb2b28820cd425edf5ee",
+      "sourceArchiveUrl": "https://github.com/zlib-ng/zlib-ng/archive/2.3.3.tar.gz",
+      "sourceMember": "LICENSE.md",
+      "verbatim": true
+    },
+    {
+      "path": "versions.json",
+      "sha256": "6711f06fc8b98d0668a94ea3799779b8487e941c7719b32bdde1656f85e19fca",
+      "note": "Normalized capture of installed versions.json; all 28 values exactly match the upstream fixed-tag versions.properties."
+    }
+  ],
+  "components": [
+    {
+      "name": "aom",
+      "version": "3.15.1",
+      "sourceArchiveUrl": "https://storage.googleapis.com/aom-releases/libaom-3.15.1.tar.gz",
+      "downloadFinalUrl": "https://storage.googleapis.com/aom-releases/libaom-3.15.1.tar.gz",
+      "archiveSha256": "8ca0c52746174603500f0adb6f2a215d69c9ca2aab2acb3caa06fb791d8d01bf",
+      "archiveBytes": 6623477,
+      "noticeFiles": [
+        "components/aom/LICENSE",
+        "components/aom/PATENTS",
+        "components/aom/third_party/fastfeat/LICENSE",
+        "components/aom/third_party/highway/LICENSE-BSD3",
+        "components/aom/third_party/libwebm/LICENSE.TXT",
+        "components/aom/third_party/libwebm/PATENTS.TXT",
+        "components/aom/third_party/libyuv/LICENSE",
+        "components/aom/third_party/vector/LICENSE",
+        "components/aom/third_party/x86inc/LICENSE"
+      ]
+    },
+    {
+      "name": "archive",
+      "version": "3.8.9",
+      "sourceArchiveUrl": "https://github.com/libarchive/libarchive/releases/download/v3.8.9/libarchive-3.8.9.tar.xz",
+      "downloadFinalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/3219804/82a1ba6d-4c35-4926-9d87-d49fa1827c76?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-15T21%3A14%3A30Z&rscd=attachment%3B+filename%3Dlibarchive-3.8.9.tar.xz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-15T20%3A13%3A54Z&ske=2026-11-15T21%3A14%3A30Z&sks=b&skv=2018-11-09&sig=Qwz4EI%2FChcJNQVL%2FMmZzXgRv1QLTU7dmGI00AckDO5I%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NDc3NTUyOSwibmJmIjoxNzk0Nzc1MjI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.hq5yf8MgLYRSsA-LNyS5pt7PyeZxWJSBlveaSS9deD4&response-content-disposition=attachment%3B%20filename%3Dlibarchive-3.8.9.tar.xz&response-content-type=application%2Foctet-stream",
+      "archiveSha256": "888c934f9d95648ecb9163dc8e23ab80a476ecb81a8f1154704a227b5b676dde",
+      "archiveBytes": 6617696,
+      "noticeFiles": [
+        "components/archive/COPYING"
+      ]
+    },
+    {
+      "name": "cairo",
+      "version": "1.18.6",
+      "sourceArchiveUrl": "https://cairographics.org/releases/cairo-1.18.6.tar.xz",
+      "downloadFinalUrl": "https://cairographics.org/releases/cairo-1.18.6.tar.xz",
+      "archiveSha256": "1c767308174337a74694da0f3ec069c271452163a1ef4540964c50c301f157d4",
+      "archiveBytes": 32725456,
+      "noticeFiles": [
+        "components/cairo/COPYING",
+        "components/cairo/COPYING-LGPL-2.1",
+        "components/cairo/COPYING-MPL-1.1"
+      ]
+    },
+    {
+      "name": "cgif",
+      "version": "0.5.4",
+      "sourceArchiveUrl": "https://github.com/dloebl/cgif/archive/v0.5.4.tar.gz",
+      "downloadFinalUrl": "https://codeload.github.com/dloebl/cgif/tar.gz/refs/tags/v0.5.4",
+      "archiveSha256": "83a70a15bc2da41f081a44ebc58ee48e2e1d524a6d3fdb4a24064afa08d5ad4d",
+      "archiveBytes": 40028,
+      "noticeFiles": [
+        "components/cgif/LICENSE"
+      ]
+    },
+    {
+      "name": "exif",
+      "version": "0.6.26",
+      "sourceArchiveUrl": "https://github.com/libexif/libexif/releases/download/v0.6.26/libexif-0.6.26.tar.xz",
+      "downloadFinalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/112677643/c4f92d4e-b09a-4140-9e53-e34030e7f1ee?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-15T21%3A28%3A00Z&rscd=attachment%3B+filename%3Dlibexif-0.6.26.tar.xz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-15T20%3A27%3A25Z&ske=2026-11-15T21%3A28%3A00Z&sks=b&skv=2018-11-09&sig=sTfSiGoP7jp4e5GN8THiqurjzKqqTPSvgxuVtHFaPoE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NDc3NTUyOSwibmJmIjoxNzk0Nzc1MjI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.hq5yf8MgLYRSsA-LNyS5pt7PyeZxWJSBlveaSS9deD4&response-content-disposition=attachment%3B%20filename%3Dlibexif-0.6.26.tar.xz&response-content-type=application%2Foctet-stream",
+      "archiveSha256": "4a055ed6575e61ca46c3172be3c753cc16c9becd0f99ec71d58dd0e471476c0c",
+      "archiveBytes": 1335488,
+      "noticeFiles": [
+        "components/exif/COPYING"
+      ]
+    },
+    {
+      "name": "expat",
+      "version": "2.8.5",
+      "sourceArchiveUrl": "https://github.com/libexpat/libexpat/releases/download/R_2_8_5/expat-2.8.5.tar.xz",
+      "downloadFinalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/80314213/b0368f5b-9ee4-4fe8-9d25-0a5e4d59eabe?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-15T21%3A23%3A50Z&rscd=attachment%3B+filename%3Dexpat-2.8.5.tar.xz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-15T20%3A23%3A03Z&ske=2026-11-15T21%3A23%3A50Z&sks=b&skv=2018-11-09&sig=unhOIZzxfzpbnmwwHyavzmS7PkWeuea%2FJ1TMJ35YTBI%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NDc3NTUyOSwibmJmIjoxNzk0Nzc1MjI5LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.hq5yf8MgLYRSsA-LNyS5pt7PyeZxWJSBlveaSS9deD4&response-content-disposition=attachment%3B%20filename%3Dexpat-2.8.5.tar.xz&response-content-type=application%2Foctet-stream",
+      "archiveSha256": "1e727b8933ec51a77a9a9d9afcf8e688bce45d907c13e36ab7393fe36e703182",
+      "archiveBytes": 528380,
+      "noticeFiles": [
+        "components/expat/COPYING"
+      ]
+    },
+    {
+      "name": "ffi",
+      "version": "3.8.0",
+      "sourceArchiveUrl": "https://github.com/libffi/libffi/releases/download/v3.8.0/libffi-3.8.0.tar.gz",
+      "downloadFinalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/321154/f687b05e-5780-4828-b7c6-c9c243e5cd9f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-15T21%3A20%3A56Z&rscd=attachment%3B+filename%3Dlibffi-3.8.0.tar.gz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-15T20%3A20%3A26Z&ske=2026-11-15T21%3A20%3A56Z&sks=b&skv=2018-11-09&sig=RoL4qwKuqj3mc9uM1mQjEyqMnzeXJJyzhYp3tD6yfXs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NDc3NTUzMCwibmJmIjoxNzk0Nzc1MjMwLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.CsKNMFBXvjuoPAkZLmZKHDm_UqrAGi9PFiGhjsphpZA&response-content-disposition=attachment%3B%20filename%3Dlibffi-3.8.0.tar.gz&response-content-type=application%2Foctet-stream",
+      "archiveSha256": "7da3e2d9a171eb0a038f592ecad3ff2bb2550f3496d87b3b29ad0cf4430c0db4",
+      "archiveBytes": 1581626,
+      "noticeFiles": [
+        "components/ffi/LICENSE"
+      ]
+    },
+    {
+      "name": "fontconfig",
+      "version": "2.18.3",
+      "sourceArchiveUrl": "https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/2.18.3/fontconfig-2.18.3.tar.gz",
+      "downloadFinalUrl": "https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/2.18.3/fontconfig-2.18.3.tar.gz",
+      "archiveSha256": "9ae01e1d53acdef56010c5451cd34aa41d325b2faccd8606448d8fa01b2496b3",
+      "archiveBytes": 666753,
+      "noticeFiles": [
+        "components/fontconfig/COPYING"
+      ]
+    },
+    {
+      "name": "freetype",
+      "version": "2.14.3",
+      "sourceArchiveUrl": "https://github.com/freetype/freetype/archive/VER-2-14-3.tar.gz",
+      "downloadFinalUrl": "https://codeload.github.com/freetype/freetype/tar.gz/refs/tags/VER-2-14-3",
+      "archiveSha256": "dc49de6b01a266eef4876a4dd34d9842c475d3e28ff2eff63bd2fb760ab56261",
+      "archiveBytes": 2515533,
+      "noticeFiles": [
+        "components/freetype/LICENSE.TXT",
+        "components/freetype/docs/FTL.TXT",
+        "components/freetype/src/bdf/README",
+        "components/freetype/src/gzip/zlib.h",
+        "components/freetype/src/pcf/README"
+      ]
+    },
+    {
+      "name": "fribidi",
+      "version": "1.0.17",
+      "sourceArchiveUrl": "https://github.com/fribidi/fribidi/releases/download/v1.0.17/fribidi-1.0.17.tar.xz",
+      "downloadFinalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/5575048/f27f4405-641d-4e0b-b4f5-f3f9bc372437?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-15T21%3A18%3A32Z&rscd=attachment%3B+filename%3Dfribidi-1.0.17.tar.xz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-15T20%3A17%3A37Z&ske=2026-11-15T21%3A18%3A32Z&sks=b&skv=2018-11-09&sig=tKKZz7Zy3JbpKdee86qf20do6LDFH%2Bcah4DN6x1nzp4%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NDc3NTUzMiwibmJmIjoxNzk0Nzc1MjMyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.vQ_NvSvs8Bhqhq0wZW6Cf5wcu9RNfoAVTPEZUm0QCXQ&response-content-disposition=attachment%3B%20filename%3Dfribidi-1.0.17.tar.xz&response-content-type=application%2Foctet-stream",
+      "archiveSha256": "6949dcde27d41cebad1fd741fcafc36d55a1020d2d872d4a6eb3914caabbada2",
+      "archiveBytes": 1203284,
+      "noticeFiles": [
+        "components/fribidi/COPYING"
+      ]
+    },
+    {
+      "name": "glib",
+      "version": "2.90.0",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "downloadFinalUrl": "https://download.gnome.org/sources/glib/2.90/glib-2.90.0.tar.xz",
+      "archiveSha256": "17d15cac2af80a33271127408e0abc2748eb297c595c2a26409e81e14e7d1b8f",
+      "archiveBytes": 5830480,
+      "noticeFiles": [
+        "components/glib/LICENSES/AFL-2.0.txt",
+        "components/glib/LICENSES/Apache-2.0.txt",
+        "components/glib/LICENSES/CC-BY-SA-3.0.txt",
+        "components/glib/LICENSES/CC0-1.0.txt",
+        "components/glib/LICENSES/GPL-2.0-or-later.txt",
+        "components/glib/LICENSES/LGPL-2.1-only.txt",
+        "components/glib/LICENSES/LGPL-2.1-or-later.txt",
+        "components/glib/LICENSES/LLVM-exception.txt",
+        "components/glib/LICENSES/LicenseRef-old-glib-tests.txt",
+        "components/glib/LICENSES/MIT.txt",
+        "components/glib/LICENSES/MPL-1.1.txt",
+        "components/glib/subprojects/gvdb/COPYING"
+      ]
+    },
+    {
+      "name": "harfbuzz",
+      "version": "14.5.0",
+      "sourceArchiveUrl": "https://github.com/harfbuzz/harfbuzz/archive/14.5.0.tar.gz",
+      "downloadFinalUrl": "https://codeload.github.com/harfbuzz/harfbuzz/tar.gz/refs/tags/14.5.0",
+      "archiveSha256": "97ec7488a46b974e18e08ee774af93173e7e1dbf738424796eb315ebcb735ec5",
+      "archiveBytes": 38777964,
+      "noticeFiles": [
+        "components/harfbuzz/COPYING",
+        "components/harfbuzz/src/ms-use/COPYING"
+      ]
+    },
+    {
+      "name": "heif",
+      "version": "1.23.5",
+      "sourceArchiveUrl": "https://github.com/strukturag/libheif/releases/download/v1.23.5/libheif-1.23.5.tar.gz",
+      "downloadFinalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/115012280/6cb9d7bb-54ef-471e-bea5-d3959796fdad?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-15T21%3A39%3A27Z&rscd=attachment%3B+filename%3Dlibheif-1.23.5.tar.gz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-15T20%3A38%3A46Z&ske=2026-11-15T21%3A39%3A27Z&sks=b&skv=2018-11-09&sig=uiMQ%2Fs0ef20cOjgrN5oJAVE%2BYZauHML3FtePrTC4Pn0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NDc3NTUzNSwibmJmIjoxNzk0Nzc1MjM1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.sMFfvDI5A34o_VEk-iAbvJ07lonQF3nkvAMv2Qveot8&response-content-disposition=attachment%3B%20filename%3Dlibheif-1.23.5.tar.gz&response-content-type=application%2Foctet-stream",
+      "archiveSha256": "fd9036064c4432f0550d15072ddf34956a248279ee9aeaff0fba3fa0f77d8f1a",
+      "archiveBytes": 2276803,
+      "noticeFiles": [
+        "components/heif/COPYING"
+      ]
+    },
+    {
+      "name": "highway",
+      "version": "1.4.0",
+      "sourceArchiveUrl": "https://github.com/google/highway/archive/1.4.0.tar.gz",
+      "downloadFinalUrl": "https://codeload.github.com/google/highway/tar.gz/refs/tags/1.4.0",
+      "archiveSha256": "e72241ac9524bb653ae52ced768b508045d4438726a303f10181a38f764a453c",
+      "archiveBytes": 3691240,
+      "noticeFiles": [
+        "components/highway/LICENSE"
+      ]
+    },
+    {
+      "name": "imagequant",
+      "version": "2.4.1",
+      "sourceArchiveUrl": "https://github.com/lovell/libimagequant/archive/v2.4.1.tar.gz",
+      "downloadFinalUrl": "https://codeload.github.com/lovell/libimagequant/tar.gz/refs/tags/v2.4.1",
+      "archiveSha256": "47d2a84b7b1052975c9d50a3d4e3cacbf57b43d84a4c3131210848ead9964dfb",
+      "archiveBytes": 45792,
+      "noticeFiles": [
+        "components/imagequant/COPYRIGHT"
+      ]
+    },
+    {
+      "name": "lcms",
+      "version": "2.19.1",
+      "sourceArchiveUrl": "https://github.com/mm2/Little-CMS/releases/download/lcms2.19.1/lcms2-2.19.1.tar.gz",
+      "downloadFinalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/507969/7245d98e-8078-4cc4-a0c8-2a23d121d342?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-15T21%3A28%3A51Z&rscd=attachment%3B+filename%3Dlcms2-2.19.1.tar.gz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-15T20%3A28%3A01Z&ske=2026-11-15T21%3A28%3A51Z&sks=b&skv=2018-11-09&sig=T9MtEjOgPFeJQkQS1KyFrDR4In5USEMZk55noKGhyTo%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NDc3NTUzNiwibmJmIjoxNzk0Nzc1MjM2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.hOIc-VwR2VVGp8FO7jqF47N2CJIj9vEs5yJCe913zz8&response-content-disposition=attachment%3B%20filename%3Dlcms2-2.19.1.tar.gz&response-content-type=application%2Foctet-stream",
+      "archiveSha256": "bfc54f7bab59fbc921012014a8032e4cba4abd46db47d46b76416a8c0b2815c8",
+      "archiveBytes": 5728743,
+      "noticeFiles": [
+        "components/lcms/LICENSE",
+        "components/lcms/utils/jpgicc/LICENSE_iccjpeg"
+      ]
+    },
+    {
+      "name": "mozjpeg",
+      "version": "0826579",
+      "sourceArchiveUrl": "https://github.com/mozilla/mozjpeg/archive/0826579.tar.gz",
+      "downloadFinalUrl": "https://codeload.github.com/mozilla/mozjpeg/tar.gz/08265790774cd0714832c9e675522acbe5581437",
+      "archiveSha256": "b680167bd5d9afebdd576a12f8c49d2c9066a3b92ef96a2b2c5f7829b8600fe5",
+      "archiveBytes": 2443542,
+      "noticeFiles": [
+        "components/mozjpeg/LICENSE.md",
+        "components/mozjpeg/README.ijg"
+      ]
+    },
+    {
+      "name": "pango",
+      "version": "1.58.2",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/pango/1.58/pango-1.58.2.tar.xz",
+      "downloadFinalUrl": "https://download.gnome.org/sources/pango/1.58/pango-1.58.2.tar.xz",
+      "archiveSha256": "342385b6ca3b7c73455d7c80a13b7dbe4489e00bc3bd4c5bd6ed4dce421e374a",
+      "archiveBytes": 1918112,
+      "noticeFiles": [
+        "components/pango/COPYING"
+      ]
+    },
+    {
+      "name": "pixman",
+      "version": "0.46.4",
+      "sourceArchiveUrl": "https://cairographics.org/releases/pixman-0.46.4.tar.gz",
+      "downloadFinalUrl": "https://cairographics.org/releases/pixman-0.46.4.tar.gz",
+      "archiveSha256": "d09c44ebc3bd5bee7021c79f922fe8fb2fb57f7320f55e97ff9914d2346a591c",
+      "archiveBytes": 827198,
+      "noticeFiles": [
+        "components/pixman/COPYING"
+      ]
+    },
+    {
+      "name": "png",
+      "version": "1.6.58",
+      "sourceArchiveUrl": "https://github.com/pnggroup/libpng/archive/v1.6.58.tar.gz",
+      "downloadFinalUrl": "https://codeload.github.com/pnggroup/libpng/tar.gz/refs/tags/v1.6.58",
+      "archiveSha256": "a9d4df463d36a6e5f9c29bd6f4967312d17e996c1854f3511f833924eb1993cf",
+      "archiveBytes": 1592190,
+      "noticeFiles": [
+        "components/png/LICENSE"
+      ]
+    },
+    {
+      "name": "proxy-libintl",
+      "version": "0.5",
+      "sourceArchiveUrl": "https://github.com/frida/proxy-libintl/archive/0.5.tar.gz",
+      "downloadFinalUrl": "https://codeload.github.com/frida-forks/proxy-libintl/tar.gz/refs/tags/0.5",
+      "archiveSha256": "f7a1cbd7579baaf575c66f9d99fb6295e9b0684a28b095967cfda17857595303",
+      "archiveBytes": 13056,
+      "noticeFiles": [
+        "components/proxy-libintl/COPYING"
+      ]
+    },
+    {
+      "name": "rsvg",
+      "version": "2.63.2",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/librsvg/2.63/librsvg-2.63.2.tar.xz",
+      "downloadFinalUrl": "https://download.gnome.org/sources/librsvg/2.63/librsvg-2.63.2.tar.xz",
+      "archiveSha256": "852b18e1a00b8605528825a27dc7748bff2a5dd254028f59dc22a34ea57e81b6",
+      "archiveBytes": 6768408,
+      "noticeFiles": [
+        "components/rsvg/COPYING.LIB",
+        "components/rsvg/librsvg-rebind/LICENSE"
+      ]
+    },
+    {
+      "name": "tiff",
+      "version": "4.7.2",
+      "sourceArchiveUrl": "https://gitlab.com/libtiff/libtiff/-/archive/v4.7.2/libtiff-v4.7.2.tar.gz",
+      "downloadFinalUrl": "https://gitlab.com/libtiff/libtiff/-/archive/v4.7.2/libtiff-v4.7.2.tar.gz",
+      "archiveSha256": "62b15f44c10106065211efa22a2dc77937bd97ee1f6e3afd2c9659010de112eb",
+      "archiveBytes": 2616788,
+      "noticeFiles": [
+        "components/tiff/LICENSE.md",
+        "components/tiff/doc/project/license.rst"
+      ]
+    },
+    {
+      "name": "uhdr",
+      "version": "2.0.2",
+      "sourceArchiveUrl": "https://github.com/google/libultrahdr/archive/v2.0.2.tar.gz",
+      "downloadFinalUrl": "https://codeload.github.com/google/libultrahdr/tar.gz/refs/tags/v2.0.2",
+      "archiveSha256": "aa8d193bb887c348c419780511dd03b374f4e07af8812b6d3f80c8537cf1ef2c",
+      "archiveBytes": 1518872,
+      "noticeFiles": [
+        "components/uhdr/LICENSE",
+        "components/uhdr/LICENSE-APACHE",
+        "components/uhdr/LICENSE-MIT",
+        "components/uhdr/adobe-hdr-gain-map-license/NOTICE",
+        "components/uhdr/third_party/image_io/LICENSE"
+      ]
+    },
+    {
+      "name": "vips",
+      "version": "8.18.7",
+      "sourceArchiveUrl": "https://github.com/libvips/libvips/releases/download/v8.18.7/vips-8.18.7.tar.xz",
+      "downloadFinalUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/1291410/d43a4776-45a9-4fee-820b-20af0cffcc14?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-11-15T21%3A35%3A15Z&rscd=attachment%3B+filename%3Dvips-8.18.7.tar.xz&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-11-15T20%3A34%3A24Z&ske=2026-11-15T21%3A35%3A15Z&sks=b&skv=2018-11-09&sig=YjCYqh%2B%2FlNOPjzXHs9Y2feGQfemAaS9lSRCpbbkhmEk%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5NDc3NzA0MiwibmJmIjoxNzk0Nzc1MjQyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zESJ-4BLaOZPB-k9c0jN9HFwc4Cau7BqTyYVl3NA-jo&response-content-disposition=attachment%3B%20filename%3Dvips-8.18.7.tar.xz&response-content-type=application%2Foctet-stream",
+      "archiveSha256": "5baaead3b0bb20ffdb9e9ff09aa9fda08620923df77b63b436654cb5e0b3bf94",
+      "archiveBytes": 25425084,
+      "noticeFiles": [
+        "components/vips/LICENSE",
+        "components/vips/libvips/foreign/libnsgif/COPYING"
+      ]
+    },
+    {
+      "name": "webp",
+      "version": "1.6.0",
+      "sourceArchiveUrl": "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz",
+      "downloadFinalUrl": "https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0.tar.gz",
+      "archiveSha256": "e4ab7009bf0629fd11982d4c2aa83964cf244cffba7347ecd39019a9e38c4564",
+      "archiveBytes": 4296070,
+      "noticeFiles": [
+        "components/webp/COPYING",
+        "components/webp/PATENTS"
+      ]
+    },
+    {
+      "name": "xml2",
+      "version": "2.15.4",
+      "sourceArchiveUrl": "https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.4.tar.xz",
+      "downloadFinalUrl": "https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.4.tar.xz",
+      "archiveSha256": "98087fd181d9070724f3fbc65c7377db03038eb92bd882374daff44940138821",
+      "archiveBytes": 3177444,
+      "noticeFiles": [
+        "components/xml2/Copyright",
+        "components/xml2/result/html-tokenizer/NOTICE"
+      ]
+    },
+    {
+      "name": "zlib-ng",
+      "version": "2.3.3",
+      "sourceArchiveUrl": "https://github.com/zlib-ng/zlib-ng/archive/2.3.3.tar.gz",
+      "downloadFinalUrl": "https://codeload.github.com/zlib-ng/zlib-ng/tar.gz/refs/tags/2.3.3",
+      "archiveSha256": "f9c65aa9c852eb8255b636fd9f07ce1c406f061ec19a2e7d508b318ca0c907d1",
+      "archiveBytes": 2447397,
+      "noticeFiles": [
+        "components/zlib-ng/LICENSE.md"
+      ]
+    }
+  ]
+}

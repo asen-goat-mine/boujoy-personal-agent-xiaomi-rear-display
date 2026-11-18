@@ -1,0 +1,6 @@
+Fusion Pixel 12px Monospaced zh-Hans
+Release: 2026.11.10
+Source: https://github.com/TakWolf/fusion-pixel-font/releases/tag/2026.11.10
+Archive SHA-256: 92aa7958879fb9bbf0f8518184a9641b83dd9543397bdf5d1c53cb6cd75c111a
+Font SHA-256: 1b71a1e61f71da89455790fc585f88b2aedbae608f1785c8eb6ec104c43ebd7e
+Original, unmodified font; included OFL notices cover this asset.

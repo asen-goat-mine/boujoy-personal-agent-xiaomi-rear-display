@@ -1,0 +1,130 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.80",
+    "name": "rayon",
+    "version": "1.12.0",
+    "build": false,
+    "exclude": [
+      "/ci/*",
+      "/.github/*"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Simple work-stealing parallelism for Rust",
+    "documentation": "https://docs.rs/rayon/",
+    "readme": "README.md",
+    "keywords": [
+      "parallel",
+      "thread",
+      "concurrency",
+      "join",
+      "performance"
+    ],
+    "categories": [
+      "concurrency"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/rayon-rs/rayon"
+  },
+  "features": {
+    "web_spin_lock": [
+      "dep:wasm_sync",
+      "rayon-core/web_spin_lock"
+    ]
+  },
+  "lib": {
+    "name": "rayon",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "chars",
+      "path": "tests/chars.rs"
+    },
+    {
+      "name": "clones",
+      "path": "tests/clones.rs"
+    },
+    {
+      "name": "collect",
+      "path": "tests/collect.rs"
+    },
+    {
+      "name": "cross-pool",
+      "path": "tests/cross-pool.rs"
+    },
+    {
+      "name": "debug",
+      "path": "tests/debug.rs"
+    },
+    {
+      "name": "drain_vec",
+      "path": "tests/drain_vec.rs"
+    },
+    {
+      "name": "intersperse",
+      "path": "tests/intersperse.rs"
+    },
+    {
+      "name": "issue671",
+      "path": "tests/issue671.rs"
+    },
+    {
+      "name": "issue671-unzip",
+      "path": "tests/issue671-unzip.rs"
+    },
+    {
+      "name": "iter_panic",
+      "path": "tests/iter_panic.rs"
+    },
+    {
+      "name": "named-threads",
+      "path": "tests/named-threads.rs"
+    },
+    {
+      "name": "octillion",
+      "path": "tests/octillion.rs"
+    },
+    {
+      "name": "par_bridge_recursion",
+      "path": "tests/par_bridge_recursion.rs"
+    },
+    {
+      "name": "producer_split_at",
+      "path": "tests/producer_split_at.rs"
+    },
+    {
+      "name": "sort-panic-safe",
+      "path": "tests/sort-panic-safe.rs"
+    },
+    {
+      "name": "str",
+      "path": "tests/str.rs"
+    }
+  ],
+  "dependencies": {
+    "either": {
+      "version": "1",
+      "default-features": false
+    },
+    "rayon-core": {
+      "version": "1.13.0"
+    },
+    "wasm_sync": {
+      "version": "0.1.0",
+      "optional": true
+    }
+  },
+  "dev-dependencies": {
+    "rand": {
+      "version": "0.9"
+    },
+    "rand_xorshift": {
+      "version": "0.4"
+    }
+  }
+}

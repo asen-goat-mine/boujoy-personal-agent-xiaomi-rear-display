@@ -1,0 +1,131 @@
+[
+  {
+    "file": "simple-sentencepiece/ssentencepiece/csrc/darts.h",
+    "sourceArchive": "simple-sentencepiece.tar.gz",
+    "archiveSha256": "1748a822060a35baa9f6609f84efc8eb54dc0e74b9ece3d82367b7119fdc75af",
+    "sourceEntry": "simple-sentencepiece-0.7/ssentencepiece/csrc/darts.h",
+    "sha256": "a0ff15abf69e2651dedef5acacf474b7b8d20ace8cd5dd79dd201e99ccfee91d"
+  },
+  {
+    "file": "simple-sentencepiece/ssentencepiece/csrc/threadpool.h",
+    "sourceArchive": "simple-sentencepiece.tar.gz",
+    "archiveSha256": "1748a822060a35baa9f6609f84efc8eb54dc0e74b9ece3d82367b7119fdc75af",
+    "sourceEntry": "simple-sentencepiece-0.7/ssentencepiece/csrc/threadpool.h",
+    "sha256": "a0737647480c4fbab218b3540b4be0cb35edf9b4e869e275f56f79f0d25d2830"
+  },
+  {
+    "file": "kaldifst/kaldifst/csrc/basic-filebuf.h",
+    "sourceArchive": "kaldifst.tar.gz",
+    "archiveSha256": "3f247b7e5a2409071202f5e2bc6200060f66728c0a3443c03923ad2723e040b3",
+    "sourceEntry": "kaldifst-1.8.0/kaldifst/csrc/basic-filebuf.h",
+    "sha256": "b1fae289f5f0672683f8e19ee23660aefcf86850461decc1d84c9ae81d266e7d"
+  },
+  {
+    "file": "json/include/nlohmann/detail/meta/cpp_future.hpp",
+    "sourceArchive": "json.tar.gz",
+    "archiveSha256": "4b92eb0c06d10683f7447ce9406cb97cd4b453be18d7279320f7b2f025c10187",
+    "sourceEntry": "json-3.12.0/include/nlohmann/detail/meta/cpp_future.hpp",
+    "sha256": "71e606c586174ff875f5996a00bc6e84a49e0919eafd6fb38c7cb928dfdf5795"
+  },
+  {
+    "file": "sherpa-onnx-source/sherpa-onnx/csrc/offline-tts-supertonic-impl.cc",
+    "sourceArchive": "sherpa-onnx-source.tar.gz",
+    "archiveSha256": "0a8db6c55dd318f4a688faba85f7760b99a6c92e8ef8864479d418531bee1ac2",
+    "sourceEntry": "sherpa-onnx-11afbd009a7f8c08f4bcf2fc1b265d0df4670fbf/sherpa-onnx/csrc/offline-tts-supertonic-impl.cc",
+    "sha256": "d47d619dfeb199d8470a02b80164ff3e6922fa715b6ec3d1aec9740bbbc16418"
+  },
+  {
+    "file": "sherpa-onnx-source/sherpa-onnx/csrc/offline-tts-supertonic-impl.h",
+    "sourceArchive": "sherpa-onnx-source.tar.gz",
+    "archiveSha256": "0a8db6c55dd318f4a688faba85f7760b99a6c92e8ef8864479d418531bee1ac2",
+    "sourceEntry": "sherpa-onnx-11afbd009a7f8c08f4bcf2fc1b265d0df4670fbf/sherpa-onnx/csrc/offline-tts-supertonic-impl.h",
+    "sha256": "c0fce7d3d73b1c996562cd8c930907a8d7ef5b406ddbcb725e0f0407892e08ac"
+  },
+  {
+    "file": "sherpa-onnx-source/sherpa-onnx/csrc/offline-tts-supertonic-model.cc",
+    "sourceArchive": "sherpa-onnx-source.tar.gz",
+    "archiveSha256": "0a8db6c55dd318f4a688faba85f7760b99a6c92e8ef8864479d418531bee1ac2",
+    "sourceEntry": "sherpa-onnx-11afbd009a7f8c08f4bcf2fc1b265d0df4670fbf/sherpa-onnx/csrc/offline-tts-supertonic-model.cc",
+    "sha256": "5d0d652a23eb4038dd07007f753cf41fe741865d359004b4eb0ec198f7a0fc60"
+  },
+  {
+    "file": "sherpa-onnx-source/sherpa-onnx/csrc/offline-tts-supertonic-model.h",
+    "sourceArchive": "sherpa-onnx-source.tar.gz",
+    "archiveSha256": "0a8db6c55dd318f4a688faba85f7760b99a6c92e8ef8864479d418531bee1ac2",
+    "sourceEntry": "sherpa-onnx-11afbd009a7f8c08f4bcf2fc1b265d0df4670fbf/sherpa-onnx/csrc/offline-tts-supertonic-model.h",
+    "sha256": "b46c8c92bafd90ce3dae01bc99b68bdc2face2de9d4310c69ced58d9737d48c2"
+  },
+  {
+    "file": "sherpa-onnx-source/sherpa-onnx/csrc/offline-tts-supertonic-unicode-processor.cc",
+    "sourceArchive": "sherpa-onnx-source.tar.gz",
+    "archiveSha256": "0a8db6c55dd318f4a688faba85f7760b99a6c92e8ef8864479d418531bee1ac2",
+    "sourceEntry": "sherpa-onnx-11afbd009a7f8c08f4bcf2fc1b265d0df4670fbf/sherpa-onnx/csrc/offline-tts-supertonic-unicode-processor.cc",
+    "sha256": "7ee5f216ea733fa59c252109fe56007b2b27c96dc0507b73d858a1669b5d5de6"
+  },
+  {
+    "file": "sherpa-onnx-source/sherpa-onnx/csrc/offline-tts-supertonic-unicode-processor.h",
+    "sourceArchive": "sherpa-onnx-source.tar.gz",
+    "archiveSha256": "0a8db6c55dd318f4a688faba85f7760b99a6c92e8ef8864479d418531bee1ac2",
+    "sourceEntry": "sherpa-onnx-11afbd009a7f8c08f4bcf2fc1b265d0df4670fbf/sherpa-onnx/csrc/offline-tts-supertonic-unicode-processor.h",
+    "sha256": "09d30ad5e835bb2bfded349544c37c032563dd3f30843ac956123851e1deb29e"
+  },
+  {
+    "file": "sherpa-onnx-source/sherpa-onnx/csrc/offline-tts-supertonic-nfkd-table.h",
+    "sourceArchive": "sherpa-onnx-source.tar.gz",
+    "archiveSha256": "0a8db6c55dd318f4a688faba85f7760b99a6c92e8ef8864479d418531bee1ac2",
+    "sourceEntry": "sherpa-onnx-11afbd009a7f8c08f4bcf2fc1b265d0df4670fbf/sherpa-onnx/csrc/offline-tts-supertonic-nfkd-table.h",
+    "sha256": "590205669b7cb80a17bbfaf21f6811840e33950c6b6ff4744ae68f9538d9de15"
+  },
+  {
+    "file": "sherpa-onnx-source/sherpa-onnx/csrc/offline-whisper-dtw.h",
+    "sourceArchive": "sherpa-onnx-source.tar.gz",
+    "archiveSha256": "0a8db6c55dd318f4a688faba85f7760b99a6c92e8ef8864479d418531bee1ac2",
+    "sourceEntry": "sherpa-onnx-11afbd009a7f8c08f4bcf2fc1b265d0df4670fbf/sherpa-onnx/csrc/offline-whisper-dtw.h",
+    "sha256": "1f6b2ac0fa5ee8d26b652e1de788bd67cd3bdef398da2b3e1f885099162899d5"
+  },
+  {
+    "file": "icu-unicode15-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/unicode-org/icu/release-72-1/icu4c/LICENSE",
+    "sha256": "af3e84c401f1a35e8d32d6eb1a33fe587c3981aa5cd206033d9527c1855b57a2",
+    "size": 25505
+  },
+  {
+    "file": "unicode-15-LICENSE.txt",
+    "url": "https://www.unicode.org/license.txt",
+    "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "size": 1995
+  },
+  {
+    "file": "unicode-15-ReadMe.txt",
+    "url": "https://www.unicode.org/Public/15.0.0/ucd/ReadMe.txt",
+    "sha256": "53672c0d0b5185e3cf04c8e970d544c3af81ae7c8eeba0b9cf6d355aa954ae1f",
+    "size": 635
+  },
+  {
+    "file": "unicode15-data.txt",
+    "url": "https://www.unicode.org/Public/15.0.0/ucd/UnicodeData.txt",
+    "sha256": "806e9aed65037197f1ec85e12be6e8cd870fc5608b4de0fffd990f689f376a73",
+    "size": 1913704
+  },
+  {
+    "file": "supertonic-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/Supertone-Inc/supertonic/1e9799e964ea4c0dad7cde993b65c3c813a7b373/LICENSE",
+    "sha256": "0dfe0d0ba84416fe3879d9a34f4909d8d0137c78d1e95834177b0414ac096fa2",
+    "size": 1070,
+    "commit": "1e9799e964ea4c0dad7cde993b65c3c813a7b373"
+  },
+  {
+    "file": "whisper-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/openai/whisper/86098128c0b4f24f0e2aa2994de830614b474227/LICENSE",
+    "sha256": "b5d65a59060e68c4ff940e1eddfa6f94b2d68fdf58ed7f4dd57721c997e35e9d",
+    "size": 1063,
+    "commit": "86098128c0b4f24f0e2aa2994de830614b474227"
+  },
+  {
+    "file": "whispercpp-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/ggml-org/whisper.cpp/5922450fbce1ed9d1648babd0d5ac4520055b436/LICENSE",
+    "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d",
+    "size": 1078,
+    "commit": "5922450fbce1ed9d1648babd0d5ac4520055b436"
+  }
+]

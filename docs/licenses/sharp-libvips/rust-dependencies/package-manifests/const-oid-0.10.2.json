@@ -1,0 +1,89 @@
+{
+  "package": {
+    "edition": "2024",
+    "rust-version": "1.85",
+    "name": "const-oid",
+    "version": "0.10.2",
+    "authors": [
+      "RustCrypto Developers"
+    ],
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Const-friendly implementation of the ISO/IEC Object Identifier (OID) standard\nas defined in ITU X.660, with support for BER/DER encoding/decoding as well as\nheapless no_std (i.e. embedded) support\n",
+    "homepage": "https://github.com/RustCrypto/formats/tree/master/const-oid",
+    "documentation": "https://docs.rs/const-oid",
+    "readme": "README.md",
+    "keywords": [
+      "iso",
+      "iec",
+      "itu",
+      "oid"
+    ],
+    "categories": [
+      "cryptography",
+      "data-structures",
+      "encoding",
+      "no-std",
+      "parser-implementations"
+    ],
+    "license": "Apache-2.0 OR MIT",
+    "repository": "https://github.com/RustCrypto/formats",
+    "resolver": "2",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "all-features": true,
+          "rustdoc-args": [
+            "--cfg",
+            "docsrs"
+          ]
+        }
+      }
+    }
+  },
+  "features": {
+    "db": []
+  },
+  "lib": {
+    "name": "const_oid",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "oid",
+      "path": "tests/oid.rs"
+    },
+    {
+      "name": "oid_ref",
+      "path": "tests/oid_ref.rs"
+    },
+    {
+      "name": "proptests",
+      "path": "tests/proptests.rs"
+    }
+  ],
+  "dependencies": {
+    "arbitrary": {
+      "version": "1.4",
+      "features": [
+        "derive"
+      ],
+      "optional": true
+    }
+  },
+  "dev-dependencies": {
+    "hex-literal": {
+      "version": "1"
+    },
+    "proptest": {
+      "version": "1"
+    },
+    "regex": {
+      "version": "1"
+    }
+  }
+}

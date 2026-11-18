@@ -1,0 +1,13 @@
+<resources>
+    <string name="display_executor_name">Boujoy 后台执行</string>
+    <string name="display_executor_description">只读取 Boujoy 后台显示会话中的应用窗口，在该显示中设置节点文字和滚动。不会读取主屏窗口或使用全局输入法。请仅在你希望启用后台执行时手动开启。</string>
+    <style name="RearStatusTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowBackground">#0C121D</item>
+        <item name="android:colorAccent">#B3A5FF</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#0C121D</item>
+        <item name="android:navigationBarColor">#0C121D</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

@@ -1,0 +1,41 @@
+{
+  "package": {
+    "edition": "2024",
+    "rust-version": "1.85",
+    "name": "block-padding",
+    "version": "0.4.2",
+    "authors": [
+      "RustCrypto Developers"
+    ],
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Padding and unpadding of messages divided into blocks.",
+    "documentation": "https://docs.rs/block-padding",
+    "readme": "README.md",
+    "keywords": [
+      "padding",
+      "pkcs7",
+      "ansix923",
+      "iso7816"
+    ],
+    "categories": [
+      "cryptography",
+      "no-std"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/RustCrypto/utils"
+  },
+  "lib": {
+    "name": "block_padding",
+    "path": "src/lib.rs"
+  },
+  "dependencies": {
+    "hybrid-array": {
+      "version": "0.4.3"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.57.0",
+    "name": "num-conv",
+    "version": "0.2.2",
+    "authors": [
+      "Jacob Pratt <jacob@jhpratt.dev>"
+    ],
+    "build": false,
+    "include": [
+      "src/**/*",
+      "LICENSE-*"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "`num_conv` is a crate to convert between integer types without using `as` casts. This provides\nbetter certainty when refactoring, makes the exact behavior of code more explicit, and allows using\nturbofish syntax.\n",
+    "readme": "README.md",
+    "keywords": [
+      "cast",
+      "extend",
+      "truncate",
+      "convert",
+      "integer"
+    ],
+    "categories": [
+      "no-std",
+      "no-std::no-alloc",
+      "rust-patterns"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/jhpratt/num-conv",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "rustdoc-args": [
+            "--generate-link-to-definition"
+          ]
+        }
+      }
+    }
+  },
+  "features": {},
+  "lib": {
+    "name": "num_conv",
+    "path": "src/lib.rs"
+  },
+  "lints": {
+    "clippy": {
+      "alloc-instead-of-core": "deny",
+      "std-instead-of-core": "deny"
+    },
+    "rust": {
+      "missing-docs": "warn",
+      "unreachable-pub": "warn",
+      "unused": "warn"
+    }
+  }
+}

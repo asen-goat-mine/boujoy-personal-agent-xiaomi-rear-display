@@ -1,0 +1,28 @@
+{
+  "package": {
+    "name": "difflib",
+    "version": "0.4.0",
+    "authors": [
+      "Dima Kudosh <dimakudosh@gmail.com>"
+    ],
+    "include": [
+      "**/*.rs",
+      "Cargo.toml"
+    ],
+    "description": "Port of Python's difflib library to Rust.",
+    "homepage": "https://github.com/DimaKudosh/difflib",
+    "documentation": "https://github.com/DimaKudosh/difflib/wiki",
+    "keywords": [
+      "difflib",
+      "text",
+      "diff"
+    ],
+    "license": "MIT",
+    "repository": "https://github.com/DimaKudosh/difflib"
+  },
+  "test": [
+    {
+      "name": "tests"
+    }
+  ]
+}

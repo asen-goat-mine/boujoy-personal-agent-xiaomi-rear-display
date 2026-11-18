@@ -1,0 +1,752 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-11-15",
+  "projects": [
+    {
+      "project": "tcl",
+      "tag": "core-9-0-4",
+      "archiveUrl": "https://github.com/tcltk/tcl/archive/refs/tags/core-9-0-4.tar.gz",
+      "archiveSha256": "8c01bac92a9a8ce271b63d3aa28f09cde2c6762d6719ca671cdc8aee25391234",
+      "matches": [
+        {
+          "sourceMember": "library/auto.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/auto.tcl"
+          ],
+          "sha256": "629dc86958aa1c5f8697a638f296c706458e7a3418d2d81a2e81ce945f3828c6"
+        },
+        {
+          "sourceMember": "library/clock.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/clock.tcl"
+          ],
+          "sha256": "6b286804649120c7c249d8c2941cee8e1da59211132d985ad97b8ab196073546"
+        },
+        {
+          "sourceMember": "library/cookiejar/cookiejar.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/cookiejar0.2/cookiejar.tcl"
+          ],
+          "sha256": "9d0811415b98c15bbb5c8f86ec3b92e812dac61e3f4d564f7e0dd0b066ba632a"
+        },
+        {
+          "sourceMember": "library/cookiejar/idna.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/cookiejar0.2/idna.tcl"
+          ],
+          "sha256": "fa329853cd186ea405f4bec122913f1e4286c54488d0ffd445f7f120c71583fe"
+        },
+        {
+          "sourceMember": "library/cookiejar/pkgIndex.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/cookiejar0.2/pkgIndex.tcl"
+          ],
+          "sha256": "7d6f5e0236fad3b60cf5b7b10fa5629effcebead382083a7d9543c9526095d1f"
+        },
+        {
+          "sourceMember": "library/cookiejar/public_suffix_list.dat.gz",
+          "installedRelativePaths": [
+            "tcl9.0/cookiejar0.2/public_suffix_list.dat.gz"
+          ],
+          "sha256": "22b8b49a17178863832dbbb646946b38f0f879cb1cd5cb3e7490e62a055fc623"
+        },
+        {
+          "sourceMember": "library/foreachline.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/foreachline.tcl"
+          ],
+          "sha256": "5073f9015583f00b25354a7877f55c68d93674ae11384ee042e3b094a8a900e8"
+        },
+        {
+          "sourceMember": "library/history.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/history.tcl"
+          ],
+          "sha256": "ca38bb6652bbc562a3a82d2919f4e900cc5deedfb3582fa4503c573754ccf007"
+        },
+        {
+          "sourceMember": "library/http/http.tcl",
+          "installedRelativePaths": [
+            "tcl9/9.0/http-2.10.2.tm"
+          ],
+          "sha256": "56372f15e8f73234b7fb2b68f597d5a56a42d995416cdf65fe0c2da1c114e5a9"
+        },
+        {
+          "sourceMember": "library/icu.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/icu.tcl"
+          ],
+          "sha256": "bc125ef0732af6e67367e324c0b3de87e03f04f48c72c42fbb8f77b7b5849a8d"
+        },
+        {
+          "sourceMember": "library/init.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/init.tcl"
+          ],
+          "sha256": "8c5907793b2b8aa05e8d8cf39c0cb7f033c01ca1b8be683e7159774d1a01357a"
+        },
+        {
+          "sourceMember": "library/install.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/install.tcl"
+          ],
+          "sha256": "5508d98832c4f3cf52b297511206c5dd020111f1dfbe358eee023ee1bff3e012"
+        },
+        {
+          "sourceMember": "library/msgcat/msgcat.tcl",
+          "installedRelativePaths": [
+            "tcl9/9.0/msgcat-1.7.1.tm"
+          ],
+          "sha256": "80301481addb70362ffd4eb1c301471a41e59987d39dbbc2a6096ddfb415071e"
+        },
+        {
+          "sourceMember": "library/opt/optparse.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/opt0.4/optparse.tcl"
+          ],
+          "sha256": "3d14ecf300f9fdd21875e22ce348988f852c177c4bf25fb6a7f37ba4be9fca73"
+        },
+        {
+          "sourceMember": "library/opt/pkgIndex.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/opt0.4/pkgIndex.tcl"
+          ],
+          "sha256": "9eaa82aeb3d308b655b69660380829c54a6bbc011280667ac8cf0e5882132846"
+        },
+        {
+          "sourceMember": "library/package.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/package.tcl"
+          ],
+          "sha256": "473bf551d3156a144d6483ce730c72add640168a3ab426b3ee0b122f6d06a96e"
+        },
+        {
+          "sourceMember": "library/parray.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/parray.tcl"
+          ],
+          "sha256": "b8677236d4e687e686426718e78d3984146d2f318e5b34cbd43824206e85a40a"
+        },
+        {
+          "sourceMember": "library/platform/platform.tcl",
+          "installedRelativePaths": [
+            "tcl9/9.0/platform-1.1.0.tm"
+          ],
+          "sha256": "4af798475ffe6a0af32f0202a7cbc7b07b59de5ddcd7f89fcbdd1b07ffe5f6e1"
+        },
+        {
+          "sourceMember": "library/platform/shell.tcl",
+          "installedRelativePaths": [
+            "tcl9/9.0/platform/shell-1.1.4.tm"
+          ],
+          "sha256": "54337e9db387e5f3c0a714ae225d3d915da83751d5be4a9e177e9b726d3f92d6"
+        },
+        {
+          "sourceMember": "library/readfile.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/readfile.tcl"
+          ],
+          "sha256": "eff41b30c70251d068e24d1500ad504404d692f8d48ab74cf8f99bb4dba64414"
+        },
+        {
+          "sourceMember": "library/safe.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/safe.tcl"
+          ],
+          "sha256": "0d3e8ddb147d713206139b7c4c915f11d0a53aebeee3a5ca3e7aebf26854e238"
+        },
+        {
+          "sourceMember": "library/tcltest/tcltest.tcl",
+          "installedRelativePaths": [
+            "tcl9/9.0/tcltest-2.5.11.tm"
+          ],
+          "sha256": "03da6ebf2e314e6c931430761cc47cf586ded9210f9c5afed804858a78034e67"
+        },
+        {
+          "sourceMember": "library/tm.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/tm.tcl"
+          ],
+          "sha256": "7c1de0bc512b362c26d489bd332f3d883041d98c2ed1cc99b4d64cd97e646786"
+        },
+        {
+          "sourceMember": "library/word.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/word.tcl"
+          ],
+          "sha256": "3a481eacbcca1c611843cdc387ac51be0b8ac98a994cbe8fa43091fee35b207e"
+        },
+        {
+          "sourceMember": "library/writefile.tcl",
+          "installedRelativePaths": [
+            "tcl9.0/writefile.tcl"
+          ],
+          "sha256": "b454723873db2e587ac1323bcebff2e8929f5dc98a6fe001ed34fcaf0c2aa320"
+        }
+      ]
+    },
+    {
+      "project": "tk",
+      "tag": "core-9-0-4",
+      "archiveUrl": "https://github.com/tcltk/tk/archive/refs/tags/core-9-0-4.tar.gz",
+      "archiveSha256": "ab9bd89fcff2e1248b7a9c097035f817fa0725285028c95686fdb92db65bc148",
+      "matches": [
+        {
+          "sourceMember": "library/bgerror.tcl",
+          "installedRelativePaths": [
+            "tk9.0/bgerror.tcl"
+          ],
+          "sha256": "391d0b6ab287c01887db14a270fd7456caf9dea8163806d2a6910b085c1c9c64"
+        },
+        {
+          "sourceMember": "library/button.tcl",
+          "installedRelativePaths": [
+            "tk9.0/button.tcl"
+          ],
+          "sha256": "7fba8f38b382468ae412541d63ab75223822fac023febb0b46532f2fa8d7fff9"
+        },
+        {
+          "sourceMember": "library/choosedir.tcl",
+          "installedRelativePaths": [
+            "tk9.0/choosedir.tcl"
+          ],
+          "sha256": "1536eae9e69ba05da9951a7125e836534423014700a09ec63c82d9cbbe9cb244"
+        },
+        {
+          "sourceMember": "library/clrpick.tcl",
+          "installedRelativePaths": [
+            "tk9.0/clrpick.tcl"
+          ],
+          "sha256": "c91f2715d02624249aff12c9ed7825d65964c21bcf5c0c32b0331c9260b07dc9"
+        },
+        {
+          "sourceMember": "library/comdlg.tcl",
+          "installedRelativePaths": [
+            "tk9.0/comdlg.tcl"
+          ],
+          "sha256": "fed47f393ff89f299d83ff482d3aa4ae61ced53dd75f3819a52c8e69b9a318cf"
+        },
+        {
+          "sourceMember": "library/console.tcl",
+          "installedRelativePaths": [
+            "tk9.0/console.tcl"
+          ],
+          "sha256": "dc90799d3fb1828944f8394a9846b3d4a9e10d280bdff5bacbf02b82f0bd284b"
+        },
+        {
+          "sourceMember": "library/dialog.tcl",
+          "installedRelativePaths": [
+            "tk9.0/dialog.tcl"
+          ],
+          "sha256": "463fdecfc1af0f70c8f0dba06a4865ce2a3311c2a52308df23891f0fcbc4f6ad"
+        },
+        {
+          "sourceMember": "library/entry.tcl",
+          "installedRelativePaths": [
+            "tk9.0/entry.tcl"
+          ],
+          "sha256": "8904b3e1fc746afdd4e3731d80dac785d5e8cab1ad954eeec525800be8c8ed85"
+        },
+        {
+          "sourceMember": "library/focus.tcl",
+          "installedRelativePaths": [
+            "tk9.0/focus.tcl"
+          ],
+          "sha256": "2b6f3cfb78c0a1d1e88dbdf9afe8eb80e5f5a0035f7d0f18981a327dd79d8377"
+        },
+        {
+          "sourceMember": "library/fontchooser.tcl",
+          "installedRelativePaths": [
+            "tk9.0/fontchooser.tcl"
+          ],
+          "sha256": "8b78e74195f9e13e82349e0472c241db3382b6c4524a936d5cfe9ad3e6aab61b"
+        },
+        {
+          "sourceMember": "library/iconbadges.tcl",
+          "installedRelativePaths": [
+            "tk9.0/iconbadges.tcl"
+          ],
+          "sha256": "e5015ee51106c53e623013ba6b6bcf17f6bec9686909bd3af44db9a58062ece2"
+        },
+        {
+          "sourceMember": "library/iconlist.tcl",
+          "installedRelativePaths": [
+            "tk9.0/iconlist.tcl"
+          ],
+          "sha256": "0e7c03224247b03ca1db39d01f58498b0356e2e483630f79f629e0b0c50d392f"
+        },
+        {
+          "sourceMember": "library/icons.tcl",
+          "installedRelativePaths": [
+            "tk9.0/icons.tcl"
+          ],
+          "sha256": "1082bdba6aeb87061d7147097b969edb8b458377078928bfdcc627778a710822"
+        },
+        {
+          "sourceMember": "library/listbox.tcl",
+          "installedRelativePaths": [
+            "tk9.0/listbox.tcl"
+          ],
+          "sha256": "5cb48eecb7389ad0868e42d8a5a1ef86f193d6461b32210c54e5a69705bca1bf"
+        },
+        {
+          "sourceMember": "library/megawidget.tcl",
+          "installedRelativePaths": [
+            "tk9.0/megawidget.tcl"
+          ],
+          "sha256": "eeb4dfdc6bb2256c83c0374782cc6afe1578232b32b4cb216faccdb975f42958"
+        },
+        {
+          "sourceMember": "library/menu.tcl",
+          "installedRelativePaths": [
+            "tk9.0/menu.tcl"
+          ],
+          "sha256": "4ab1819b71532aeb493c63df54b572fe7ce3f474f1e449714b25c6dadd302ab8"
+        },
+        {
+          "sourceMember": "library/mkpsenc.tcl",
+          "installedRelativePaths": [
+            "tk9.0/mkpsenc.tcl"
+          ],
+          "sha256": "0ac9d11d4046ef4d8e6d219f6941bf69c6ae448c6a1c2f7fc382f84b5786f660"
+        },
+        {
+          "sourceMember": "library/msgbox.tcl",
+          "installedRelativePaths": [
+            "tk9.0/msgbox.tcl"
+          ],
+          "sha256": "1da78ffbd719cc38cfbeb2aeb0a1b18e46ba4477963c2fc7a0c22f4d3254a187"
+        },
+        {
+          "sourceMember": "library/optMenu.tcl",
+          "installedRelativePaths": [
+            "tk9.0/optMenu.tcl"
+          ],
+          "sha256": "2805d470102800d8af66fee3c030feeb45b4e969c37414838acb086e5fe14dcd"
+        },
+        {
+          "sourceMember": "library/palette.tcl",
+          "installedRelativePaths": [
+            "tk9.0/palette.tcl"
+          ],
+          "sha256": "59709065d66d690b50cd8b5a6dd99fa5e92a90e94d4e9df0c107eff1198f4e01"
+        },
+        {
+          "sourceMember": "library/panedwindow.tcl",
+          "installedRelativePaths": [
+            "tk9.0/panedwindow.tcl"
+          ],
+          "sha256": "813d5da099883418818d9a9eb8dea0d38e1eebe29b903f794bedba64e7304a32"
+        },
+        {
+          "sourceMember": "library/print.tcl",
+          "installedRelativePaths": [
+            "tk9.0/print.tcl"
+          ],
+          "sha256": "973d400c618b83956ca0ab88ec7711f03c18e9311cfe3d204fa600e2f139d01a"
+        },
+        {
+          "sourceMember": "library/safetk.tcl",
+          "installedRelativePaths": [
+            "tk9.0/safetk.tcl"
+          ],
+          "sha256": "318c663c2ff6e8fd2c33e8cf0918342b0431a9151c1e05d8037f4ee7bfc6add1"
+        },
+        {
+          "sourceMember": "library/scale.tcl",
+          "installedRelativePaths": [
+            "tk9.0/scale.tcl"
+          ],
+          "sha256": "43b1e9c6f29e6a9fa09186fc51029a95dd4dc70a0cf0ddf92af058083fd4567c"
+        },
+        {
+          "sourceMember": "library/scaling.tcl",
+          "installedRelativePaths": [
+            "tk9.0/scaling.tcl"
+          ],
+          "sha256": "20c4f15b4859e029122901abdbb6b95fe744094fb982f6168e4d55135e69efe7"
+        },
+        {
+          "sourceMember": "library/scrlbar.tcl",
+          "installedRelativePaths": [
+            "tk9.0/scrlbar.tcl"
+          ],
+          "sha256": "ba1c40064864b01a25a3edd869b05b2dae745ddda8b12721db6980563a4b040f"
+        },
+        {
+          "sourceMember": "library/spinbox.tcl",
+          "installedRelativePaths": [
+            "tk9.0/spinbox.tcl"
+          ],
+          "sha256": "7239b27458867b25ec2fde06f2ea8833d481f1cfaf5804e7977f8d5a10bbb57b"
+        },
+        {
+          "sourceMember": "library/systray.tcl",
+          "installedRelativePaths": [
+            "tk9.0/systray.tcl"
+          ],
+          "sha256": "36b25a0a9cf4a9f1897aa90e145235aeb69e4146a761510d7475b16fc104b339"
+        },
+        {
+          "sourceMember": "library/tearoff.tcl",
+          "installedRelativePaths": [
+            "tk9.0/tearoff.tcl"
+          ],
+          "sha256": "7e0262027b3923105262ada30dcc285124397e3929eb1b198b429ddda81e73ff"
+        },
+        {
+          "sourceMember": "library/text.tcl",
+          "installedRelativePaths": [
+            "tk9.0/text.tcl"
+          ],
+          "sha256": "03448f1557595e4487d86a68b93129b81f5e256301ddcc6b3742a40adca87b66"
+        },
+        {
+          "sourceMember": "library/tk.tcl",
+          "installedRelativePaths": [
+            "tk9.0/tk.tcl"
+          ],
+          "sha256": "a8a68093d26a32b78cc58b074fb4cd29b5a3312b4898be452395d7e2ce635cf1"
+        },
+        {
+          "sourceMember": "library/tkfbox.tcl",
+          "installedRelativePaths": [
+            "tk9.0/tkfbox.tcl"
+          ],
+          "sha256": "f4a89638d5145cb5a356a7eca38999356070e70392d74aab3e0da16470b2cfc5"
+        },
+        {
+          "sourceMember": "library/ttk/altTheme.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/altTheme.tcl"
+          ],
+          "sha256": "a92d5585c91f1c2e4bb8e92cf874e99d61bbdbecad1c2b9a9511d5a13e20238c"
+        },
+        {
+          "sourceMember": "library/ttk/aquaTheme.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/aquaTheme.tcl"
+          ],
+          "sha256": "25a38de6dbd4b9f8fb64635d55a5a0da4bc6b3b3d256bcb94b84303a99cf645d"
+        },
+        {
+          "sourceMember": "library/ttk/button.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/button.tcl"
+          ],
+          "sha256": "58c4c1ac28e7a4da35df11a40ce9d7dc69b7ff56882c69a50d2947f47449076a"
+        },
+        {
+          "sourceMember": "library/ttk/clamTheme.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/clamTheme.tcl"
+          ],
+          "sha256": "4d4c1a399553d4198ea822fbe73cf21c2c1fb60a4edd4069cad0ecf58dc614c3"
+        },
+        {
+          "sourceMember": "library/ttk/classicTheme.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/classicTheme.tcl"
+          ],
+          "sha256": "8156dadbff4efde1cf4c48286e73aa915f7d8869583660e28d4eb608fdb6ebf7"
+        },
+        {
+          "sourceMember": "library/ttk/combobox.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/combobox.tcl"
+          ],
+          "sha256": "56999ea89dd3b97f64c11de9b515fc2a71ee3dbaee927c6fd45d37be4fdee133"
+        },
+        {
+          "sourceMember": "library/ttk/cursors.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/cursors.tcl"
+          ],
+          "sha256": "685b7f1737c606841f2a797f989b0153f88bbb62e80210c00524ef8526073682"
+        },
+        {
+          "sourceMember": "library/ttk/defaults.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/defaults.tcl"
+          ],
+          "sha256": "8a2d71b2d98bc05ae8ce68fe888ebefeaee5e788734f8ea9bc0ab7aeab02bced"
+        },
+        {
+          "sourceMember": "library/ttk/entry.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/entry.tcl"
+          ],
+          "sha256": "081ae003913a17172782a9ae48c08f7433a6e3f02e51e52ed46cc99a62f4d694"
+        },
+        {
+          "sourceMember": "library/ttk/fonts.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/fonts.tcl"
+          ],
+          "sha256": "235fbff958f5f420d86fdc40063441625ab3838f4a35d2210a9e1f43c30cdc78"
+        },
+        {
+          "sourceMember": "library/ttk/menubutton.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/menubutton.tcl"
+          ],
+          "sha256": "98fdf67d20188be9074e04a1ce4d91c4dc0562bc4762598ac42520d4d0eb100f"
+        },
+        {
+          "sourceMember": "library/ttk/notebook.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/notebook.tcl"
+          ],
+          "sha256": "6aa711938fd62ff90535ab71d9091440c66f7c9ef028fe1db883acc38f0d58e4"
+        },
+        {
+          "sourceMember": "library/ttk/panedwindow.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/panedwindow.tcl"
+          ],
+          "sha256": "5cdd719102c4f978cbd225ff9ea81256967839c26b2460c93a94702b94b9cc80"
+        },
+        {
+          "sourceMember": "library/ttk/progress.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/progress.tcl"
+          ],
+          "sha256": "440dfbd799945c9ee8abf275ef8715ef0663f278cc3117f6dd033fabca6c295b"
+        },
+        {
+          "sourceMember": "library/ttk/scale.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/scale.tcl"
+          ],
+          "sha256": "419012f3c07d4ae138f324b40b2e19178d3f7d277d85078451fbf4cfbed6125a"
+        },
+        {
+          "sourceMember": "library/ttk/scrollbar.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/scrollbar.tcl"
+          ],
+          "sha256": "eab2c42fdd826b37b7308d4834ddef063b5f8125f21b00677746c03f66e2351e"
+        },
+        {
+          "sourceMember": "library/ttk/sizegrip.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/sizegrip.tcl"
+          ],
+          "sha256": "a7132288dda9b5acc5f7751ba6eec8399f60988a2bebd480982a8c0a6418a27f"
+        },
+        {
+          "sourceMember": "library/ttk/spinbox.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/spinbox.tcl"
+          ],
+          "sha256": "b6522ed8a2f1bb6d999a2e010c6ec276f770ba39432615eb7fc0635c431dd956"
+        },
+        {
+          "sourceMember": "library/ttk/treeview.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/treeview.tcl"
+          ],
+          "sha256": "cdc70e8b5f49cc77daf2866a69fbe2b37a0e3f12742e405eb5c1b31fe3a9d62d"
+        },
+        {
+          "sourceMember": "library/ttk/ttk.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/ttk.tcl"
+          ],
+          "sha256": "ccfae8b866f51fdc5ce415a82300c8a85423228d99b80c61453c242989127f1c"
+        },
+        {
+          "sourceMember": "library/ttk/utils.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/utils.tcl"
+          ],
+          "sha256": "c7886c6bcf00c33c2ae165a9cdafb9eb65ef0a1ca93e91f54d9f7783e089c038"
+        },
+        {
+          "sourceMember": "library/ttk/vistaTheme.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/vistaTheme.tcl"
+          ],
+          "sha256": "7fb0dabbcf6044447d422ec552ba42776b8bf9c2b100c1ea62849abcca1aa13c"
+        },
+        {
+          "sourceMember": "library/ttk/winTheme.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/winTheme.tcl"
+          ],
+          "sha256": "f85a87d14deab7ab5d7306be8a0b3deaad2c81e7111eefce10e14b863bf06eff"
+        },
+        {
+          "sourceMember": "library/ttk/xpTheme.tcl",
+          "installedRelativePaths": [
+            "tk9.0/ttk/xpTheme.tcl"
+          ],
+          "sha256": "6d6f529ed6055e74e9324aeeaeca1060a46180cdc561b55cc52a74cc710bff6f"
+        },
+        {
+          "sourceMember": "library/xmfbox.tcl",
+          "installedRelativePaths": [
+            "tk9.0/xmfbox.tcl"
+          ],
+          "sha256": "8051bca4e346a27eb1d0e361bbfa10ff5aff9a4c8c7ef14f283a050656da1624"
+        }
+      ]
+    },
+    {
+      "project": "itcl",
+      "tag": "itcl-4-3-8",
+      "archiveUrl": "https://github.com/tcltk/itcl/archive/refs/tags/itcl-4-3-8.tar.gz",
+      "archiveSha256": "376da372b4b2fa50abb3bf2df9bf26fe02c6bfb9ab5946849af293d1650f3faf",
+      "matches": [
+        {
+          "sourceMember": "library/itcl.tcl",
+          "installedRelativePaths": [
+            "itcl4.3.8/itcl.tcl"
+          ],
+          "sha256": "75db5e1e5695215a6cf0b8bd241c984b575c4493747eef9a8c307513ca7832c4"
+        },
+        {
+          "sourceMember": "library/itclHullCmds.tcl",
+          "installedRelativePaths": [
+            "itcl4.3.8/itclHullCmds.tcl"
+          ],
+          "sha256": "015378168f4431e23ef8df19ff4f03d1e772a91b02e625e584da257d4ae6fad3"
+        },
+        {
+          "sourceMember": "library/itclWidget.tcl",
+          "installedRelativePaths": [
+            "itcl4.3.8/itclWidget.tcl"
+          ],
+          "sha256": "cfe9a5eb616e1a8d5c97d5ff1ebdd6a69e0a033c6b9b05a8ce371f41edd38c92"
+        }
+      ]
+    },
+    {
+      "project": "thread",
+      "tag": "thread-3-0-6",
+      "archiveUrl": "https://github.com/tcltk/thread/archive/refs/tags/thread-3-0-6.tar.gz",
+      "archiveSha256": "266831ecc834dfe5e9cdc13eed64a5aa5cc922c16e7a0da77c7a222248b87de0",
+      "matches": [
+        {
+          "sourceMember": "lib/ttrace.tcl",
+          "installedRelativePaths": [
+            "thread3.0.6/ttrace.tcl"
+          ],
+          "sha256": "261d96832df31668c944e0989b077fbf093ed49558f164bddf01b6a260da15b9"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "Tcl-license.terms",
+      "sha256": "c0a69a2bfd757361ec7e6143973b103c90409316b49e9c88db26ad6388e79f16",
+      "sourceArchive": "https://github.com/tcltk/tcl/archive/refs/tags/core-9-0-4.tar.gz",
+      "sourceMember": "license.terms",
+      "rawUrl": "https://raw.githubusercontent.com/tcltk/tcl/core-9-0-4/license.terms",
+      "verbatim": true
+    },
+    {
+      "path": "Tcl-libtommath-LICENSE.txt",
+      "sha256": "2fa64b163659f41965c9815882a8296d3d03ff546b76153e11445f9bdecf955a",
+      "sourceArchive": "https://github.com/tcltk/tcl/archive/refs/tags/core-9-0-4.tar.gz",
+      "sourceMember": "libtommath/LICENSE",
+      "rawUrl": "https://raw.githubusercontent.com/tcltk/tcl/core-9-0-4/libtommath/LICENSE",
+      "verbatim": true
+    },
+    {
+      "path": "Tk-license.terms",
+      "sha256": "2cde822b93ca16ae535c954b7dfe658b4ad10df2a193628d1b358f1765e8b198",
+      "sourceArchive": "https://github.com/tcltk/tk/archive/refs/tags/core-9-0-4.tar.gz",
+      "sourceMember": "license.terms",
+      "rawUrl": "https://raw.githubusercontent.com/tcltk/tk/core-9-0-4/license.terms",
+      "verbatim": true
+    },
+    {
+      "path": "Itcl-license.terms",
+      "sha256": "b61edfaeead97546bc62b1f205b046f2e440b83bfc517bc0932b93bc3d505865",
+      "sourceArchive": "https://github.com/tcltk/itcl/archive/refs/tags/itcl-4-3-8.tar.gz",
+      "sourceMember": "license.terms",
+      "rawUrl": "https://raw.githubusercontent.com/tcltk/itcl/itcl-4-3-8/license.terms",
+      "verbatim": true
+    },
+    {
+      "path": "ItclWidget-license.terms",
+      "sha256": "30e7313051d2caf5167fdbf26ee445a6b9891db8d0b010928abc8c9e11198787",
+      "sourceArchive": "https://github.com/tcltk/itcl/archive/refs/tags/itcl-4-3-8.tar.gz",
+      "sourceMember": "itclWidget/license.terms",
+      "rawUrl": "https://raw.githubusercontent.com/tcltk/itcl/itcl-4-3-8/itclWidget/license.terms",
+      "verbatim": true
+    },
+    {
+      "path": "Thread-license.terms",
+      "sha256": "0a03981c40f7813ce6ddbdfce9882020bcfd696ea044b21ef07619ed9b86abae",
+      "sourceArchive": "https://github.com/tcltk/thread/archive/refs/tags/thread-3-0-6.tar.gz",
+      "sourceMember": "license.terms",
+      "rawUrl": "https://raw.githubusercontent.com/tcltk/thread/thread-3-0-6/license.terms",
+      "verbatim": true
+    },
+    {
+      "path": "Tcl-regex-Henry-Spencer.txt",
+      "sha256": "dd2810e0c4594ed51ae17553f6b35267387d93707eb8814cc9ce7dec8bfcc8cb",
+      "sourceArchive": "https://github.com/tcltk/tcl/archive/refs/tags/core-9-0-4.tar.gz",
+      "sourceMember": "generic/regcomp.c",
+      "extraction": "Complete initial copyright/licensing comment, unchanged."
+    },
+    {
+      "path": "IDNA-source-attribution.txt",
+      "sha256": "1bdf95b5ed88b2f42e860bc762908b1b2b3e9b26157b58ee4939833eb0c153e5",
+      "sourceArchive": "https://github.com/tcltk/tcl/archive/refs/tags/core-9-0-4.tar.gz",
+      "sourceMember": "library/cookiejar/idna.tcl",
+      "extraction": "Complete original leading comment, unchanged."
+    },
+    {
+      "path": "RFC-3492.txt",
+      "sha256": "d1848b1b4f01e20708a64f42394e5f4b840141935bed7f09ad7baeb6693b8772",
+      "sourceUrl": "https://www.rfc-editor.org/rfc/rfc3492.txt",
+      "verbatim": true
+    },
+    {
+      "path": "MPL-2.0.txt",
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "sourceUrl": "https://www.mozilla.org/media/MPL/2.0/index.txt",
+      "verbatim": true
+    },
+    {
+      "path": "public_suffix_list.dat.gz",
+      "sha256": "22b8b49a17178863832dbbb646946b38f0f879cb1cd5cb3e7490e62a055fc623",
+      "sourceArchive": "https://github.com/tcltk/tcl/archive/refs/tags/core-9-0-4.tar.gz",
+      "sourceMember": "library/cookiejar/public_suffix_list.dat.gz",
+      "rawUrl": "https://raw.githubusercontent.com/tcltk/tcl/core-9-0-4/library/cookiejar/public_suffix_list.dat.gz",
+      "verbatim": true,
+      "equalsInstalledRuntime": true
+    },
+    {
+      "path": "public_suffix_list.dat",
+      "sha256": "6d5a41890175e65826f2a3532369925067d840e324631eb8b8008dc5f9ffebad",
+      "extraction": "Exact gzip decompression of the installed and fixed-tag source data, including its original MPL2 header and all comments.",
+      "dataModified": false
+    }
+  ],
+  "runtimeModules": {
+    "Tcl": "9.0.4",
+    "Tk": "9.0.4",
+    "Itcl": "4.3.8",
+    "Thread": "3.0.6",
+    "http": "2.10.2",
+    "msgcat": "1.7.1",
+    "platform": "1.1.0",
+    "platform::shell": "1.1.4",
+    "tcltest": "2.5.11",
+    "opt": "0.4.10",
+    "cookiejar": "0.2.0",
+    "tcl::idna": "1.0.1"
+  },
+  "publicSuffixList": {
+    "compressedSha256": "22b8b49a17178863832dbbb646946b38f0f879cb1cd5cb3e7490e62a055fc623",
+    "decompressedSha256": "6d5a41890175e65826f2a3532369925067d840e324631eb8b8008dc5f9ffebad",
+    "bytes": 216180,
+    "fixedTagDataMatchesInstalled": true,
+    "currentPublicSuffixListComparison": "Not performed; no claim of equality to latest upstream list."
+  }
+}

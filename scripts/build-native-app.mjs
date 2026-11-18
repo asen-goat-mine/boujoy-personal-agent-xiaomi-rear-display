@@ -1,0 +1,37 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
+import {spawnSync} from 'node:child_process';
+import {ROOT,DATA,MEMORY_VAULT,HARNESS} from '../src/config.mjs';
+import {DISTRIBUTION as D,BUILD_IDENTITY} from '../src/distribution.mjs';
+import serviceIdentity from '../desktop/service-identity.cjs';
+serviceIdentity.assertBuildIdentity(BUILD_IDENTITY,BUILD_IDENTITY);
+const runtime=process.env.BOUJOY_ELECTRON_RUNTIME||path.join(os.homedir(),'Library/Application Support/Boujoy/PersonalAgentDesktopRuntime');
+const source=path.join(runtime,'node_modules/electron/dist/Electron.app');
+if(!fs.existsSync(source))throw Error('请先安装桌面运行时：参见 desktop/README.md');
+const output=path.join(ROOT,'dist',D.productName+'.app');
+const staging=fs.mkdtempSync(path.join(os.tmpdir(),'boujoy-native-'));
+const bundle=path.join(staging,D.productName+'.app');
+const run=(command,args)=>{const r=spawnSync(command,args,{stdio:'inherit'});if(r.status!==0)throw Error(command+' failed');};
+try{
+  run('/usr/bin/ditto',[source,bundle]);
+  const resources=path.join(bundle,'Contents/Resources/app');fs.mkdirSync(resources,{recursive:true});
+  for(const name of ['main.cjs','portable-runtime.cjs','preload.cjs','pet-preload.cjs','pet-state.cjs','media-permission.cjs','service-identity.cjs'])fs.copyFileSync(path.join(ROOT,'desktop',name),path.join(resources,name));
+  fs.cpSync(path.join(ROOT,'desktop/pet'),path.join(resources,'pet'),{recursive:true});
+  fs.copyFileSync(path.join(ROOT,'web/assets/robot-head-base.png'),path.join(resources,'pet/robot-head-base.png'));
+  fs.writeFileSync(path.join(resources,'package.json'),JSON.stringify({name:`boujoy-${D.edition}-desktop`,productName:D.productName,version:D.desktopVersion,main:'main.cjs'}));
+  fs.writeFileSync(path.join(resources,'runtime.json'),JSON.stringify({root:ROOT,data:DATA,node:process.execPath,memory:MEMORY_VAULT,harness:HARNESS,distribution:D,expectedIdentity:BUILD_IDENTITY}));
+  fs.mkdirSync(path.join(resources,'licenses'),{recursive:true});
+  for(const name of ['LICENSE','LICENSES.chromium.html'])fs.copyFileSync(path.join(path.dirname(source),name),path.join(resources,'licenses',name));
+  const plist=path.join(bundle,'Contents/Info.plist');
+  for(const [key,value] of Object.entries({CFBundleName:D.productName,CFBundleDisplayName:D.productName,CFBundleIdentifier:D.bundleId,CFBundleShortVersionString:D.desktopVersion,CFBundleVersion:String(D.desktopBuild)}))run('/usr/libexec/PlistBuddy',['-c',`Set :${key} ${value}`,plist]);
+  const microphone='用于你主动发起的语音输入，按当前配置转写为可编辑文字；可能发送至 DeepSeek。';
+  const existing=spawnSync('/usr/libexec/PlistBuddy',['-c','Print :NSMicrophoneUsageDescription',plist],{stdio:'ignore'}).status===0;
+  run('/usr/libexec/PlistBuddy',['-c',`${existing?'Set':'Add'} :NSMicrophoneUsageDescription ${existing?'':'string '}${microphone}`,plist]);
+  run('/usr/bin/codesign',['--force','--deep','--sign','-',bundle]);
+  fs.mkdirSync(path.dirname(output),{recursive:true});
+  if(fs.existsSync(output))fs.renameSync(output,output+'.backup-'+Date.now());
+  fs.renameSync(bundle,output);
+  run('/usr/bin/codesign',['--verify','--deep','--strict',output]);
+  console.log(output);
+}finally{fs.rmSync(staging,{recursive:true,force:true});}

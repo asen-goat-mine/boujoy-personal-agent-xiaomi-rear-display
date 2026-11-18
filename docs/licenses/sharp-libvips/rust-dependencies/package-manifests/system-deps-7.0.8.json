@@ -1,0 +1,70 @@
+{
+  "package": {
+    "edition": "2018",
+    "rust-version": "1.78.0",
+    "name": "system-deps",
+    "version": "7.0.8",
+    "authors": [
+      "Guillaume Desmottes <guillaume.desmottes@collabora.com>",
+      "Josh Triplett <josh@joshtriplett.org>"
+    ],
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Discover and configure system dependencies from declarative dependencies in Cargo.toml",
+    "documentation": "https://docs.rs/system-deps/",
+    "readme": "README.md",
+    "keywords": [
+      "pkg-config",
+      "build-dependencies",
+      "build-depends",
+      "manifest",
+      "metadata"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/gdesmott/system-deps"
+  },
+  "lib": {
+    "name": "system_deps",
+    "path": "src/lib.rs"
+  },
+  "dependencies": {
+    "cfg-expr": {
+      "version": ">= 0.17, < 0.21",
+      "features": [
+        "targets"
+      ]
+    },
+    "heck": {
+      "version": "0.5"
+    },
+    "pkg-config": {
+      "version": "0.3.25"
+    },
+    "toml": {
+      "version": "1",
+      "features": [
+        "parse",
+        "std"
+      ],
+      "default-features": false
+    },
+    "version-compare": {
+      "version": "0.2"
+    }
+  },
+  "dev-dependencies": {
+    "assert_matches": {
+      "version": "1.5"
+    },
+    "itertools": {
+      "version": "0.14"
+    },
+    "lazy_static": {
+      "version": "1"
+    }
+  }
+}

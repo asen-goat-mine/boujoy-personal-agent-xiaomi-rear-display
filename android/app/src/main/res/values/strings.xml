@@ -1,0 +1,14 @@
+<resources>
+    <string name="ime_name">Boujoy 输入</string>
+  <string name="connection_status">%1$s %2$s</string>
+  <string name="browser_paused">%1$s · 任务已暂停；点击下方对应控件操作</string>
+  <string name="browser_error">%1$s\n任务保持暂停；不自动重复刚才的操作。</string>
+  <string name="demonstration_help">你来操作手机，Boujoy 只记录页面结构变化和通用按钮。最多两分钟；不保存截图、输入正文或密码，不自动点击。结束后生成未验证草稿，换参数执行通过后才能算已验证。</string>
+  <string name="demonstration_started">已开始。请自己切换到要示范的 App。通知栏可以随时结束。</string>
+  <string name="share_details">%1$s\n目标 App：%2$s\n大小：%3$d 字节\n附件任务：%4$s</string>
+  <string name="share_note">这里只把附件交给指定 App；收件人与最终发送仍需任务核实。</string>
+  <string name="share_dispatched">附件已交给 %1$s；正在核实草稿，尚未表示发送成功。</string>
+    <string name="wireless_typing_name">Boujoy 无线输入</string>
+    <string name="wireless_typing_description">在你交办的手机任务中，向当前应用输入文字。保留原键盘，不采集无障碍事件文字，不读取密码，不依赖数据线。</string>
+  <string name="group_member_description">%1$s\n%2$s</string>
+</resources>

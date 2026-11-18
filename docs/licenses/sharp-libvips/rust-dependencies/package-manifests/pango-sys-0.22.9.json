@@ -1,0 +1,141 @@
+{
+  "package": {
+    "edition": "2024",
+    "rust-version": "1.92",
+    "name": "pango-sys",
+    "version": "0.22.9",
+    "authors": [
+      "The gtk-rs Project Developers"
+    ],
+    "build": "build.rs",
+    "exclude": [
+      "gir-files/*"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "FFI bindings to libpango-1.0",
+    "homepage": "https://gtk-rs.org/",
+    "readme": false,
+    "keywords": [
+      "pango",
+      "ffi",
+      "gtk-rs",
+      "gnome"
+    ],
+    "license": "MIT",
+    "repository": "https://github.com/gtk-rs/gtk-rs-core",
+    "metadata": {
+      "system-deps": {
+        "pango": {
+          "name": "pango",
+          "version": "1.40",
+          "v1_42": {
+            "version": "1.42"
+          },
+          "v1_44": {
+            "version": "1.44"
+          },
+          "v1_46": {
+            "version": "1.46"
+          },
+          "v1_48": {
+            "version": "1.48"
+          },
+          "v1_50": {
+            "version": "1.50"
+          },
+          "v1_52": {
+            "version": "1.52"
+          },
+          "v1_54": {
+            "version": "1.54"
+          },
+          "v1_56": {
+            "version": "1.55"
+          },
+          "v1_57": {
+            "version": "1.57"
+          },
+          "v1_58": {
+            "version": "1.58"
+          }
+        }
+      },
+      "docs": {
+        "rs": {
+          "rustdoc-args": [
+            "--generate-link-to-definition"
+          ],
+          "all-features": true
+        }
+      }
+    }
+  },
+  "features": {
+    "v1_42": [],
+    "v1_44": [
+      "v1_42"
+    ],
+    "v1_46": [
+      "v1_44"
+    ],
+    "v1_48": [
+      "v1_46"
+    ],
+    "v1_50": [
+      "v1_48"
+    ],
+    "v1_52": [
+      "v1_50"
+    ],
+    "v1_54": [
+      "v1_52"
+    ],
+    "v1_56": [
+      "v1_54"
+    ],
+    "v1_57": [
+      "v1_56"
+    ],
+    "v1_58": [
+      "v1_57"
+    ]
+  },
+  "lib": {
+    "name": "pango_sys",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "abi",
+      "path": "tests/abi.rs"
+    }
+  ],
+  "dependencies": {
+    "glib-sys": {
+      "version": "0.22.0"
+    },
+    "gobject-sys": {
+      "version": "0.22.0"
+    },
+    "libc": {
+      "version": "0.2"
+    }
+  },
+  "dev-dependencies": {
+    "shell-words": {
+      "version": "1.0.0"
+    },
+    "tempfile": {
+      "version": "3"
+    }
+  },
+  "build-dependencies": {
+    "system-deps": {
+      "version": "9"
+    }
+  }
+}

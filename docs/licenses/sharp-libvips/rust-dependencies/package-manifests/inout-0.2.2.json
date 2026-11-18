@@ -1,0 +1,54 @@
+{
+  "package": {
+    "edition": "2024",
+    "rust-version": "1.85",
+    "name": "inout",
+    "version": "0.2.2",
+    "authors": [
+      "RustCrypto Developers"
+    ],
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Custom reference types for code generic over in-place and buffer-to-buffer modes of operation.",
+    "documentation": "https://docs.rs/inout",
+    "readme": "README.md",
+    "keywords": [
+      "custom-reference"
+    ],
+    "categories": [
+      "no-std"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/RustCrypto/utils",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "all-features": true
+        }
+      }
+    }
+  },
+  "lib": {
+    "name": "inout",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "split-inout",
+      "path": "tests/split-inout.rs"
+    }
+  ],
+  "dependencies": {
+    "block-padding": {
+      "version": "0.4.2",
+      "optional": true
+    },
+    "hybrid-array": {
+      "version": "0.4"
+    }
+  }
+}

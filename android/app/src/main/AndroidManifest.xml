@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <!-- Optional adb-granted IME switching. BoujoyInputMethod catches denial and supports the normal accessibility path without it. -->
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" tools:ignore="ProtectedPermissions" />
+    <queries>
+        <package android:name="ai.nidhoggfgg.phoneuse" />
+        <package android:name="moe.shizuku.privileged.api" />
+        <package android:name="com.tencent.mm" /><package android:name="com.tencent.mobileqq" />
+        <package android:name="com.google.android.gm" /><package android:name="com.microsoft.office.outlook" /><package android:name="com.samsung.android.email.provider" /><package android:name="com.xingin.xhs" /><package android:name="com.ss.android.ugc.aweme" /><package android:name="tv.danmaku.bili" />
+        <package android:name="org.telegram.messenger" /><package android:name="com.whatsapp" />
+    </queries>
+    <application android:allowBackup="false" android:dataExtractionRules="@xml/data_extraction_rules" android:usesCleartextTraffic="false"
+        android:label="${productName}" android:icon="@drawable/ic_boujoy" android:theme="@style/AppTheme"
+        android:supportsRtl="true">
+        <meta-data android:name="miui.rear.policy" android:value="${rearPolicy}" />
+        <provider android:name="rikka.shizuku.ShizukuProvider" android:authorities="${applicationId}.shizuku" android:multiprocess="false" android:enabled="${backgroundSupported}" android:exported="true" android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
+        <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTop" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="${bindScheme}" android:host="bind" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ShareBridgeActivity" android:exported="true" android:excludeFromRecents="true">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.INFO" /></intent-filter>
+        </activity>
+        <provider android:name=".AttachmentProvider" android:authorities="${applicationId}.attachments" android:exported="false" android:grantUriPermissions="true" />
+        <activity android:name=".DisplayWorkspaceActivity" android:enabled="${backgroundSupported}" android:exported="true" android:permission="android.permission.DUMP"
+            android:taskAffinity="${applicationId}.display.workspace" android:resizeableActivity="true" android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.Material.NoActionBar" />
+        <activity android:name=".RearStatusActivity" android:enabled="${backgroundSupported}" android:exported="true" android:permission="android.permission.DUMP" android:showWhenLocked="true"
+            android:launchMode="singleInstance" android:taskAffinity="${applicationId}.rear" android:resizeableActivity="true" android:excludeFromRecents="true" android:theme="@style/RearStatusTheme">
+            <meta-data android:name="miui.rear.policy" android:value="${rearPolicy}" />
+        </activity>
+        <service android:name=".BoujoyDisplayService" android:enabled="${backgroundSupported}" android:exported="true" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:label="${displayExecutorName}">
+            <intent-filter><action android:name="android.accessibilityservice.AccessibilityService" /></intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/display_accessibility" />
+        </service>
+        <activity android:name=".DisplayServiceSettingsActivity" android:enabled="${backgroundSupported}" android:exported="false" android:excludeFromRecents="true" />
+        <activity android:name=".HandoffActivity" android:enabled="${backgroundSupported}" android:exported="false" android:excludeFromRecents="true"
+            android:taskAffinity="${applicationId}.handoff" android:resizeableActivity="true" />
+        <activity android:name=".DemonstrationActivity" android:exported="false" />
+        <activity android:name=".BrowserActivity" android:exported="false" />
+        <service android:name=".BoujoyTypingService" android:exported="true" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:label="${wirelessTypingName}">
+            <intent-filter><action android:name="android.accessibilityservice.AccessibilityService" /></intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/typing_accessibility" />
+        </service>
+        <service android:name=".BoujoyInputMethod" android:exported="true" android:permission="android.permission.BIND_INPUT_METHOD" android:label="${imeName}">
+            <intent-filter><action android:name="android.view.InputMethod" /></intent-filter>
+            <meta-data android:name="android.view.im" android:resource="@xml/ime" />
+        </service>
+        <service android:name=".ConnectionService" android:exported="false" android:stopWithTask="false"
+            android:foregroundServiceType="specialUse">
+            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="User-enabled authenticated remote personal assistant connection and phone control; visible task status and local stop control" />
+        </service>
+        <receiver android:name=".BootReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

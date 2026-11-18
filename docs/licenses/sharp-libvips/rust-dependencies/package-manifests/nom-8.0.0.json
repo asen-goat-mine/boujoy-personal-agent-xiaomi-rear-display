@@ -1,0 +1,196 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.65.0",
+    "name": "nom",
+    "version": "8.0.0",
+    "authors": [
+      "contact@geoffroycouprie.com"
+    ],
+    "build": false,
+    "include": [
+      "CHANGELOG.md",
+      "LICENSE",
+      "README.md",
+      ".gitignore",
+      "Cargo.toml",
+      "src/*.rs",
+      "src/*/*.rs",
+      "tests/*.rs",
+      "doc/nom_recipes.md"
+    ],
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "A byte-oriented, zero-copy, parser combinators library",
+    "documentation": "https://docs.rs/nom",
+    "readme": "README.md",
+    "keywords": [
+      "parser",
+      "parser-combinators",
+      "parsing",
+      "streaming",
+      "bit"
+    ],
+    "categories": [
+      "parsing"
+    ],
+    "license": "MIT",
+    "repository": "https://github.com/rust-bakery/nom",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "all-features": true,
+          "features": [
+            "alloc",
+            "std",
+            "docsrs"
+          ],
+          "rustdoc-args": [
+            "--generate-link-to-definition"
+          ]
+        }
+      }
+    }
+  },
+  "profile": {
+    "bench": {
+      "lto": true,
+      "codegen-units": 1,
+      "debug": 2
+    }
+  },
+  "lib": {
+    "name": "nom",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "arithmetic",
+      "path": "tests/arithmetic.rs"
+    },
+    {
+      "name": "arithmetic_ast",
+      "path": "tests/arithmetic_ast.rs",
+      "required-features": [
+        "alloc"
+      ]
+    },
+    {
+      "name": "css",
+      "path": "tests/css.rs"
+    },
+    {
+      "name": "custom_errors",
+      "path": "tests/custom_errors.rs"
+    },
+    {
+      "name": "escaped",
+      "path": "tests/escaped.rs"
+    },
+    {
+      "name": "expression_ast",
+      "path": "tests/expression_ast.rs",
+      "required-features": [
+        "alloc"
+      ]
+    },
+    {
+      "name": "float",
+      "path": "tests/float.rs"
+    },
+    {
+      "name": "fnmut",
+      "path": "tests/fnmut.rs",
+      "required-features": [
+        "alloc"
+      ]
+    },
+    {
+      "name": "ini",
+      "path": "tests/ini.rs",
+      "required-features": [
+        "alloc"
+      ]
+    },
+    {
+      "name": "ini_str",
+      "path": "tests/ini_str.rs",
+      "required-features": [
+        "alloc"
+      ]
+    },
+    {
+      "name": "issues",
+      "path": "tests/issues.rs",
+      "required-features": [
+        "alloc"
+      ]
+    },
+    {
+      "name": "json",
+      "path": "tests/json.rs"
+    },
+    {
+      "name": "mp4",
+      "path": "tests/mp4.rs",
+      "required-features": [
+        "alloc"
+      ]
+    },
+    {
+      "name": "multiline",
+      "path": "tests/multiline.rs",
+      "required-features": [
+        "alloc"
+      ]
+    },
+    {
+      "name": "overflow",
+      "path": "tests/overflow.rs"
+    },
+    {
+      "name": "reborrow_fold",
+      "path": "tests/reborrow_fold.rs"
+    }
+  ],
+  "dependencies": {
+    "memchr": {
+      "version": "2.3",
+      "default-features": false
+    }
+  },
+  "dev-dependencies": {
+    "doc-comment": {
+      "version": "0.3"
+    },
+    "proptest": {
+      "version": "=1.0.0"
+    }
+  },
+  "features": {
+    "alloc": [],
+    "default": [
+      "std"
+    ],
+    "docsrs": [],
+    "std": [
+      "alloc",
+      "memchr/std"
+    ]
+  },
+  "badges": {
+    "coveralls": {
+      "branch": "main",
+      "repository": "Geal/nom",
+      "service": "github"
+    },
+    "maintenance": {
+      "status": "actively-developed"
+    },
+    "travis-ci": {
+      "repository": "Geal/nom"
+    }
+  }
+}

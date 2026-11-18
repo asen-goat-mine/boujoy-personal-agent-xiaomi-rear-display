@@ -1,0 +1,15 @@
+{
+  "package": {
+    "name": "rctree",
+    "version": "0.6.0",
+    "authors": [
+      "Simon Sapin <simon.sapin@exyr.org>",
+      "Yevhenii Reizner <razrfalcon@gmail.com>"
+    ],
+    "description": "A 'DOM-like' tree implemented using reference counting",
+    "documentation": "https://docs.rs/rctree/",
+    "readme": "README.md",
+    "license": "MIT",
+    "repository": "https://github.com/RazrFalcon/rctree"
+  }
+}

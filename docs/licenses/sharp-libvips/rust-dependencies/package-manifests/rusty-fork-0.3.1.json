@@ -1,0 +1,61 @@
+{
+  "package": {
+    "edition": "2018",
+    "name": "rusty-fork",
+    "version": "0.3.1",
+    "authors": [
+      "Jason Lingle"
+    ],
+    "build": false,
+    "exclude": [
+      "/gen-readme.sh",
+      "/readme-*.md"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Cross-platform library for running Rust tests in sub-processes using a\nfork-like interface.\n",
+    "documentation": "https://docs.rs/rusty-fork",
+    "readme": "README.md",
+    "keywords": [
+      "testing",
+      "process",
+      "fork"
+    ],
+    "categories": [
+      "development-tools::testing"
+    ],
+    "license": "MIT/Apache-2.0",
+    "repository": "https://github.com/altsysrq/rusty-fork"
+  },
+  "features": {
+    "default": [
+      "timeout"
+    ],
+    "timeout": [
+      "wait-timeout"
+    ]
+  },
+  "lib": {
+    "name": "rusty_fork",
+    "path": "src/lib.rs"
+  },
+  "dependencies": {
+    "fnv": {
+      "version": "1.0"
+    },
+    "quick-error": {
+      "version": "1.2"
+    },
+    "tempfile": {
+      "version": "3.0"
+    },
+    "wait-timeout": {
+      "version": "0.2",
+      "optional": true
+    }
+  },
+  "dev-dependencies": {}
+}

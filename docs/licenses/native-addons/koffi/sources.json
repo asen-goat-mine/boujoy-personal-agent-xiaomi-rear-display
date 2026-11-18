@@ -1,0 +1,82 @@
+{
+  "package": "koffi",
+  "version": "3.1.1",
+  "source_url": "https://registry.npmjs.org/koffi/-/koffi-3.1.1.tgz",
+  "source_sha256": "d6e3cb95f5d155d16cfe40f39ce09be18568c7f84dfb0b0722820a0da9e03b17",
+  "source_npm_integrity": "sha512-mRX6AMeeKCxSOeOopqAcLAl5jcNvge7NAG8l7rF/8gGJATI0tdHFYjteIdE0mGOtWdsrJOij+PjnP8Q9c1gwgA==",
+  "files": [
+    {
+      "file": "LICENSE.txt",
+      "sha256": "22bcbbbacd739b026a8dc484f62a31484ce4c4e31f3408b60b29b4e41d62b290",
+      "matches_published_npm": true
+    },
+    {
+      "file": "vendor/node-addon-api/LICENSE.md",
+      "sha256": "89024017b88a9f2b763f79b941a4f2db3b4428edfcacdc0b23866b2da633ad0c",
+      "matches_published_npm": true
+    },
+    {
+      "file": "vendor/node-api-headers/LICENSE",
+      "sha256": "a553508f516031c91f3af1148d44970cb81bbae6c4f091be6835d39cc252238c",
+      "matches_published_npm": true
+    },
+    {
+      "file": "lib/native/base/unicode.inc",
+      "sha256": "a337b5e53a6c72534fcf093c58d7fbf12f7b1075f068ea83a09c91e34373b5a4",
+      "matches_published_npm": true
+    }
+  ],
+  "notice_files": [
+    {
+      "file": "Koffi-LICENSE.txt",
+      "sha256": "22bcbbbacd739b026a8dc484f62a31484ce4c4e31f3408b60b29b4e41d62b290",
+      "size": 1117,
+      "published_source_member": "package/LICENSE.txt"
+    },
+    {
+      "file": "node-addon-api-LICENSE.md",
+      "sha256": "89024017b88a9f2b763f79b941a4f2db3b4428edfcacdc0b23866b2da633ad0c",
+      "size": 1150,
+      "published_source_member": "package/vendor/node-addon-api/LICENSE.md"
+    },
+    {
+      "file": "node-api-headers-LICENSE",
+      "sha256": "a553508f516031c91f3af1148d44970cb81bbae6c4f091be6835d39cc252238c",
+      "size": 1064,
+      "published_source_member": "package/vendor/node-api-headers/LICENSE"
+    },
+    {
+      "file": "Unicode-LICENSE-V3.txt",
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "size": 1995,
+      "source_url": "https://www.unicode.org/license.txt"
+    },
+    {
+      "file": "Unicode-16.0.0-ReadMe.txt",
+      "sha256": "14cafa23788d3a20dd21d6b0cdcb8d6dab520781fcd9ad9392f3b88ea607e633",
+      "size": 693,
+      "source_url": "https://www.unicode.org/Public/16.0.0/ucd/ReadMe.txt"
+    },
+    {
+      "file": "Unicode-16.0.0-source-header.txt",
+      "sha256": "6ff8551c9f26d4421e18a41ddca9f2765181bb873a88acfd586291170578d707",
+      "size": 376,
+      "source_url": "https://www.unicode.org/Public/16.0.0/ucd/DerivedCoreProperties.txt"
+    }
+  ],
+  "unicode_data": {
+    "version": "16.0.0",
+    "source_url": "https://www.unicode.org/Public/16.0.0/ucd/DerivedCoreProperties.txt",
+    "full_source_sha256": "39d35161f2954497f69e08bdb9e701493f476a3d30222de20028feda36c1dabd",
+    "evidence": "Shipped lib/native/base/unicode.inc identifies DerivedCoreProperties-16.0.0.txt and 2024-05-31 18:09:32 GMT; exact official source header agrees. The MIT header covers Koffi code; Unicode attribution is preserved separately.",
+    "license_snapshot_url": "https://www.unicode.org/license.txt",
+    "license_snapshot_sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "license_snapshot_note": "Unicode License V3 fetched during this distribution audit; current copyright year 2026 is retained verbatim, alongside the original 2024 data copyright header."
+  },
+  "native_package": {
+    "name": "@koromix/koffi-darwin-arm64",
+    "version": "3.1.1",
+    "source_url": "https://registry.npmjs.org/@koromix/koffi-darwin-arm64/-/koffi-darwin-arm64-3.1.1.tgz",
+    "shipped_native_sha256": "571168fbd60ffe51953b82e305cd721da603577649e8e58584f25233012253be"
+  }
+}

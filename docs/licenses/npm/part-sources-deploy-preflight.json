@@ -1,0 +1,1287 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "chainsaw",
+      "version": "0.1.0",
+      "repo": "substack/node-chainsaw",
+      "gitHead": null,
+      "license": "MIT/X11",
+      "verifiedInstalledMembers": [
+        {
+          "path": "index.js",
+          "sha256": "2fd46e18cf7cc2f90684023a951f0289c01316f4fb76cec197da14d0449106ba"
+        },
+        {
+          "path": ".npmignore",
+          "sha256": "16d30e4462189fb14dd611bdb708c510630c576a1f35b9383e89a4352da36c97"
+        },
+        {
+          "path": "package.json",
+          "sha256": "51910ad64abca4eb8c2c23abb2f713ba5220db89ed89c9fd198d27241a5a70ea"
+        },
+        {
+          "path": "README.markdown",
+          "sha256": "bab1502b1c34cf1ca7fa2086e576f127440f18a7a6b6cabaeb6b591d1cce3042"
+        },
+        {
+          "path": "examples/add_do.js",
+          "sha256": "7900369d6a1d3b475aebb21b5dc638a2893dc61289ea36d40d37b69a8c93d583"
+        },
+        {
+          "path": "examples/prompt.js",
+          "sha256": "3db7316b5bdcb6fa1814f8c48b81c874c43f2c55341cba2a8a731aab612579bf"
+        }
+      ],
+      "archiveSha256": "01586a6aa1d1174ae07aff69822d01e0704fe30f23ac22221c9b804bab976cfb",
+      "npmTarball": "https://registry.npmjs.org/chainsaw/-/chainsaw-0.1.0.tgz",
+      "npmIntegrity": "sha512-75kWfWt6MEKNC8xYXIdRpDehRYY/tNSgwKaJq+dbbDcxORuVrrQ+SEHoWsniVn9XPYfP4gmdWIeDk/4YNp1rNQ==",
+      "npmShasum": "5eab50b28afe58074d0d58291388828b5e5fbc98",
+      "declarationFile": "chainsaw-0.1.0/package-declaration.json",
+      "preservedFiles": [
+        {
+          "file": "chainsaw-0.1.0/README.markdown",
+          "sha256": "bab1502b1c34cf1ca7fa2086e576f127440f18a7a6b6cabaeb6b591d1cce3042",
+          "sourcePackageMember": "README.markdown",
+          "kind": "unchanged published package README and license declaration"
+        }
+      ],
+      "supplementalStandardTexts": [
+        "standard-texts/MIT.txt",
+        "standard-texts/X11.txt"
+      ],
+      "scope": "Original declared license and attribution retained. Standard text, where listed, is supplemental and is not labeled an original standalone upstream file."
+    },
+    {
+      "name": "https",
+      "version": "1.0.0",
+      "repo": null,
+      "gitHead": null,
+      "license": "ISC",
+      "verifiedInstalledMembers": [
+        {
+          "path": "package.json",
+          "sha256": "30cc493ed51f008e9e1d0d0730759183294f9d1b39798032ee341dc6a17399f7"
+        }
+      ],
+      "archiveSha256": "7d6cc44a6471377a9299371e4d207cd2607bbaf7bcca1b220c8bd6831fbbe645",
+      "npmTarball": "https://registry.npmjs.org/https/-/https-1.0.0.tgz",
+      "npmIntegrity": "sha512-4EC57ddXrkaF0x83Oj8sM6SLQHAWXw90Skqu2M4AEWENZ3F02dFJE/GARA8igO79tcgYqGrD7ae4f5L3um2lgg==",
+      "npmShasum": "3c37c7ae1a8eeb966904a2ad1e975a194b7ed3a4",
+      "declarationFile": "https-1.0.0/package-declaration.json",
+      "preservedFiles": [],
+      "supplementalStandardTexts": [
+        "standard-texts/ISC.txt"
+      ],
+      "scope": "Original declared license and attribution retained. Standard text, where listed, is supplemental and is not labeled an original standalone upstream file."
+    },
+    {
+      "name": "saxes",
+      "version": "5.0.1",
+      "repo": "lddubeau/saxes",
+      "gitHead": null,
+      "license": "ISC",
+      "verifiedInstalledMembers": [
+        {
+          "path": "saxes.js",
+          "sha256": "68e8f0dc9fb3237a481132211ba779865ce80b25e11fc03d1dbcf4dfc67ed5fb"
+        },
+        {
+          "path": "package.json",
+          "sha256": "5730864bc76e7b0e2072c87756c8e73f56e0ca840337fecdedcd3e35e1e191c2"
+        },
+        {
+          "path": "saxes.js.map",
+          "sha256": "775378adc052c9817a18dd9a8cfa33a055f37376d80d686e6073cf6b4af101d0"
+        },
+        {
+          "path": "README.md",
+          "sha256": "ade6061f7c778cdd868d9b0f711530e4c1ec1f33767222ce33bb05e295bf6f0c"
+        },
+        {
+          "path": "saxes.d.ts",
+          "sha256": "256193be63c8fe7d0ca5c5e52961520048ace366fd364d4f449fff3e6c74f752"
+        }
+      ],
+      "archiveSha256": "d39d114627a8c29d1c26fb295dc4c1b81e8805a619f827d39177dfc39904a24b",
+      "npmTarball": "https://registry.npmjs.org/saxes/-/saxes-5.0.1.tgz",
+      "npmIntegrity": "sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==",
+      "npmShasum": "eebab953fa3b7608dbe94e5dadb15c888fa6696d",
+      "declarationFile": "saxes-5.0.1/package-declaration.json",
+      "preservedFiles": [
+        {
+          "file": "saxes-5.0.1/LICENSE",
+          "sha256": "0fac2374380621b22e6b50451057721a9c52935b02d16d106a9f04897f061d0e",
+          "sourceUrl": "https://raw.githubusercontent.com/lddubeau/saxes/v5.0.1/LICENSE",
+          "kind": "unchanged original upstream license"
+        },
+        {
+          "file": "saxes-5.0.1/README.md",
+          "sha256": "ade6061f7c778cdd868d9b0f711530e4c1ec1f33767222ce33bb05e295bf6f0c",
+          "sourcePackageMember": "README.md",
+          "kind": "unchanged published package README and license declaration"
+        }
+      ],
+      "supplementalStandardTexts": [],
+      "scope": "Original declared license and attribution retained. Standard text, where listed, is supplemental and is not labeled an original standalone upstream file."
+    },
+    {
+      "name": "binary",
+      "version": "0.3.0",
+      "repo": "substack/node-binary",
+      "gitHead": null,
+      "license": "MIT",
+      "verifiedInstalledMembers": [
+        {
+          "path": "package.json",
+          "sha256": "355ec61b56448e3d9ad74b286fa07e1b18bcbf153f45223b1a4f68d86bec891f"
+        },
+        {
+          "path": ".npmignore",
+          "sha256": "16d30e4462189fb14dd611bdb708c510630c576a1f35b9383e89a4352da36c97"
+        },
+        {
+          "path": "index.js",
+          "sha256": "f8a30b774d7aa965de3d4d103c5370fd2c63ac4eb9bb5d8713dab72845a090c0"
+        },
+        {
+          "path": "example/stream.js",
+          "sha256": "74aa3b8e1e1e65ac3950b61bdaa66a318c379f0fbfbfb3101dcfa55f77635709"
+        },
+        {
+          "path": "example/parse.js",
+          "sha256": "2a4adae48b7a07ad3cbcc40a328cfebdf368f333ff426516e76c6e20b74a1564"
+        },
+        {
+          "path": "example/buf.js",
+          "sha256": "73b94c828aa813e32b6a7cff06aec1fa48a27dfab721650345e875f8b0c7dddf"
+        },
+        {
+          "path": "perf/small.js",
+          "sha256": "deb223d8ac6a59badae530c72c9be3bdcf3924f1ab94770cf04ce632484ee38d"
+        },
+        {
+          "path": "perf/loop.js",
+          "sha256": "43e773cfd321d5b61adc9cfd7b182c0faa5f62dcd0f1fd57a70ab7d6a07abebc"
+        },
+        {
+          "path": ".travis.yml",
+          "sha256": "dc3b4379f4671f3771341b866a8b9d7ff954a65e9152056b8166747dfb343d19"
+        },
+        {
+          "path": "lib/vars.js",
+          "sha256": "4d5e62cf705b95d5f464390cbb76a42264cb5af5d466fedffe93138d8290f8bf"
+        },
+        {
+          "path": "README.markdown",
+          "sha256": "0088ddd654bee85917fa48e9e13721fb07437e68f21423e19d9d3734213c9f59"
+        }
+      ],
+      "archiveSha256": "940bc9b40fb2a875876e3ca1be3d05a7a419881e4201c76c83ffbb05568b6909",
+      "npmTarball": "https://registry.npmjs.org/binary/-/binary-0.3.0.tgz",
+      "npmIntegrity": "sha512-D4H1y5KYwpJgK8wk1Cue5LLPgmwHKYSChkbspQg5JtVuR5ulGckxfR62H3AE9UDkdMC8yyXlqYihuz3Aqg2XZg==",
+      "npmShasum": "9f60553bc5ce8c3386f3b553cff47462adecaa79",
+      "declarationFile": "binary-0.3.0/package-declaration.json",
+      "preservedFiles": [
+        {
+          "file": "binary-0.3.0/README.markdown",
+          "sha256": "0088ddd654bee85917fa48e9e13721fb07437e68f21423e19d9d3734213c9f59",
+          "sourcePackageMember": "README.markdown",
+          "kind": "unchanged published package README and license declaration"
+        }
+      ],
+      "supplementalStandardTexts": [
+        "standard-texts/MIT.txt"
+      ],
+      "scope": "Original declared license and attribution retained. Standard text, where listed, is supplemental and is not labeled an original standalone upstream file."
+    },
+    {
+      "name": "dfa",
+      "version": "1.2.0",
+      "repo": "devongovett/dfa",
+      "gitHead": "3f5e603e5082caedabefefdf53e8a6ca3111e966",
+      "license": "MIT",
+      "verifiedInstalledMembers": [
+        {
+          "path": "package.json",
+          "sha256": "96c0ce3cc17b34aabd58fd442157766d9e244cba735e54ee4fe10d7841f0460c"
+        },
+        {
+          "path": "compile.js",
+          "sha256": "fc1362901ed557e189957f374d1550bc771b10738d16133d7ce7fdeba9de19a2"
+        },
+        {
+          "path": "compile.js.map",
+          "sha256": "0b33b80836a944fcf6a75d2d6ece0ab8297c71de78ab6004bdb80aada4ee0726"
+        },
+        {
+          "path": "index.js",
+          "sha256": "1781af74f714561763b2f405b6764d4141876acc167fb0c0aa7160374f97f5ab"
+        },
+        {
+          "path": "index.js.map",
+          "sha256": "ee08a6bc4249c4d06e45f4584727d3a3718fe686cf610f7e3a61e6587ab21021"
+        },
+        {
+          "path": "README.md",
+          "sha256": "30bd445925aa53205ff7f9afa6a43e21358fab656e471df6e028431aefc426c7"
+        }
+      ],
+      "archiveSha256": "d781eb3a307ab6aa2d97028f695b17dbeadf6fd27788c333b1fb96d18d2a23ad",
+      "npmTarball": "https://registry.npmjs.org/dfa/-/dfa-1.2.0.tgz",
+      "npmIntegrity": "sha512-ED3jP8saaweFTjeGX8HQPjeC1YYyZs98jGNZx6IiBvxW7JG5v492kamAQB3m2wop07CvU/RQmzcKr6bgcC5D/Q==",
+      "npmShasum": "96ac3204e2d29c49ea5b57af8d92c2ae12790657",
+      "declarationFile": "dfa-1.2.0/package-declaration.json",
+      "preservedFiles": [
+        {
+          "file": "dfa-1.2.0/README.md",
+          "sha256": "30bd445925aa53205ff7f9afa6a43e21358fab656e471df6e028431aefc426c7",
+          "sourcePackageMember": "README.md",
+          "kind": "unchanged published package README and license declaration"
+        }
+      ],
+      "supplementalStandardTexts": [
+        "standard-texts/MIT.txt"
+      ],
+      "scope": "Original declared license and attribution retained. Standard text, where listed, is supplemental and is not labeled an original standalone upstream file."
+    },
+    {
+      "name": "brotli",
+      "version": "1.3.3",
+      "repo": "devongovett/brotli.js",
+      "gitHead": "e36051345f6d27a56e5f39ea70d2f789b8574046",
+      "license": "MIT",
+      "verifiedInstalledMembers": [
+        {
+          "path": "dec/bit_reader.js",
+          "sha256": "1c7488ebdbcb2dba8a61965f5458452fe8cac38c06c3db0cc5184408a5aacf77"
+        },
+        {
+          "path": "compress.js",
+          "sha256": "81558c8990d1f70e85495b75f95abb85303c150774fa7a1cb065521c444e14b3"
+        },
+        {
+          "path": "dec/context.js",
+          "sha256": "5cd72c7ce643693ff902cd9c1ada003b45f70b4daec1bfb1a6a4a842efca811e"
+        },
+        {
+          "path": "dec/decode.js",
+          "sha256": "f66d1fd1ea9e54c843b7f5f4bc02cf028f28fed69404f279f86869b097dace5e"
+        },
+        {
+          "path": "decompress.js",
+          "sha256": "a8aa73fda6d64d69ddc097d75b309322c190d1c733a2d4321c053b79c4a9cc9b"
+        },
+        {
+          "path": "dec/dictionary-browser.js",
+          "sha256": "97ed5f277433f6888753ee5ed6c7a091ac66b68a7d09088f6fa4d1960dedf7fc"
+        },
+        {
+          "path": "dec/dictionary-data.js",
+          "sha256": "e2a9bd8348d01afc08f49730d08b7f33fc5dbbc198cdea54da49afbeae45da4d"
+        },
+        {
+          "path": "dec/dictionary.bin.js",
+          "sha256": "ac06c0a4b369ac16cb604b3dbacf0d5c739579e9324fffbb4388a7478a03c06c"
+        },
+        {
+          "path": "dec/dictionary.js",
+          "sha256": "f7bd7462acad204047edc609009dfeb28239f14fe6f06ca42661f1d751382946"
+        },
+        {
+          "path": "build/encode.js",
+          "sha256": "03420f6145016577d87df245c6a98d4b0dfcbc4852befd4c0282d948d9422b91"
+        },
+        {
+          "path": "dec/huffman.js",
+          "sha256": "69cb67902c20896c89ae679d7c71b1f2274b34c51d4b235865396187f6d7e572"
+        },
+        {
+          "path": "index.js",
+          "sha256": "d3cc8a963b9f5f18fcc60850e5d678fee68db7c286afa2fe55d92974ea77c3e5"
+        },
+        {
+          "path": "build/mem.js",
+          "sha256": "6c2ffec2e5acd4a3181c3e5e57ac173d2bdd695458e7cecaec7ae85001b9ebb7"
+        },
+        {
+          "path": "enc/pre.js",
+          "sha256": "3339040edf8854a6a595e529b4e4eed8d3f7d35e67dfb1db3fd2d86da398e528"
+        },
+        {
+          "path": "dec/prefix.js",
+          "sha256": "e65fb2183d6fc1058020ba55939ea08334d39ae33bf4832d952d9acab5db2d8a"
+        },
+        {
+          "path": "dec/streams.js",
+          "sha256": "90e23fca221adbfafd4cda38934920648781f4bb65d993fd6187fb7b270513ea"
+        },
+        {
+          "path": "dec/transform.js",
+          "sha256": "56c0ebea0ce70b4d7afa7225eca2e5c9e0046dbdc9a4d6b568c5d5f4b47f170b"
+        },
+        {
+          "path": "package.json",
+          "sha256": "387b47d00ea96cab9b4c521629fbcdc7621053ac061812526f3c69700924cef5"
+        },
+        {
+          "path": "readme.md",
+          "sha256": "8a8bac543fccf52a64708ff3315ca2be90e3e4c270634df1e4e4b51f0ee9c5d7"
+        }
+      ],
+      "archiveSha256": "3c7c260f6263df95fee49a9119e9fd21227d628b6c9d99080a75edfd9e2bdb24",
+      "npmTarball": "https://registry.npmjs.org/brotli/-/brotli-1.3.3.tgz",
+      "npmIntegrity": "sha512-oTKjJdShmDuGW94SyyaoQvAjf30dZaHnjJ8uAF+u2/vGJkJbJPJAT1gDiOJP5v1Zb6f9KEyW/1HpuaWIXtGHPg==",
+      "npmShasum": "7365d8cc00f12cf765d2b2c898716bcf4b604d48",
+      "declarationFile": "brotli-1.3.3/package-declaration.json",
+      "preservedFiles": [
+        {
+          "file": "brotli-1.3.3/google-brotli-LICENSE",
+          "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+          "sourceUrl": "https://raw.githubusercontent.com/google/brotli/5ce9bf11b3fe0924d87b2a2d47eb7a53a76a4421/LICENSE",
+          "kind": "unchanged original upstream license"
+        },
+        {
+          "file": "brotli-1.3.3/readme.md",
+          "sha256": "8a8bac543fccf52a64708ff3315ca2be90e3e4c270634df1e4e4b51f0ee9c5d7",
+          "sourcePackageMember": "readme.md",
+          "kind": "unchanged published package README and license declaration"
+        },
+        {
+          "file": "brotli-1.3.3/Google-decoder-original-header.txt",
+          "sha256": "bc670957aaf188b069c48d4afe455bf0c276ec0f37994bdf435e3ad89e22a8a8",
+          "sourcePackageMember": "dec/decode.js",
+          "sourceLines": "1-14",
+          "kind": "unchanged Apache-2.0 copyright/license header excerpt"
+        }
+      ],
+      "supplementalStandardTexts": [
+        "standard-texts/MIT.txt",
+        "standard-texts/Apache-2.0.txt"
+      ],
+      "scope": "Original declared license and attribution retained. Standard text, where listed, is supplemental and is not labeled an original standalone upstream file."
+    },
+    {
+      "name": "standardwebhooks",
+      "version": "1.1.1",
+      "repo": "standard-webhooks/standard-webhooks",
+      "gitHead": "b4d2c14fc5b4ccff3ff271e3b087dff812254c59",
+      "license": "MIT",
+      "verifiedInstalledMembers": [
+        {
+          "path": "dist/index.js",
+          "sha256": "7dc47b591774d44680060e16473041c449329fa1e5c7264666a37d4aea461437"
+        },
+        {
+          "path": "dist/timing_safe_equal.js",
+          "sha256": "ce12efbf5a53a8bc985879ed2e413b9cb4d0f90b2b931603a05fb121a183b0ba"
+        },
+        {
+          "path": "package.json",
+          "sha256": "686397f0f0202e0b693cfd3f6241d7a8da3df326f9642867a484fbbd295690b6"
+        },
+        {
+          "path": "dist/index.js.map",
+          "sha256": "1041f73ba706ccca1b9d702a310542caa16078178b255e5f375469242d80fa19"
+        },
+        {
+          "path": "dist/timing_safe_equal.js.map",
+          "sha256": "f9a22d0889b5ff452549240669f190e99d07be6eb8bb98172268c8e064a2316c"
+        },
+        {
+          "path": "README.md",
+          "sha256": "d904d315274ae461f19d32dc96e3da1f0dc567ede4075258dc57a465ddb8f1a8"
+        },
+        {
+          "path": "dist/index.d.ts",
+          "sha256": "05bc35926e83e201c43dce6c4beab37d9d636b15d1a2ddb66991f31e3dceeffa"
+        },
+        {
+          "path": "dist/timing_safe_equal.d.ts",
+          "sha256": "55907f4c2a9ae826aa9d3f0aae64e45b2f510be810fa5da63e78d18784b38d64"
+        }
+      ],
+      "archiveSha256": "d0bc8fec280c9e30ea3cbc876f44fe71d56f443aeca2bd2bdf745718308d4aed",
+      "npmTarball": "https://registry.npmjs.org/standardwebhooks/-/standardwebhooks-1.1.1.tgz",
+      "npmIntegrity": "sha512-bCbX9ZEyFkWPsRz7Bl3NuQUJohmwGSev/yhr7vhaGPlc4AfIrspIRa6cPTBuI1ItmrTDJ4d/S2hCsfe4+vQGnQ==",
+      "npmShasum": "25b98fa2bbe4edad7b42778135c923563e3d5e2f",
+      "declarationFile": "standardwebhooks-1.1.1/package-declaration.json",
+      "preservedFiles": [
+        {
+          "file": "standardwebhooks-1.1.1/libraries-LICENSE",
+          "sha256": "5ec8c7b26b64d881a6706617bed25c049f97f2f35de034c756de8546fd6dbe27",
+          "sourceUrl": "https://raw.githubusercontent.com/standard-webhooks/standard-webhooks/b4d2c14fc5b4ccff3ff271e3b087dff812254c59/libraries/LICENSE",
+          "kind": "unchanged original upstream license"
+        },
+        {
+          "file": "standardwebhooks-1.1.1/README.md",
+          "sha256": "d904d315274ae461f19d32dc96e3da1f0dc567ede4075258dc57a465ddb8f1a8",
+          "sourcePackageMember": "README.md",
+          "kind": "unchanged published package README and license declaration"
+        }
+      ],
+      "supplementalStandardTexts": [],
+      "scope": "libraries/LICENSE governs the JavaScript library; the repository-root Apache license is not substituted."
+    },
+    {
+      "name": "saxes",
+      "version": "6.0.0",
+      "repo": "lddubeau/saxes",
+      "gitHead": "211fa0ebec9b628affc09219199639887174bfc3",
+      "license": "ISC",
+      "verifiedInstalledMembers": [
+        {
+          "path": "saxes.js",
+          "sha256": "d00e2ba27ed7d6ac961d03ff14d6b8c0eb5bf063ed2c996c22c6df06ac121423"
+        },
+        {
+          "path": "package.json",
+          "sha256": "32052572b41c2a890ed0854798c48454cc5991dcaafe5fb1718a4253046acfd3"
+        },
+        {
+          "path": "saxes.js.map",
+          "sha256": "bf0ebc4bc6bec1a50bf91fab8b5460212e753becea10409082edac58fa8c7d6c"
+        },
+        {
+          "path": "README.md",
+          "sha256": "ade6061f7c778cdd868d9b0f711530e4c1ec1f33767222ce33bb05e295bf6f0c"
+        },
+        {
+          "path": "saxes.d.ts",
+          "sha256": "a795d722f71f114bbb73ad6fbde87c11e3b64af808f91183e1db601ff456d37f"
+        }
+      ],
+      "archiveSha256": "1cdf52fbbe1ccbd175c365d2b8e63f46e590e74aff23fa6a44a6ec51522e96db",
+      "npmTarball": "https://registry.npmjs.org/saxes/-/saxes-6.0.0.tgz",
+      "npmIntegrity": "sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==",
+      "npmShasum": "fe5b4a4768df4f14a201b1ba6a65c1f3d9988cc5",
+      "declarationFile": "saxes-6.0.0/package-declaration.json",
+      "preservedFiles": [
+        {
+          "file": "saxes-6.0.0/LICENSE",
+          "sha256": "0fac2374380621b22e6b50451057721a9c52935b02d16d106a9f04897f061d0e",
+          "sourceUrl": "https://raw.githubusercontent.com/lddubeau/saxes/211fa0ebec9b628affc09219199639887174bfc3/LICENSE",
+          "kind": "unchanged original upstream license"
+        },
+        {
+          "file": "saxes-6.0.0/README.md",
+          "sha256": "ade6061f7c778cdd868d9b0f711530e4c1ec1f33767222ce33bb05e295bf6f0c",
+          "sourcePackageMember": "README.md",
+          "kind": "unchanged published package README and license declaration"
+        }
+      ],
+      "supplementalStandardTexts": [],
+      "scope": "Original declared license and attribution retained. Standard text, where listed, is supplemental and is not labeled an original standalone upstream file."
+    },
+    {
+      "name": "proxy-agent-negotiate",
+      "version": "1.1.0",
+      "repo": "TooTallNate/proxy-agents",
+      "gitHead": null,
+      "license": "MIT",
+      "verifiedInstalledMembers": [
+        {
+          "path": "dist/index.js",
+          "sha256": "56f33d231c16933054a0dddc665abdc8514d952c84fa96b245e841875d05f5e5"
+        },
+        {
+          "path": "package.json",
+          "sha256": "7b7c2579ea138d20d4f7699ca78ef16c526f35168dbf694f1d47cc861b0954d4"
+        },
+        {
+          "path": "dist/index.d.ts.map",
+          "sha256": "4ade5fadd6dd7bcceb0663cf631e78dedca5a2243501e53b8a6c019a32f82bc5"
+        },
+        {
+          "path": "dist/index.js.map",
+          "sha256": "cff70853e95eda06a4427db41c4cd5fa93d2d794ae4198c3ab4f7468450c3f9e"
+        },
+        {
+          "path": "dist/index.d.ts",
+          "sha256": "3568fa0be646ebf28f9ead14e0c8fe3c7c6fb2bc846fc248f4161f02d7dbf423"
+        }
+      ],
+      "archiveSha256": "6eec23d5d381a8b0ffafe91c19876d3a052e463618695981a7529f3a8bca1997",
+      "npmTarball": "https://registry.npmjs.org/proxy-agent-negotiate/-/proxy-agent-negotiate-1.1.0.tgz",
+      "npmIntegrity": "sha512-N8IBcM3UgCVzz2L2Lqv8DVntDnnC8/hiV4nEDUPkqq72TPUgYWjQc+bdZlBPZK9LzPAvOY//gAt0S0DApoOXWQ==",
+      "npmShasum": "de7d37aede9d71e74346125d6f484fac8092b615",
+      "declarationFile": "proxy-agent-negotiate-1.1.0/package-declaration.json",
+      "preservedFiles": [],
+      "supplementalStandardTexts": [
+        "standard-texts/MIT.txt"
+      ],
+      "scope": "Original declared license and attribution retained. Standard text, where listed, is supplemental and is not labeled an original standalone upstream file."
+    },
+    {
+      "name": "@xterm/addon-serialize",
+      "version": "0.14.0",
+      "repo": "xtermjs/xterm.js",
+      "gitHead": "f447274f430fd22513f6adbf9862d19524471c04",
+      "license": "MIT",
+      "verifiedInstalledMembers": [
+        {
+          "path": "lib/addon-serialize.js",
+          "sha256": "65d8dd7c2b3b37a77f583ea5e0d14a23bbcc846e4ae0d6bb534ae12a380aea0d"
+        },
+        {
+          "path": "package.json",
+          "sha256": "48b1c275c67f141828765fbf188457c430827c333dba069fe4520cbedb729763"
+        },
+        {
+          "path": "lib/addon-serialize.js.map",
+          "sha256": "f06070a76cc7f7111f322acd258cc2bb542f858f7f0fcb504600920ce6ee102b"
+        },
+        {
+          "path": "lib/addon-serialize.mjs.map",
+          "sha256": "3c5bae38b18976df4b41215a367dd3d1204116aafa78cf9a58d4f4d0e8145dbb"
+        },
+        {
+          "path": "README.md",
+          "sha256": "0040f50d822389a04071a3bb6c6543bac09b95d7e0557be88029abc8676d1431"
+        },
+        {
+          "path": "lib/addon-serialize.mjs",
+          "sha256": "6c93dff90bef3b7aac8664fa4c1cb4026bf4b701f3014a1fb88edde943dab906"
+        },
+        {
+          "path": "typings/addon-serialize.d.ts",
+          "sha256": "ab358d5241c4c8f64d333e182189c97cbc5e581610c817b2284aaf0386e99ac5"
+        },
+        {
+          "path": "src/SerializeAddon.ts",
+          "sha256": "a1ed69d294d0e013aafb4e70c9a9a66c36550a410946eddb03a47d66b92a0405"
+        }
+      ],
+      "archiveSha256": "f9a290923dc9c6178446e3fc082c29812a7096a1664fd7bf904022c141c5bbfb",
+      "npmTarball": "https://registry.npmjs.org/@xterm/addon-serialize/-/addon-serialize-0.14.0.tgz",
+      "npmIntegrity": "sha512-uteyTU1EkrQa2Ux6P/uFl2fzmXI46jy5uoQMKEOM0fKTyiW7cSn0WrFenHm5vO5uEXX/GpwW/FgILvv3r0WbkA==",
+      "npmShasum": "70c9f6dcd4632b086a0aa0deafd0e26e7482843b",
+      "declarationFile": "@xterm--addon-serialize-0.14.0/package-declaration.json",
+      "preservedFiles": [
+        {
+          "file": "@xterm--addon-serialize-0.14.0/LICENSE",
+          "sha256": "b569f629d00f2626a8100df2a1798210535621e42164dfd426a6fe5aac7b0ccd",
+          "sourceUrl": "https://raw.githubusercontent.com/xtermjs/xterm.js/f447274f430fd22513f6adbf9862d19524471c04/LICENSE",
+          "kind": "unchanged original upstream license"
+        },
+        {
+          "file": "@xterm--addon-serialize-0.14.0/README.md",
+          "sha256": "0040f50d822389a04071a3bb6c6543bac09b95d7e0557be88029abc8676d1431",
+          "sourcePackageMember": "README.md",
+          "kind": "unchanged published package README and license declaration"
+        }
+      ],
+      "supplementalStandardTexts": [],
+      "scope": "Original declared license and attribution retained. Standard text, where listed, is supplemental and is not labeled an original standalone upstream file."
+    },
+    {
+      "name": "@xterm/headless",
+      "version": "6.0.0",
+      "repo": "xtermjs/xterm.js",
+      "gitHead": "f447274f430fd22513f6adbf9862d19524471c04",
+      "license": "MIT",
+      "verifiedInstalledMembers": [
+        {
+          "path": "lib-headless/xterm-headless.js",
+          "sha256": "17a90b650cf6b77cce2b98c4063884d43545e4ce177a54b76ccfc906f1aacaed"
+        },
+        {
+          "path": "package.json",
+          "sha256": "6c39530ee759998113bd8bcc306d1b725c0b1d5b0cdc04e071f6945a5f5edf1a"
+        },
+        {
+          "path": "lib-headless/xterm-headless.js.map",
+          "sha256": "780e782badc8189491a469c9277b783e01911882ea84417b31e71294ea927d98"
+        },
+        {
+          "path": "lib-headless/xterm-headless.mjs.map",
+          "sha256": "aa22417fd3552189dd764ad1f99251aeb6d3c30d9b9c578a022a2aba2c1c0827"
+        },
+        {
+          "path": "README.md",
+          "sha256": "9742d0d89959f62b7a120b793c429212776db7adca1f50b8080e9a557de1342b"
+        },
+        {
+          "path": "lib-headless/xterm-headless.mjs",
+          "sha256": "b27576b6bef6610be97e55a959319baa8a6b1a4fae629d49926971a536428c7a"
+        },
+        {
+          "path": "typings/xterm-headless.d.ts",
+          "sha256": "d157ac3b7ddd0c72fb522631860ebd8b12009a55c1fd8f4730c72c244f6b9640"
+        }
+      ],
+      "archiveSha256": "07e4970b1674e7ef6cbd57c8c17746eaadcd41aa7df5b33695fd649e6ec4d78a",
+      "npmTarball": "https://registry.npmjs.org/@xterm/headless/-/headless-6.0.0.tgz",
+      "npmIntegrity": "sha512-5Yj1QINYCyzrZtf8OFIHi47iQtI+0qYFPHmouEfG8dHNxbZ9Tb9YGSuLcsEwj9Z+OL75GJqPyJbyoFer80a2Hw==",
+      "npmShasum": "a839dee397c49834bb220fa5951d60f4b7f0aa11",
+      "declarationFile": "@xterm--headless-6.0.0/package-declaration.json",
+      "preservedFiles": [
+        {
+          "file": "@xterm--headless-6.0.0/LICENSE",
+          "sha256": "b569f629d00f2626a8100df2a1798210535621e42164dfd426a6fe5aac7b0ccd",
+          "sourceUrl": "https://raw.githubusercontent.com/xtermjs/xterm.js/f447274f430fd22513f6adbf9862d19524471c04/LICENSE",
+          "kind": "unchanged original upstream license"
+        },
+        {
+          "file": "@xterm--headless-6.0.0/README.md",
+          "sha256": "9742d0d89959f62b7a120b793c429212776db7adca1f50b8080e9a557de1342b",
+          "sourcePackageMember": "README.md",
+          "kind": "unchanged published package README and license declaration"
+        }
+      ],
+      "supplementalStandardTexts": [],
+      "scope": "Original declared license and attribution retained. Standard text, where listed, is supplemental and is not labeled an original standalone upstream file."
+    },
+    {
+      "name": "@nodable/entities",
+      "version": "3.1.0",
+      "repo": "nodable/val-parsers",
+      "gitHead": "ac48e7ea591da372be023a481875c747535812b3",
+      "license": "MIT",
+      "verifiedInstalledMembers": [
+        {
+          "path": "src/all-entities.js",
+          "sha256": "2f1340ab32dce314f41638b7ee6d0368b974e3302983154b815a6d49a6dfb63b"
+        },
+        {
+          "path": "src/entities.js",
+          "sha256": "96ec5d127a4e8cd77bdc678422f0d57c8ff9e37bcec999983da71a7b72ce9a0e"
+        },
+        {
+          "path": "src/EntityDecoder.js",
+          "sha256": "a56cf2bf8174e0adf94970d70e003afcfc3923a53d0cf973f92d374cfe684544"
+        },
+        {
+          "path": "src/EntityEncoder.js",
+          "sha256": "812a2077e073564d6470b8fda8ac0d20ecaaf75ddb1594d55d28acc2da8a1a71"
+        },
+        {
+          "path": "src/entityTries.js",
+          "sha256": "fa2838d141fba0e8ee5bd2197956c3f6b1d23668be2c8841a585614ea7051f99"
+        },
+        {
+          "path": "src/index.js",
+          "sha256": "79a65ddeda08664d00b7b82f5a903ea437de1dff54a02ed469e9cb1067cb568b"
+        },
+        {
+          "path": "package.json",
+          "sha256": "81fc13661f9431f9f72ae5a1723482a1bcb473af463b93ca0b27c42461a6c6c9"
+        },
+        {
+          "path": "README.md",
+          "sha256": "7e3484a07c208b5c5813290a993244c6841efc3d4241c29a07ef948e8129a758"
+        },
+        {
+          "path": "src/index.d.ts",
+          "sha256": "f66cce05456e7b56b60d6356e8b42910abc1ae7dacf3cf37e17b05bf67d55304"
+        }
+      ],
+      "archiveSha256": "3b7cbfe696f570ada57df3eb6981f6c668737a2158ec88a53134f243f9f1db8e",
+      "npmTarball": "https://registry.npmjs.org/@nodable/entities/-/entities-3.1.0.tgz",
+      "npmIntegrity": "sha512-LsS/DjHr+uDM647Gru/cA8+J3a3HfhttwCKLyuoyN7yXTFCxKBtSgMQBvrW9yNPa2/zDRUNuGPaH5QUFoa4arQ==",
+      "npmShasum": "2ab366e0e607fdef8d65c5d84c58d191812bbd4b",
+      "declarationFile": "@nodable--entities-3.1.0/package-declaration.json",
+      "preservedFiles": [
+        {
+          "file": "@nodable--entities-3.1.0/LICENSE",
+          "sha256": "750cb3fb6362804957ef52caaf9b5c824015be44d494637330d7cd8834d31d40",
+          "sourceUrl": "https://raw.githubusercontent.com/nodable/val-parsers/ac48e7ea591da372be023a481875c747535812b3/LICENSE",
+          "kind": "unchanged original upstream license"
+        },
+        {
+          "file": "@nodable--entities-3.1.0/README.md",
+          "sha256": "7e3484a07c208b5c5813290a993244c6841efc3d4241c29a07ef948e8129a758",
+          "sourcePackageMember": "README.md",
+          "kind": "unchanged published package README and license declaration"
+        }
+      ],
+      "supplementalStandardTexts": [],
+      "scope": "Original declared license and attribution retained. Standard text, where listed, is supplemental and is not labeled an original standalone upstream file."
+    },
+    {
+      "name": "fontkit",
+      "version": "2.0.4",
+      "repo": "foliojs/fontkit",
+      "gitHead": "fbf3b9ef21eebd219eb73e666faed573af0fba09",
+      "license": "MIT",
+      "verifiedInstalledMembers": [
+        {
+          "path": "dist/browser.cjs",
+          "sha256": "799c5e068e08e29b002924e272ea9e816c9c56a8512b267d3bf978e94ef3fbf0"
+        },
+        {
+          "path": "dist/main.cjs",
+          "sha256": "1cac5f3c126952095df9cb84bd2bef8230c7133ee1aeb119b2de85d3053fd245"
+        },
+        {
+          "path": "src/tables/aat.js",
+          "sha256": "0745f365032f6eedcb9302a692e8dbe5b4bbd4dfc3fcfc02e77176bbc2738364"
+        },
+        {
+          "path": "src/aat/AATFeatureMap.js",
+          "sha256": "ce123c0b83e51d12e0383f35a7d8ac1bf1e1e3afdc2c726dd6767afbd8710896"
+        },
+        {
+          "path": "src/aat/AATLayoutEngine.js",
+          "sha256": "3e4f12e6cbfe266d26886518ab4f5b240024afd7bb1117f06b6a426ec56e0b9f"
+        },
+        {
+          "path": "src/aat/AATLookupTable.js",
+          "sha256": "484a5b421c0a7f6731265e73edb7243ad5274ddb727b1ca4f7602ec9b4b8d962"
+        },
+        {
+          "path": "src/aat/AATMorxProcessor.js",
+          "sha256": "fbd2c4d55c7f2b0f72b81d99e7d36fbc5c17db44d60eb84a85180a31ecbe5f9a"
+        },
+        {
+          "path": "src/aat/AATStateMachine.js",
+          "sha256": "dc6189803bbe903457dfb3ecb976eef5779ef21c91ac8a62df0c971d1f8b11bf"
+        },
+        {
+          "path": "src/opentype/shapers/ArabicShaper.js",
+          "sha256": "68786fa28b8e6f96db4cf486181a08b6be7c755f8c2cd7675777fb022abac8ca"
+        },
+        {
+          "path": "src/tables/avar.js",
+          "sha256": "1771fa2ff3a46731dce1de719cf35d6e0e14b0f9541c349a4a865999bbc7113c"
+        },
+        {
+          "path": "src/base.js",
+          "sha256": "219e665171599d5b82930e27d08c048236122d7116e22f69213b9d74f587ce9d"
+        },
+        {
+          "path": "src/tables/BASE.js",
+          "sha256": "da6dd83581f2d6b39c3add7b336e5b25b28d005f1ec2b9b52471fc19d76f4993"
+        },
+        {
+          "path": "src/glyph/BBox.js",
+          "sha256": "8c575077bfcc3658dfbc37daffcf62bad5500ed94357fc6dc54ab18d7a858df1"
+        },
+        {
+          "path": "src/tables/bsln.js",
+          "sha256": "7cf35923381f019d744d72f25619e9e00696a622395e8bda948f4e0488ad1317"
+        },
+        {
+          "path": "src/cff/CFFCharsets.js",
+          "sha256": "10d84775bef3ea48aa5c41f9a1f172de3291e724f18b6ed43e8f33ee10893857"
+        },
+        {
+          "path": "src/cff/CFFDict.js",
+          "sha256": "8c44efa1a9c160bd63dea8cf6c2d7b98e875957e0909c61ca93411ac28ad67b6"
+        },
+        {
+          "path": "src/cff/CFFEncodings.js",
+          "sha256": "c6bfcbb646c8fc9fd880ebe7303f66a465ab01382aead5716917ec8e1c077200"
+        },
+        {
+          "path": "src/cff/CFFFont.js",
+          "sha256": "4a9a839f5d192cff975faeea9076fcb425857fad90c957b373a24919bb988fcc"
+        },
+        {
+          "path": "src/glyph/CFFGlyph.js",
+          "sha256": "bddb472d4438f6c26d4b04597663f8f48a90a4a1a3b41c1b6c1e90e70c2640b5"
+        },
+        {
+          "path": "src/cff/CFFIndex.js",
+          "sha256": "1e603ae80584a7a5f999790f5a20dfb8d7464597b182c7748e84cd8817c7c8b2"
+        },
+        {
+          "path": "src/cff/CFFOperand.js",
+          "sha256": "e852a68b982f59c3044fa64199245ca0d111c63f5a40d2b8896c5bd7acf4e2fd"
+        },
+        {
+          "path": "src/cff/CFFPointer.js",
+          "sha256": "982da9ab8fc1fc8a5bd0ce9c4badc40af6da30dec4b70ae0da84623bb2d981ad"
+        },
+        {
+          "path": "src/cff/CFFPrivateDict.js",
+          "sha256": "a43aa26fe69ce65b27072ad3dfd4b2e67841423782ef431e310231df54e5b49c"
+        },
+        {
+          "path": "src/cff/CFFStandardStrings.js",
+          "sha256": "bad70982c18928ce6a951d697d9d1a01b698318f7eabf6ff0966066dadfcaa0b"
+        },
+        {
+          "path": "src/subset/CFFSubset.js",
+          "sha256": "cd922643365275b7a9978bf7f0b022a1f778e8b85255c3ffbfa1088b4bf2e6c0"
+        },
+        {
+          "path": "src/cff/CFFTop.js",
+          "sha256": "e14254df045c03443c3aae23277f6722972e951ede1b42ecf6117501e6027e51"
+        },
+        {
+          "path": "src/tables/cmap.js",
+          "sha256": "f36b41fefb8c3713e4cbc27c8322ae78ac6b54d2cfaa303b10ce207b0a184a36"
+        },
+        {
+          "path": "src/CmapProcessor.js",
+          "sha256": "75f01b15f11012aa0ce41e84f7614fd87c1260653b45ea2dd5273575aabe0b3a"
+        },
+        {
+          "path": "src/tables/COLR.js",
+          "sha256": "e3482a201d85a6183dc856e84c73eb331f5c4bb88b8cd6ad20145d857b784f1d"
+        },
+        {
+          "path": "src/glyph/COLRGlyph.js",
+          "sha256": "ed1bcbe5c360a91821c1f6e39d4af59f1ae79e3ccede73d70d4c82d5b90ee49e"
+        },
+        {
+          "path": "src/tables/CPAL.js",
+          "sha256": "2ea80304e3b033b515df89771bb9e24fa15671b599b50370dcd30680aba98d21"
+        },
+        {
+          "path": "src/tables/cvt.js",
+          "sha256": "6bba26f5429252669df49b54384741005d8b3cd6bec5262d9d487ddce34342c4"
+        },
+        {
+          "path": "src/decorators.js",
+          "sha256": "2b2b730786563629aa319ba7e3a5fbc1b2f57788629c9215a2c4f353a5a8a1d2"
+        },
+        {
+          "path": "src/opentype/shapers/DefaultShaper.js",
+          "sha256": "4602f63be1ffae0e027da21243a0ae2c797cb7b42e41d9b397b3e67f6219122b"
+        },
+        {
+          "path": "src/DFont.js",
+          "sha256": "15b3c97d34c3d6e54d36d99d17e9ee4a6e3f15fd871ed482816e0c8df0ba5e18"
+        },
+        {
+          "path": "src/tables/directory.js",
+          "sha256": "0801f3515bd9b3dde529ae689bf4f54cdfeeefb6de24075c810cccf68129d007"
+        },
+        {
+          "path": "src/tables/DSIG.js",
+          "sha256": "2ee406358b15378d5360e094023a2e77c62957aeb1945bab0669fba871030128"
+        },
+        {
+          "path": "src/tables/EBDT.js",
+          "sha256": "41cb7631de8cb3fe75185af813e4e72130d0b05e9c26a340af75856d13bfe186"
+        },
+        {
+          "path": "src/tables/EBLC.js",
+          "sha256": "989477d539103b3405861e7138e45513f1d0b79552300c18f6440dd9d6d72efb"
+        },
+        {
+          "path": "src/encodings.js",
+          "sha256": "2cecef96738e825e33d02f4376840d24a4868960fd5a8c2a56137201d6042624"
+        },
+        {
+          "path": "src/tables/feat.js",
+          "sha256": "312ae6f96cc27f189d545b279eb62fbd87b27739085f50ddb04960b70c6e8253"
+        },
+        {
+          "path": "src/tables/fpgm.js",
+          "sha256": "f206c67095186be161a203b5961935e65811b397d9353fe82ecadb42c633d736"
+        },
+        {
+          "path": "src/fs.js",
+          "sha256": "c58902ee02534bf2ca8b4c22fe1c6a899b6e3da54f5e939b2afac0761163e9d9"
+        },
+        {
+          "path": "src/tables/fvar.js",
+          "sha256": "6ed69eec0e3a82a900d775ff3593221b9b2b1c95c3a16845877561032734b029"
+        },
+        {
+          "path": "src/tables/gasp.js",
+          "sha256": "2b4198d267220bc4a6ee8fa03f679f9f62957e6e95cce409188f807a5bd136c9"
+        },
+        {
+          "path": "src/tables/GDEF.js",
+          "sha256": "4478b5777d937ec9f9b9d71ff613c56b70e4a1c082b2e2aea23e9392449913be"
+        },
+        {
+          "path": "src/opentype/shapers/gen-indic.js",
+          "sha256": "a667e033e21fc87f5374e10d5f5c121e0af8e723e3dececf3b993505540e18a9"
+        },
+        {
+          "path": "src/opentype/shapers/gen-use.js",
+          "sha256": "27ff67e501690abfaa4dc04c212978f61ae3a3a86b36ebb9efd7f3de518b9979"
+        },
+        {
+          "path": "src/opentype/shapers/generate-data.js",
+          "sha256": "7c1a40b37ddb39315772675359bdb4e831dd8709be56f27b1e47b59f17df1110"
+        },
+        {
+          "path": "src/tables/glyf.js",
+          "sha256": "6a360327c086c36f1b5d735e1fb5d3e7c424e0bd4a91667a799640fba58a76a9"
+        },
+        {
+          "path": "src/glyph/Glyph.js",
+          "sha256": "0ac6365118afabb0df055e5726e1cc50b9687ccb5b3fe7033bf6b581e376c237"
+        },
+        {
+          "path": "src/opentype/GlyphInfo.js",
+          "sha256": "506c714aea33a2f721de03160eee632c77df9301b36c9a4d931a27bb00983b08"
+        },
+        {
+          "path": "src/opentype/GlyphIterator.js",
+          "sha256": "3f1b528a8fa3ed1a55ef664808f6a4bf2cc9271969ab461697e2b8a338a19b4e"
+        },
+        {
+          "path": "src/layout/GlyphPosition.js",
+          "sha256": "7cb294b3b59cf9e6e3db5f0fd4095a82fdd04c5f0c574ed1703896c135cc7dbd"
+        },
+        {
+          "path": "src/layout/GlyphRun.js",
+          "sha256": "f3c6eb92e4cefdf17fac78855759ce037d95fc51e3a3c6fb76fe474898d3df3b"
+        },
+        {
+          "path": "src/glyph/GlyphVariationProcessor.js",
+          "sha256": "f380a266a7b2c0a3ce383c68cdd91d65e906a497f166f097ab8f084eb128b85f"
+        },
+        {
+          "path": "src/tables/GPOS.js",
+          "sha256": "b5d6a9c482ad78c02d0afdace958ee7c60b89d54915bdec499e932a0cba35506"
+        },
+        {
+          "path": "src/opentype/GPOSProcessor.js",
+          "sha256": "fac2805a704ade02f42994a3e0fed5de016a47cb2de53c7fb2013229b7546a17"
+        },
+        {
+          "path": "src/tables/GSUB.js",
+          "sha256": "71c8e7454f6fe08d3abefbaeef5d3e73215d0eca29a564e9031f6ef5e4d628ed"
+        },
+        {
+          "path": "src/opentype/GSUBProcessor.js",
+          "sha256": "11291caf13c2c52abe9e6a80a1700c084c400096a7d04281db55827c04ef1587"
+        },
+        {
+          "path": "src/tables/gvar.js",
+          "sha256": "40014d3eff8a0f72678c2336c73628f631eff85d717fb448f429857ead7d7d85"
+        },
+        {
+          "path": "src/opentype/shapers/HangulShaper.js",
+          "sha256": "626bb0e2603ab4b9c77b9eed8230e5a74432de298c4d24f94930e219215bd2c3"
+        },
+        {
+          "path": "src/tables/hdmx.js",
+          "sha256": "c61dadce5b12a8c6ab268c7ba45a2a7fb8076394aac6c092b590f59de772ab4e"
+        },
+        {
+          "path": "src/tables/head.js",
+          "sha256": "fb0b3669ac49769ac25c372c663f45f8b3a9239ab449120b8dc1862b0e5a048a"
+        },
+        {
+          "path": "src/tables/hhea.js",
+          "sha256": "18c9e6979cef510e18f4092661aae6db9c549049b28c0bfca27433e8e0c8ac2e"
+        },
+        {
+          "path": "src/tables/hmtx.js",
+          "sha256": "c379dac2401ac188a9eec469523dd2dd2539758bca87b8a33ee5e0ed844e54ff"
+        },
+        {
+          "path": "src/tables/HVAR.js",
+          "sha256": "bf8d6dd1df6cd6b78e3a64363c67c9da93363209b3785e84a89d1fcd541a6f88"
+        },
+        {
+          "path": "src/index.js",
+          "sha256": "34d8a2c48992c3118db6f9e21cb65a5cdcbd5660073c2aa701dc55271efc9b65"
+        },
+        {
+          "path": "src/opentype/shapers/index.js",
+          "sha256": "cebf99e046968f5c8ee36e39ec377ea086bcc000d7dce6e737cabe10069225be"
+        },
+        {
+          "path": "src/tables/index.js",
+          "sha256": "a029c0cbb9756022cc406568105dccca972315deb2cc0cdf9acd751ecdc95efc"
+        },
+        {
+          "path": "src/opentype/shapers/indic-data.js",
+          "sha256": "351cba980192a850eec81f97ef51d4442531689388a4f4123d6bf2ea6846d9c8"
+        },
+        {
+          "path": "src/opentype/shapers/IndicShaper.js",
+          "sha256": "ad1c7595dc0f39d7b801e2cc9dcd60a7a79b6a6af0df825cb6f2c9aa3b34ea89"
+        },
+        {
+          "path": "src/tables/JSTF.js",
+          "sha256": "6c4deb152c01567fdb27800e28210123c4e6ea6eda3bb951818d92beb85e663d"
+        },
+        {
+          "path": "src/tables/just.js",
+          "sha256": "a2f36cc6809869d59436c7b80f9fc583d801a5e4aff889e335d0fa056377e9ea"
+        },
+        {
+          "path": "src/tables/kern.js",
+          "sha256": "91ac1bdc17c3888ece6093afd3086c3cb186fa4afab4e8787c4b4b99c972da91"
+        },
+        {
+          "path": "src/layout/KernProcessor.js",
+          "sha256": "a7c56e18660f3f3cfccd333bf226325b90e7c3de654a04bc9a04e19abda74722"
+        },
+        {
+          "path": "src/layout/LayoutEngine.js",
+          "sha256": "8de72afb9dcedce22737ae4b960fc4501b20ccfbf58b8624b1e4d33d815bf1ed"
+        },
+        {
+          "path": "src/tables/loca.js",
+          "sha256": "2c2dee624d2023fb0b4ec3b65d9eaa66a97a06b0113f38f0bd2fa6d105df910a"
+        },
+        {
+          "path": "src/tables/LTSH.js",
+          "sha256": "d27bbe072874ed30e4af6441e157542e79fa0508c8a5f2b977a4fa2627756117"
+        },
+        {
+          "path": "src/tables/maxp.js",
+          "sha256": "f3cdb385ec2756f32fd0e425927e378d4e892099372ea6eba0caa8a2fed1b5a6"
+        },
+        {
+          "path": "src/tables/morx.js",
+          "sha256": "7e56c32ca01fc1f72396ced727e53488b91e2edec3087c613dea39cd0bf0c619"
+        },
+        {
+          "path": "src/tables/name.js",
+          "sha256": "09ecfc5ff3145925d351f6e5efedfa096f20917c8314d361ac2a985263de1f0a"
+        },
+        {
+          "path": "src/node.js",
+          "sha256": "9001790df246fb0ae2960ee786a97a17f667b21ddfcd380039aac9a7a2b09887"
+        },
+        {
+          "path": "src/tables/opbd.js",
+          "sha256": "dbbb1a10de4f86b832ed51bcd33d126f62c05dc149b646dff822ba41990de009"
+        },
+        {
+          "path": "src/tables/opentype.js",
+          "sha256": "3fbfc94ebeb529bdc836b8fa3d2608ec8f3a0023637a0da668a34739180c63fd"
+        },
+        {
+          "path": "src/tables/OS2.js",
+          "sha256": "ef68bc11d8db0bc46954a2af0baeb604c944bd5a14fa8a200fd243ced1a396be"
+        },
+        {
+          "path": "src/opentype/OTLayoutEngine.js",
+          "sha256": "0f5a14dc7334ded001395211a5a94dd9ba8f64cf62efffbe16eb9ebc893c3b96"
+        },
+        {
+          "path": "src/opentype/OTProcessor.js",
+          "sha256": "2c0d2668b6517e6a6778fe932823488de70d695ab41fc9ccae6d20704de0ee9c"
+        },
+        {
+          "path": "src/glyph/Path.js",
+          "sha256": "f465c9573862c9857ff86ead0a4f18f7b0fac81b08dab4621064d1db30c160de"
+        },
+        {
+          "path": "src/tables/PCLT.js",
+          "sha256": "b1a3d9df9f365ec27dcb8834f0f617b6578795a5bd918951e4e01b99c5f0aa68"
+        },
+        {
+          "path": "src/tables/post.js",
+          "sha256": "8ae6f75da5dc32ae645eb8cec72dc289d7bde92c3e9364bc464e113e6bfd52f0"
+        },
+        {
+          "path": "src/tables/prep.js",
+          "sha256": "edb6fadb25611a1a304cbc9ecf11f75a8401d36cd2d528855476dad3f250cfc0"
+        },
+        {
+          "path": "src/tables/sbix.js",
+          "sha256": "1c73a272d3c3174be794ee9137a156bca5a2d85eda6b8d31ea5ab21490c9a613"
+        },
+        {
+          "path": "src/glyph/SBIXGlyph.js",
+          "sha256": "e8de70be9a09b32969d6dc44bedfadf15cd191af004b134b665bc7de2c42727c"
+        },
+        {
+          "path": "src/layout/Script.js",
+          "sha256": "9896370aba75d0803e7e0352191f47c46410738e26f14d545b76ff367720221c"
+        },
+        {
+          "path": "src/opentype/ShapingPlan.js",
+          "sha256": "5ab659b8ad97ae0167a11093ba90d664c6301b1012cad2e51c02e66ffbf45476"
+        },
+        {
+          "path": "src/glyph/StandardNames.js",
+          "sha256": "27a74b26e95f6907d7cc5583df191367bdda6c56d1800ae32092d9534cdb5e8f"
+        },
+        {
+          "path": "src/subset/Subset.js",
+          "sha256": "64303cb9e9067d62367441e66dfa9cd292f612917625d8ab175141482705b6f0"
+        },
+        {
+          "path": "src/TrueTypeCollection.js",
+          "sha256": "dbd3d92ba60bad353fbd5d598a71e868946bcb4c273c44dcb94a1554cd908498"
+        },
+        {
+          "path": "src/TTFFont.js",
+          "sha256": "e00c15435b659300450603439eb9fef428f6c9a999a8243e3b19e0065bcb7326"
+        },
+        {
+          "path": "src/glyph/TTFGlyph.js",
+          "sha256": "04debb0316b462eabbace1d1cdb67f839298cd65da18f2770c3e874b380baaa1"
+        },
+        {
+          "path": "src/glyph/TTFGlyphEncoder.js",
+          "sha256": "6f81c99a10fb1fea59f866318b839ed9783971d98f7dc4fa40341be766d4e52b"
+        },
+        {
+          "path": "src/subset/TTFSubset.js",
+          "sha256": "7fcd8f24c1e7b09a5588a831ddfc13e656fec3751a58916c381860ba12740305"
+        },
+        {
+          "path": "src/layout/UnicodeLayoutEngine.js",
+          "sha256": "95ca056848ad291a4136a8caea051324705ddba03bf8dcdb9c25134e83791c67"
+        },
+        {
+          "path": "src/opentype/shapers/UniversalShaper.js",
+          "sha256": "ad1a2a8e8c8a33b9e24e45a20b5ba95a3f0782b53587d9b3b85bd8d39cba758f"
+        },
+        {
+          "path": "src/utils.js",
+          "sha256": "3924250ad3044efdb5f0d3c07b8061a95b4ffea99b024b66ff4dcf643d824aef"
+        },
+        {
+          "path": "src/tables/variations.js",
+          "sha256": "8ea7c8572be40e85eb5d6d2201655bc32c51e2eb5d8cb9eeee65c5aeec167362"
+        },
+        {
+          "path": "src/tables/VDMX.js",
+          "sha256": "6b57f2263d855da8e53298e91ee9940bd9517b43ba8fcccab9e7720815f33f94"
+        },
+        {
+          "path": "src/tables/vhea.js",
+          "sha256": "0c806e9fc941dadfc68e3b2bf1a07ec21d11caf7e1629af210a270f545193671"
+        },
+        {
+          "path": "src/tables/vmtx.js",
+          "sha256": "5227469395c379de4dcb6294627d6d1cbf566e81bf255487ed5053071722d170"
+        },
+        {
+          "path": "src/tables/VORG.js",
+          "sha256": "8f2fe28ef22fa65290904b2ea16343f6c1571680efaba07154515e63e16dc1e1"
+        },
+        {
+          "path": "src/tables/WOFF2Directory.js",
+          "sha256": "137a651dc0cd5833c407273e932ee99ba14ab03664afa1ae13c0f41f6958c37e"
+        },
+        {
+          "path": "src/WOFF2Font.js",
+          "sha256": "2cae2ad54ffdd226c10d3b9a8d1ffa186f0008018ea56297efb27326e69953b6"
+        },
+        {
+          "path": "src/glyph/WOFF2Glyph.js",
+          "sha256": "3d652d0110de69f1e19c250cd7cbd4219c6b95c52b96a1e1f6b811be97a85cf4"
+        },
+        {
+          "path": "src/tables/WOFFDirectory.js",
+          "sha256": "b540ee834d4c07ce7996d204d1166b6b884274bdd8a785495ecb329de3ee5631"
+        },
+        {
+          "path": "src/WOFFFont.js",
+          "sha256": "bccdd936f3c8738124c309f7c89f48864efac6bda71e30c213093a5ecf6f569d"
+        },
+        {
+          "path": "src/opentype/shapers/indic.json",
+          "sha256": "903a39c0f59dca5ab4d31d14ca39bacb58786fa373b64d38af82c5749f2e16e2"
+        },
+        {
+          "path": "package.json",
+          "sha256": "49c60605b92316a5d5fe57b9a3bca8950ad9a8beab1cb633d6f29862d1bd163d"
+        },
+        {
+          "path": "src/opentype/shapers/use.json",
+          "sha256": "98de30bc007d0e3fb180839e167de030dd579acd40285865d67718d713b2e9b1"
+        },
+        {
+          "path": "src/opentype/shapers/indic.machine",
+          "sha256": "ace5d0eebf014c8d2112b86d9642b8eade4af9010dd23b58bed6596e0fd7c17b"
+        },
+        {
+          "path": "src/opentype/shapers/use.machine",
+          "sha256": "fb1ec6f50006241999ef2faa83b198860ef023249d5509bbec3bdb7159c5a318"
+        },
+        {
+          "path": "dist/browser-module.mjs.map",
+          "sha256": "312af373c0db0d3c36e425b3b791e7e7cf23ac4b6d1fb58725f16cfa00e574b3"
+        },
+        {
+          "path": "dist/browser.cjs.map",
+          "sha256": "914eb298a7947cec731b2938a38f6d0263ca9b16c05eda6be3e11da2a52350a6"
+        },
+        {
+          "path": "dist/main.cjs.map",
+          "sha256": "58d9ae96bac87ac465168903130a24a92b3524509e2c7efbbc1108c2ac4637c8"
+        },
+        {
+          "path": "dist/module.mjs.map",
+          "sha256": "6f7d446c44b1d2096ac7283f97783ad80f68adc3bb3749b8fb2870867a0a72e8"
+        },
+        {
+          "path": "README.md",
+          "sha256": "8a1cf12d8ae7277f047c3000af7677927f2da9243627223ba5715d40df4979d6"
+        },
+        {
+          "path": "dist/browser-module.mjs",
+          "sha256": "f2bcd6bda6be2032d14f0256bef9a90d4c5a0eed6fb569d2216ff0710a688315"
+        },
+        {
+          "path": "dist/module.mjs",
+          "sha256": "3dde5aab2c79c239598211256ff26d460da28ca098d314b063b8554c13ee2e57"
+        },
+        {
+          "path": "src/opentype/shapers/data.trie",
+          "sha256": "6d735b80dcfb2270ab2d20a193aa676b82c7888b7deee1db34daee3f444c58b8"
+        },
+        {
+          "path": "src/opentype/shapers/indic.trie",
+          "sha256": "7f86f07a1a4efe63959e8baa1d9bda1b176d9911e3545f9b3f55c410fa95c5e3"
+        },
+        {
+          "path": "src/opentype/shapers/use.trie",
+          "sha256": "16447d2fca775fcd2ea6611d43f394b944b940c1d72d696678796692dee89daa"
+        }
+      ],
+      "archiveSha256": "f686a9515af33fce16ab4bffe50570728197e53165068548c6f75a1793797a08",
+      "npmTarball": "https://registry.npmjs.org/fontkit/-/fontkit-2.0.4.tgz",
+      "npmIntegrity": "sha512-syetQadaUEDNdxdugga9CpEYVaQIxOwk7GlwZWWZ19//qW4zE5bknOKeMBDYAASwnpaSHKJITRLMF9m1fp3s6g==",
+      "npmShasum": "4765d664c68b49b5d6feb6bd1051ee49d8ec5ab0",
+      "declarationFile": "fontkit-2.0.4/package-declaration.json",
+      "preservedFiles": [
+        {
+          "file": "fontkit-2.0.4/README.md",
+          "sha256": "8a1cf12d8ae7277f047c3000af7677927f2da9243627223ba5715d40df4979d6",
+          "sourcePackageMember": "README.md",
+          "kind": "unchanged published package README and license declaration"
+        }
+      ],
+      "supplementalStandardTexts": [
+        "standard-texts/MIT.txt"
+      ],
+      "scope": "Original declared license and attribution retained. Standard text, where listed, is supplemental and is not labeled an original standalone upstream file."
+    },
+    {
+      "name": "dijkstrajs",
+      "version": "1.0.3",
+      "preservedFiles": [
+        {
+          "file": "dijkstrajs-1.0.3/LICENSE.md",
+          "sha256": "c46324e45a005413535a6fb7a97e9eacd3cc6bf30335b7d5c10b8ee3af9e60c2",
+          "kind": "unchanged shipped original copyright/declaration/disclaimer"
+        }
+      ],
+      "supplementalStandardTexts": [
+        "standard-texts/MIT.txt"
+      ],
+      "scope": "Original notice explicitly declares MIT and names Wyatt Baldwin (2008) but omits grant paragraphs; supplemental standard MIT body supplied without altering that original."
+    }
+  ],
+  "standardTexts": [
+    {
+      "sourceName": "MIT-standard.txt",
+      "includedFile": "standard-texts/MIT.txt",
+      "url": "https://raw.githubusercontent.com/spdx/license-list-data/v3.27.0/text/MIT.txt",
+      "sha256": "b05785f9f18e6716bab63424b11454513b9943a222595b70411009202fc592b5"
+    },
+    {
+      "sourceName": "ISC-standard.txt",
+      "includedFile": "standard-texts/ISC.txt",
+      "url": "https://raw.githubusercontent.com/spdx/license-list-data/v3.27.0/text/ISC.txt",
+      "sha256": "f2ec607f67bb0dd3053b49835b02110d5cd0f8eb6da3aac4dc0b142a6b299be9"
+    },
+    {
+      "sourceName": "X11-standard.txt",
+      "includedFile": "standard-texts/X11.txt",
+      "url": "https://raw.githubusercontent.com/spdx/license-list-data/v3.27.0/text/X11.txt",
+      "sha256": "e1963c9958b93bc2578b34f8ae22cfe205e8c0e7d5be7235cfdbdefbf92a5423"
+    }
+  ]
+}

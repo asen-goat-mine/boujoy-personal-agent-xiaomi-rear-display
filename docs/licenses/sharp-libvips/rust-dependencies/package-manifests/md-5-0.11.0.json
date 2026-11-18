@@ -1,0 +1,99 @@
+{
+  "package": {
+    "edition": "2024",
+    "rust-version": "1.85",
+    "name": "md-5",
+    "version": "0.11.0",
+    "authors": [
+      "RustCrypto Developers"
+    ],
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "MD5 hash function",
+    "documentation": "https://docs.rs/md-5",
+    "readme": "README.md",
+    "keywords": [
+      "md5",
+      "hash",
+      "digest"
+    ],
+    "categories": [
+      "cryptography",
+      "no-std"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/RustCrypto/hashes",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "all-features": true
+        }
+      }
+    }
+  },
+  "features": {
+    "alloc": [
+      "digest/alloc"
+    ],
+    "default": [
+      "alloc",
+      "oid"
+    ],
+    "oid": [
+      "digest/oid"
+    ],
+    "zeroize": [
+      "digest/zeroize"
+    ]
+  },
+  "lib": {
+    "name": "md5",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "mod",
+      "path": "tests/mod.rs"
+    }
+  ],
+  "bench": [
+    {
+      "name": "mod",
+      "path": "benches/mod.rs"
+    }
+  ],
+  "dependencies": {
+    "cfg-if": {
+      "version": "1"
+    },
+    "digest": {
+      "version": "0.11"
+    }
+  },
+  "dev-dependencies": {
+    "digest": {
+      "version": "0.11",
+      "features": [
+        "dev"
+      ]
+    },
+    "hex-literal": {
+      "version": "1"
+    }
+  },
+  "lints": {
+    "rust": {
+      "unexpected_cfgs": {
+        "level": "warn",
+        "priority": 0,
+        "check-cfg": [
+          "cfg(md5_backend, values(\"soft\"))"
+        ]
+      }
+    }
+  }
+}

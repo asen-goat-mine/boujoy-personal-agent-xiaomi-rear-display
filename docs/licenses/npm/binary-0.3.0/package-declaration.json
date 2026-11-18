@@ -1,0 +1,15 @@
+{
+  "name": "binary",
+  "version": "0.3.0",
+  "license": "MIT",
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/substack/node-binary.git"
+  },
+  "originalPackageJsonSha256": "355ec61b56448e3d9ad74b286fa07e1b18bcbf153f45223b1a4f68d86bec891f"
+}

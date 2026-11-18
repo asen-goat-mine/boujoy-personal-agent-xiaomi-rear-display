@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {lookup} from 'node:dns/promises';
+import {createRelay} from '../src/remote/relay.mjs';
+const file=process.env.BOUJOY_RELAY_ROUTES;if(!file)throw Error('Set BOUJOY_RELAY_ROUTES to the protected route hash file');
+const routes=JSON.parse(fs.readFileSync(file,'utf8'));
+const trustedProxyAddresses=process.env.BOUJOY_RELAY_TRUSTED_PROXY?(await lookup(process.env.BOUJOY_RELAY_TRUSTED_PROXY,{all:true})).flatMap(x=>[x.address,'::ffff:'+x.address]):[];
+const proxyRefresh=process.env.BOUJOY_RELAY_TRUSTED_PROXY?setInterval(async()=>{try{const addresses=(await lookup(process.env.BOUJOY_RELAY_TRUSTED_PROXY,{all:true})).flatMap(x=>[x.address,'::ffff:'+x.address]);trustedProxyAddresses.splice(0,trustedProxyAddresses.length,...addresses);}catch{}},30000):null;
+proxyRefresh?.unref();
+const relay=createRelay({routes,trustedProxyAddresses,host:process.env.BOUJOY_RELAY_HOST||'127.0.0.1',port:Number(process.env.PORT||18843)});
+await relay.listen();console.log('Boujoy encrypted relay listening; no message payload logging.');
+for(const sig of ['SIGINT','SIGTERM'])process.once(sig,async()=>{clearInterval(proxyRefresh);await relay.close();process.exit(0);});

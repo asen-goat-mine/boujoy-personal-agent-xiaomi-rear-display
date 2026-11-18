@@ -1,0 +1,180 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.71",
+    "name": "serde_json",
+    "version": "1.0.151",
+    "authors": [
+      "Erick Tryzelaar <erick.tryzelaar@gmail.com>",
+      "David Tolnay <dtolnay@gmail.com>"
+    ],
+    "build": "build.rs",
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "A JSON serialization file format",
+    "documentation": "https://docs.rs/serde_json",
+    "readme": "README.md",
+    "keywords": [
+      "json",
+      "serde",
+      "serialization"
+    ],
+    "categories": [
+      "encoding",
+      "parser-implementations",
+      "no-std"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/serde-rs/json",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "features": [
+            "preserve_order",
+            "raw_value",
+            "unbounded_depth"
+          ],
+          "targets": [
+            "x86_64-unknown-linux-gnu"
+          ],
+          "rustdoc-args": [
+            "--generate-link-to-definition",
+            "--generate-macro-expansion",
+            "--extern-html-root-url=core=https://doc.rust-lang.org",
+            "--extern-html-root-url=alloc=https://doc.rust-lang.org",
+            "--extern-html-root-url=std=https://doc.rust-lang.org"
+          ]
+        }
+      },
+      "playground": {
+        "features": [
+          "float_roundtrip",
+          "raw_value",
+          "unbounded_depth"
+        ]
+      }
+    }
+  },
+  "features": {
+    "alloc": [
+      "serde_core/alloc"
+    ],
+    "arbitrary_precision": [],
+    "default": [
+      "std"
+    ],
+    "float_roundtrip": [],
+    "preserve_order": [
+      "indexmap",
+      "std"
+    ],
+    "raw_value": [],
+    "std": [
+      "memchr/std",
+      "serde_core/std"
+    ],
+    "unbounded_depth": []
+  },
+  "lib": {
+    "name": "serde_json",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "compiletest",
+      "path": "tests/compiletest.rs"
+    },
+    {
+      "name": "debug",
+      "path": "tests/debug.rs"
+    },
+    {
+      "name": "lexical",
+      "path": "tests/lexical.rs"
+    },
+    {
+      "name": "map",
+      "path": "tests/map.rs"
+    },
+    {
+      "name": "regression",
+      "path": "tests/regression.rs"
+    },
+    {
+      "name": "stream",
+      "path": "tests/stream.rs"
+    },
+    {
+      "name": "test",
+      "path": "tests/test.rs"
+    }
+  ],
+  "dependencies": {
+    "indexmap": {
+      "version": "2.2.3",
+      "optional": true
+    },
+    "itoa": {
+      "version": "1.0"
+    },
+    "memchr": {
+      "version": "2",
+      "default-features": false
+    },
+    "serde_core": {
+      "version": "1.0.220",
+      "default-features": false
+    },
+    "zmij": {
+      "version": "1.0"
+    }
+  },
+  "dev-dependencies": {
+    "automod": {
+      "version": "1.0.11"
+    },
+    "indoc": {
+      "version": "2.0.2"
+    },
+    "ref-cast": {
+      "version": "1.0.18"
+    },
+    "rustversion": {
+      "version": "1.0.13"
+    },
+    "serde": {
+      "version": "1.0.194",
+      "features": [
+        "derive"
+      ]
+    },
+    "serde_bytes": {
+      "version": "0.11.10"
+    },
+    "serde_derive": {
+      "version": "1.0.166"
+    },
+    "serde_stacker": {
+      "version": "0.1.8"
+    },
+    "trybuild": {
+      "version": "1.0.108",
+      "features": [
+        "diff"
+      ]
+    }
+  },
+  "target": {
+    "cfg(any())": {
+      "dependencies": {
+        "serde": {
+          "version": "1.0.220",
+          "default-features": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.85",
+    "name": "jobserver",
+    "version": "0.1.35",
+    "authors": [
+      "Alex Crichton <alex@alexcrichton.com>"
+    ],
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "An implementation of the GNU Make jobserver for Rust.\n",
+    "homepage": "https://github.com/rust-lang/jobserver-rs",
+    "documentation": "https://docs.rs/jobserver",
+    "readme": "README.md",
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/rust-lang/jobserver-rs"
+  },
+  "lib": {
+    "name": "jobserver",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "client",
+      "path": "tests/client.rs",
+      "harness": false
+    },
+    {
+      "name": "client-of-myself",
+      "path": "tests/client-of-myself.rs",
+      "harness": false
+    },
+    {
+      "name": "helper",
+      "path": "tests/helper.rs"
+    },
+    {
+      "name": "make-as-a-client",
+      "path": "tests/make-as-a-client.rs",
+      "harness": false
+    },
+    {
+      "name": "server",
+      "path": "tests/server.rs"
+    }
+  ],
+  "dev-dependencies": {
+    "tempfile": {
+      "version": "3.10.1"
+    }
+  },
+  "target": {
+    "cfg(unix)": {
+      "dependencies": {
+        "libc": {
+          "version": "0.2.171"
+        }
+      },
+      "dev-dependencies": {
+        "nix": {
+          "version": "0.31.3",
+          "features": [
+            "fs"
+          ]
+        }
+      }
+    },
+    "cfg(windows)": {
+      "dependencies": {
+        "getrandom": {
+          "version": "0.4",
+          "features": [
+            "std"
+          ]
+        }
+      }
+    }
+  }
+}

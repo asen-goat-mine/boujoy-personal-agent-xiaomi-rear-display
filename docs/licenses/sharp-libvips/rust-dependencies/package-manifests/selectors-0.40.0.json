@@ -1,0 +1,88 @@
+{
+  "package": {
+    "edition": "2021",
+    "name": "selectors",
+    "version": "0.40.0",
+    "authors": [
+      "The Servo Project Developers"
+    ],
+    "build": "build.rs",
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "CSS Selectors matching for Rust",
+    "documentation": "https://docs.rs/selectors/",
+    "readme": "README.md",
+    "keywords": [
+      "css",
+      "selectors"
+    ],
+    "license": "MPL-2.0",
+    "repository": "https://github.com/servo/stylo"
+  },
+  "features": {
+    "bench": [],
+    "to_shmem": [
+      "dep:to_shmem",
+      "dep:to_shmem_derive"
+    ]
+  },
+  "lib": {
+    "name": "selectors",
+    "path": "lib.rs"
+  },
+  "dependencies": {
+    "bitflags": {
+      "version": "2"
+    },
+    "cssparser": {
+      "version": "0.37"
+    },
+    "derive_more": {
+      "version": "2",
+      "features": [
+        "add",
+        "add_assign"
+      ]
+    },
+    "log": {
+      "version": "0.4"
+    },
+    "new_debug_unreachable": {
+      "version": "1"
+    },
+    "phf": {
+      "version": "0.13"
+    },
+    "precomputed-hash": {
+      "version": "0.1"
+    },
+    "rustc-hash": {
+      "version": "2.1.1"
+    },
+    "servo_arc": {
+      "version": "0.4.3"
+    },
+    "smallvec": {
+      "version": "1.0"
+    },
+    "to_shmem": {
+      "version": "0.5.0",
+      "features": [
+        "servo"
+      ],
+      "optional": true
+    },
+    "to_shmem_derive": {
+      "version": "0.1.0",
+      "optional": true
+    }
+  },
+  "build-dependencies": {
+    "phf_codegen": {
+      "version": "0.13"
+    }
+  }
+}

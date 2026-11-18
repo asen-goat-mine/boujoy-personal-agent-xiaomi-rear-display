@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "scope": "Six assigned installed npm packages only; no runtime code or installed bundle files modified. Each complete license has fixed-version official-source evidence and an archive digest tied to the installed lock.",
+  "packages": [
+    {
+      "name": "@aws-sdk/nested-clients",
+      "version": "3.997.47",
+      "directory": "aws-sdk-nested-clients-3.997.47",
+      "status": "full-license-supplemented-from-fixed-version-source",
+      "files": [
+        {
+          "path": "aws-sdk-nested-clients-3.997.47/LICENSE",
+          "sha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d"
+        },
+        {
+          "path": "aws-sdk-nested-clients-3.997.47/README.md",
+          "sha256": "c09ef5fab7725318fc36a57a72ac32e6d2a2266dc677a2205057f71c2785efbb"
+        },
+        {
+          "path": "aws-sdk-nested-clients-3.997.47/published-package.json",
+          "sha256": "306cb78df59c5a51a781cf80b54dba33d0bb8088f405524b101fbc3d71443f6c"
+        },
+        {
+          "path": "aws-sdk-nested-clients-3.997.47/source-evidence.json",
+          "sha256": "ed14713af2ad6963e647ab3dea2033555f468cbdfabc650cecf72524a3b7b99b"
+        },
+        {
+          "path": "aws-sdk-nested-clients-3.997.47/source-package.json",
+          "sha256": "1fd00613dc21086918bd424b31850ba5f5393be8e78bb2a49326e7298b178cc6"
+        }
+      ],
+      "archiveSha256": "33664a0cde71e85c8933f58776d1188e6f67544887cea11e1ed2d1d47a9bb39c",
+      "sourceCommit": "a960c14e8ce09ab8fd09352e40d75c6b9d52c1ca",
+      "licenseSha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d",
+      "retainedThirdPartyNoticeCount": 0
+    },
+    {
+      "name": "@aws-sdk/credential-provider-http",
+      "version": "3.972.75",
+      "directory": "aws-sdk-credential-provider-http-3.972.75",
+      "status": "full-license-supplemented-from-fixed-version-source",
+      "files": [
+        {
+          "path": "aws-sdk-credential-provider-http-3.972.75/LICENSE",
+          "sha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d"
+        },
+        {
+          "path": "aws-sdk-credential-provider-http-3.972.75/README.md",
+          "sha256": "27565aaf288f7ae8b93c268ca2b8c082587c35090b2bd19837825e1eed33f4a7"
+        },
+        {
+          "path": "aws-sdk-credential-provider-http-3.972.75/published-package.json",
+          "sha256": "a079c66652365f8ab548c65dddfe0da3f3fc89cb4b4fbe09660a4eae4ae9b878"
+        },
+        {
+          "path": "aws-sdk-credential-provider-http-3.972.75/source-evidence.json",
+          "sha256": "84f83c6701835a7c8d56ef9e7cb1809fa7686f25a856be01b2fc7335a6c63199"
+        },
+        {
+          "path": "aws-sdk-credential-provider-http-3.972.75/source-package.json",
+          "sha256": "64fbddec8cd91f10514ef78051f5ae4c112093ea665104a45ad45ec540564e0c"
+        }
+      ],
+      "archiveSha256": "ccd1b488642d8e979a4bef67a6aaffdfe7e089fe4cc71207a8aa918ee4bb98bd",
+      "sourceCommit": "a960c14e8ce09ab8fd09352e40d75c6b9d52c1ca",
+      "licenseSha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d",
+      "retainedThirdPartyNoticeCount": 0
+    },
+    {
+      "name": "@aws-sdk/credential-provider-login",
+      "version": "3.972.80",
+      "directory": "aws-sdk-credential-provider-login-3.972.80",
+      "status": "full-license-supplemented-from-fixed-version-source",
+      "files": [
+        {
+          "path": "aws-sdk-credential-provider-login-3.972.80/LICENSE",
+          "sha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d"
+        },
+        {
+          "path": "aws-sdk-credential-provider-login-3.972.80/README.md",
+          "sha256": "5ec95530124c139b9b034ddc7aad1747e87e99d05bf48324fa258aa29bd5d712"
+        },
+        {
+          "path": "aws-sdk-credential-provider-login-3.972.80/published-package.json",
+          "sha256": "a017ed8e74e38f3ea0d46c62f53147900859db3f951f9361f1880fe02ded28ba"
+        },
+        {
+          "path": "aws-sdk-credential-provider-login-3.972.80/source-evidence.json",
+          "sha256": "efb8dfcdb71982666e70858c4afff5ee116d66737219a5ca87d281c6797c6347"
+        },
+        {
+          "path": "aws-sdk-credential-provider-login-3.972.80/source-package.json",
+          "sha256": "233b309500cc62716c7fa1271131fc85b3b50291f75ad6aeaab01d1bd8c0786b"
+        }
+      ],
+      "archiveSha256": "9ee76356634024af7a7f20c37ed329dcefb031192be838846ce23be8725df6c7",
+      "sourceCommit": "a960c14e8ce09ab8fd09352e40d75c6b9d52c1ca",
+      "licenseSha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d",
+      "retainedThirdPartyNoticeCount": 0
+    },
+    {
+      "name": "@earendil-works/pi-telemetry",
+      "version": "1.1.0",
+      "directory": "earendil-works-pi-telemetry-1.1.0",
+      "status": "full-license-supplemented-from-fixed-version-source",
+      "files": [
+        {
+          "path": "earendil-works-pi-telemetry-1.1.0/LICENSE",
+          "sha256": "0457f5bcec3b3b211605dfb5d1a49042fd638f3686a410fe099c24a25af13c48"
+        },
+        {
+          "path": "earendil-works-pi-telemetry-1.1.0/README.md",
+          "sha256": "e47a1c31c14f809050e854ed23d2b8dc4c43d98ff69839e976da1a8a6e447149"
+        },
+        {
+          "path": "earendil-works-pi-telemetry-1.1.0/published-package.json",
+          "sha256": "60409cbe4a3d9c15c681ea5020709c31b95f2a854c35ee78f531f19bcd99d8e7"
+        },
+        {
+          "path": "earendil-works-pi-telemetry-1.1.0/source-evidence.json",
+          "sha256": "7643c321510be05c667438f9397865adc148e4eeb77ef6da319c73cc9f79bb2a"
+        },
+        {
+          "path": "earendil-works-pi-telemetry-1.1.0/source-package.json",
+          "sha256": "60409cbe4a3d9c15c681ea5020709c31b95f2a854c35ee78f531f19bcd99d8e7"
+        }
+      ],
+      "archiveSha256": "fe6b7c399a444757128aa9a330e8b0e9efd1266aa8b52022d4cf2cd5118a3af3",
+      "sourceCommit": "abe508e1b89912adde45528136c3221eb69acdd7",
+      "licenseSha256": "0457f5bcec3b3b211605dfb5d1a49042fd638f3686a410fe099c24a25af13c48",
+      "retainedThirdPartyNoticeCount": 0
+    },
+    {
+      "name": "@earendil-works/pi-ai",
+      "version": "1.1.0",
+      "directory": "earendil-works-pi-ai-1.1.0",
+      "status": "full-license-supplemented-from-fixed-version-source",
+      "files": [
+        {
+          "path": "earendil-works-pi-ai-1.1.0/LICENSE",
+          "sha256": "0457f5bcec3b3b211605dfb5d1a49042fd638f3686a410fe099c24a25af13c48"
+        },
+        {
+          "path": "earendil-works-pi-ai-1.1.0/README.md",
+          "sha256": "497ac4c1938916d6a2bed9b0993f39e6ea05238ec46b366a478d6b0ed2a68150"
+        },
+        {
+          "path": "earendil-works-pi-ai-1.1.0/published-package.json",
+          "sha256": "a8f10d5157b335379ae00edf9c25ae7a15bfc0f3a76107d4376a3779bb5b2995"
+        },
+        {
+          "path": "earendil-works-pi-ai-1.1.0/source-evidence.json",
+          "sha256": "858cd8edc25f93aa7e935df1622d0cb40b4eb1f1d078a858646db8b972b512d9"
+        },
+        {
+          "path": "earendil-works-pi-ai-1.1.0/source-package.json",
+          "sha256": "a8f10d5157b335379ae00edf9c25ae7a15bfc0f3a76107d4376a3779bb5b2995"
+        }
+      ],
+      "archiveSha256": "6caab33cec57480ed02c57fe37428a030a77cc2a0662814b435a5cf8932ad829",
+      "sourceCommit": "abe508e1b89912adde45528136c3221eb69acdd7",
+      "licenseSha256": "0457f5bcec3b3b211605dfb5d1a49042fd638f3686a410fe099c24a25af13c48",
+      "retainedThirdPartyNoticeCount": 0
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-inspector",
+      "version": "0.2.1-alpha.2",
+      "directory": "deepseek-ai-dsh-experimental-inspector-0.2.1-alpha.2",
+      "status": "full-license-supplemented-from-fixed-version-source",
+      "files": [
+        {
+          "path": "deepseek-ai-dsh-experimental-inspector-0.2.1-alpha.2/LICENSE",
+          "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+        },
+        {
+          "path": "deepseek-ai-dsh-experimental-inspector-0.2.1-alpha.2/README.md",
+          "sha256": "4350518df7fc72ea777b75b27d4f82e5b0a79bd3df74564277f4390e71df82e8"
+        },
+        {
+          "path": "deepseek-ai-dsh-experimental-inspector-0.2.1-alpha.2/published-package.json",
+          "sha256": "33cc60eeea90674f29c63c5dcdd65c4516df7d6afbfee401e6c51478ef7b54a0"
+        },
+        {
+          "path": "deepseek-ai-dsh-experimental-inspector-0.2.1-alpha.2/source-evidence.json",
+          "sha256": "6d230f5f1018160626089b94ebc71e5889d3c32de9358303d2c67b7bfacadedc"
+        },
+        {
+          "path": "deepseek-ai-dsh-experimental-inspector-0.2.1-alpha.2/source-package.json",
+          "sha256": "d3d7558edd238e5b0b26842f79b5aaaed2841414114db0526ad27dafa690dfac"
+        }
+      ],
+      "archiveSha256": "17e437e1a5e72b03fc7b01e1bf1af104bfbaafc2c451168f8ad978cd2b97e765",
+      "sourceCommit": "1c6078dca6acafc71e8bfcb1ad57ac2e01b604e1",
+      "licenseSha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be",
+      "retainedThirdPartyNoticeCount": 29
+    }
+  ]
+}

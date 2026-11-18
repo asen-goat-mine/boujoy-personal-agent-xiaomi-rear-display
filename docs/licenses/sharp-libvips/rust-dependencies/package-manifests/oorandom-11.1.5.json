@@ -1,0 +1,45 @@
+{
+  "package": {
+    "edition": "2018",
+    "name": "oorandom",
+    "version": "11.1.5",
+    "authors": [
+      "Simon Heath <icefox@dreamquest.io>"
+    ],
+    "description": "A tiny, robust PRNG implementation.",
+    "readme": "README.md",
+    "keywords": [
+      "rng",
+      "prng",
+      "random",
+      "pcg"
+    ],
+    "categories": [
+      "algorithms",
+      "embedded",
+      "no-std"
+    ],
+    "license": "MIT",
+    "repository": "https://hg.sr.ht/~icefox/oorandom"
+  },
+  "dependencies": {},
+  "dev-dependencies": {
+    "rand_core": {
+      "version": "0.5"
+    },
+    "rand_pcg": {
+      "version": "0.2"
+    },
+    "random-fast-rng": {
+      "version": "0.1"
+    },
+    "randomize": {
+      "version": "3.0.0"
+    }
+  },
+  "badges": {
+    "maintenance": {
+      "status": "passively-maintained"
+    }
+  }
+}

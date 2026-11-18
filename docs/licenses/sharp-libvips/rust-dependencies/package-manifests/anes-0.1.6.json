@@ -1,0 +1,70 @@
+{
+  "package": {
+    "edition": "2018",
+    "name": "anes",
+    "version": "0.1.6",
+    "authors": [
+      "Robert Vojta <rvojta@me.com>"
+    ],
+    "exclude": [
+      "target",
+      "Cargo.lock"
+    ],
+    "description": "ANSI Escape Sequences provider & parser",
+    "documentation": "https://docs.rs/anes/",
+    "readme": "README.md",
+    "keywords": [
+      "terminal",
+      "ansi",
+      "sequence",
+      "code",
+      "parser"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/zrzka/anes-rs",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "all-features": true
+        }
+      }
+    }
+  },
+  "lib": {
+    "bench": false
+  },
+  "bench": [
+    {
+      "name": "bench_main",
+      "harness": false,
+      "required-features": [
+        "parser"
+      ]
+    }
+  ],
+  "dependencies": {
+    "bitflags": {
+      "version": "1.2",
+      "optional": true
+    }
+  },
+  "dev-dependencies": {
+    "criterion": {
+      "version": "0.3"
+    },
+    "libc": {
+      "version": "0.2.66"
+    }
+  },
+  "features": {
+    "default": [],
+    "parser": [
+      "bitflags"
+    ]
+  },
+  "badges": {
+    "maintenance": {
+      "status": "actively-developed"
+    }
+  }
+}

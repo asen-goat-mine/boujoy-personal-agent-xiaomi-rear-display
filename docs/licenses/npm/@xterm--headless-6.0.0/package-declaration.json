@@ -1,0 +1,7 @@
+{
+  "name": "@xterm/headless",
+  "version": "6.0.0",
+  "license": "MIT",
+  "repository": "https://github.com/xtermjs/xterm.js",
+  "originalPackageJsonSha256": "6c39530ee759998113bd8bcc306d1b725c0b1d5b0cdc04e071f6945a5f5edf1a"
+}

@@ -1,0 +1,214 @@
+{
+  "package": {
+    "edition": "2021",
+    "name": "zerocopy-derive",
+    "version": "0.8.57",
+    "build": false,
+    "exclude": [
+      ".*",
+      "tests/enum_from_bytes.rs",
+      "tests/ui-nightly/enum_from_bytes_u16_too_few.rs.disabled"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Custom derive for traits from the zerocopy crate",
+    "readme": false,
+    "license": "BSD-2-Clause OR Apache-2.0 OR MIT",
+    "repository": "https://github.com/google/zerocopy"
+  },
+  "lib": {
+    "name": "zerocopy_derive",
+    "path": "src/lib.rs",
+    "proc-macro": true
+  },
+  "test": [
+    {
+      "name": "deprecated",
+      "path": "tests/deprecated.rs"
+    },
+    {
+      "name": "enum_from_zeros",
+      "path": "tests/enum_from_zeros.rs"
+    },
+    {
+      "name": "enum_known_layout",
+      "path": "tests/enum_known_layout.rs"
+    },
+    {
+      "name": "enum_no_cell",
+      "path": "tests/enum_no_cell.rs"
+    },
+    {
+      "name": "enum_to_bytes",
+      "path": "tests/enum_to_bytes.rs"
+    },
+    {
+      "name": "enum_try_from_bytes",
+      "path": "tests/enum_try_from_bytes.rs"
+    },
+    {
+      "name": "enum_unaligned",
+      "path": "tests/enum_unaligned.rs"
+    },
+    {
+      "name": "eq",
+      "path": "tests/eq.rs"
+    },
+    {
+      "name": "hash",
+      "path": "tests/hash.rs"
+    },
+    {
+      "name": "hygiene",
+      "path": "tests/hygiene.rs"
+    },
+    {
+      "name": "include",
+      "path": "tests/include.rs"
+    },
+    {
+      "name": "issue_2117",
+      "path": "tests/issue_2117.rs"
+    },
+    {
+      "name": "issue_2835",
+      "path": "tests/issue_2835.rs"
+    },
+    {
+      "name": "issue_2880",
+      "path": "tests/issue_2880.rs"
+    },
+    {
+      "name": "issue_2915",
+      "path": "tests/issue_2915.rs"
+    },
+    {
+      "name": "on_error",
+      "path": "tests/on_error.rs"
+    },
+    {
+      "name": "paths_and_modules",
+      "path": "tests/paths_and_modules.rs"
+    },
+    {
+      "name": "priv_in_pub",
+      "path": "tests/priv_in_pub.rs"
+    },
+    {
+      "name": "struct_from_bytes",
+      "path": "tests/struct_from_bytes.rs"
+    },
+    {
+      "name": "struct_from_zeros",
+      "path": "tests/struct_from_zeros.rs"
+    },
+    {
+      "name": "struct_known_layout",
+      "path": "tests/struct_known_layout.rs"
+    },
+    {
+      "name": "struct_no_cell",
+      "path": "tests/struct_no_cell.rs"
+    },
+    {
+      "name": "struct_to_bytes",
+      "path": "tests/struct_to_bytes.rs"
+    },
+    {
+      "name": "struct_try_from_bytes",
+      "path": "tests/struct_try_from_bytes.rs"
+    },
+    {
+      "name": "struct_unaligned",
+      "path": "tests/struct_unaligned.rs"
+    },
+    {
+      "name": "ui",
+      "path": "tests/ui.rs"
+    },
+    {
+      "name": "union_from_bytes",
+      "path": "tests/union_from_bytes.rs"
+    },
+    {
+      "name": "union_from_zeros",
+      "path": "tests/union_from_zeros.rs"
+    },
+    {
+      "name": "union_known_layout",
+      "path": "tests/union_known_layout.rs"
+    },
+    {
+      "name": "union_no_cell",
+      "path": "tests/union_no_cell.rs"
+    },
+    {
+      "name": "union_to_bytes",
+      "path": "tests/union_to_bytes.rs"
+    },
+    {
+      "name": "union_try_from_bytes",
+      "path": "tests/union_try_from_bytes.rs"
+    },
+    {
+      "name": "union_unaligned",
+      "path": "tests/union_unaligned.rs"
+    },
+    {
+      "name": "unsafe_cell",
+      "path": "tests/unsafe_cell.rs"
+    }
+  ],
+  "dependencies": {
+    "proc-macro2": {
+      "version": "1.0.1"
+    },
+    "quote": {
+      "version": "1.0.40"
+    },
+    "syn": {
+      "version": "2.0.46",
+      "features": [
+        "full"
+      ]
+    }
+  },
+  "dev-dependencies": {
+    "dissimilar": {
+      "version": "1.0.9"
+    },
+    "prettyplease": {
+      "version": "0.2.17"
+    },
+    "rustversion": {
+      "version": "1.0"
+    },
+    "static_assertions": {
+      "version": "1.1"
+    },
+    "syn": {
+      "version": "2.0.46",
+      "features": [
+        "visit"
+      ]
+    }
+  },
+  "lints": {
+    "rust": {
+      "unexpected_cfgs": {
+        "level": "warn",
+        "priority": 0,
+        "check-cfg": [
+          "cfg(__ZEROCOPY_INTERNAL_USE_ONLY_NIGHTLY_FEATURES_IN_TESTS)",
+          "cfg(__ZEROCOPY_INTERNAL_USE_ONLY_TOOLCHAIN, values(\"msrv\", \"stable\", \"nightly\"))",
+          "cfg(coverage_nightly)",
+          "cfg(zerocopy_derive_union_into_bytes)",
+          "cfg(zerocopy_unstable_linux)"
+        ]
+      }
+    }
+  }
+}

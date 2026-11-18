@@ -1,0 +1,355 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.68.2",
+    "name": "glam",
+    "version": "0.31.1",
+    "authors": [
+      "Cameron Hart <cameron.hart@gmail.com>"
+    ],
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "A simple and fast 3D math library for games and graphics",
+    "readme": "README.md",
+    "keywords": [
+      "gamedev",
+      "math",
+      "matrix",
+      "vector",
+      "quaternion"
+    ],
+    "categories": [
+      "game-engines",
+      "no-std"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/bitshifter/glam-rs"
+  },
+  "badges": {
+    "maintenance": {
+      "status": "actively-developed"
+    }
+  },
+  "features": {
+    "bytecheck": [
+      "rkyv/bytecheck"
+    ],
+    "core-simd": [
+      "bytemuck?/nightly_portable_simd"
+    ],
+    "cuda": [],
+    "debug-glam-assert": [],
+    "default": [
+      "std"
+    ],
+    "fast-math": [],
+    "glam-assert": [],
+    "libm": [
+      "dep:libm"
+    ],
+    "nostd-libm": [
+      "dep:libm"
+    ],
+    "scalar-math": [],
+    "serde": [
+      "dep:serde_core"
+    ],
+    "std": [],
+    "zerocopy": [
+      "dep:zerocopy",
+      "dep:zerocopy-derive"
+    ]
+  },
+  "lib": {
+    "name": "glam",
+    "path": "src/lib.rs",
+    "bench": false
+  },
+  "test": [
+    {
+      "name": "affine2",
+      "path": "tests/affine2.rs"
+    },
+    {
+      "name": "affine3",
+      "path": "tests/affine3.rs"
+    },
+    {
+      "name": "euler",
+      "path": "tests/euler.rs"
+    },
+    {
+      "name": "float",
+      "path": "tests/float.rs"
+    },
+    {
+      "name": "mat2",
+      "path": "tests/mat2.rs"
+    },
+    {
+      "name": "mat3",
+      "path": "tests/mat3.rs"
+    },
+    {
+      "name": "mat4",
+      "path": "tests/mat4.rs"
+    },
+    {
+      "name": "quat",
+      "path": "tests/quat.rs"
+    },
+    {
+      "name": "support",
+      "path": "tests/support.rs"
+    },
+    {
+      "name": "swizzles_f32",
+      "path": "tests/swizzles_f32.rs"
+    },
+    {
+      "name": "swizzles_f64",
+      "path": "tests/swizzles_f64.rs"
+    },
+    {
+      "name": "swizzles_i16",
+      "path": "tests/swizzles_i16.rs"
+    },
+    {
+      "name": "swizzles_i32",
+      "path": "tests/swizzles_i32.rs"
+    },
+    {
+      "name": "swizzles_i64",
+      "path": "tests/swizzles_i64.rs"
+    },
+    {
+      "name": "swizzles_i8",
+      "path": "tests/swizzles_i8.rs"
+    },
+    {
+      "name": "swizzles_isize",
+      "path": "tests/swizzles_isize.rs"
+    },
+    {
+      "name": "swizzles_u16",
+      "path": "tests/swizzles_u16.rs"
+    },
+    {
+      "name": "swizzles_u32",
+      "path": "tests/swizzles_u32.rs"
+    },
+    {
+      "name": "swizzles_u64",
+      "path": "tests/swizzles_u64.rs"
+    },
+    {
+      "name": "swizzles_u8",
+      "path": "tests/swizzles_u8.rs"
+    },
+    {
+      "name": "swizzles_usize",
+      "path": "tests/swizzles_usize.rs"
+    },
+    {
+      "name": "vec2",
+      "path": "tests/vec2.rs"
+    },
+    {
+      "name": "vec3",
+      "path": "tests/vec3.rs"
+    },
+    {
+      "name": "vec4",
+      "path": "tests/vec4.rs"
+    }
+  ],
+  "bench": [
+    {
+      "name": "affine2",
+      "path": "benches/affine2.rs",
+      "harness": false
+    },
+    {
+      "name": "affine3",
+      "path": "benches/affine3.rs",
+      "harness": false
+    },
+    {
+      "name": "gungraun",
+      "path": "benches/gungraun.rs",
+      "harness": false
+    },
+    {
+      "name": "mat2",
+      "path": "benches/mat2.rs",
+      "harness": false
+    },
+    {
+      "name": "mat3",
+      "path": "benches/mat3.rs",
+      "harness": false
+    },
+    {
+      "name": "mat3a",
+      "path": "benches/mat3a.rs",
+      "harness": false
+    },
+    {
+      "name": "mat4",
+      "path": "benches/mat4.rs",
+      "harness": false
+    },
+    {
+      "name": "quat",
+      "path": "benches/quat.rs",
+      "harness": false
+    },
+    {
+      "name": "support",
+      "path": "benches/support.rs",
+      "bench": false
+    },
+    {
+      "name": "vec2",
+      "path": "benches/vec2.rs",
+      "harness": false
+    },
+    {
+      "name": "vec3",
+      "path": "benches/vec3.rs",
+      "harness": false
+    },
+    {
+      "name": "vec3a",
+      "path": "benches/vec3a.rs",
+      "harness": false
+    },
+    {
+      "name": "vec4",
+      "path": "benches/vec4.rs",
+      "harness": false
+    }
+  ],
+  "dependencies": {
+    "approx": {
+      "version": "0.5",
+      "optional": true,
+      "default-features": false
+    },
+    "arbitrary": {
+      "version": "1.4.2",
+      "optional": true,
+      "default-features": false
+    },
+    "bytemuck": {
+      "version": "1.9",
+      "features": [
+        "derive",
+        "aarch64_simd",
+        "wasm_simd"
+      ],
+      "optional": true,
+      "default-features": false
+    },
+    "encase": {
+      "version": "0.12",
+      "optional": true,
+      "default-features": false
+    },
+    "libm": {
+      "version": "0.2",
+      "optional": true,
+      "default-features": false
+    },
+    "mint": {
+      "version": "0.5.8",
+      "optional": true,
+      "default-features": false
+    },
+    "rand": {
+      "version": "0.9",
+      "optional": true,
+      "default-features": false
+    },
+    "rkyv": {
+      "version": "0.8",
+      "optional": true,
+      "default-features": false
+    },
+    "serde_core": {
+      "version": "1.0",
+      "optional": true,
+      "default-features": false
+    },
+    "speedy": {
+      "version": "0.8",
+      "optional": true,
+      "default-features": false
+    },
+    "zerocopy": {
+      "version": "0.8",
+      "features": [
+        "simd"
+      ],
+      "optional": true,
+      "default-features": false
+    },
+    "zerocopy-derive": {
+      "version": "0.8",
+      "optional": true,
+      "default-features": false
+    }
+  },
+  "dev-dependencies": {
+    "rand_xoshiro": {
+      "version": "0.7"
+    },
+    "rkyv": {
+      "version": "0.8",
+      "features": [
+        "alloc"
+      ],
+      "default-features": false
+    },
+    "serde_json": {
+      "version": "1.0"
+    }
+  },
+  "target": {
+    "cfg(not(target_family = \"wasm\"))": {
+      "dev-dependencies": {
+        "criterion": {
+          "version": "0.8",
+          "features": [
+            "html_reports"
+          ]
+        },
+        "gungraun": {
+          "version": "0.17"
+        }
+      }
+    },
+    "cfg(target_family = \"wasm\")": {
+      "dev-dependencies": {
+        "wasm-bindgen-test": {
+          "version": "0.3.0"
+        }
+      }
+    }
+  },
+  "lints": {
+    "rust": {
+      "unexpected_cfgs": {
+        "level": "warn",
+        "priority": 0,
+        "check-cfg": [
+          "cfg(target_arch, values(\"spirv\"))"
+        ]
+      }
+    }
+  }
+}

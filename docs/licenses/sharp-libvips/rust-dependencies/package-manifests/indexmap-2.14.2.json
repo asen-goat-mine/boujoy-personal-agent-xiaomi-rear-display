@@ -1,0 +1,190 @@
+{
+  "package": {
+    "edition": "2024",
+    "rust-version": "1.85",
+    "name": "indexmap",
+    "version": "2.14.2",
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "A hash table with consistent order and fast iteration.",
+    "documentation": "https://docs.rs/indexmap/",
+    "readme": "README.md",
+    "keywords": [
+      "hashmap",
+      "no_std"
+    ],
+    "categories": [
+      "data-structures",
+      "no-std"
+    ],
+    "license": "Apache-2.0 OR MIT",
+    "repository": "https://github.com/indexmap-rs/indexmap",
+    "metadata": {
+      "release": {
+        "allow-branch": [
+          "main"
+        ],
+        "sign-tag": true,
+        "tag-name": "{{version}}"
+      },
+      "docs": {
+        "rs": {
+          "features": [
+            "arbitrary",
+            "quickcheck",
+            "serde",
+            "borsh",
+            "rayon",
+            "sval"
+          ],
+          "rustdoc-args": [
+            "--cfg",
+            "docsrs"
+          ]
+        }
+      }
+    }
+  },
+  "features": {
+    "default": [
+      "std"
+    ],
+    "serde": [
+      "dep:serde_core",
+      "dep:serde"
+    ],
+    "std": [],
+    "test_debug": []
+  },
+  "lib": {
+    "name": "indexmap",
+    "path": "src/lib.rs",
+    "bench": false
+  },
+  "test": [
+    {
+      "name": "equivalent_trait",
+      "path": "tests/equivalent_trait.rs"
+    },
+    {
+      "name": "macros_full_path",
+      "path": "tests/macros_full_path.rs"
+    },
+    {
+      "name": "quick",
+      "path": "tests/quick.rs"
+    },
+    {
+      "name": "tests",
+      "path": "tests/tests.rs"
+    }
+  ],
+  "bench": [
+    {
+      "name": "bench",
+      "path": "benches/bench.rs"
+    },
+    {
+      "name": "faststring",
+      "path": "benches/faststring.rs"
+    }
+  ],
+  "dependencies": {
+    "arbitrary": {
+      "version": "1.0",
+      "optional": true,
+      "default-features": false
+    },
+    "borsh": {
+      "version": "1.2",
+      "optional": true,
+      "default-features": false
+    },
+    "equivalent": {
+      "version": "1.0",
+      "default-features": false
+    },
+    "hashbrown": {
+      "version": "0.17",
+      "default-features": false
+    },
+    "quickcheck": {
+      "version": "1.0",
+      "optional": true,
+      "default-features": false
+    },
+    "rayon": {
+      "version": "1.9",
+      "optional": true
+    },
+    "serde_core": {
+      "version": "1.0.220",
+      "optional": true,
+      "default-features": false
+    },
+    "sval": {
+      "version": "2",
+      "optional": true,
+      "default-features": false
+    }
+  },
+  "dev-dependencies": {
+    "fastrand": {
+      "version": "2",
+      "default-features": false
+    },
+    "fnv": {
+      "version": "1.0"
+    },
+    "itertools": {
+      "version": "0.14"
+    },
+    "quickcheck": {
+      "version": "1.1",
+      "default-features": false
+    },
+    "serde": {
+      "version": "1.0",
+      "features": [
+        "derive"
+      ],
+      "default-features": false
+    }
+  },
+  "target": {
+    "cfg(any())": {
+      "dependencies": {
+        "serde": {
+          "version": "1.0.220",
+          "optional": true,
+          "default-features": false
+        }
+      }
+    }
+  },
+  "lints": {
+    "clippy": {
+      "style": "allow"
+    },
+    "rust": {
+      "private_bounds": "deny",
+      "private_interfaces": "deny",
+      "unnameable_types": "deny",
+      "unreachable_pub": "deny",
+      "unsafe_code": "deny",
+      "rust_2018_idioms": {
+        "level": "warn",
+        "priority": -1
+      }
+    }
+  },
+  "profile": {
+    "bench": {
+      "debug": 2
+    }
+  }
+}

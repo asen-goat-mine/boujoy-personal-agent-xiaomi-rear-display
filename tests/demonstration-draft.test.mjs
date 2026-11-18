@@ -1,0 +1,19 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {randomUUID} from 'node:crypto';
+import {Store} from '../src/core/store.mjs';
+import {Engine} from '../src/core/engine.mjs';
+import {WorkflowLibrary} from '../src/core/workflows.mjs';
+import {requestHash} from '../src/core/task-contract.mjs';
+function fixture(t){const dir=fs.mkdtempSync(path.join(os.tmpdir(),'boujoy-demodraft-')),store=new Store(path.join(dir,'runtime')),engine=new Engine({store,broker:{},secrets:{},memory:{}});engine.pump=async()=>{};const task=engine.create({prompt:'把亮度调到30%',cloudConsent:false});store.updateTask(task.id,t=>{t.status='paused';t.deadlineAt=new Date(Date.now()-5000).toISOString();});const library=new WorkflowLibrary({store,root:path.join(dir,'workflows')}),at=Date.now()-2000,session={id:randomUUID(),sourceTaskId:task.id,sourceMessageId:task.messages[0].id,sourceSha256:requestHash(task.messages[0].content),objective:task.taskContract.goal,name:'用户的私密名称',startedBy:'authenticated_user',certificateFingerprint:'do-not-store-device-identity',startedAt:new Date(at).toISOString(),expiresAt:new Date(at+120000).toISOString(),endedAt:new Date(at+1000).toISOString(),stopReason:'user_stopped',observations:[{at:at+100,packageName:'com.android.settings',screenHash:'a'.repeat(64),nodeSummary:{nodeCount:10,editableCount:1,controls:[{label:'确定',viewId:'com.android.settings:id/save',className:'android.widget.Button'},{label:'sk-private-secret-123456',viewId:'../../private',className:'invalid class'}]},rawText:'用户私密屏幕正文',screenshot:'private-image'}]};t.after(()=>{store.close();fs.rmSync(dir,{recursive:true,force:true});});return {dir,store,task,library,session};}
+test('an explicitly ended demonstration creates a minimal draft from a paused expired task without resuming it',t=>{
+ const f=fixture(t),before=structuredClone(f.store.task(f.task.id)),draft=f.library.createDemonstrationDraft(f.session);assert.equal(draft.status,'draft');assert.equal(draft.source_type,'user_demonstration');assert.equal(draft.demonstration.actionsRecorded,false);assert.equal(draft.demonstration.authorization,false);assert.deepEqual(f.store.task(f.task.id),before);assert.equal(f.library.createDemonstrationDraft(f.session).id,draft.id);
+ const saved=fs.readFileSync(f.library.file(draft.id),'utf8');for(const privateValue of ['30%','用户私密屏幕正文','sk-private-secret','private-image','do-not-store-device-identity','用户的私密名称'])assert.equal(saved.includes(privateValue),false,privateValue);assert.equal(draft.demonstration.observations[0].nodeSummary.controls[0].label,'确定');assert.deepEqual(draft.demonstration.observations[0].nodeSummary.controls[1],{});assert.equal(draft.instances.length,0);assert.equal(draft.outcomes.length,0);
+});
+test('demonstration source, time and evidence cannot be replaced or stretched into a background recording',t=>{
+ const f=fixture(t);assert.throws(()=>f.library.createDemonstrationDraft({...f.session,startedBy:'model'}));assert.throws(()=>f.library.createDemonstrationDraft({...f.session,sourceSha256:'b'.repeat(64)}));assert.throws(()=>f.library.createDemonstrationDraft({...f.session,expiresAt:new Date(Date.now()+3600000).toISOString()}));assert.throws(()=>f.library.createDemonstrationDraft({...f.session,observations:[]}));assert.throws(()=>f.library.createDemonstrationDraft({...f.session,observations:Array(61).fill(f.session.observations[0])}));
+ f.library.createDemonstrationDraft(f.session);assert.throws(()=>f.library.createDemonstrationDraft({...f.session,observations:[{...f.session.observations[0],screenHash:'b'.repeat(64)}]}));f.store.updateTask(f.task.id,t=>t.messages.push({id:randomUUID(),role:'user',content:'另一个目标'}));assert.throws(()=>f.library.createDemonstrationDraft(f.session));
+});

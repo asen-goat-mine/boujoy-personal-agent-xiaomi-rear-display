@@ -1,0 +1,12 @@
+{
+  "upstream": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+  "commit": "8c32a9dc5d72c033816c6a8110b37f40cf94fba4",
+  "version": "0.1.0",
+  "license": "MIT",
+  "runtime": "0.2.1-alpha.2",
+  "sourceModified": false,
+  "generatedCore": "src/vendor/dsh-superagent-core.mjs",
+  "coreSha256": "4e8e2b5c240e7b0f0f1412f5d00044a9ff942f5e5dd7ffa169b3a7459195c694",
+  "build": "node scripts/build-official-superagent.mjs",
+  "integrationNotes": "docs/superagent-integration-2026-11-05.md"
+}

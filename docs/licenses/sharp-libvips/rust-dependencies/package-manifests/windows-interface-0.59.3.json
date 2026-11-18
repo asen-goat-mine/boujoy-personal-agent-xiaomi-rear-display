@@ -1,0 +1,68 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.74",
+    "name": "windows-interface",
+    "version": "0.59.3",
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "The interface macro for the Windows crates",
+    "readme": "readme.md",
+    "categories": [
+      "os::windows-apis"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/microsoft/windows-rs",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "default-target": "x86_64-pc-windows-msvc",
+          "targets": []
+        }
+      }
+    }
+  },
+  "lib": {
+    "name": "windows_interface",
+    "path": "src/lib.rs",
+    "proc-macro": true
+  },
+  "dependencies": {
+    "proc-macro2": {
+      "version": "1.0",
+      "default-features": false
+    },
+    "quote": {
+      "version": "1.0",
+      "default-features": false
+    },
+    "syn": {
+      "version": "2.0",
+      "features": [
+        "parsing",
+        "proc-macro",
+        "printing",
+        "full",
+        "clone-impls"
+      ],
+      "default-features": false
+    }
+  },
+  "dev-dependencies": {},
+  "lints": {
+    "rust": {
+      "missing_unsafe_on_extern": "warn",
+      "unexpected_cfgs": {
+        "level": "warn",
+        "priority": 0,
+        "check-cfg": [
+          "cfg(windows_raw_dylib, windows_slim_errors)"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "standardwebhooks",
+  "version": "1.1.1",
+  "license": "MIT",
+  "author": "Standard Webhooks",
+  "repository": "https://github.com/standard-webhooks/standard-webhooks",
+  "originalPackageJsonSha256": "686397f0f0202e0b693cfd3f6241d7a8da3df326f9642867a484fbbd295690b6"
+}

@@ -1,0 +1,172 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.60",
+    "name": "num-bigint",
+    "version": "0.4.8",
+    "authors": [
+      "The Rust Project Developers"
+    ],
+    "build": false,
+    "exclude": [
+      "/ci/*",
+      "/.github/*"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Big integer implementation for Rust",
+    "homepage": "https://github.com/rust-num/num-bigint",
+    "documentation": "https://docs.rs/num-bigint",
+    "readme": "README.md",
+    "keywords": [
+      "mathematics",
+      "numerics",
+      "bignum"
+    ],
+    "categories": [
+      "algorithms",
+      "data-structures",
+      "science"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/rust-num/num-bigint",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "features": [
+            "std",
+            "serde",
+            "rand",
+            "quickcheck",
+            "arbitrary"
+          ],
+          "rustdoc-args": [
+            "--cfg",
+            "docsrs"
+          ]
+        }
+      }
+    }
+  },
+  "features": {
+    "arbitrary": [
+      "dep:arbitrary"
+    ],
+    "default": [
+      "std"
+    ],
+    "quickcheck": [
+      "dep:quickcheck"
+    ],
+    "rand": [
+      "dep:rand"
+    ],
+    "serde": [
+      "dep:serde"
+    ],
+    "std": [
+      "num-integer/std",
+      "num-traits/std"
+    ]
+  },
+  "lib": {
+    "name": "num_bigint",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "bigint",
+      "path": "tests/bigint.rs"
+    },
+    {
+      "name": "bigint_bitwise",
+      "path": "tests/bigint_bitwise.rs"
+    },
+    {
+      "name": "bigint_scalar",
+      "path": "tests/bigint_scalar.rs"
+    },
+    {
+      "name": "biguint",
+      "path": "tests/biguint.rs"
+    },
+    {
+      "name": "biguint_scalar",
+      "path": "tests/biguint_scalar.rs"
+    },
+    {
+      "name": "fuzzed",
+      "path": "tests/fuzzed.rs"
+    },
+    {
+      "name": "modpow",
+      "path": "tests/modpow.rs"
+    },
+    {
+      "name": "roots",
+      "path": "tests/roots.rs"
+    }
+  ],
+  "bench": [
+    {
+      "name": "bigint",
+      "path": "benches/bigint.rs"
+    },
+    {
+      "name": "factorial",
+      "path": "benches/factorial.rs"
+    },
+    {
+      "name": "gcd",
+      "path": "benches/gcd.rs"
+    },
+    {
+      "name": "roots",
+      "path": "benches/roots.rs"
+    },
+    {
+      "name": "shootout-pidigits",
+      "path": "benches/shootout-pidigits.rs",
+      "harness": false
+    }
+  ],
+  "dependencies": {
+    "arbitrary": {
+      "version": "1",
+      "optional": true,
+      "default-features": false
+    },
+    "num-integer": {
+      "version": "0.1.46",
+      "features": [
+        "i128"
+      ],
+      "default-features": false
+    },
+    "num-traits": {
+      "version": "0.2.18",
+      "features": [
+        "i128"
+      ],
+      "default-features": false
+    },
+    "quickcheck": {
+      "version": "1",
+      "optional": true,
+      "default-features": false
+    },
+    "rand": {
+      "version": "0.8",
+      "optional": true,
+      "default-features": false
+    },
+    "serde": {
+      "version": "1.0",
+      "optional": true,
+      "default-features": false
+    }
+  }
+}

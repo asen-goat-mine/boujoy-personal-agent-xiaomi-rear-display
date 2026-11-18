@@ -1,0 +1,26 @@
+{
+  "package": {
+    "edition": "2018",
+    "name": "mutants",
+    "version": "0.0.4",
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Decorator attributes to be used with cargo-mutants",
+    "readme": "README.md",
+    "categories": [
+      "development-tools::testing"
+    ],
+    "license": "MIT",
+    "repository": "https://github.com/sourcefrog/cargo-mutants",
+    "resolver": "2"
+  },
+  "lib": {
+    "name": "mutants",
+    "path": "src/lib.rs",
+    "proc-macro": true
+  }
+}

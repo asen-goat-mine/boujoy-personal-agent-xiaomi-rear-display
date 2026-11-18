@@ -1,0 +1,33 @@
+{
+  "name": "@aws-sdk/credential-provider-http",
+  "version": "3.972.75",
+  "declaredLicense": "Apache-2.0",
+  "finding": "Official exact-version npm archive omits the package root LICENSE and does not embed a complete root license in README. This supplement provides the complete unmodified project license from fixed official source whose package name/version match.",
+  "archive": {
+    "url": "https://registry.npmjs.org/@aws-sdk/credential-provider-http/-/credential-provider-http-3.972.75.tgz",
+    "lockIntegrity": "sha512-Q/uIDy8eAVN7JgSKDg16F/f+hmNJj/ZyLJN8AkW2ofVdDgJVh8fO/A26iZ7YsvM2/k76hsf/u2lLAtyXsK8Ziw==",
+    "sha256": "ccd1b488642d8e979a4bef67a6aaffdfe7e089fe4cc71207a8aa918ee4bb98bd",
+    "lockIntegrityAndRegistryShasumVerified": true
+  },
+  "source": {
+    "repository": "https://github.com/aws/aws-sdk-js-v3",
+    "commit": "a960c14e8ce09ab8fd09352e40d75c6b9d52c1ca",
+    "packageManifestUrl": "https://raw.githubusercontent.com/aws/aws-sdk-js-v3/a960c14e8ce09ab8fd09352e40d75c6b9d52c1ca/packages-internal/credential-provider-http/package.json",
+    "packageManifestSha256": "64fbddec8cd91f10514ef78051f5ae4c112093ea665104a45ad45ec540564e0c",
+    "nameAndVersionMatch": true,
+    "licenseUrl": "https://raw.githubusercontent.com/aws/aws-sdk-js-v3/a960c14e8ce09ab8fd09352e40d75c6b9d52c1ca/LICENSE",
+    "licenseSha256": "edea91454b811f127fbdea3d86f378f6719bd372ed440abf82b232f6fca06c3d",
+    "provenance": {
+      "kind": "official-source-commit-with-exact-name-and-version",
+      "commitLookupUrl": "https://api.github.com/repos/aws/aws-sdk-js-v3/commits?path=packages-internal%2Fcredential-provider-http%2Fpackage.json&per_page=10&page=2",
+      "relatedAlreadyBundledProjectNotice": {
+        "name": "@aws-sdk/credential-provider-node",
+        "version": "3.972.85",
+        "sha256": "d82ceb8cbd004a2d4834085c557d55459f528e30268d95159ee1e4030a693a6e",
+        "identicalToSourceRoot": false,
+        "note": "The already-bundled companion notice retains its 2018-2020 AWS attribution. The exact-version official source root notice copied here has its own 2018 attribution; neither notice is altered or removed."
+      }
+    }
+  },
+  "retainedBundledThirdPartyNotices": []
+}

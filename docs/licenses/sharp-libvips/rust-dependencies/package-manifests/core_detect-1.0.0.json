@@ -1,0 +1,37 @@
+{
+  "package": {
+    "edition": "2018",
+    "name": "core_detect",
+    "version": "1.0.0",
+    "authors": [
+      "Thom Chiovoloni <chiovolonit@gmail.com>"
+    ],
+    "description": "A `no_std` version of the `std::is_x86_feature_detected!` macro.",
+    "homepage": "https://github.com/thomcc/core_detect",
+    "documentation": "https://docs.rs/core_detect",
+    "readme": "README.md",
+    "keywords": [
+      "feature",
+      "detection",
+      "x86",
+      "arch",
+      "cpuid"
+    ],
+    "categories": [
+      "hardware-support",
+      "no-std"
+    ],
+    "license": "MIT/Apache-2.0",
+    "repository": "https://github.com/thomcc/core_detect"
+  },
+  "dev-dependencies": {
+    "cupid": {
+      "version": "0.6"
+    }
+  },
+  "features": {
+    "assume_has_cpuid": [],
+    "default": [],
+    "unstable_has_cpuid": []
+  }
+}

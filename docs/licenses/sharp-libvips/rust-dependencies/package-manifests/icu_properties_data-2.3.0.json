@@ -1,0 +1,73 @@
+{
+  "package": {
+    "edition": "2024",
+    "rust-version": "1.88",
+    "name": "icu_properties_data",
+    "version": "2.3.0",
+    "authors": [
+      "The ICU4X Project Developers"
+    ],
+    "build": "build.rs",
+    "include": [
+      "data/**/*",
+      "src/**/*",
+      "examples/**/*",
+      "benches/**/*",
+      "tests/**/*",
+      "Cargo.toml",
+      "LICENSE",
+      "README.md",
+      "build.rs"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Data for the icu_properties crate",
+    "homepage": "https://icu4x.unicode.org",
+    "readme": "README.md",
+    "keywords": [
+      "data",
+      "unicode"
+    ],
+    "categories": [
+      "internationalization",
+      "localization",
+      "no-std",
+      "embedded"
+    ],
+    "license": "Unicode-3.0",
+    "repository": "https://github.com/unicode-org/icu4x",
+    "resolver": "2",
+    "metadata": {
+      "sources": {
+        "cldr": {
+          "tagged": "48.2.1"
+        },
+        "icuexport": {
+          "tagged": "release-78.1rc"
+        },
+        "segmenter_lstm": {
+          "tagged": "v0.1.0"
+        }
+      }
+    }
+  },
+  "lib": {
+    "name": "icu_properties_data",
+    "path": "src/lib.rs"
+  },
+  "dependencies": {},
+  "lints": {
+    "rust": {
+      "unexpected_cfgs": {
+        "level": "warn",
+        "priority": 0,
+        "check-cfg": [
+          "cfg(icu4x_custom_data)"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+Boujoy 首次使用
+
+1. 阅读 构建信息.json，确认 Phone Use 或 Xiaomi 发行版。
+2. 在完整解压目录运行：shasum -a 256 -c SHA256SUMS
+3. 按 SETUP.md 把本版 .app 放进“应用程序”，再完成本人的模型配置与手机配对。
+4. 先用同一局域网的主屏控制；手机 Boujoy 聊天需自建加密 relay。
+5. 希望交给 AI 配置：给它 AI-SETUP.md。不要给聊天发送模型密钥、绑定码或私钥。
+
+两个版本可并存；同一手机一次只由一版执行。Xiaomi 背屏/后台能力不是全机型保证。
+签名冲突不要卸载旧应用。校验失败先查 TROUBLESHOOTING.md。

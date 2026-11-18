@@ -1,0 +1,8 @@
+{$BOUJOY_RELAY_DOMAIN} {
+  @tunnel path /v1/tunnel
+  route {
+    reverse_proxy @tunnel relay:18843
+    reverse_proxy /healthz relay:18843
+    respond 404
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "package": {
+    "edition": "2024",
+    "rust-version": "1.92",
+    "name": "pangocairo",
+    "version": "0.22.9",
+    "authors": [
+      "The gtk-rs Project Developers"
+    ],
+    "build": false,
+    "exclude": [
+      "gir-files/*"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Rust bindings for the PangoCairo library",
+    "homepage": "https://gtk-rs.org/",
+    "documentation": "https://gtk-rs.org/gtk-rs-core/stable/latest/docs/pangocairo/",
+    "readme": "README.md",
+    "keywords": [
+      "pango",
+      "cairo",
+      "gtk-rs",
+      "gnome"
+    ],
+    "license": "MIT",
+    "repository": "https://github.com/gtk-rs/gtk-rs-core",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "all-features": true,
+          "rustdoc-args": [
+            "--generate-link-to-definition"
+          ]
+        }
+      }
+    }
+  },
+  "features": {
+    "v1_58": [
+      "pango/v1_58",
+      "pangocairo-sys/v1_58"
+    ]
+  },
+  "lib": {
+    "name": "pangocairo",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "check_gir",
+      "path": "tests/check_gir.rs"
+    },
+    {
+      "name": "iterators",
+      "path": "tests/iterators.rs"
+    }
+  ],
+  "dependencies": {
+    "cairo-rs": {
+      "version": "0.22.0"
+    },
+    "glib": {
+      "version": "0.22.0",
+      "default-features": false
+    },
+    "pango": {
+      "version": "0.22.0"
+    },
+    "pangocairo-sys": {
+      "version": "0.22.0"
+    }
+  },
+  "dev-dependencies": {
+    "gir-format-check": {
+      "version": "^0.1"
+    }
+  }
+}

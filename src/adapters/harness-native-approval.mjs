@@ -1,0 +1,9 @@
+// Bridge official Harness permission questions into Boujoy's existing approval UI.
+export const name='boujoy-harness-native-approval';export const inject=['approval','tools'];
+export function apply(ctx){const calls=new Map();
+ ctx.on('tools/pre-execute',async(exec,next)=>{const timer=setTimeout(()=>calls.delete(exec.callId),240000);timer.unref?.();calls.set(exec.callId,{tool:exec.name,args:exec.arguments,timer});try{if(!exec.name.startsWith('mcp__personal__')){const response=await fetch(process.env.BOUJOY_INTERNAL_URL+'/harness/native-authorize',{method:'POST',headers:{Authorization:'Bearer '+process.env.BOUJOY_RUNTIME_TOKEN,'Content-Type':'application/json'},body:JSON.stringify({tool:exec.name,sessionId:exec.agent?.session?.id}),signal:exec.signal});if(!response.ok)throw Error('当前任务的执行权限已暂停或撤销');}return await next();}catch(error){clearTimeout(calls.get(exec.callId)?.timer);calls.delete(exec.callId);throw error;}},true);
+ ctx.on('tools/post-execute',async(exec,result,next)=>{try{return await next();}finally{clearTimeout(calls.get(exec.callId)?.timer);calls.delete(exec.callId);}},true);
+ ctx.on('approval/request',async(req)=>{if(req.signal?.aborted)return 'cancelled';const call=calls.get(req.callId);if(!call)return 'unavailable';
+  try{const response=await fetch(process.env.BOUJOY_INTERNAL_URL+'/harness/approval',{method:'POST',headers:{Authorization:'Bearer '+process.env.BOUJOY_RUNTIME_TOKEN,'Content-Type':'application/json'},body:JSON.stringify({tool:call.tool,args:call.args,summary:req.displayReason?.zh||req.reason||call.tool,callId:req.callId,sessionId:req.agent.session.id}),signal:AbortSignal.any([...(req.signal?[req.signal]:[]),AbortSignal.timeout(190000)])});if(!response.ok)return 'unavailable';const value=await response.json();return ['allowed-once','rejected','cancelled','unavailable'].includes(value.outcome)?value.outcome:'unavailable';}catch{return req.signal?.aborted?'cancelled':'unavailable';}
+ });
+}

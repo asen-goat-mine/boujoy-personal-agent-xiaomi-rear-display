@@ -1,0 +1,62 @@
+{
+  "package": {
+    "edition": "2021",
+    "name": "defmt-macros",
+    "version": "1.1.1",
+    "authors": [
+      "The Knurling-rs developers"
+    ],
+    "build": "build.rs",
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "defmt macros",
+    "readme": "README.md",
+    "keywords": [
+      "knurling",
+      "defmt"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/knurling-rs/defmt"
+  },
+  "features": {
+    "unstable-test": []
+  },
+  "lib": {
+    "name": "defmt_macros",
+    "path": "src/lib.rs",
+    "proc-macro": true
+  },
+  "dependencies": {
+    "defmt-parser": {
+      "version": "=1.0.0"
+    },
+    "proc-macro2": {
+      "version": "1"
+    },
+    "quote": {
+      "version": "1"
+    },
+    "syn": {
+      "version": "2",
+      "features": [
+        "full",
+        "extra-traits"
+      ]
+    }
+  },
+  "dev-dependencies": {
+    "maplit": {
+      "version": "1"
+    },
+    "pretty_assertions": {
+      "version": "1"
+    },
+    "rstest": {
+      "version": "0.19",
+      "default-features": false
+    }
+  }
+}

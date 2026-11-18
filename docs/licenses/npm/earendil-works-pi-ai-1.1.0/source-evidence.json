@@ -1,0 +1,30 @@
+{
+  "name": "@earendil-works/pi-ai",
+  "version": "1.1.0",
+  "declaredLicense": "MIT",
+  "finding": "Official exact-version npm archive omits the package root LICENSE and does not embed a complete root license in README. This supplement provides the complete unmodified project license from fixed official source whose package name/version match.",
+  "archive": {
+    "url": "https://registry.npmjs.org/@earendil-works/pi-ai/-/pi-ai-1.1.0.tgz",
+    "lockIntegrity": "sha512-1T7LAkc/5Bvc0v6w4vAGVdCrli0o/E0pEmYKTnixu95vSFArBjvbhS/G4ZwI0RUePgf0Imcu0VyqlM4EcXxqfw==",
+    "sha256": "6caab33cec57480ed02c57fe37428a030a77cc2a0662814b435a5cf8932ad829",
+    "lockIntegrityAndRegistryShasumVerified": true
+  },
+  "source": {
+    "repository": "https://github.com/earendil-works/pi",
+    "commit": "abe508e1b89912adde45528136c3221eb69acdd7",
+    "packageManifestUrl": "https://raw.githubusercontent.com/earendil-works/pi/abe508e1b89912adde45528136c3221eb69acdd7/packages/ai/package.json",
+    "packageManifestSha256": "a8f10d5157b335379ae00edf9c25ae7a15bfc0f3a76107d4376a3779bb5b2995",
+    "nameAndVersionMatch": true,
+    "licenseUrl": "https://raw.githubusercontent.com/earendil-works/pi/abe508e1b89912adde45528136c3221eb69acdd7/LICENSE",
+    "licenseSha256": "0457f5bcec3b3b211605dfb5d1a49042fd638f3686a410fe099c24a25af13c48",
+    "provenance": {
+      "kind": "npm-published-SLSA-source-statement",
+      "url": "https://registry.npmjs.org/-/npm/v1/attestations/@earendil-works%2fpi-ai@1.1.0",
+      "subjectDigestMatchesArchive": true,
+      "signatureVerificationPerformed": false,
+      "declaredGitCommit": "abe508e1b89912adde45528136c3221eb69acdd7",
+      "statementSha256": "b4eeb91e7ee038204bd5c7d95abd0a69c8a9124e869029dc329b2d25a8ace8f4"
+    }
+  },
+  "retainedBundledThirdPartyNotices": []
+}

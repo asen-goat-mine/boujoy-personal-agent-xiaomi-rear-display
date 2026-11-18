@@ -1,0 +1,16 @@
+# Boujoy desktop
+
+The macOS app uses Electron's hidden native title bar. Real traffic-light buttons sit inside the sidebar; the web page keeps the boujoy brand and round search/new controls. The page is sandboxed and receives no Node.js or IPC bridge. Each edition uses its distribution.json loopback port, application identity, data directory, memory directory and Keychain namespace. The launcher authenticates through /api/session and compares the running service's edition, version, Android application ID and source digest before reusing it. A different build is rejected without stopping any service.
+
+Runtime: Electron 44.7.2, installed outside the Vault at `~/Library/Application Support/Boujoy/PersonalAgentDesktopRuntime`. Install with `npm install --prefix "$HOME/Library/Application Support/Boujoy/PersonalAgentDesktopRuntime" --save-exact electron@44.7.2 --no-audit --no-fund`, then run the package's `install.js` if the binary has not downloaded.
+
+Run `npm run app` from the project to build the edition-named developer app under `dist/`. The previous build is renamed with a backup timestamp. This developer shell uses the current source checkout; it is not a portable share package. Portable distribution uses `scripts/package-share.mjs` and contains its own backend and runtimes. The service survives closing the window; reopening the app restores a window and can start the service if needed. `BOUJOY_ELECTRON_RUNTIME` can override the runtime directory during builds.
+
+The supported desktop shell is Electron on Apple silicon macOS. Obsolete Chrome and Swift launchers are not included in these editions.
+
+Voice input requests the microphone only when the user clicks the recording button in the main local chat. Camera, embedded frames, the pet and external pages are denied. macOS shows its own first-use microphone permission; the app bundle includes the matching usage description. The current voice service first attempts DeepSeek ASR/TTS, so audio or read-aloud text may be sent to the configured provider; an independently prepared local runtime provides fallback. Transcription produces an editable draft before the chat message is sent, but this does not mean the preceding audio processing stayed local. See [voice setup and data flow](../docs/local-voice.md).
+
+## Desktop pet (0.4)
+Closing or minimizing the main window shows the transparent head-only pet. Click its head or window button to reopen; drag its head to move it. Task state is read locally and reduced to counts/mode before reaching the sandboxed pet. Its decorative terminal face appears while a task is queued/running/waiting for children and restores when work ends. No task output or credentials are exposed to the pet.
+
+The coin is a virtual token, unrelated to API usage or billing. Feeding provides a toss/swallow/happy animation with a 60-second cooldown enforced in the Electron main process and persisted in desktop-native/pet-state.json. Closing/reopening does not reset it. The pet has a separate, sender-validated IPC bridge only for state, feeding, repositioning and reopening the main window. The main web app still has no IPC bridge. Quitting Boujoy exits the pet; closing its main window keeps the service and pet available.

@@ -1,0 +1,51 @@
+{
+  "package": {
+    "edition": "2021",
+    "name": "defmt-parser",
+    "version": "1.0.0",
+    "authors": [
+      "The Knurling-rs developers"
+    ],
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Parsing library for defmt format strings",
+    "readme": "README.md",
+    "keywords": [
+      "knurling",
+      "defmt"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/knurling-rs/defmt",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "rustdoc-args": [
+            "--cfg=docsrs"
+          ]
+        }
+      }
+    }
+  },
+  "features": {
+    "unstable": []
+  },
+  "lib": {
+    "name": "defmt_parser",
+    "path": "src/lib.rs"
+  },
+  "dependencies": {
+    "thiserror": {
+      "version": "2"
+    }
+  },
+  "dev-dependencies": {
+    "rstest": {
+      "version": "0.19",
+      "default-features": false
+    }
+  }
+}

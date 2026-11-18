@@ -1,0 +1,72 @@
+{
+  "package": {
+    "edition": "2018",
+    "rust-version": "1.68",
+    "name": "r-efi",
+    "version": "6.0.0",
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "UEFI Reference Specification Protocol Constants and Definitions",
+    "homepage": "https://github.com/r-efi/r-efi/wiki",
+    "readme": "README.md",
+    "keywords": [
+      "boot",
+      "efi",
+      "firmware",
+      "specification",
+      "uefi"
+    ],
+    "categories": [
+      "embedded",
+      "hardware-support",
+      "no-std",
+      "os"
+    ],
+    "license": "MIT OR Apache-2.0 OR LGPL-2.1-or-later",
+    "repository": "https://github.com/r-efi/r-efi"
+  },
+  "features": {
+    "native": [],
+    "rustc-dep-of-std": [
+      "core"
+    ]
+  },
+  "lib": {
+    "name": "r_efi",
+    "path": "src/lib.rs"
+  },
+  "example": [
+    {
+      "name": "freestanding",
+      "path": "examples/freestanding.rs",
+      "required-features": [
+        "native"
+      ]
+    },
+    {
+      "name": "gop-query",
+      "path": "examples/gop-query.rs",
+      "required-features": [
+        "native"
+      ]
+    },
+    {
+      "name": "hello-world",
+      "path": "examples/hello-world.rs",
+      "required-features": [
+        "native"
+      ]
+    }
+  ],
+  "dependencies": {
+    "core": {
+      "version": "1.0.0",
+      "optional": true,
+      "package": "rustc-std-workspace-core"
+    }
+  }
+}

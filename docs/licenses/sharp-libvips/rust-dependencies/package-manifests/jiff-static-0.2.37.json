@@ -1,0 +1,72 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.70",
+    "name": "jiff-static",
+    "version": "0.2.37",
+    "authors": [
+      "Andrew Gallant <jamslam@gmail.com>"
+    ],
+    "build": false,
+    "include": [
+      "/src/**/*.rs",
+      "COPYING",
+      "LICENSE-MIT",
+      "UNLICENSE"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Create static TimeZone values for Jiff (useful in core-only environments).",
+    "homepage": "https://github.com/BurntSushi/jiff/tree/master/crates/jiff-static",
+    "documentation": "https://docs.rs/jiff-tzdb",
+    "readme": "README.md",
+    "keywords": [
+      "date",
+      "time",
+      "static",
+      "zone",
+      "iana"
+    ],
+    "categories": [
+      "date-and-time"
+    ],
+    "license": "Unlicense OR MIT",
+    "repository": "https://github.com/BurntSushi/jiff"
+  },
+  "features": {
+    "default": [],
+    "perf-inline": [],
+    "tz-fat": [],
+    "tzdb": [
+      "dep:jiff-tzdb"
+    ]
+  },
+  "lib": {
+    "name": "jiff_static",
+    "path": "src/lib.rs",
+    "bench": false,
+    "proc-macro": true
+  },
+  "dependencies": {
+    "jcore": {
+      "version": "0.1",
+      "package": "jiff-core"
+    },
+    "jiff-tzdb": {
+      "version": "0.1.6",
+      "optional": true
+    },
+    "proc-macro2": {
+      "version": "1.0.93"
+    },
+    "quote": {
+      "version": "1.0.38"
+    },
+    "syn": {
+      "version": "2.0.98"
+    }
+  }
+}

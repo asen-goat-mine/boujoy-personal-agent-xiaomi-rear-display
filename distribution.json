@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "edition": "xiaomi",
+  "productName": "Boujoy Xiaomi",
+  "desktopVersion": "0.4.16",
+  "desktopBuild": 20,
+  "bundleId": "dev.boujoy.xiaomi.desktop",
+  "androidApplicationId": "dev.boujoy.xiaomi",
+  "androidNamespace": "dev.boujoy.personalagent",
+  "androidVersion": "1.0.52",
+  "androidVersionCode": 54,
+  "bindScheme": "boujoy-xiaomi",
+  "port": 18892,
+  "gatewayPort": 18992,
+  "dataDirectoryName": "Boujoy Xiaomi",
+  "memoryDirectoryName": "Boujoy-Xiaomi-Memory",
+  "keychainAccount": "boujoy-xiaomi",
+  "keychainServicePrefix": "dev.boujoy.xiaomi",
+  "launchdLabel": "dev.boujoy.xiaomi.service",
+  "supportsBackground": true,
+  "sourceBaseVersion": "1.0.52/code54",
+  "sourceBaseManifestSha256": "91e55cdb5a46828a3bb2d6341fa5f3a5760d2c36bc48b37e0e3c6965b68d01d0"
+}

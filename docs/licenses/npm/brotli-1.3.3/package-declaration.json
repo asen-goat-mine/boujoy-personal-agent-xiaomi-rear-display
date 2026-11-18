@@ -1,0 +1,11 @@
+{
+  "name": "brotli",
+  "version": "1.3.3",
+  "license": "MIT",
+  "author": "Devon Govett <devongovett@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devongovett/brotli.js.git"
+  },
+  "originalPackageJsonSha256": "387b47d00ea96cab9b4c521629fbcdc7621053ac061812526f3c69700924cef5"
+}

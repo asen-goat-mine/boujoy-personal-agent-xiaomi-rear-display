@@ -1,0 +1,11 @@
+{
+  "name": "@nodable/entities",
+  "version": "3.1.0",
+  "license": "MIT",
+  "author": "Amit Gupta (https://solothought.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodable/val-parsers.git"
+  },
+  "originalPackageJsonSha256": "81fc13661f9431f9f72ae5a1723482a1bcb473af463b93ca0b27c42461a6c6c9"
+}

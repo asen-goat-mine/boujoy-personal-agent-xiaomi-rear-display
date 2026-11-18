@@ -1,0 +1,101 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.80",
+    "name": "rayon-core",
+    "version": "1.13.0",
+    "build": "build.rs",
+    "links": "rayon-core",
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Core APIs for Rayon",
+    "documentation": "https://docs.rs/rayon-core/",
+    "readme": "README.md",
+    "keywords": [
+      "parallel",
+      "thread",
+      "concurrency",
+      "join",
+      "performance"
+    ],
+    "categories": [
+      "concurrency"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/rayon-rs/rayon"
+  },
+  "features": {
+    "web_spin_lock": [
+      "dep:wasm_sync"
+    ]
+  },
+  "lib": {
+    "name": "rayon_core",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "double_init_fail",
+      "path": "tests/double_init_fail.rs"
+    },
+    {
+      "name": "init_zero_threads",
+      "path": "tests/init_zero_threads.rs"
+    },
+    {
+      "name": "scope_join",
+      "path": "tests/scope_join.rs"
+    },
+    {
+      "name": "scoped_threadpool",
+      "path": "tests/scoped_threadpool.rs"
+    },
+    {
+      "name": "simple_panic",
+      "path": "tests/simple_panic.rs"
+    },
+    {
+      "name": "stack_overflow_crash",
+      "path": "tests/stack_overflow_crash.rs"
+    },
+    {
+      "name": "use_current_thread",
+      "path": "tests/use_current_thread.rs"
+    }
+  ],
+  "dependencies": {
+    "crossbeam-deque": {
+      "version": "0.8.1"
+    },
+    "crossbeam-utils": {
+      "version": "0.8.0"
+    },
+    "wasm_sync": {
+      "version": "0.1.0",
+      "optional": true
+    }
+  },
+  "dev-dependencies": {
+    "rand": {
+      "version": "0.9"
+    },
+    "rand_xorshift": {
+      "version": "0.4"
+    },
+    "scoped-tls": {
+      "version": "1.0"
+    }
+  },
+  "target": {
+    "cfg(unix)": {
+      "dev-dependencies": {
+        "libc": {
+          "version": "0.2"
+        }
+      }
+    }
+  }
+}

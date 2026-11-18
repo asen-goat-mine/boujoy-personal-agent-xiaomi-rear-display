@@ -1,0 +1,50 @@
+{
+  "package": {
+    "name": "tinytemplate",
+    "version": "1.2.1",
+    "authors": [
+      "Brook Heisler <brookheisler@gmail.com>"
+    ],
+    "description": "Simple, lightweight template engine",
+    "readme": "README.md",
+    "keywords": [
+      "template",
+      "html"
+    ],
+    "categories": [
+      "template-engine"
+    ],
+    "license": "Apache-2.0 OR MIT",
+    "repository": "https://github.com/bheisler/TinyTemplate"
+  },
+  "bench": [
+    {
+      "name": "benchmarks",
+      "harness": false
+    }
+  ],
+  "dependencies": {
+    "serde": {
+      "version": "1.0"
+    },
+    "serde_json": {
+      "version": "1.0"
+    }
+  },
+  "dev-dependencies": {
+    "criterion": {
+      "version": "0.3"
+    },
+    "serde_derive": {
+      "version": "1.0"
+    }
+  },
+  "badges": {
+    "maintenance": {
+      "status": "passively-maintained"
+    },
+    "travis-ci": {
+      "repository": "bheisler/TinyTemplate"
+    }
+  }
+}

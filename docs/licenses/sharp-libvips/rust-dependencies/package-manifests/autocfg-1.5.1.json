@@ -1,0 +1,77 @@
+{
+  "package": {
+    "rust-version": "1.0",
+    "name": "autocfg",
+    "version": "1.5.1",
+    "authors": [
+      "Josh Stone <cuviper@gmail.com>"
+    ],
+    "build": false,
+    "exclude": [
+      "/.github/**"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Automatic cfg for Rust compiler features",
+    "documentation": "https://docs.rs/autocfg/",
+    "readme": "README.md",
+    "keywords": [
+      "rustc",
+      "build",
+      "autoconf"
+    ],
+    "categories": [
+      "development-tools::build-utils"
+    ],
+    "license": "Apache-2.0 OR MIT",
+    "repository": "https://github.com/cuviper/autocfg"
+  },
+  "lib": {
+    "name": "autocfg",
+    "path": "src/lib.rs"
+  },
+  "example": [
+    {
+      "name": "integers",
+      "path": "examples/integers.rs"
+    },
+    {
+      "name": "nightly",
+      "path": "examples/nightly.rs"
+    },
+    {
+      "name": "paths",
+      "path": "examples/paths.rs"
+    },
+    {
+      "name": "traits",
+      "path": "examples/traits.rs"
+    },
+    {
+      "name": "versions",
+      "path": "examples/versions.rs"
+    }
+  ],
+  "test": [
+    {
+      "name": "no_std",
+      "path": "tests/no_std.rs"
+    },
+    {
+      "name": "rustflags",
+      "path": "tests/rustflags.rs"
+    },
+    {
+      "name": "tests",
+      "path": "tests/tests.rs"
+    },
+    {
+      "name": "wrappers",
+      "path": "tests/wrappers.rs",
+      "harness": false
+    }
+  ]
+}

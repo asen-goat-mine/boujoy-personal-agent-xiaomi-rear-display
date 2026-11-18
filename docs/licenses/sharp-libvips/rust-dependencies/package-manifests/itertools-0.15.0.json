@@ -1,0 +1,194 @@
+{
+  "package": {
+    "edition": "2018",
+    "rust-version": "1.63.0",
+    "name": "itertools",
+    "version": "0.15.0",
+    "authors": [
+      "bluss"
+    ],
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Extra iterator adaptors, iterator methods, free functions, and macros.",
+    "documentation": "https://docs.rs/itertools/",
+    "readme": "README.md",
+    "keywords": [
+      "iterator",
+      "data-structure",
+      "zip",
+      "product"
+    ],
+    "categories": [
+      "algorithms",
+      "rust-patterns",
+      "no-std",
+      "no-std::no-alloc"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/rust-itertools/itertools"
+  },
+  "features": {
+    "default": [
+      "use_std"
+    ],
+    "use_alloc": [],
+    "use_std": [
+      "use_alloc",
+      "either/use_std"
+    ]
+  },
+  "lib": {
+    "name": "itertools",
+    "path": "src/lib.rs",
+    "test": false,
+    "bench": false
+  },
+  "example": [
+    {
+      "name": "iris",
+      "path": "examples/iris.rs"
+    }
+  ],
+  "test": [
+    {
+      "name": "adaptors_no_collect",
+      "path": "tests/adaptors_no_collect.rs"
+    },
+    {
+      "name": "arrays",
+      "path": "tests/arrays.rs"
+    },
+    {
+      "name": "flatten_ok",
+      "path": "tests/flatten_ok.rs"
+    },
+    {
+      "name": "laziness",
+      "path": "tests/laziness.rs"
+    },
+    {
+      "name": "macros_hygiene",
+      "path": "tests/macros_hygiene.rs"
+    },
+    {
+      "name": "merge_join",
+      "path": "tests/merge_join.rs"
+    },
+    {
+      "name": "peeking_take_while",
+      "path": "tests/peeking_take_while.rs"
+    },
+    {
+      "name": "quick",
+      "path": "tests/quick.rs"
+    },
+    {
+      "name": "specializations",
+      "path": "tests/specializations.rs"
+    },
+    {
+      "name": "test_core",
+      "path": "tests/test_core.rs"
+    },
+    {
+      "name": "test_std",
+      "path": "tests/test_std.rs"
+    },
+    {
+      "name": "tuples",
+      "path": "tests/tuples.rs"
+    },
+    {
+      "name": "zip",
+      "path": "tests/zip.rs"
+    }
+  ],
+  "bench": [
+    {
+      "name": "bench1",
+      "path": "benches/bench1.rs",
+      "harness": false
+    },
+    {
+      "name": "combinations",
+      "path": "benches/combinations.rs",
+      "harness": false
+    },
+    {
+      "name": "combinations_with_replacement",
+      "path": "benches/combinations_with_replacement.rs",
+      "harness": false
+    },
+    {
+      "name": "fold_specialization",
+      "path": "benches/fold_specialization.rs",
+      "harness": false
+    },
+    {
+      "name": "k_smallest",
+      "path": "benches/k_smallest.rs",
+      "harness": false
+    },
+    {
+      "name": "powerset",
+      "path": "benches/powerset.rs",
+      "harness": false
+    },
+    {
+      "name": "specializations",
+      "path": "benches/specializations.rs",
+      "harness": false
+    },
+    {
+      "name": "tree_reduce",
+      "path": "benches/tree_reduce.rs",
+      "harness": false
+    },
+    {
+      "name": "tuple_combinations",
+      "path": "benches/tuple_combinations.rs",
+      "harness": false
+    },
+    {
+      "name": "tuples",
+      "path": "benches/tuples.rs",
+      "harness": false
+    }
+  ],
+  "dependencies": {
+    "either": {
+      "version": "1.0",
+      "default-features": false
+    }
+  },
+  "dev-dependencies": {
+    "criterion": {
+      "version": "0.4.0",
+      "features": [
+        "html_reports"
+      ]
+    },
+    "paste": {
+      "version": "1.0.0"
+    },
+    "permutohedron": {
+      "version": "0.2"
+    },
+    "quickcheck": {
+      "version": "0.9",
+      "default-features": false
+    },
+    "rand": {
+      "version": "0.7"
+    }
+  },
+  "profile": {
+    "bench": {
+      "debug": 2
+    }
+  }
+}

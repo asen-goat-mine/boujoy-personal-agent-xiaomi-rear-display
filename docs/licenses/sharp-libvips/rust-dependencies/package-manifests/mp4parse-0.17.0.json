@@ -1,0 +1,82 @@
+{
+  "package": {
+    "edition": "2018",
+    "name": "mp4parse",
+    "version": "0.17.0",
+    "authors": [
+      "Ralph Giles <giles@mozilla.com>",
+      "Matthew Gregan <kinetik@flim.org>",
+      "Alfredo Yang <ayang@mozilla.com>",
+      "Jon Bauman <jbauman@mozilla.com>",
+      "Bryce Seager van Dyk <bvandyk@mozilla.com>"
+    ],
+    "exclude": [
+      "*.mp4",
+      "*.avif",
+      "av1-avif/*"
+    ],
+    "description": "Parser for ISO base media file format (mp4)",
+    "documentation": "https://docs.rs/mp4parse/",
+    "readme": "README.md",
+    "categories": [
+      "multimedia::video"
+    ],
+    "license": "MPL-2.0",
+    "repository": "https://github.com/mozilla/mp4parse-rust"
+  },
+  "lib": {
+    "bench": false
+  },
+  "bench": [
+    {
+      "name": "avif_benchmark",
+      "harness": false
+    }
+  ],
+  "dependencies": {
+    "bitreader": {
+      "version": "0.3.2"
+    },
+    "byteorder": {
+      "version": "1.2.1"
+    },
+    "fallible_collections": {
+      "version": "0.4",
+      "features": [
+        "std_io"
+      ]
+    },
+    "log": {
+      "version": "0.4"
+    },
+    "num-traits": {
+      "version": "0.2.14"
+    },
+    "static_assertions": {
+      "version": "1.1.0"
+    }
+  },
+  "dev-dependencies": {
+    "criterion": {
+      "version": "0.4"
+    },
+    "test-assembler": {
+      "version": "0.1.2"
+    },
+    "walkdir": {
+      "version": "2.3.1"
+    }
+  },
+  "features": {
+    "3gpp": [],
+    "meta-xml": [],
+    "missing-pixi-permitted": [],
+    "mp4v": [],
+    "unstable-api": []
+  },
+  "badges": {
+    "travis-ci": {
+      "repository": "https://github.com/mozilla/mp4parse-rust"
+    }
+  }
+}

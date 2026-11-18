@@ -1,0 +1,44 @@
+{
+  "package": {
+    "edition": "2021",
+    "name": "servo_arc",
+    "version": "0.4.3",
+    "authors": [
+      "The Servo Project Developers"
+    ],
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "A fork of std::sync::Arc with some extra functionality and without weak references",
+    "readme": "README.md",
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/servo/stylo"
+  },
+  "lib": {
+    "name": "servo_arc",
+    "path": "lib.rs"
+  },
+  "dependencies": {
+    "serde": {
+      "version": "1.0",
+      "optional": true
+    },
+    "stable_deref_trait": {
+      "version": "1.0.0"
+    }
+  },
+  "features": {
+    "default": [
+      "track_alloc_size"
+    ],
+    "gecko_refcount_logging": [],
+    "servo": [
+      "serde",
+      "track_alloc_size"
+    ],
+    "track_alloc_size": []
+  }
+}

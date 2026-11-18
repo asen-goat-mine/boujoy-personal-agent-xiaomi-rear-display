@@ -1,0 +1,30 @@
+{
+  "name": "@earendil-works/pi-telemetry",
+  "version": "1.1.0",
+  "declaredLicense": "MIT",
+  "finding": "Official exact-version npm archive omits the package root LICENSE and does not embed a complete root license in README. This supplement provides the complete unmodified project license from fixed official source whose package name/version match.",
+  "archive": {
+    "url": "https://registry.npmjs.org/@earendil-works/pi-telemetry/-/pi-telemetry-1.1.0.tgz",
+    "lockIntegrity": "sha512-8gAK05/2pPozZZz6hCLOi8x2vsqzvsmO9gG92kbvuvTPm0qMHaFlaXX98ndXsrOi5pmzha7vNLguuG4+0Rgxjw==",
+    "sha256": "fe6b7c399a444757128aa9a330e8b0e9efd1266aa8b52022d4cf2cd5118a3af3",
+    "lockIntegrityAndRegistryShasumVerified": true
+  },
+  "source": {
+    "repository": "https://github.com/earendil-works/pi",
+    "commit": "abe508e1b89912adde45528136c3221eb69acdd7",
+    "packageManifestUrl": "https://raw.githubusercontent.com/earendil-works/pi/abe508e1b89912adde45528136c3221eb69acdd7/packages/telemetry/package.json",
+    "packageManifestSha256": "60409cbe4a3d9c15c681ea5020709c31b95f2a854c35ee78f531f19bcd99d8e7",
+    "nameAndVersionMatch": true,
+    "licenseUrl": "https://raw.githubusercontent.com/earendil-works/pi/abe508e1b89912adde45528136c3221eb69acdd7/LICENSE",
+    "licenseSha256": "0457f5bcec3b3b211605dfb5d1a49042fd638f3686a410fe099c24a25af13c48",
+    "provenance": {
+      "kind": "npm-published-SLSA-source-statement",
+      "url": "https://registry.npmjs.org/-/npm/v1/attestations/@earendil-works%2fpi-telemetry@1.1.0",
+      "subjectDigestMatchesArchive": true,
+      "signatureVerificationPerformed": false,
+      "declaredGitCommit": "abe508e1b89912adde45528136c3221eb69acdd7",
+      "statementSha256": "b234fa8ba93d6400b4b070857977a8766d84809e5cf233f877a8516180aec7b8"
+    }
+  },
+  "retainedBundledThirdPartyNotices": []
+}

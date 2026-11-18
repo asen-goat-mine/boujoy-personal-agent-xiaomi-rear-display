@@ -1,0 +1,15 @@
+{
+  "package": {
+    "name": "matches",
+    "version": "0.1.10",
+    "description": "A macro to evaluate, as a boolean, whether an expression matches a pattern.",
+    "documentation": "https://docs.rs/matches/",
+    "readme": "README.md",
+    "license": "MIT",
+    "repository": "https://github.com/SimonSapin/rust-std-candidates"
+  },
+  "lib": {
+    "name": "matches",
+    "path": "lib.rs"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "width": 586,
+  "height": 1440,
+  "lines": [
+    {
+      "text": "椰子（",
+      "bounds": [
+        96,
+        86,
+        146,
+        107
+      ],
+      "kind": "row",
+      "sourceRow": 2,
+      "id": "text-3",
+      "center": {
+        "x": 121,
+        "y": 97
+      }
+    },
+    {
+      "text": "搜索发现",
+      "bounds": [
+        17,
+        155,
+        115,
+        182
+      ],
+      "kind": "row",
+      "sourceRow": 3,
+      "id": "text-4",
+      "center": {
+        "x": 66,
+        "y": 169
+      }
+    },
+    {
+      "text": "搜索",
+      "bounds": [
+        481,
+        80,
+        529,
+        105
+      ],
+      "kind": "row",
+      "sourceRow": 8,
+      "id": "text-9",
+      "center": {
+        "x": 505,
+        "y": 93
+      }
+    },
+    {
+      "text": "搜索",
+      "bounds": [
+        17,
+        155,
+        67,
+        182
+      ],
+      "kind": "word",
+      "sourceRow": 3,
+      "range": {
+        "location": 0,
+        "length": 2
+      },
+      "geometrySource": "vision_subrange",
+      "id": "text-62",
+      "center": {
+        "x": 42,
+        "y": 169
+      }
+    }
+  ],
+  "source": "Actual 2026-10-16 failed Starbucks search screenshot; public header/discovery text only"
+}

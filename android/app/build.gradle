@@ -1,0 +1,68 @@
+plugins { id 'com.android.application' }
+
+def distribution = new groovy.json.JsonSlurper().parse(rootProject.file('../distribution.json'))
+if (distribution.schemaVersion != 1 || !(distribution.edition in ['phoneuse', 'xiaomi'])
+        || distribution.androidNamespace != 'dev.boujoy.personalagent'
+        || distribution.androidApplicationId != 'dev.boujoy.' + distribution.edition
+        || distribution.supportsBackground != (distribution.edition == 'xiaomi')) {
+    throw new GradleException('Invalid distribution identity')
+}
+def quoted = { value -> groovy.json.JsonOutput.toJson(value.toString()) }
+
+android {
+    namespace 'dev.boujoy.personalagent'
+    compileSdk 35
+    defaultConfig {
+        applicationId distribution.androidApplicationId
+        minSdk 33
+        targetSdk 35
+        versionCode distribution.androidVersionCode
+        versionName distribution.androidVersion
+        buildConfigField 'String', 'EDITION', quoted(distribution.edition)
+        buildConfigField 'String', 'PRODUCT_NAME', quoted(distribution.productName)
+        buildConfigField 'String', 'BIND_SCHEME', quoted(distribution.bindScheme)
+        buildConfigField 'boolean', 'BACKGROUND_SUPPORTED', distribution.supportsBackground.toString()
+        manifestPlaceholders = [productName: distribution.productName, bindScheme: distribution.bindScheme,
+                backgroundSupported: distribution.supportsBackground.toString(), imeName: distribution.productName + ' 输入', wirelessTypingName: distribution.productName + ' 无线输入', displayExecutorName: distribution.productName + ' 后台执行', rearPolicy: distribution.supportsBackground ? '1' : '0']
+    }
+    buildFeatures { buildConfig true; aidl true }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    signingConfigs {
+        localRelease {
+            if (System.getenv('BOUJOY_ANDROID_KEYSTORE')) {
+                storeFile file(System.getenv('BOUJOY_ANDROID_KEYSTORE'))
+                storePassword System.getenv('BOUJOY_ANDROID_STORE_PASSWORD')
+                keyAlias 'boujoy-android'
+                keyPassword System.getenv('BOUJOY_ANDROID_STORE_PASSWORD')
+            }
+        }
+    }
+    buildTypes {
+        release { signingConfig signingConfigs.localRelease; minifyEnabled false }
+    }
+    testOptions { unitTests.returnDefaultValues = true; unitTests.includeAndroidResources = true }
+}
+dependencies {
+    implementation 'dev.rikka.shizuku:api:13.1.5'
+    implementation 'dev.rikka.shizuku:provider:13.1.5'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.17'
+    testImplementation 'org.json:json:20240303'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.12.0'
+    testImplementation 'com.squareup.okhttp3:okhttp-tls:4.12.0'
+}
+
+// NodeInteropTest launches the actual Node sources. Those files must invalidate
+// Gradle's test cache even when no Android source changed.
+tasks.withType(Test).configureEach {
+    inputs.dir(rootProject.file('../src'))
+    inputs.files(rootProject.file('../tests/remote-interop-fixture.mjs'), rootProject.file('../package-lock.json'))
+}
+
+// Render native Views on the host; visual review must precede device installation.
+tasks.withType(Test).configureEach {
+    systemProperty 'robolectric.dependency.repo.url', 'https://repo.maven.apache.org/maven2'
+    systemProperty 'boujoy.visual.output', rootProject.file('build/qa/android-ui').absolutePath
+    maxHeapSize = '3g'
+}

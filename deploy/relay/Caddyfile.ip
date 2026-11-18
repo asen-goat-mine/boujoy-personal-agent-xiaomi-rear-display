@@ -1,0 +1,19 @@
+{
+  # IP clients commonly omit TLS SNI; Docker's local IP is not the public IP.
+  default_sni {$BOUJOY_RELAY_DOMAIN}
+}
+
+{$BOUJOY_RELAY_DOMAIN} {
+  tls {
+    issuer acme {
+      dir https://acme-v02.api.letsencrypt.org/directory
+      profile shortlived
+    }
+  }
+  @tunnel path /v1/tunnel
+  route {
+    reverse_proxy @tunnel relay:18843
+    reverse_proxy /healthz relay:18843
+    respond 404
+  }
+}

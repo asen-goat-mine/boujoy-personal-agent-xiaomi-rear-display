@@ -1,0 +1,19 @@
+node_modules/
+.tools/
+/vendor/*
+!/vendor/dsh-superagent/
+.env
+*.log
+.DS_Store
+dist/
+.runtime/
+
+backups/
+android/build/
+android/app/build/
+android/.gradle/
+scripts/__pycache__/
+*.pyc
+
+# Local test traces and screenshots may include device or conversation data.
+/qa/

@@ -1,0 +1,12 @@
+**
+!src/
+!src/remote/
+!src/remote/protocol.mjs
+!src/remote/relay.mjs
+!scripts/
+!scripts/run-relay.mjs
+!deploy/
+!deploy/relay/
+!deploy/relay/Dockerfile
+!deploy/relay/package.json
+!deploy/relay/package-lock.json

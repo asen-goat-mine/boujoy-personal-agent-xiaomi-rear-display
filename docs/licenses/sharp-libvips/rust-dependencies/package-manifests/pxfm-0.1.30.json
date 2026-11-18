@@ -1,0 +1,59 @@
+{
+  "package": {
+    "edition": "2024",
+    "rust-version": "1.85",
+    "name": "pxfm",
+    "version": "0.1.30",
+    "authors": [
+      "Radzivon Bartoshyk"
+    ],
+    "build": false,
+    "include": [
+      "/src/",
+      "/README.md",
+      "/LICENSE.md",
+      "/LICENSE-APACHE.md"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Fast and accurate math",
+    "documentation": "https://github.com/awxkee/pxfm",
+    "readme": "README.md",
+    "keywords": [
+      "libm",
+      "math"
+    ],
+    "categories": [
+      "mathematics"
+    ],
+    "license": "BSD-3-Clause OR Apache-2.0",
+    "repository": "https://github.com/awxkee/pxfm",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "all-features": true,
+          "rustdoc-args": [
+            "--cfg",
+            "docsrs"
+          ]
+        }
+      }
+    }
+  },
+  "lib": {
+    "name": "pxfm",
+    "path": "src/lib.rs"
+  },
+  "profile": {
+    "dev": {
+      "package": {
+        "bessel": {
+          "opt-level": 3
+        }
+      }
+    }
+  }
+}

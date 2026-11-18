@@ -1,0 +1,7293 @@
+{
+  "root": [
+    "librsvg-c",
+    "2.63.2"
+  ],
+  "method": "Declared normal/build dependency reachability from original manifests; excludes root optional pixbuf/test-utils and all dev-dependency edges, but retains transitive optional features and all target conditions. It is a conservative classification, not cargo-resolved or binary-linked evidence.",
+  "possibleNormalBuildRegistryCount": 208,
+  "possibleNormalBuildRegistryPackages": [
+    [
+      "adler2",
+      "2.0.1"
+    ],
+    [
+      "ahash",
+      "0.8.12"
+    ],
+    [
+      "aho-corasick",
+      "1.1.5"
+    ],
+    [
+      "approx",
+      "0.5.1"
+    ],
+    [
+      "autocfg",
+      "1.5.1"
+    ],
+    [
+      "av-data",
+      "0.4.4"
+    ],
+    [
+      "bitflags",
+      "2.13.2"
+    ],
+    [
+      "bitreader",
+      "0.3.11"
+    ],
+    [
+      "block",
+      "0.1.6"
+    ],
+    [
+      "byte-slice-cast",
+      "1.2.3"
+    ],
+    [
+      "bytemuck",
+      "1.25.2"
+    ],
+    [
+      "byteorder",
+      "1.5.0"
+    ],
+    [
+      "byteorder-lite",
+      "0.1.0"
+    ],
+    [
+      "bytes",
+      "1.12.1"
+    ],
+    [
+      "cairo-rs",
+      "0.22.9"
+    ],
+    [
+      "cairo-sys-rs",
+      "0.22.9"
+    ],
+    [
+      "cast",
+      "0.3.0"
+    ],
+    [
+      "cfg-expr",
+      "0.20.9"
+    ],
+    [
+      "cfg-if",
+      "1.0.5"
+    ],
+    [
+      "color_quant",
+      "1.1.0"
+    ],
+    [
+      "core_detect",
+      "1.0.0"
+    ],
+    [
+      "crc32fast",
+      "1.5.2"
+    ],
+    [
+      "crossbeam-deque",
+      "0.8.8"
+    ],
+    [
+      "crossbeam-epoch",
+      "0.9.21"
+    ],
+    [
+      "crossbeam-utils",
+      "0.8.23"
+    ],
+    [
+      "cssparser",
+      "0.37.0"
+    ],
+    [
+      "cssparser-color",
+      "0.5.0"
+    ],
+    [
+      "cssparser-macros",
+      "0.7.1"
+    ],
+    [
+      "data-url",
+      "0.3.2"
+    ],
+    [
+      "dav1d",
+      "0.11.1"
+    ],
+    [
+      "dav1d-sys",
+      "0.8.3"
+    ],
+    [
+      "derive_more",
+      "2.1.1"
+    ],
+    [
+      "derive_more-impl",
+      "2.1.1"
+    ],
+    [
+      "displaydoc",
+      "0.2.7"
+    ],
+    [
+      "dtoa",
+      "1.0.11"
+    ],
+    [
+      "dtoa-short",
+      "0.3.5"
+    ],
+    [
+      "either",
+      "1.18.0"
+    ],
+    [
+      "encoding_rs",
+      "0.8.41"
+    ],
+    [
+      "equivalent",
+      "1.0.2"
+    ],
+    [
+      "fallible_collections",
+      "0.4.9"
+    ],
+    [
+      "fastrand",
+      "2.5.0"
+    ],
+    [
+      "fdeflate",
+      "0.3.7"
+    ],
+    [
+      "flate2",
+      "1.1.10"
+    ],
+    [
+      "float-cmp",
+      "0.10.0"
+    ],
+    [
+      "form_urlencoded",
+      "1.2.2"
+    ],
+    [
+      "futures-channel",
+      "0.3.34"
+    ],
+    [
+      "futures-core",
+      "0.3.34"
+    ],
+    [
+      "futures-executor",
+      "0.3.34"
+    ],
+    [
+      "futures-io",
+      "0.3.34"
+    ],
+    [
+      "futures-macro",
+      "0.3.34"
+    ],
+    [
+      "futures-task",
+      "0.3.34"
+    ],
+    [
+      "futures-util",
+      "0.3.34"
+    ],
+    [
+      "gif",
+      "0.14.2"
+    ],
+    [
+      "gio",
+      "0.22.9"
+    ],
+    [
+      "gio-sys",
+      "0.22.9"
+    ],
+    [
+      "glam",
+      "0.30.10"
+    ],
+    [
+      "glam",
+      "0.31.1"
+    ],
+    [
+      "glam",
+      "0.32.1"
+    ],
+    [
+      "glam",
+      "0.33.7"
+    ],
+    [
+      "glib",
+      "0.22.9"
+    ],
+    [
+      "glib-macros",
+      "0.22.9"
+    ],
+    [
+      "glib-sys",
+      "0.22.9"
+    ],
+    [
+      "gobject-sys",
+      "0.22.9"
+    ],
+    [
+      "hashbrown",
+      "0.13.2"
+    ],
+    [
+      "hashbrown",
+      "0.17.1"
+    ],
+    [
+      "heck",
+      "0.5.0"
+    ],
+    [
+      "icu_collections",
+      "2.3.0"
+    ],
+    [
+      "icu_locale_core",
+      "2.3.0"
+    ],
+    [
+      "icu_normalizer",
+      "2.3.0"
+    ],
+    [
+      "icu_normalizer_data",
+      "2.3.0"
+    ],
+    [
+      "icu_properties",
+      "2.3.0"
+    ],
+    [
+      "icu_properties_data",
+      "2.3.0"
+    ],
+    [
+      "icu_provider",
+      "2.3.1"
+    ],
+    [
+      "idna",
+      "1.1.0"
+    ],
+    [
+      "idna_adapter",
+      "1.2.2"
+    ],
+    [
+      "image",
+      "0.25.10"
+    ],
+    [
+      "image-webp",
+      "0.2.4"
+    ],
+    [
+      "indexmap",
+      "2.14.2"
+    ],
+    [
+      "itertools",
+      "0.15.0"
+    ],
+    [
+      "itoa",
+      "1.0.18"
+    ],
+    [
+      "language-tags",
+      "0.3.2"
+    ],
+    [
+      "lazy_static",
+      "1.5.0"
+    ],
+    [
+      "libc",
+      "0.2.189"
+    ],
+    [
+      "litemap",
+      "0.8.3"
+    ],
+    [
+      "locale_config",
+      "0.3.0"
+    ],
+    [
+      "lock_api",
+      "0.4.14"
+    ],
+    [
+      "log",
+      "0.4.34"
+    ],
+    [
+      "malloc_buf",
+      "0.0.6"
+    ],
+    [
+      "markup5ever",
+      "0.39.0"
+    ],
+    [
+      "matrixmultiply",
+      "0.3.11"
+    ],
+    [
+      "memchr",
+      "2.8.3"
+    ],
+    [
+      "miniz_oxide",
+      "0.8.9"
+    ],
+    [
+      "miniz_oxide",
+      "0.9.1"
+    ],
+    [
+      "moxcms",
+      "0.8.1"
+    ],
+    [
+      "mp4parse",
+      "0.17.0"
+    ],
+    [
+      "multiversion",
+      "0.9.0"
+    ],
+    [
+      "multiversion-macros",
+      "0.9.0"
+    ],
+    [
+      "multiversion_no_op",
+      "1.0.0"
+    ],
+    [
+      "mutants",
+      "0.0.4"
+    ],
+    [
+      "nalgebra",
+      "0.35.0"
+    ],
+    [
+      "nalgebra-macros",
+      "0.3.0"
+    ],
+    [
+      "new_debug_unreachable",
+      "1.0.6"
+    ],
+    [
+      "num-bigint",
+      "0.4.8"
+    ],
+    [
+      "num-complex",
+      "0.4.6"
+    ],
+    [
+      "num-derive",
+      "0.4.2"
+    ],
+    [
+      "num-integer",
+      "0.1.47"
+    ],
+    [
+      "num-rational",
+      "0.4.2"
+    ],
+    [
+      "num-traits",
+      "0.2.19"
+    ],
+    [
+      "objc",
+      "0.2.7"
+    ],
+    [
+      "objc-foundation",
+      "0.1.1"
+    ],
+    [
+      "objc_id",
+      "0.1.1"
+    ],
+    [
+      "once_cell",
+      "1.21.4"
+    ],
+    [
+      "pango",
+      "0.22.9"
+    ],
+    [
+      "pango-sys",
+      "0.22.9"
+    ],
+    [
+      "pangocairo",
+      "0.22.9"
+    ],
+    [
+      "pangocairo-sys",
+      "0.22.9"
+    ],
+    [
+      "parking_lot",
+      "0.12.5"
+    ],
+    [
+      "parking_lot_core",
+      "0.9.12"
+    ],
+    [
+      "percent-encoding",
+      "2.3.2"
+    ],
+    [
+      "phf",
+      "0.13.1"
+    ],
+    [
+      "phf_codegen",
+      "0.13.1"
+    ],
+    [
+      "phf_generator",
+      "0.13.1"
+    ],
+    [
+      "phf_macros",
+      "0.13.1"
+    ],
+    [
+      "phf_shared",
+      "0.13.1"
+    ],
+    [
+      "phf_shared",
+      "0.14.0"
+    ],
+    [
+      "pin-project-lite",
+      "0.2.17"
+    ],
+    [
+      "pkg-config",
+      "0.3.34"
+    ],
+    [
+      "png",
+      "0.18.1"
+    ],
+    [
+      "potential_utf",
+      "0.1.6"
+    ],
+    [
+      "precomputed-hash",
+      "0.1.1"
+    ],
+    [
+      "proc-macro2",
+      "1.0.107"
+    ],
+    [
+      "pxfm",
+      "0.1.30"
+    ],
+    [
+      "quick-error",
+      "2.0.1"
+    ],
+    [
+      "quote",
+      "1.0.47"
+    ],
+    [
+      "rawpointer",
+      "0.2.1"
+    ],
+    [
+      "rayon",
+      "1.12.0"
+    ],
+    [
+      "rayon-core",
+      "1.13.0"
+    ],
+    [
+      "rctree",
+      "0.6.0"
+    ],
+    [
+      "redox_syscall",
+      "0.5.18"
+    ],
+    [
+      "regex",
+      "1.13.1"
+    ],
+    [
+      "regex-automata",
+      "0.4.18"
+    ],
+    [
+      "regex-syntax",
+      "0.8.11"
+    ],
+    [
+      "rgb",
+      "0.8.53"
+    ],
+    [
+      "rustc-hash",
+      "2.1.3"
+    ],
+    [
+      "rustc_version",
+      "0.4.1"
+    ],
+    [
+      "rustversion",
+      "1.0.23"
+    ],
+    [
+      "safe_arch",
+      "1.2.0"
+    ],
+    [
+      "scopeguard",
+      "1.2.0"
+    ],
+    [
+      "selectors",
+      "0.40.0"
+    ],
+    [
+      "semver",
+      "1.0.28"
+    ],
+    [
+      "serde",
+      "1.0.229"
+    ],
+    [
+      "serde_core",
+      "1.0.229"
+    ],
+    [
+      "serde_derive",
+      "1.0.229"
+    ],
+    [
+      "serde_spanned",
+      "1.1.1"
+    ],
+    [
+      "servo_arc",
+      "0.4.3"
+    ],
+    [
+      "simba",
+      "0.10.2"
+    ],
+    [
+      "simd-adler32",
+      "0.3.10"
+    ],
+    [
+      "simdutf8",
+      "0.1.5"
+    ],
+    [
+      "siphasher",
+      "1.0.3"
+    ],
+    [
+      "slab",
+      "0.4.12"
+    ],
+    [
+      "smallvec",
+      "1.16.1"
+    ],
+    [
+      "stable_deref_trait",
+      "1.2.1"
+    ],
+    [
+      "static_assertions",
+      "1.1.0"
+    ],
+    [
+      "string_cache",
+      "0.10.0"
+    ],
+    [
+      "string_cache",
+      "0.9.0"
+    ],
+    [
+      "string_cache_codegen",
+      "0.6.1"
+    ],
+    [
+      "syn",
+      "2.0.119"
+    ],
+    [
+      "syn",
+      "3.0.6"
+    ],
+    [
+      "synstructure",
+      "0.14.0"
+    ],
+    [
+      "system-deps",
+      "7.0.8"
+    ],
+    [
+      "system-deps",
+      "9.0.0"
+    ],
+    [
+      "target-lexicon",
+      "0.13.5"
+    ],
+    [
+      "tendril",
+      "0.5.1"
+    ],
+    [
+      "tinystr",
+      "0.8.4"
+    ],
+    [
+      "tinyvec",
+      "1.13.3"
+    ],
+    [
+      "toml",
+      "1.1.6+spec-1.1.0"
+    ],
+    [
+      "toml_datetime",
+      "1.1.1+spec-1.1.0"
+    ],
+    [
+      "toml_parser",
+      "1.1.3+spec-1.1.0"
+    ],
+    [
+      "toml_writer",
+      "1.1.2+spec-1.1.0"
+    ],
+    [
+      "typenum",
+      "1.20.1"
+    ],
+    [
+      "unicode-ident",
+      "1.0.26"
+    ],
+    [
+      "url",
+      "2.5.8"
+    ],
+    [
+      "utf8_iter",
+      "1.0.4"
+    ],
+    [
+      "version-compare",
+      "0.2.1"
+    ],
+    [
+      "version_check",
+      "0.9.5"
+    ],
+    [
+      "web_atoms",
+      "0.2.6"
+    ],
+    [
+      "weezl",
+      "0.1.12"
+    ],
+    [
+      "wide",
+      "1.7.1"
+    ],
+    [
+      "winapi",
+      "0.3.9"
+    ],
+    [
+      "winapi-i686-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "winapi-x86_64-pc-windows-gnu",
+      "0.4.0"
+    ],
+    [
+      "windows-link",
+      "0.2.1"
+    ],
+    [
+      "windows-sys",
+      "0.61.2"
+    ],
+    [
+      "winnow",
+      "1.0.4"
+    ],
+    [
+      "writeable",
+      "0.6.4"
+    ],
+    [
+      "xml5ever",
+      "0.39.0"
+    ],
+    [
+      "yoke",
+      "0.8.3"
+    ],
+    [
+      "yoke-derive",
+      "0.8.3"
+    ],
+    [
+      "zerocopy",
+      "0.8.57"
+    ],
+    [
+      "zerocopy-derive",
+      "0.8.57"
+    ],
+    [
+      "zerofrom",
+      "0.1.8"
+    ],
+    [
+      "zerofrom-derive",
+      "0.1.8"
+    ],
+    [
+      "zerotrie",
+      "0.2.5"
+    ],
+    [
+      "zerovec",
+      "0.11.8"
+    ],
+    [
+      "zerovec-derive",
+      "0.11.6"
+    ],
+    [
+      "zlib-rs",
+      "0.6.8"
+    ],
+    [
+      "zune-core",
+      "0.5.3"
+    ],
+    [
+      "zune-jpeg",
+      "0.5.15"
+    ]
+  ],
+  "lockedWorkspaceOnlyCount": 149,
+  "lockedWorkspaceOnlyPackages": [
+    [
+      "aes",
+      "0.9.3"
+    ],
+    [
+      "alloca",
+      "0.4.0"
+    ],
+    [
+      "android_system_properties",
+      "0.1.6"
+    ],
+    [
+      "anes",
+      "0.1.6"
+    ],
+    [
+      "anstream",
+      "1.0.0"
+    ],
+    [
+      "anstyle",
+      "1.0.14"
+    ],
+    [
+      "anstyle-parse",
+      "1.0.0"
+    ],
+    [
+      "anstyle-query",
+      "1.1.5"
+    ],
+    [
+      "anstyle-wincon",
+      "3.0.11"
+    ],
+    [
+      "arbitrary",
+      "1.4.2"
+    ],
+    [
+      "assert_cmd",
+      "2.2.2"
+    ],
+    [
+      "bit-set",
+      "0.8.0"
+    ],
+    [
+      "bit-vec",
+      "0.8.0"
+    ],
+    [
+      "bitflags",
+      "1.3.2"
+    ],
+    [
+      "block-buffer",
+      "0.12.1"
+    ],
+    [
+      "block-padding",
+      "0.4.2"
+    ],
+    [
+      "bstr",
+      "1.13.1"
+    ],
+    [
+      "bumpalo",
+      "3.20.3"
+    ],
+    [
+      "cbc",
+      "0.2.1"
+    ],
+    [
+      "cc",
+      "1.4.7"
+    ],
+    [
+      "chacha20",
+      "0.10.2"
+    ],
+    [
+      "chrono",
+      "0.4.45"
+    ],
+    [
+      "ciborium",
+      "0.2.2"
+    ],
+    [
+      "ciborium-io",
+      "0.2.2"
+    ],
+    [
+      "ciborium-ll",
+      "0.2.2"
+    ],
+    [
+      "cipher",
+      "0.5.2"
+    ],
+    [
+      "clap",
+      "4.6.7"
+    ],
+    [
+      "clap_builder",
+      "4.6.7"
+    ],
+    [
+      "clap_complete",
+      "4.6.11"
+    ],
+    [
+      "clap_derive",
+      "4.6.7"
+    ],
+    [
+      "clap_lex",
+      "1.1.1"
+    ],
+    [
+      "colorchoice",
+      "1.0.5"
+    ],
+    [
+      "const-oid",
+      "0.10.2"
+    ],
+    [
+      "core-foundation-sys",
+      "0.8.7"
+    ],
+    [
+      "cpubits",
+      "0.1.1"
+    ],
+    [
+      "cpufeatures",
+      "0.3.1"
+    ],
+    [
+      "criterion",
+      "0.8.2"
+    ],
+    [
+      "criterion-plot",
+      "0.8.2"
+    ],
+    [
+      "crunchy",
+      "0.2.4"
+    ],
+    [
+      "crypto-common",
+      "0.2.2"
+    ],
+    [
+      "defmt",
+      "1.1.1"
+    ],
+    [
+      "defmt-macros",
+      "1.1.1"
+    ],
+    [
+      "defmt-parser",
+      "1.0.0"
+    ],
+    [
+      "deranged",
+      "0.5.8"
+    ],
+    [
+      "diff",
+      "0.1.13"
+    ],
+    [
+      "difflib",
+      "0.4.0"
+    ],
+    [
+      "digest",
+      "0.11.3"
+    ],
+    [
+      "dlib",
+      "0.5.3"
+    ],
+    [
+      "ecb",
+      "0.2.1"
+    ],
+    [
+      "errno",
+      "0.3.14"
+    ],
+    [
+      "find-msvc-tools",
+      "0.1.13"
+    ],
+    [
+      "fnv",
+      "1.0.7"
+    ],
+    [
+      "gdk-pixbuf",
+      "0.22.0"
+    ],
+    [
+      "gdk-pixbuf-sys",
+      "0.22.9"
+    ],
+    [
+      "getrandom",
+      "0.3.4"
+    ],
+    [
+      "getrandom",
+      "0.4.3"
+    ],
+    [
+      "gio-unix",
+      "0.22.8"
+    ],
+    [
+      "gio-unix-sys",
+      "0.22.9"
+    ],
+    [
+      "gio-win32",
+      "0.22.8"
+    ],
+    [
+      "gio-win32-sys",
+      "0.22.9"
+    ],
+    [
+      "half",
+      "2.7.1"
+    ],
+    [
+      "hybrid-array",
+      "0.4.15"
+    ],
+    [
+      "iana-time-zone",
+      "0.1.65"
+    ],
+    [
+      "iana-time-zone-haiku",
+      "0.1.2"
+    ],
+    [
+      "inout",
+      "0.2.2"
+    ],
+    [
+      "is_terminal_polyfill",
+      "1.70.2"
+    ],
+    [
+      "itertools",
+      "0.13.0"
+    ],
+    [
+      "jiff",
+      "0.2.37"
+    ],
+    [
+      "jiff-core",
+      "0.1.1"
+    ],
+    [
+      "jiff-static",
+      "0.2.37"
+    ],
+    [
+      "jiff-tzdb",
+      "0.1.8"
+    ],
+    [
+      "jiff-tzdb-platform",
+      "0.1.3"
+    ],
+    [
+      "jobserver",
+      "0.1.35"
+    ],
+    [
+      "js-sys",
+      "0.3.105"
+    ],
+    [
+      "libfuzzer-sys",
+      "0.4.13"
+    ],
+    [
+      "libloading",
+      "0.8.9"
+    ],
+    [
+      "linux-raw-sys",
+      "0.12.1"
+    ],
+    [
+      "lopdf",
+      "0.44.0"
+    ],
+    [
+      "matches",
+      "0.1.10"
+    ],
+    [
+      "md-5",
+      "0.11.0"
+    ],
+    [
+      "nom",
+      "8.0.0"
+    ],
+    [
+      "normalize-line-endings",
+      "0.3.0"
+    ],
+    [
+      "num-conv",
+      "0.2.2"
+    ],
+    [
+      "once_cell_polyfill",
+      "1.70.2"
+    ],
+    [
+      "oorandom",
+      "11.1.5"
+    ],
+    [
+      "page_size",
+      "0.6.0"
+    ],
+    [
+      "plotters",
+      "0.3.7"
+    ],
+    [
+      "plotters-backend",
+      "0.3.7"
+    ],
+    [
+      "plotters-svg",
+      "0.3.7"
+    ],
+    [
+      "portable-atomic",
+      "1.15.0"
+    ],
+    [
+      "portable-atomic-util",
+      "0.2.8"
+    ],
+    [
+      "powerfmt",
+      "0.2.0"
+    ],
+    [
+      "ppv-lite86",
+      "0.2.21"
+    ],
+    [
+      "predicates",
+      "3.1.4"
+    ],
+    [
+      "predicates-core",
+      "1.0.10"
+    ],
+    [
+      "predicates-tree",
+      "1.0.13"
+    ],
+    [
+      "pretty_assertions",
+      "1.4.1"
+    ],
+    [
+      "proptest",
+      "1.11.0"
+    ],
+    [
+      "quick-error",
+      "1.2.3"
+    ],
+    [
+      "r-efi",
+      "5.3.0"
+    ],
+    [
+      "r-efi",
+      "6.0.0"
+    ],
+    [
+      "rand",
+      "0.10.2"
+    ],
+    [
+      "rand",
+      "0.9.5"
+    ],
+    [
+      "rand_chacha",
+      "0.9.0"
+    ],
+    [
+      "rand_core",
+      "0.10.1"
+    ],
+    [
+      "rand_core",
+      "0.9.5"
+    ],
+    [
+      "rand_xorshift",
+      "0.4.0"
+    ],
+    [
+      "rangemap",
+      "1.8.0"
+    ],
+    [
+      "rustix",
+      "1.1.5"
+    ],
+    [
+      "rusty-fork",
+      "0.3.1"
+    ],
+    [
+      "same-file",
+      "1.0.6"
+    ],
+    [
+      "serde_json",
+      "1.0.151"
+    ],
+    [
+      "sha2",
+      "0.11.0"
+    ],
+    [
+      "shell-words",
+      "1.1.1"
+    ],
+    [
+      "shlex",
+      "2.0.1"
+    ],
+    [
+      "stringprep",
+      "0.1.5"
+    ],
+    [
+      "strsim",
+      "0.11.1"
+    ],
+    [
+      "tempfile",
+      "3.27.0"
+    ],
+    [
+      "termtree",
+      "0.5.1"
+    ],
+    [
+      "thiserror",
+      "2.0.20"
+    ],
+    [
+      "thiserror-impl",
+      "2.0.20"
+    ],
+    [
+      "time",
+      "0.3.55"
+    ],
+    [
+      "time-core",
+      "0.1.9"
+    ],
+    [
+      "time-macros",
+      "0.2.32"
+    ],
+    [
+      "tinytemplate",
+      "1.2.1"
+    ],
+    [
+      "unarray",
+      "0.1.4"
+    ],
+    [
+      "unicode-bidi",
+      "0.3.18"
+    ],
+    [
+      "unicode-normalization",
+      "0.1.25"
+    ],
+    [
+      "unicode-properties",
+      "0.1.4"
+    ],
+    [
+      "utf8parse",
+      "0.2.2"
+    ],
+    [
+      "wait-timeout",
+      "0.2.1"
+    ],
+    [
+      "walkdir",
+      "2.5.0"
+    ],
+    [
+      "wasip2",
+      "1.0.4+wasi-0.2.12"
+    ],
+    [
+      "wasm-bindgen",
+      "0.2.128"
+    ],
+    [
+      "wasm-bindgen-macro",
+      "0.2.128"
+    ],
+    [
+      "wasm-bindgen-macro-support",
+      "0.2.128"
+    ],
+    [
+      "wasm-bindgen-shared",
+      "0.2.128"
+    ],
+    [
+      "web-sys",
+      "0.3.105"
+    ],
+    [
+      "weezl",
+      "0.2.1"
+    ],
+    [
+      "winapi-util",
+      "0.1.11"
+    ],
+    [
+      "windows-core",
+      "0.62.2"
+    ],
+    [
+      "windows-implement",
+      "0.60.2"
+    ],
+    [
+      "windows-interface",
+      "0.59.3"
+    ],
+    [
+      "windows-result",
+      "0.4.1"
+    ],
+    [
+      "windows-strings",
+      "0.5.1"
+    ],
+    [
+      "wit-bindgen",
+      "0.57.1"
+    ],
+    [
+      "yansi",
+      "1.0.1"
+    ],
+    [
+      "yeslogic-fontconfig-sys",
+      "6.0.1"
+    ],
+    [
+      "zmij",
+      "1.0.23"
+    ]
+  ],
+  "edges": [
+    {
+      "from": [
+        "librsvg-c",
+        "2.63.2"
+      ],
+      "to": [
+        "cairo-rs",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg-c",
+        "2.63.2"
+      ],
+      "to": [
+        "cast",
+        "0.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg-c",
+        "2.63.2"
+      ],
+      "to": [
+        "float-cmp",
+        "0.10.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg-c",
+        "2.63.2"
+      ],
+      "to": [
+        "gio",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg-c",
+        "2.63.2"
+      ],
+      "to": [
+        "glib",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg-c",
+        "2.63.2"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg-c",
+        "2.63.2"
+      ],
+      "to": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg-c",
+        "2.63.2"
+      ],
+      "to": [
+        "rgb",
+        "0.8.53"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg-c",
+        "2.63.2"
+      ],
+      "to": [
+        "url",
+        "2.5.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg-c",
+        "2.63.2"
+      ],
+      "to": [
+        "regex",
+        "1.13.1"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "regex",
+        "1.13.1"
+      ],
+      "to": [
+        "aho-corasick",
+        "1.1.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "regex",
+        "1.13.1"
+      ],
+      "to": [
+        "memchr",
+        "2.8.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "regex",
+        "1.13.1"
+      ],
+      "to": [
+        "regex-automata",
+        "0.4.18"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "regex",
+        "1.13.1"
+      ],
+      "to": [
+        "regex-syntax",
+        "0.8.11"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "regex-automata",
+        "0.4.18"
+      ],
+      "to": [
+        "aho-corasick",
+        "1.1.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "regex-automata",
+        "0.4.18"
+      ],
+      "to": [
+        "memchr",
+        "2.8.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "regex-automata",
+        "0.4.18"
+      ],
+      "to": [
+        "regex-syntax",
+        "0.8.11"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "aho-corasick",
+        "1.1.5"
+      ],
+      "to": [
+        "memchr",
+        "2.8.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "url",
+        "2.5.8"
+      ],
+      "to": [
+        "form_urlencoded",
+        "1.2.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "url",
+        "2.5.8"
+      ],
+      "to": [
+        "idna",
+        "1.1.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "url",
+        "2.5.8"
+      ],
+      "to": [
+        "percent-encoding",
+        "2.3.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "url",
+        "2.5.8"
+      ],
+      "to": [
+        "serde",
+        "1.0.229"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "serde",
+        "1.0.229"
+      ],
+      "to": [
+        "serde_core",
+        "1.0.229"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "serde",
+        "1.0.229"
+      ],
+      "to": [
+        "serde_derive",
+        "1.0.229"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "serde_derive",
+        "1.0.229"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "serde_derive",
+        "1.0.229"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "serde_derive",
+        "1.0.229"
+      ],
+      "to": [
+        "syn",
+        "3.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "syn",
+        "3.0.6"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "syn",
+        "3.0.6"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "syn",
+        "3.0.6"
+      ],
+      "to": [
+        "unicode-ident",
+        "1.0.26"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "quote",
+        "1.0.47"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "to": [
+        "unicode-ident",
+        "1.0.26"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "serde_core",
+        "1.0.229"
+      ],
+      "to": [
+        "serde_derive",
+        "1.0.229"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(any())",
+      "optional": false
+    },
+    {
+      "from": [
+        "idna",
+        "1.1.0"
+      ],
+      "to": [
+        "idna_adapter",
+        "1.2.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "idna",
+        "1.1.0"
+      ],
+      "to": [
+        "smallvec",
+        "1.16.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "idna",
+        "1.1.0"
+      ],
+      "to": [
+        "utf8_iter",
+        "1.0.4"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "idna_adapter",
+        "1.2.2"
+      ],
+      "to": [
+        "icu_normalizer",
+        "2.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "idna_adapter",
+        "1.2.2"
+      ],
+      "to": [
+        "icu_properties",
+        "2.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_properties",
+        "2.3.0"
+      ],
+      "to": [
+        "displaydoc",
+        "0.2.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_properties",
+        "2.3.0"
+      ],
+      "to": [
+        "icu_collections",
+        "2.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_properties",
+        "2.3.0"
+      ],
+      "to": [
+        "icu_locale_core",
+        "2.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_properties",
+        "2.3.0"
+      ],
+      "to": [
+        "icu_properties_data",
+        "2.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "icu_properties",
+        "2.3.0"
+      ],
+      "to": [
+        "icu_provider",
+        "2.3.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_properties",
+        "2.3.0"
+      ],
+      "to": [
+        "zerotrie",
+        "0.2.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_properties",
+        "2.3.0"
+      ],
+      "to": [
+        "zerovec",
+        "0.11.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "zerovec",
+        "0.11.8"
+      ],
+      "to": [
+        "yoke",
+        "0.8.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "zerovec",
+        "0.11.8"
+      ],
+      "to": [
+        "zerofrom",
+        "0.1.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "zerovec",
+        "0.11.8"
+      ],
+      "to": [
+        "zerovec-derive",
+        "0.11.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "zerovec-derive",
+        "0.11.6"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "zerovec-derive",
+        "0.11.6"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "zerovec-derive",
+        "0.11.6"
+      ],
+      "to": [
+        "syn",
+        "3.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "zerofrom",
+        "0.1.8"
+      ],
+      "to": [
+        "zerofrom-derive",
+        "0.1.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "zerofrom-derive",
+        "0.1.8"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "zerofrom-derive",
+        "0.1.8"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "zerofrom-derive",
+        "0.1.8"
+      ],
+      "to": [
+        "syn",
+        "3.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "zerofrom-derive",
+        "0.1.8"
+      ],
+      "to": [
+        "synstructure",
+        "0.14.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "synstructure",
+        "0.14.0"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "synstructure",
+        "0.14.0"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "synstructure",
+        "0.14.0"
+      ],
+      "to": [
+        "syn",
+        "3.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "yoke",
+        "0.8.3"
+      ],
+      "to": [
+        "stable_deref_trait",
+        "1.2.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "yoke",
+        "0.8.3"
+      ],
+      "to": [
+        "yoke-derive",
+        "0.8.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "yoke",
+        "0.8.3"
+      ],
+      "to": [
+        "zerofrom",
+        "0.1.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "yoke-derive",
+        "0.8.3"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "yoke-derive",
+        "0.8.3"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "yoke-derive",
+        "0.8.3"
+      ],
+      "to": [
+        "syn",
+        "3.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "yoke-derive",
+        "0.8.3"
+      ],
+      "to": [
+        "synstructure",
+        "0.14.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "zerotrie",
+        "0.2.5"
+      ],
+      "to": [
+        "displaydoc",
+        "0.2.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "zerotrie",
+        "0.2.5"
+      ],
+      "to": [
+        "yoke",
+        "0.8.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "zerotrie",
+        "0.2.5"
+      ],
+      "to": [
+        "zerofrom",
+        "0.1.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "displaydoc",
+        "0.2.7"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "displaydoc",
+        "0.2.7"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "displaydoc",
+        "0.2.7"
+      ],
+      "to": [
+        "syn",
+        "3.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_provider",
+        "2.3.1"
+      ],
+      "to": [
+        "displaydoc",
+        "0.2.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_provider",
+        "2.3.1"
+      ],
+      "to": [
+        "icu_locale_core",
+        "2.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_provider",
+        "2.3.1"
+      ],
+      "to": [
+        "writeable",
+        "0.6.4"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "icu_provider",
+        "2.3.1"
+      ],
+      "to": [
+        "yoke",
+        "0.8.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_provider",
+        "2.3.1"
+      ],
+      "to": [
+        "zerofrom",
+        "0.1.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_provider",
+        "2.3.1"
+      ],
+      "to": [
+        "zerotrie",
+        "0.2.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "icu_provider",
+        "2.3.1"
+      ],
+      "to": [
+        "zerovec",
+        "0.11.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_locale_core",
+        "2.3.0"
+      ],
+      "to": [
+        "displaydoc",
+        "0.2.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_locale_core",
+        "2.3.0"
+      ],
+      "to": [
+        "litemap",
+        "0.8.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_locale_core",
+        "2.3.0"
+      ],
+      "to": [
+        "tinystr",
+        "0.8.4"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_locale_core",
+        "2.3.0"
+      ],
+      "to": [
+        "writeable",
+        "0.6.4"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_locale_core",
+        "2.3.0"
+      ],
+      "to": [
+        "zerovec",
+        "0.11.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "tinystr",
+        "0.8.4"
+      ],
+      "to": [
+        "displaydoc",
+        "0.2.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "tinystr",
+        "0.8.4"
+      ],
+      "to": [
+        "zerovec",
+        "0.11.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "icu_collections",
+        "2.3.0"
+      ],
+      "to": [
+        "displaydoc",
+        "0.2.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_collections",
+        "2.3.0"
+      ],
+      "to": [
+        "potential_utf",
+        "0.1.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_collections",
+        "2.3.0"
+      ],
+      "to": [
+        "utf8_iter",
+        "1.0.4"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_collections",
+        "2.3.0"
+      ],
+      "to": [
+        "yoke",
+        "0.8.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_collections",
+        "2.3.0"
+      ],
+      "to": [
+        "zerofrom",
+        "0.1.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_collections",
+        "2.3.0"
+      ],
+      "to": [
+        "zerovec",
+        "0.11.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "potential_utf",
+        "0.1.6"
+      ],
+      "to": [
+        "zerovec",
+        "0.11.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "icu_normalizer",
+        "2.3.0"
+      ],
+      "to": [
+        "icu_collections",
+        "2.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_normalizer",
+        "2.3.0"
+      ],
+      "to": [
+        "icu_normalizer_data",
+        "2.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "icu_normalizer",
+        "2.3.0"
+      ],
+      "to": [
+        "icu_properties",
+        "2.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "icu_normalizer",
+        "2.3.0"
+      ],
+      "to": [
+        "icu_provider",
+        "2.3.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_normalizer",
+        "2.3.0"
+      ],
+      "to": [
+        "smallvec",
+        "1.16.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "icu_normalizer",
+        "2.3.0"
+      ],
+      "to": [
+        "zerovec",
+        "0.11.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "form_urlencoded",
+        "1.2.2"
+      ],
+      "to": [
+        "percent-encoding",
+        "2.3.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "rgb",
+        "0.8.53"
+      ],
+      "to": [
+        "bytemuck",
+        "1.25.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "cairo-rs",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "cast",
+        "0.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "cssparser",
+        "0.37.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "cssparser-color",
+        "0.5.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "data-url",
+        "0.3.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "encoding_rs",
+        "0.8.41"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "float-cmp",
+        "0.10.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "gio",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "glib",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "image",
+        "0.25.10"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "itertools",
+        "0.15.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "language-tags",
+        "0.3.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "locale_config",
+        "0.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "markup5ever",
+        "0.39.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "mutants",
+        "0.0.4"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "pango",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "pangocairo",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "precomputed-hash",
+        "0.1.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "rayon",
+        "1.12.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "rctree",
+        "0.6.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "regex",
+        "1.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "rgb",
+        "0.8.53"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "selectors",
+        "0.40.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "string_cache",
+        "0.10.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "tinyvec",
+        "1.13.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "url",
+        "2.5.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "xml5ever",
+        "0.39.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "librsvg",
+        "2.63.2"
+      ],
+      "to": [
+        "system-deps",
+        "7.0.8"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "system-deps",
+        "7.0.8"
+      ],
+      "to": [
+        "cfg-expr",
+        "0.20.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "system-deps",
+        "7.0.8"
+      ],
+      "to": [
+        "heck",
+        "0.5.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "system-deps",
+        "7.0.8"
+      ],
+      "to": [
+        "pkg-config",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "system-deps",
+        "7.0.8"
+      ],
+      "to": [
+        "toml",
+        "1.1.6+spec-1.1.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "system-deps",
+        "7.0.8"
+      ],
+      "to": [
+        "version-compare",
+        "0.2.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "toml",
+        "1.1.6+spec-1.1.0"
+      ],
+      "to": [
+        "indexmap",
+        "2.14.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "toml",
+        "1.1.6+spec-1.1.0"
+      ],
+      "to": [
+        "serde_core",
+        "1.0.229"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "toml",
+        "1.1.6+spec-1.1.0"
+      ],
+      "to": [
+        "serde_spanned",
+        "1.1.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "toml",
+        "1.1.6+spec-1.1.0"
+      ],
+      "to": [
+        "toml_datetime",
+        "1.1.1+spec-1.1.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "toml",
+        "1.1.6+spec-1.1.0"
+      ],
+      "to": [
+        "toml_parser",
+        "1.1.3+spec-1.1.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "toml",
+        "1.1.6+spec-1.1.0"
+      ],
+      "to": [
+        "toml_writer",
+        "1.1.2+spec-1.1.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "toml",
+        "1.1.6+spec-1.1.0"
+      ],
+      "to": [
+        "winnow",
+        "1.0.4"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "toml_parser",
+        "1.1.3+spec-1.1.0"
+      ],
+      "to": [
+        "winnow",
+        "1.0.4"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "toml_datetime",
+        "1.1.1+spec-1.1.0"
+      ],
+      "to": [
+        "serde_core",
+        "1.0.229"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "serde_spanned",
+        "1.1.1"
+      ],
+      "to": [
+        "serde_core",
+        "1.0.229"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "indexmap",
+        "2.14.2"
+      ],
+      "to": [
+        "equivalent",
+        "1.0.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "indexmap",
+        "2.14.2"
+      ],
+      "to": [
+        "hashbrown",
+        "0.17.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cfg-expr",
+        "0.20.9"
+      ],
+      "to": [
+        "smallvec",
+        "1.16.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cfg-expr",
+        "0.20.9"
+      ],
+      "to": [
+        "target-lexicon",
+        "0.13.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "xml5ever",
+        "0.39.0"
+      ],
+      "to": [
+        "log",
+        "0.4.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "xml5ever",
+        "0.39.0"
+      ],
+      "to": [
+        "markup5ever",
+        "0.39.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "markup5ever",
+        "0.39.0"
+      ],
+      "to": [
+        "log",
+        "0.4.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "markup5ever",
+        "0.39.0"
+      ],
+      "to": [
+        "tendril",
+        "0.5.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "markup5ever",
+        "0.39.0"
+      ],
+      "to": [
+        "web_atoms",
+        "0.2.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "web_atoms",
+        "0.2.6"
+      ],
+      "to": [
+        "phf",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "web_atoms",
+        "0.2.6"
+      ],
+      "to": [
+        "string_cache",
+        "0.9.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "web_atoms",
+        "0.2.6"
+      ],
+      "to": [
+        "phf_codegen",
+        "0.13.1"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "web_atoms",
+        "0.2.6"
+      ],
+      "to": [
+        "string_cache_codegen",
+        "0.6.1"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache_codegen",
+        "0.6.1"
+      ],
+      "to": [
+        "phf_generator",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache_codegen",
+        "0.6.1"
+      ],
+      "to": [
+        "phf_shared",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache_codegen",
+        "0.6.1"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache_codegen",
+        "0.6.1"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "phf_shared",
+        "0.13.1"
+      ],
+      "to": [
+        "siphasher",
+        "1.0.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "phf_generator",
+        "0.13.1"
+      ],
+      "to": [
+        "fastrand",
+        "2.5.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "phf_generator",
+        "0.13.1"
+      ],
+      "to": [
+        "phf_shared",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "phf_codegen",
+        "0.13.1"
+      ],
+      "to": [
+        "phf_generator",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "phf_codegen",
+        "0.13.1"
+      ],
+      "to": [
+        "phf_shared",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache",
+        "0.9.0"
+      ],
+      "to": [
+        "new_debug_unreachable",
+        "1.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache",
+        "0.9.0"
+      ],
+      "to": [
+        "parking_lot",
+        "0.12.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache",
+        "0.9.0"
+      ],
+      "to": [
+        "phf_shared",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache",
+        "0.9.0"
+      ],
+      "to": [
+        "precomputed-hash",
+        "0.1.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "parking_lot",
+        "0.12.5"
+      ],
+      "to": [
+        "lock_api",
+        "0.4.14"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "parking_lot",
+        "0.12.5"
+      ],
+      "to": [
+        "parking_lot_core",
+        "0.9.12"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "parking_lot_core",
+        "0.9.12"
+      ],
+      "to": [
+        "cfg-if",
+        "1.0.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "parking_lot_core",
+        "0.9.12"
+      ],
+      "to": [
+        "smallvec",
+        "1.16.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "parking_lot_core",
+        "0.9.12"
+      ],
+      "to": [
+        "redox_syscall",
+        "0.5.18"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(target_os = \"redox\")",
+      "optional": false
+    },
+    {
+      "from": [
+        "parking_lot_core",
+        "0.9.12"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(unix)",
+      "optional": false
+    },
+    {
+      "from": [
+        "parking_lot_core",
+        "0.9.12"
+      ],
+      "to": [
+        "windows-link",
+        "0.2.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(windows)",
+      "optional": false
+    },
+    {
+      "from": [
+        "redox_syscall",
+        "0.5.18"
+      ],
+      "to": [
+        "bitflags",
+        "2.13.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "lock_api",
+        "0.4.14"
+      ],
+      "to": [
+        "scopeguard",
+        "1.2.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "phf",
+        "0.13.1"
+      ],
+      "to": [
+        "phf_macros",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "phf",
+        "0.13.1"
+      ],
+      "to": [
+        "phf_shared",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "phf",
+        "0.13.1"
+      ],
+      "to": [
+        "serde",
+        "1.0.229"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "phf_macros",
+        "0.13.1"
+      ],
+      "to": [
+        "phf_generator",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "phf_macros",
+        "0.13.1"
+      ],
+      "to": [
+        "phf_shared",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "phf_macros",
+        "0.13.1"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "phf_macros",
+        "0.13.1"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "phf_macros",
+        "0.13.1"
+      ],
+      "to": [
+        "syn",
+        "2.0.119"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "syn",
+        "2.0.119"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "syn",
+        "2.0.119"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "syn",
+        "2.0.119"
+      ],
+      "to": [
+        "unicode-ident",
+        "1.0.26"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "tendril",
+        "0.5.1"
+      ],
+      "to": [
+        "new_debug_unreachable",
+        "1.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache",
+        "0.10.0"
+      ],
+      "to": [
+        "new_debug_unreachable",
+        "1.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache",
+        "0.10.0"
+      ],
+      "to": [
+        "parking_lot",
+        "0.12.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache",
+        "0.10.0"
+      ],
+      "to": [
+        "phf_shared",
+        "0.14.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache",
+        "0.10.0"
+      ],
+      "to": [
+        "precomputed-hash",
+        "0.1.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "string_cache",
+        "0.10.0"
+      ],
+      "to": [
+        "serde",
+        "1.0.229"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "phf_shared",
+        "0.14.0"
+      ],
+      "to": [
+        "siphasher",
+        "1.0.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "selectors",
+        "0.40.0"
+      ],
+      "to": [
+        "bitflags",
+        "2.13.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "selectors",
+        "0.40.0"
+      ],
+      "to": [
+        "cssparser",
+        "0.37.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "selectors",
+        "0.40.0"
+      ],
+      "to": [
+        "derive_more",
+        "2.1.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "selectors",
+        "0.40.0"
+      ],
+      "to": [
+        "log",
+        "0.4.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "selectors",
+        "0.40.0"
+      ],
+      "to": [
+        "new_debug_unreachable",
+        "1.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "selectors",
+        "0.40.0"
+      ],
+      "to": [
+        "phf",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "selectors",
+        "0.40.0"
+      ],
+      "to": [
+        "precomputed-hash",
+        "0.1.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "selectors",
+        "0.40.0"
+      ],
+      "to": [
+        "rustc-hash",
+        "2.1.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "selectors",
+        "0.40.0"
+      ],
+      "to": [
+        "servo_arc",
+        "0.4.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "selectors",
+        "0.40.0"
+      ],
+      "to": [
+        "smallvec",
+        "1.16.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "selectors",
+        "0.40.0"
+      ],
+      "to": [
+        "phf_codegen",
+        "0.13.1"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "servo_arc",
+        "0.4.3"
+      ],
+      "to": [
+        "stable_deref_trait",
+        "1.2.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "derive_more",
+        "2.1.1"
+      ],
+      "to": [
+        "derive_more-impl",
+        "2.1.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "derive_more-impl",
+        "2.1.1"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "derive_more-impl",
+        "2.1.1"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "derive_more-impl",
+        "2.1.1"
+      ],
+      "to": [
+        "syn",
+        "2.0.119"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "derive_more-impl",
+        "2.1.1"
+      ],
+      "to": [
+        "rustc_version",
+        "0.4.1"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "rustc_version",
+        "0.4.1"
+      ],
+      "to": [
+        "semver",
+        "1.0.28"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cssparser",
+        "0.37.0"
+      ],
+      "to": [
+        "cssparser-macros",
+        "0.7.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "cssparser",
+        "0.37.0"
+      ],
+      "to": [
+        "dtoa-short",
+        "0.3.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cssparser",
+        "0.37.0"
+      ],
+      "to": [
+        "itoa",
+        "1.0.18"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cssparser",
+        "0.37.0"
+      ],
+      "to": [
+        "phf",
+        "0.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "cssparser",
+        "0.37.0"
+      ],
+      "to": [
+        "smallvec",
+        "1.16.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "dtoa-short",
+        "0.3.5"
+      ],
+      "to": [
+        "dtoa",
+        "1.0.11"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cssparser-macros",
+        "0.7.1"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cssparser-macros",
+        "0.7.1"
+      ],
+      "to": [
+        "syn",
+        "3.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "rayon",
+        "1.12.0"
+      ],
+      "to": [
+        "either",
+        "1.18.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "rayon",
+        "1.12.0"
+      ],
+      "to": [
+        "rayon-core",
+        "1.13.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "rayon-core",
+        "1.13.0"
+      ],
+      "to": [
+        "crossbeam-deque",
+        "0.8.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "rayon-core",
+        "1.13.0"
+      ],
+      "to": [
+        "crossbeam-utils",
+        "0.8.23"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "crossbeam-deque",
+        "0.8.8"
+      ],
+      "to": [
+        "crossbeam-epoch",
+        "0.9.21"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "crossbeam-deque",
+        "0.8.8"
+      ],
+      "to": [
+        "crossbeam-utils",
+        "0.8.23"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "crossbeam-epoch",
+        "0.9.21"
+      ],
+      "to": [
+        "crossbeam-utils",
+        "0.8.23"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pangocairo",
+        "0.22.9"
+      ],
+      "to": [
+        "cairo-rs",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pangocairo",
+        "0.22.9"
+      ],
+      "to": [
+        "glib",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pangocairo",
+        "0.22.9"
+      ],
+      "to": [
+        "pango",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pangocairo",
+        "0.22.9"
+      ],
+      "to": [
+        "pangocairo-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pangocairo-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "cairo-sys-rs",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pangocairo-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "glib-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pangocairo-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pangocairo-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "pango-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pangocairo-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "system-deps",
+        "9.0.0"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "system-deps",
+        "9.0.0"
+      ],
+      "to": [
+        "cfg-expr",
+        "0.20.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "system-deps",
+        "9.0.0"
+      ],
+      "to": [
+        "heck",
+        "0.5.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "system-deps",
+        "9.0.0"
+      ],
+      "to": [
+        "pkg-config",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "system-deps",
+        "9.0.0"
+      ],
+      "to": [
+        "toml",
+        "1.1.6+spec-1.1.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "system-deps",
+        "9.0.0"
+      ],
+      "to": [
+        "version-compare",
+        "0.2.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pango-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "glib-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pango-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "gobject-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pango-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pango-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "system-deps",
+        "9.0.0"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gobject-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "glib-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gobject-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gobject-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "system-deps",
+        "9.0.0"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "system-deps",
+        "9.0.0"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cairo-sys-rs",
+        "0.22.9"
+      ],
+      "to": [
+        "glib-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "cairo-sys-rs",
+        "0.22.9"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cairo-sys-rs",
+        "0.22.9"
+      ],
+      "to": [
+        "system-deps",
+        "9.0.0"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pango",
+        "0.22.9"
+      ],
+      "to": [
+        "gio",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pango",
+        "0.22.9"
+      ],
+      "to": [
+        "glib",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "pango",
+        "0.22.9"
+      ],
+      "to": [
+        "pango-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "bitflags",
+        "2.13.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "futures-channel",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "futures-core",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "futures-executor",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "futures-task",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "futures-util",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "gio-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "glib-macros",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "glib-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "gobject-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "memchr",
+        "2.8.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib",
+        "0.22.9"
+      ],
+      "to": [
+        "smallvec",
+        "1.16.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib-macros",
+        "0.22.9"
+      ],
+      "to": [
+        "heck",
+        "0.5.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib-macros",
+        "0.22.9"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib-macros",
+        "0.22.9"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "glib-macros",
+        "0.22.9"
+      ],
+      "to": [
+        "syn",
+        "3.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "glib-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "gobject-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "system-deps",
+        "9.0.0"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio-sys",
+        "0.22.9"
+      ],
+      "to": [
+        "windows-sys",
+        "0.61.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(windows)",
+      "optional": false
+    },
+    {
+      "from": [
+        "windows-sys",
+        "0.61.2"
+      ],
+      "to": [
+        "windows-link",
+        "0.2.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "futures-util",
+        "0.3.34"
+      ],
+      "to": [
+        "futures-core",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "futures-util",
+        "0.3.34"
+      ],
+      "to": [
+        "futures-macro",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "futures-util",
+        "0.3.34"
+      ],
+      "to": [
+        "futures-task",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "futures-util",
+        "0.3.34"
+      ],
+      "to": [
+        "pin-project-lite",
+        "0.2.17"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "futures-util",
+        "0.3.34"
+      ],
+      "to": [
+        "slab",
+        "0.4.12"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "futures-macro",
+        "0.3.34"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "futures-macro",
+        "0.3.34"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "futures-macro",
+        "0.3.34"
+      ],
+      "to": [
+        "syn",
+        "3.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "futures-executor",
+        "0.3.34"
+      ],
+      "to": [
+        "futures-core",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "futures-executor",
+        "0.3.34"
+      ],
+      "to": [
+        "futures-task",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "futures-executor",
+        "0.3.34"
+      ],
+      "to": [
+        "futures-util",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "futures-channel",
+        "0.3.34"
+      ],
+      "to": [
+        "futures-core",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio",
+        "0.22.9"
+      ],
+      "to": [
+        "futures-channel",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio",
+        "0.22.9"
+      ],
+      "to": [
+        "futures-core",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio",
+        "0.22.9"
+      ],
+      "to": [
+        "futures-io",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio",
+        "0.22.9"
+      ],
+      "to": [
+        "futures-util",
+        "0.3.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio",
+        "0.22.9"
+      ],
+      "to": [
+        "gio-sys",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio",
+        "0.22.9"
+      ],
+      "to": [
+        "glib",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio",
+        "0.22.9"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio",
+        "0.22.9"
+      ],
+      "to": [
+        "pin-project-lite",
+        "0.2.17"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gio",
+        "0.22.9"
+      ],
+      "to": [
+        "smallvec",
+        "1.16.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cairo-rs",
+        "0.22.9"
+      ],
+      "to": [
+        "bitflags",
+        "2.13.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cairo-rs",
+        "0.22.9"
+      ],
+      "to": [
+        "cairo-sys-rs",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cairo-rs",
+        "0.22.9"
+      ],
+      "to": [
+        "glib",
+        "0.22.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "cairo-rs",
+        "0.22.9"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "to": [
+        "autocfg",
+        "1.5.1"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "approx",
+        "0.5.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.30.10"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.31.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.32.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.33.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.30.10"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.31.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.32.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.33.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.30.10"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.31.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.32.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.33.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.30.10"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.31.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.32.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "glam",
+        "0.33.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "matrixmultiply",
+        "0.3.11"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "nalgebra-macros",
+        "0.3.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "num-complex",
+        "0.4.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "num-rational",
+        "0.4.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "simba",
+        "0.10.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "nalgebra",
+        "0.35.0"
+      ],
+      "to": [
+        "typenum",
+        "1.20.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "simba",
+        "0.10.2"
+      ],
+      "to": [
+        "approx",
+        "0.5.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "simba",
+        "0.10.2"
+      ],
+      "to": [
+        "num-complex",
+        "0.4.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "simba",
+        "0.10.2"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "simba",
+        "0.10.2"
+      ],
+      "to": [
+        "wide",
+        "1.7.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "wide",
+        "1.7.1"
+      ],
+      "to": [
+        "bytemuck",
+        "1.25.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "wide",
+        "1.7.1"
+      ],
+      "to": [
+        "safe_arch",
+        "1.2.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(target_arch = \"x86\")",
+      "optional": false
+    },
+    {
+      "from": [
+        "wide",
+        "1.7.1"
+      ],
+      "to": [
+        "safe_arch",
+        "1.2.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(target_arch = \"x86_64\")",
+      "optional": false
+    },
+    {
+      "from": [
+        "safe_arch",
+        "1.2.0"
+      ],
+      "to": [
+        "bytemuck",
+        "1.25.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "num-complex",
+        "0.4.6"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "approx",
+        "0.5.1"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "num-rational",
+        "0.4.2"
+      ],
+      "to": [
+        "num-bigint",
+        "0.4.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "num-rational",
+        "0.4.2"
+      ],
+      "to": [
+        "num-integer",
+        "0.1.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "num-rational",
+        "0.4.2"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "num-integer",
+        "0.1.47"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "num-bigint",
+        "0.4.8"
+      ],
+      "to": [
+        "num-integer",
+        "0.1.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "num-bigint",
+        "0.4.8"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "nalgebra-macros",
+        "0.3.0"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "nalgebra-macros",
+        "0.3.0"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "nalgebra-macros",
+        "0.3.0"
+      ],
+      "to": [
+        "syn",
+        "2.0.119"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "matrixmultiply",
+        "0.3.11"
+      ],
+      "to": [
+        "rawpointer",
+        "0.2.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "matrixmultiply",
+        "0.3.11"
+      ],
+      "to": [
+        "autocfg",
+        "1.5.1"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "locale_config",
+        "0.3.0"
+      ],
+      "to": [
+        "lazy_static",
+        "1.5.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "locale_config",
+        "0.3.0"
+      ],
+      "to": [
+        "regex",
+        "1.13.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "locale_config",
+        "0.3.0"
+      ],
+      "to": [
+        "objc",
+        "0.2.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(target_os = \"macos\")",
+      "optional": false
+    },
+    {
+      "from": [
+        "locale_config",
+        "0.3.0"
+      ],
+      "to": [
+        "objc-foundation",
+        "0.1.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(target_os = \"macos\")",
+      "optional": false
+    },
+    {
+      "from": [
+        "locale_config",
+        "0.3.0"
+      ],
+      "to": [
+        "winapi",
+        "0.3.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(windows)",
+      "optional": false
+    },
+    {
+      "from": [
+        "winapi",
+        "0.3.9"
+      ],
+      "to": [
+        "winapi-i686-pc-windows-gnu",
+        "0.4.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "i686-pc-windows-gnu",
+      "optional": false
+    },
+    {
+      "from": [
+        "winapi",
+        "0.3.9"
+      ],
+      "to": [
+        "winapi-x86_64-pc-windows-gnu",
+        "0.4.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "x86_64-pc-windows-gnu",
+      "optional": false
+    },
+    {
+      "from": [
+        "objc-foundation",
+        "0.1.1"
+      ],
+      "to": [
+        "block",
+        "0.1.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "objc-foundation",
+        "0.1.1"
+      ],
+      "to": [
+        "objc",
+        "0.2.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "objc-foundation",
+        "0.1.1"
+      ],
+      "to": [
+        "objc_id",
+        "0.1.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "objc_id",
+        "0.1.1"
+      ],
+      "to": [
+        "objc",
+        "0.2.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "objc",
+        "0.2.7"
+      ],
+      "to": [
+        "malloc_buf",
+        "0.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "malloc_buf",
+        "0.0.6"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "itertools",
+        "0.15.0"
+      ],
+      "to": [
+        "either",
+        "1.18.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "image",
+        "0.25.10"
+      ],
+      "to": [
+        "bytemuck",
+        "1.25.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "image",
+        "0.25.10"
+      ],
+      "to": [
+        "byteorder-lite",
+        "0.1.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "image",
+        "0.25.10"
+      ],
+      "to": [
+        "color_quant",
+        "1.1.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "image",
+        "0.25.10"
+      ],
+      "to": [
+        "dav1d",
+        "0.11.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "image",
+        "0.25.10"
+      ],
+      "to": [
+        "gif",
+        "0.14.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "image",
+        "0.25.10"
+      ],
+      "to": [
+        "image-webp",
+        "0.2.4"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "image",
+        "0.25.10"
+      ],
+      "to": [
+        "moxcms",
+        "0.8.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "image",
+        "0.25.10"
+      ],
+      "to": [
+        "mp4parse",
+        "0.17.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "image",
+        "0.25.10"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "image",
+        "0.25.10"
+      ],
+      "to": [
+        "png",
+        "0.18.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "image",
+        "0.25.10"
+      ],
+      "to": [
+        "zune-core",
+        "0.5.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "image",
+        "0.25.10"
+      ],
+      "to": [
+        "zune-jpeg",
+        "0.5.15"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "zune-jpeg",
+        "0.5.15"
+      ],
+      "to": [
+        "zune-core",
+        "0.5.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "png",
+        "0.18.1"
+      ],
+      "to": [
+        "bitflags",
+        "2.13.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "png",
+        "0.18.1"
+      ],
+      "to": [
+        "crc32fast",
+        "1.5.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "png",
+        "0.18.1"
+      ],
+      "to": [
+        "fdeflate",
+        "0.3.7"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "png",
+        "0.18.1"
+      ],
+      "to": [
+        "flate2",
+        "1.1.10"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "png",
+        "0.18.1"
+      ],
+      "to": [
+        "miniz_oxide",
+        "0.8.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "miniz_oxide",
+        "0.8.9"
+      ],
+      "to": [
+        "adler2",
+        "2.0.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "miniz_oxide",
+        "0.8.9"
+      ],
+      "to": [
+        "simd-adler32",
+        "0.3.10"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "flate2",
+        "1.1.10"
+      ],
+      "to": [
+        "crc32fast",
+        "1.5.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "flate2",
+        "1.1.10"
+      ],
+      "to": [
+        "miniz_oxide",
+        "0.9.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "flate2",
+        "1.1.10"
+      ],
+      "to": [
+        "zlib-rs",
+        "0.6.8"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "miniz_oxide",
+        "0.9.1"
+      ],
+      "to": [
+        "adler2",
+        "2.0.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "miniz_oxide",
+        "0.9.1"
+      ],
+      "to": [
+        "simd-adler32",
+        "0.3.10"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "crc32fast",
+        "1.5.2"
+      ],
+      "to": [
+        "cfg-if",
+        "1.0.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "fdeflate",
+        "0.3.7"
+      ],
+      "to": [
+        "simd-adler32",
+        "0.3.10"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "mp4parse",
+        "0.17.0"
+      ],
+      "to": [
+        "bitreader",
+        "0.3.11"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "mp4parse",
+        "0.17.0"
+      ],
+      "to": [
+        "byteorder",
+        "1.5.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "mp4parse",
+        "0.17.0"
+      ],
+      "to": [
+        "fallible_collections",
+        "0.4.9"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "mp4parse",
+        "0.17.0"
+      ],
+      "to": [
+        "log",
+        "0.4.34"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "mp4parse",
+        "0.17.0"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "mp4parse",
+        "0.17.0"
+      ],
+      "to": [
+        "static_assertions",
+        "1.1.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "fallible_collections",
+        "0.4.9"
+      ],
+      "to": [
+        "hashbrown",
+        "0.13.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "hashbrown",
+        "0.13.2"
+      ],
+      "to": [
+        "ahash",
+        "0.8.12"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "ahash",
+        "0.8.12"
+      ],
+      "to": [
+        "cfg-if",
+        "1.0.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "ahash",
+        "0.8.12"
+      ],
+      "to": [
+        "zerocopy",
+        "0.8.57"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "ahash",
+        "0.8.12"
+      ],
+      "to": [
+        "version_check",
+        "0.9.5"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "ahash",
+        "0.8.12"
+      ],
+      "to": [
+        "once_cell",
+        "1.21.4"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(not(all(target_arch = \"arm\", target_os = \"none\")))",
+      "optional": false
+    },
+    {
+      "from": [
+        "zerocopy",
+        "0.8.57"
+      ],
+      "to": [
+        "zerocopy-derive",
+        "0.8.57"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "zerocopy",
+        "0.8.57"
+      ],
+      "to": [
+        "zerocopy-derive",
+        "0.8.57"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(any())",
+      "optional": false
+    },
+    {
+      "from": [
+        "zerocopy-derive",
+        "0.8.57"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "zerocopy-derive",
+        "0.8.57"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "zerocopy-derive",
+        "0.8.57"
+      ],
+      "to": [
+        "syn",
+        "2.0.119"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "bitreader",
+        "0.3.11"
+      ],
+      "to": [
+        "cfg-if",
+        "1.0.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "moxcms",
+        "0.8.1"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "moxcms",
+        "0.8.1"
+      ],
+      "to": [
+        "pxfm",
+        "0.1.30"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "image-webp",
+        "0.2.4"
+      ],
+      "to": [
+        "byteorder-lite",
+        "0.1.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "image-webp",
+        "0.2.4"
+      ],
+      "to": [
+        "quick-error",
+        "2.0.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "gif",
+        "0.14.2"
+      ],
+      "to": [
+        "color_quant",
+        "1.1.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "gif",
+        "0.14.2"
+      ],
+      "to": [
+        "weezl",
+        "0.1.12"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "dav1d",
+        "0.11.1"
+      ],
+      "to": [
+        "av-data",
+        "0.4.4"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "dav1d",
+        "0.11.1"
+      ],
+      "to": [
+        "bitflags",
+        "2.13.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "dav1d",
+        "0.11.1"
+      ],
+      "to": [
+        "dav1d-sys",
+        "0.8.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "dav1d",
+        "0.11.1"
+      ],
+      "to": [
+        "static_assertions",
+        "1.1.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "dav1d-sys",
+        "0.8.3"
+      ],
+      "to": [
+        "libc",
+        "0.2.189"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "dav1d-sys",
+        "0.8.3"
+      ],
+      "to": [
+        "system-deps",
+        "7.0.8"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "av-data",
+        "0.4.4"
+      ],
+      "to": [
+        "byte-slice-cast",
+        "1.2.3"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "av-data",
+        "0.4.4"
+      ],
+      "to": [
+        "bytes",
+        "1.12.1"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "av-data",
+        "0.4.4"
+      ],
+      "to": [
+        "num-derive",
+        "0.4.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "av-data",
+        "0.4.4"
+      ],
+      "to": [
+        "num-rational",
+        "0.4.2"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "av-data",
+        "0.4.4"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "num-derive",
+        "0.4.2"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "num-derive",
+        "0.4.2"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "num-derive",
+        "0.4.2"
+      ],
+      "to": [
+        "syn",
+        "2.0.119"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "float-cmp",
+        "0.10.0"
+      ],
+      "to": [
+        "num-traits",
+        "0.2.19"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "encoding_rs",
+        "0.8.41"
+      ],
+      "to": [
+        "cfg-if",
+        "1.0.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "encoding_rs",
+        "0.8.41"
+      ],
+      "to": [
+        "multiversion_no_op",
+        "1.0.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "encoding_rs",
+        "0.8.41"
+      ],
+      "to": [
+        "rustversion",
+        "1.0.23"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": true
+    },
+    {
+      "from": [
+        "encoding_rs",
+        "0.8.41"
+      ],
+      "to": [
+        "scopeguard",
+        "1.2.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "encoding_rs",
+        "0.8.41"
+      ],
+      "to": [
+        "rustversion",
+        "1.0.23"
+      ],
+      "kind": "build-dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "encoding_rs",
+        "0.8.41"
+      ],
+      "to": [
+        "multiversion",
+        "0.9.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(all(any(target_arch = \"x86_64\", target_arch = \"x86\"), not(all(target_feature = \"avx2\", target_feature = \"bmi1\"))))",
+      "optional": false
+    },
+    {
+      "from": [
+        "encoding_rs",
+        "0.8.41"
+      ],
+      "to": [
+        "core_detect",
+        "1.0.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(any(target_arch = \"x86_64\", target_arch = \"x86\"))",
+      "optional": false
+    },
+    {
+      "from": [
+        "encoding_rs",
+        "0.8.41"
+      ],
+      "to": [
+        "simdutf8",
+        "0.1.5"
+      ],
+      "kind": "dependencies",
+      "targetCondition": "cfg(any(target_arch = \"x86_64\", target_arch = \"x86\", target_arch = \"aarch64\", all(target_arch = \"wasm32\", target_feature = \"simd128\")))",
+      "optional": false
+    },
+    {
+      "from": [
+        "multiversion",
+        "0.9.0"
+      ],
+      "to": [
+        "multiversion-macros",
+        "0.9.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "multiversion-macros",
+        "0.9.0"
+      ],
+      "to": [
+        "proc-macro2",
+        "1.0.107"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "multiversion-macros",
+        "0.9.0"
+      ],
+      "to": [
+        "quote",
+        "1.0.47"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "multiversion-macros",
+        "0.9.0"
+      ],
+      "to": [
+        "rustversion",
+        "1.0.23"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "multiversion-macros",
+        "0.9.0"
+      ],
+      "to": [
+        "syn",
+        "3.0.6"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    },
+    {
+      "from": [
+        "cssparser-color",
+        "0.5.0"
+      ],
+      "to": [
+        "cssparser",
+        "0.37.0"
+      ],
+      "kind": "dependencies",
+      "targetCondition": null,
+      "optional": false
+    }
+  ]
+}

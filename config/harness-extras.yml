@@ -1,0 +1,39 @@
+# Harness components Boujoy adds on top of the minimal kernel (sdk-minimal).
+# Every real action still goes through Boujoy's brokered tools and their checks.
+# If any entry fails to load, Boujoy restarts the Harness without this file.
+- insert:
+    # Long conversations: trim oversized tool output, then condense the oldest
+    # history into a summary well before the 1M-token window fills up.
+    - id: token-meter
+      name: '@deepseek-ai/dsh-token-meter'
+    - id: tool-result-pruner
+      name: '@deepseek-ai/dsh-compaction-tool-result-pruner'
+      config:
+        thresholdChars: 16000
+        headChars: 8000
+        tailChars: 2000
+    - id: compaction-basic
+      name: '@deepseek-ai/dsh-compaction-basic'
+      config:
+        thresholdRatio: 0.2
+        retainRatio: 0.06
+    - id: image-offload
+      name: '@deepseek-ai/dsh-compaction-image-offload'
+    # Official native subagents inherit the live task catalog. Boujoy's adapter
+    # separates child completion and serializes access to the single phone.
+    - id: subagent
+      name: '@deepseek-ai/dsh-subagent'
+    - id: subagent-spawn-in-process
+      name: '@deepseek-ai/dsh-subagent-spawn-in-process'
+      config:
+        providerName: spawn
+    - id: tool-subagent-control
+      name: '@deepseek-ai/dsh-tool-subagent-control'
+    - id: tool-subagent
+      name: '@deepseek-ai/dsh-tool-subagent'
+      config:
+        provider: spawn
+        toolName: subagent
+        maxDepth: provider-managed
+        toolFilter:
+          allow: ['boujoy:inherit-task-tools']

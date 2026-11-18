@@ -1,0 +1,37 @@
+import {DISTRIBUTION,ANDROID_PACKAGE} from '../src/distribution.mjs';
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {randomUUID} from 'node:crypto';
+import {Store} from '../src/core/store.mjs';
+import {Engine} from '../src/core/engine.mjs';
+import {Approvals} from '../src/core/approvals.mjs';
+import {RemoteState,spkiPin} from '../src/remote/state.mjs';
+import {createGateway} from '../src/remote/gateway.mjs';
+import {validateTaskContract} from '../src/core/task-contract.mjs';
+import {identities,request} from './helpers/remote-tls.mjs';
+
+test('F2 lock pauses the owner; only explicit current-epoch continue resumes; old unknown receipts stay intact',async t=>{
+ const fixture=identities(),store=new Store(fixture.dir,{lock:false}),state=new RemoteState(fixture.dir),deviceId=randomUUID(),phone={lease:null};
+ const engine=new Engine({store,broker:{calls:new Map(),approvals:new Approvals(store)},secrets:{get:async()=>assert.fail('no cloud model')},memory:{}});engine.pump=async()=>{};
+ const gateway=createGateway({identity:fixture.server,state,store,engine,phone,dataDir:fixture.dir}),port=await gateway.listen();
+ t.after(async()=>{await gateway.close();engine.groups.close();store.close();fixture.cleanup();});
+ const call=(pathname,body)=>request({port,identity:fixture.client,pin:spkiPin(fixture.server.cert),pathname,method:body?'POST':'GET',body});
+ const control=(controlEpoch,paused)=>call('/v1/device/control',{messageId:randomUUID(),controlEpoch,paused,reason:paused?'screen_off':'explicit_task_continue'});
+ const pairing=state.issuePairing({deviceId});assert.equal((await call('/v1/pair',{edition:DISTRIBUTION.edition,androidApplicationId:ANDROID_PACKAGE,pairToken:pairing.pairToken})).status,200);assert.equal((await control(1,false)).status,200);
+ const task=engine.create({prompt:'打开设置查看电池',cloudConsent:true,remoteDeviceId:deviceId,remoteControlEpoch:1});store.updateTask(task.id,t=>t.status='running');phone.lease=task.id;
+ const deadline=task.deadlineAt,source=structuredClone(task.taskContract.source);
+ assert.equal((await control(2,true)).status,200);assert.equal(store.task(task.id).status,'paused');
+ assert.equal((await control(2,false)).status,400,'same epoch cannot unlock control');
+ assert.equal((await call('/v1/tasks/'+task.id+'/continue',{messageId:randomUUID(),controlEpoch:1})).status,400);
+ assert.equal((await control(3,false)).status,200);assert.equal(store.task(task.id).status,'paused','unlock/control acknowledgment alone never replays a task');
+ const body={messageId:randomUUID(),controlEpoch:3},reply=await call('/v1/tasks/'+task.id+'/continue',body);assert.equal(reply.status,200);
+ const resumed=store.task(task.id);assert.equal(resumed.status,'queued');assert.equal(resumed.remoteControlEpoch,3);assert.equal(resumed.deadlineAt,deadline);assert.deepEqual(resumed.taskContract.source,source);assert.equal(validateTaskContract(resumed,{store}).valid,true);
+ const revision=resumed.taskContract.revision;assert.deepEqual((await call('/v1/tasks/'+task.id+'/continue',body)).body,reply.body);assert.equal(store.task(task.id).taskContract.revision,revision,'retry is receipt lookup, not replay');
+ store.updateTask(task.id,(t,s)=>{t.status='running';s.actions.push({id:'f2-in-flight',taskId:t.id,tool:'phone_use',status:'executing'});});
+ assert.equal((await control(4,true)).status,200);assert.equal(store.task(task.id).status,'unknown_result');assert.equal(store.data.actions[0].status,'unknown');
+ assert.equal((await control(5,false)).status,200);assert.equal((await call('/v1/tasks/'+task.id+'/continue',{messageId:randomUUID(),controlEpoch:5})).status,400);
+ store.transaction(s=>{s.settings.chatCloudConsent=true;});
+ const fresh=await call('/v1/messages',{messageId:randomUUID(),text:'打开计算器',controlEpoch:5,createdAt:new Date().toISOString(),expiresAt:new Date(Date.now()+120000).toISOString()});
+ assert.equal(fresh.status,200);assert.notEqual(fresh.body.taskId,task.id);assert.equal(store.task(fresh.body.taskId).status,'queued');assert.equal(store.task(fresh.body.taskId).remoteControlEpoch,5);
+ assert.equal(store.task(task.id).status,'unknown_result');assert.equal(store.data.actions[0].status,'unknown');
+});

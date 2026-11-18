@@ -1,0 +1,575 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-11-15",
+  "upstreamProject": "astral-sh/python-build-standalone",
+  "tag": "20260825",
+  "commit": "c0aa3bbdc2fff56a77ad1ecec68b1e47794d8779",
+  "archives": [
+    {
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260825/cpython-3.12.14%2B20260825-aarch64-apple-darwin-install_only.tar.gz",
+      "sha256": "62eef3fcf48fa4f792d0d6d267c140b81aaea0edca4ae0641d8021854314f966",
+      "matchedOfficialAssetDigest": true
+    },
+    {
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260825/cpython-3.12.14%2B20260825-aarch64-apple-darwin-pgo%2Blto-full.tar.zst",
+      "sha256": "bce7da43c65a574be0185c9cf8ae8305c44afb53f746a05e8c51415c8c621bf7",
+      "matchedOfficialAssetDigest": true
+    }
+  ],
+  "files": [
+    {
+      "file": "standalone-originals/LICENSE.bdb.txt",
+      "archiveEntry": "python/licenses/LICENSE.bdb.txt",
+      "sha256": "3bdff06e69991c94664f2ef5c5f8096f60b7dbec071756ea6cc26b445e06ec5b"
+    },
+    {
+      "file": "standalone-originals/LICENSE.bzip2.txt",
+      "archiveEntry": "python/licenses/LICENSE.bzip2.txt",
+      "sha256": "1f38bbc7caacafd65169276d759c0d88c991b753b643ce35d0e45ea1971dd441"
+    },
+    {
+      "file": "standalone-originals/LICENSE.cpython.txt",
+      "archiveEntry": "python/licenses/LICENSE.cpython.txt",
+      "sha256": "86e61415828a8b5b06ec8d024e6f086ce155a8b85fd0c419c0ba4dc004e74fdd"
+    },
+    {
+      "file": "standalone-originals/LICENSE.expat.txt",
+      "archiveEntry": "python/licenses/LICENSE.expat.txt",
+      "sha256": "122f2c27000472a201d337b9b31f7eb2b52d091b02857061a8880371612d9534"
+    },
+    {
+      "file": "standalone-originals/LICENSE.libX11.txt",
+      "archiveEntry": "python/licenses/LICENSE.libX11.txt",
+      "sha256": "2daec087a88e7c9b8082557cdeebad5bbb8155a4137472f0b22e269cd99d0c1e"
+    },
+    {
+      "file": "standalone-originals/LICENSE.libXau.txt",
+      "archiveEntry": "python/licenses/LICENSE.libXau.txt",
+      "sha256": "56abe29bb1d9806a9e04fa9f80fed2c0f18027594df3f098148d814aef6bddfa"
+    },
+    {
+      "file": "standalone-originals/LICENSE.libedit.txt",
+      "archiveEntry": "python/licenses/LICENSE.libedit.txt",
+      "sha256": "29cea33c32bbc9785142386377915612a2fa786482c46843383384aded2e09b1"
+    },
+    {
+      "file": "standalone-originals/LICENSE.libffi.txt",
+      "archiveEntry": "python/licenses/LICENSE.libffi.txt",
+      "sha256": "deaf3a42effb551a5b140fa9afefed183a27f1341c6d1bf430d106a5e6931fc0"
+    },
+    {
+      "file": "standalone-originals/LICENSE.liblzma.txt",
+      "archiveEntry": "python/licenses/LICENSE.liblzma.txt",
+      "sha256": "9a4062de0a2c388a98cf35a35d348b62fa97c838a71c3c28ee1a2d7d0a565b02"
+    },
+    {
+      "file": "standalone-originals/LICENSE.libuuid.txt",
+      "archiveEntry": "python/licenses/LICENSE.libuuid.txt",
+      "sha256": "122ee1f7e258f2c3c0e538a75c037684f420454bf3850ddc74ce750bbf5fe86b"
+    },
+    {
+      "file": "standalone-originals/LICENSE.libxcb.txt",
+      "archiveEntry": "python/licenses/LICENSE.libxcb.txt",
+      "sha256": "c5ffbfeaa501071ceeb97b7de2c0d703fdaa35de01c0fb6cbac1c28453a3e9fd"
+    },
+    {
+      "file": "standalone-originals/LICENSE.mpdecimal.txt",
+      "archiveEntry": "python/licenses/LICENSE.mpdecimal.txt",
+      "sha256": "669512af7219f58be03a398766d7c9da11a3b3df9d3f05cb74c5ceca25c8da3b"
+    },
+    {
+      "file": "standalone-originals/LICENSE.ncurses.txt",
+      "archiveEntry": "python/licenses/LICENSE.ncurses.txt",
+      "sha256": "87a4c4442337b8968ef956031c406b74f9cb7149b7ba87311bdaba534816201c"
+    },
+    {
+      "file": "standalone-originals/LICENSE.openssl-1.1.txt",
+      "archiveEntry": "python/licenses/LICENSE.openssl-1.1.txt",
+      "sha256": "9c04cce50c4989d5601dd8b07f6ab922c40388b66ac736c9007cb1ed9d9dd560"
+    },
+    {
+      "file": "standalone-originals/LICENSE.openssl-3.txt",
+      "archiveEntry": "python/licenses/LICENSE.openssl-3.txt",
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
+    },
+    {
+      "file": "standalone-originals/LICENSE.sqlite.txt",
+      "archiveEntry": "python/licenses/LICENSE.sqlite.txt",
+      "sha256": "38bef3d28b24f145ea293bd3b6eb4b20396982abc8303128fb493986ea5bc719"
+    },
+    {
+      "file": "standalone-originals/LICENSE.tcl.txt",
+      "archiveEntry": "python/licenses/LICENSE.tcl.txt",
+      "sha256": "c0a69a2bfd757361ec7e6143973b103c90409316b49e9c88db26ad6388e79f16"
+    },
+    {
+      "file": "standalone-originals/LICENSE.tix.txt",
+      "archiveEntry": "python/licenses/LICENSE.tix.txt",
+      "sha256": "3ac5cdd0bef6c43ce34c6a7ced452081d9e5a0bf94082b9f9147d23ec9e214f5"
+    },
+    {
+      "file": "standalone-originals/LICENSE.zlib.txt",
+      "archiveEntry": "python/licenses/LICENSE.zlib.txt",
+      "sha256": "818922b2620f12801a12bf78e399644a30990e66824abd8ca8ec24d451d6f92c"
+    },
+    {
+      "file": "upstream-PYTHON.json",
+      "archiveEntry": "python/PYTHON.json",
+      "sha256": "a0d3a19ee1b5c8b2917f0c7abac6e270cde6a287abf2990f86e2bd53862075e9"
+    }
+  ],
+  "binarySectionChecks": [
+    {
+      "runtimeFile": "bin/python3.12",
+      "upstreamFileSha256": "77d322db9095f4aebe28b192a618cadcdba54bf184445182cbc97698fcd36def",
+      "runtimeInputFileSha256": "ac60cfe0268614638d0ffa35f3b0284fc7b3a11482723793455e17eeb278509e",
+      "wholeFileEqual": false,
+      "machOSectionMembershipAndHashesEqual": true,
+      "sections": {
+        "__TEXT,__text": "0624715d94b60ab9c94e2302afb755cc2c2ad6b2c18dbd2c49d7715cf84e56b1",
+        "__TEXT,__stubs": "70918d671c5ad890426771f095f3eeb366a3fe09f3a604970901e69516b4d136",
+        "__TEXT,__stub_helper": "4fe9a5ff913042a0a541e8ba43abb6b6a82b8519aa4db7f0f11162fae9d31c2c",
+        "__TEXT,__literals": "309a5eec2b1143f7e736617872cab8fe7572b25113f4fb20c555fb5158b874a5",
+        "__TEXT,__cstring": "ed8d7eacd7a50813ef2c14c900ac87d0d5f4ffe6b5e6b6802fc182a3d34030c3",
+        "__TEXT,__const": "5008e6cd29ec995866ccc985b62e6e28c668d9764c8cc07e966bba332e1baaf5",
+        "__TEXT,__unwind_info": "061b41cd0b4971a8417e2a37d3d6933ebec0323f67c241c2679991736738997f",
+        "__TEXT,__eh_frame": "d877bb2e2bc228c34b8566a07bbc2aadc4c28c2b73f7113c4152ba7e1a46719f",
+        "__DATA_CONST,__got": "bd50e12c55dda3ee443c1cb6d71c7bcf6351c4ec96f7bc8d6adec015d1192eea",
+        "__DATA_CONST,__const": "c287a8666ed88e370d0e2295e84ee9d4578d8f951ba1ca63cb28de1be9cab4e9",
+        "__DATA_CONST,__mod_init_func": "ea311265c847652f4e1ed3f103a57c998707ec64595c429956fd30888bc73408",
+        "__DATA,__la_symbol_ptr": "477323ff56bc62a2a29c73cc9f29ff6c52a31233450dd166bd4b44f419f61583",
+        "__DATA,__data": "e9402e9604b6d675e6096c2f50c917b44104fb8b600a87f3430c5bf57c9fb8f2",
+        "__DATA,__thread_vars": "53d43e48ec48583c187f9a9957ed1000cf0d9169e33ebbd34ac1b494303f2c99",
+        "__DATA,PyRuntime": "ea1105b2be260a2c438cd44287f537ba0a770c4dda4f1e8e84ef89fd45138171"
+      }
+    },
+    {
+      "runtimeFile": "lib/libpython3.12.dylib",
+      "upstreamFileSha256": "b0698e2e20bd862cf42fa0082b81b25e0ac00d00c482ff383c79df2c6833c187",
+      "runtimeInputFileSha256": "7f620421c3a8fd8cea4b9400747356e1eb12f2216cd1045aff7de40dc1ef3732",
+      "wholeFileEqual": false,
+      "machOSectionMembershipAndHashesEqual": true,
+      "sections": {
+        "__TEXT,__text": "6da697553c3dc9e84cd393aa2980ba9f422cb8ee0174ab8d07f8438c2f96ceaa",
+        "__TEXT,__stubs": "70918d671c5ad890426771f095f3eeb366a3fe09f3a604970901e69516b4d136",
+        "__TEXT,__stub_helper": "4fe9a5ff913042a0a541e8ba43abb6b6a82b8519aa4db7f0f11162fae9d31c2c",
+        "__TEXT,__literals": "309a5eec2b1143f7e736617872cab8fe7572b25113f4fb20c555fb5158b874a5",
+        "__TEXT,__cstring": "ed8d7eacd7a50813ef2c14c900ac87d0d5f4ffe6b5e6b6802fc182a3d34030c3",
+        "__TEXT,__const": "5008e6cd29ec995866ccc985b62e6e28c668d9764c8cc07e966bba332e1baaf5",
+        "__TEXT,__unwind_info": "55b5ad30e70b74d0c96755b3a065943a6577a4565ac0895a5d40fafb1f801c5a",
+        "__TEXT,__eh_frame": "e3a428ca7eef1301417bdf8d19124e5bd2b517ad653ae85d8aaa41e960392cad",
+        "__DATA_CONST,__got": "bd50e12c55dda3ee443c1cb6d71c7bcf6351c4ec96f7bc8d6adec015d1192eea",
+        "__DATA_CONST,__const": "bc96a3f39fe6f7677a8c976a165840e14bf1795951603b1d05fca533e6fc33ad",
+        "__DATA_CONST,__mod_init_func": "69dda19409d448b758965f6577e5255a30a9a3bdebd868a1c24d8e410207f9d2",
+        "__DATA,__la_symbol_ptr": "346fb461422aea6f972996065f9393db342ba5cb192e5a874b8da205ade3e538",
+        "__DATA,__data": "e8ab2c93b4d27f797a419b148e663bc37ab3147a38b83a5f86c2b655e8f5a8f7",
+        "__DATA,__thread_vars": "53d43e48ec48583c187f9a9957ed1000cf0d9169e33ebbd34ac1b494303f2c99",
+        "__DATA,PyRuntime": "716ec0baa4ff8a179c908b4273548128e7640698aa4d86922016c24b8aa27e87"
+      }
+    },
+    {
+      "runtimeFile": "lib/libtcl9.0.dylib",
+      "upstreamFileSha256": "ffa545824bd84cf79f279d2e8dcf633cfa1609a291d1377d8d4df130b0820334",
+      "runtimeInputFileSha256": "638e3af0b036eeba09c696b3351b730240fa9bf95099b3d69678223dba06cdf1",
+      "wholeFileEqual": false,
+      "machOSectionMembershipAndHashesEqual": true,
+      "sections": {
+        "__TEXT,__text": "4ac7b7c036822ca7d06cdacd33e6cd1c5cdb182d4d4f2a11013f5a884e2a2725",
+        "__TEXT,__stubs": "47ea830177d1925a49a4d5aa6a8c2cae10430e0649f097d44d4a5d68f2cd371f",
+        "__TEXT,__stub_helper": "4b232441dbfda49560dbfada3bb53ddd814f6e5d99333536b30daa25bb7965a7",
+        "__TEXT,__literals": "1d0c9da5e6a93be014175ea0e3e901c2c3cdbafd5554ca862c9ac5bc6d94f21a",
+        "__TEXT,__const": "82b67450f6938b995a85049ca11ed8014511271231bb6429aa7cec04f61fca70",
+        "__TEXT,__cstring": "6a3e930109564bd8646ada63dbb035b92138753581bd0b8da2301ad6b7a26594",
+        "__TEXT,__info_plist": "2268ac7f211bcf9033c7859d9b79e0388b3fae999859b3a26d9a00d257e4550f",
+        "__TEXT,__unwind_info": "ff94b044563ad6bcd5dd0e70b2ad7484a433e270eb1d0597004ffe65389792ac",
+        "__TEXT,__eh_frame": "6e1f69a4b219a9aaa5485a22c0b672517b18517dc875f519754182be5225cb79",
+        "__DATA_CONST,__got": "10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365",
+        "__DATA_CONST,__const": "1744645877ca1c68f06898bf486e77aae4b8533b37016819021a3f95129f94b6",
+        "__DATA_CONST,__cfstring": "26a11d91ad76dd9a5b0d8b97a688bdb4cd50941a3936169d460230770316b468",
+        "__DATA,__la_symbol_ptr": "90fc3bc839e375a29a4550f1523bf4658aa8b7893c02d89415d33d78f94fedfb",
+        "__DATA,__data": "af50513bfd923632f66dbe7697b24fd5ace8198132a547a48882f0290c1ae65c"
+      }
+    },
+    {
+      "runtimeFile": "lib/libtcl9tk9.0.dylib",
+      "upstreamFileSha256": "e1d12a9c30e19fd4ee83b82a74f96b7135d3fefd7daa9eb40e4b41a7210cd521",
+      "runtimeInputFileSha256": "6bc8099b082c212481bae339982325bfd0772d34798fe16d48f20eff9db01954",
+      "wholeFileEqual": false,
+      "machOSectionMembershipAndHashesEqual": true,
+      "sections": {
+        "__TEXT,__text": "94fc39a3f605341505ff285448003fce829076ee971fe34edd9f1a3f8190c44b",
+        "__TEXT,__stubs": "66496b9c321ea2294aeeddbfc12c1ae2155dbe8c3663f68080e0cc130034b926",
+        "__TEXT,__stub_helper": "a1fc8220e7d5aaca110e3cc0a4b856b678bc63d20787b359cfd2e7fb480abad7",
+        "__TEXT,__literals": "85ce2c65ac7fc1281b22f8e7027e45f9c89f7228350917e0d256786fefc3c58a",
+        "__TEXT,__cstring": "748e6db526e0fa7ecd28a4e1a4a08a6e9865e2dd357b347b31f4e045d764d35b",
+        "__TEXT,__const": "3dc5206294b731e587ba775d94b9dfbd6cea59f6b44e4a451cac7c130d762d42",
+        "__TEXT,__objc_methname": "d7d16126d22b8437fe64a725f1817d443754bf3612bfbe9206990e5272aa555b",
+        "__TEXT,__objc_methlist": "f0d55ca935fe12cf481e5357042ca73a27da65f2333e0a4aa47db7765b17e2ad",
+        "__TEXT,__info_plist": "c7b3a04eb81c8d83c311a3d55ac24ab078e42e45b75cbf283da79e9cfaf40cfa",
+        "__TEXT,__unwind_info": "ec638762c7f870cd83a0adfdae03e052046301d32e45ce363e4192ab319acd69",
+        "__TEXT,__eh_frame": "ad8b08299ed49f6d1c72f489f58297d01f8bb4dac02f5865c36132a0133f9d72",
+        "__DATA_CONST,__got": "22fec3bc784546d70e79696b405d950aff355b6f429f266ceacffe0cc2e5ba02",
+        "__DATA_CONST,__const": "ea4bbab970f58d10ef8788273057ae4ca28c846eb363527e823ad2cee588ad85",
+        "__DATA_CONST,__objc_catlist": "ff4ab8bec730415b2e3ad8dd5139aa3f118040504ccaf386c8359073673617fb",
+        "__DATA_CONST,__cfstring": "b8c6bea1258097af767ef0122aff63a4b6da04e0f7091db72d31d0e6ee60bfd8",
+        "__DATA_CONST,__objc_protolist": "1455ae0d50aec57b9fe94d6aca2d4a6fc6a28d1baa95d2a2e4a9e566d9218c93",
+        "__DATA_CONST,__objc_classlist": "e330f3798ee86260dbe05d655009159100e865cda5a7373edde5d3102c8010ba",
+        "__DATA_CONST,__objc_imageinfo": "94039884329d3732c577860f40d0dfdf883ff89dac332f87216e692c08892fa2",
+        "__DATA,__la_symbol_ptr": "511138c02fdc9b3442d3de62abd6a0d4de31834e7374412137dc789a382cacf2",
+        "__DATA,__data": "cd40b423189289e6cabe18f708ccbbe1ddf82123eda2916ecffcb547bed1696b",
+        "__DATA,__objc_selrefs": "d878a4270efe7b51f1c1b8e6fad4c809117000550eea89f64a51743a0c949d7e",
+        "__DATA,__objc_classrefs": "2cf8ca11b437f5c0794cffc440b0d9ee2d2cbc09aa1aa25c9aad491cfa574c08",
+        "__DATA,__objc_const": "f3ddef070b08bb4ee8013ee9f3fc134b5c2dcff5abe4e856f3dc92b6770c35c2",
+        "__DATA,__objc_data": "191147908c206672fd65d76005e79c0edc01647831f437a5999c99a12d62ce4a",
+        "__DATA,__objc_superrefs": "1848ac3d72fabfdc40d01c9d47eff5492e537c523c068ae193d0bcca20cd0995",
+        "__DATA,__objc_ivar": "335879417e52ce3b59a85ec69b64cd23296613eefd2ce48fe2fde6b579f14fdc"
+      }
+    }
+  ],
+  "modules": {
+    "_bz2": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.bzip2.txt"
+        ],
+        "licenses": [
+          "bzip2-1.0.6"
+        ],
+        "links": [
+          {
+            "name": "bz2",
+            "path_static": "build/lib/libbz2.a"
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_ctypes": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.libffi.txt"
+        ],
+        "licenses": [
+          "MIT"
+        ],
+        "links": [
+          {
+            "name": "dl",
+            "system": true
+          },
+          {
+            "name": "ffi",
+            "path_static": "build/lib/libffi.a"
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_ctypes_test": [
+      {
+        "links": [
+          {
+            "name": "m",
+            "system": true
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_curses": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.ncurses.txt"
+        ],
+        "licenses": [
+          "X11"
+        ],
+        "links": [
+          {
+            "name": "ncurses",
+            "system": true
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_curses_panel": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.ncurses.txt"
+        ],
+        "licenses": [
+          "X11"
+        ],
+        "links": [
+          {
+            "name": "ncurses",
+            "system": true
+          },
+          {
+            "name": "panel",
+            "system": true
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_decimal": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.mpdecimal.txt"
+        ],
+        "licenses": [
+          "BSD-2-Clause"
+        ],
+        "links": [
+          {
+            "name": "mpdec",
+            "path_static": "build/lib/libmpdec.a"
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_elementtree": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.expat.txt"
+        ],
+        "licenses": [
+          "MIT"
+        ],
+        "links": [
+          {
+            "name": "expat",
+            "path_static": "build/lib/libexpat.a"
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_hashlib": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.openssl-1.1.txt",
+          "licenses/LICENSE.openssl-3.txt"
+        ],
+        "licenses": [
+          "Apache-2.0",
+          "OpenSSL"
+        ],
+        "links": [
+          {
+            "name": "crypto",
+            "path_static": "build/lib/libcrypto.a"
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_lzma": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.liblzma.txt"
+        ],
+        "licenses": [
+          "0BSD"
+        ],
+        "links": [
+          {
+            "name": "lzma",
+            "path_static": "build/lib/liblzma.a"
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_scproxy": [
+      {
+        "links": [
+          {
+            "framework": true,
+            "name": "CoreFoundation"
+          },
+          {
+            "framework": true,
+            "name": "SystemConfiguration"
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_sqlite3": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.sqlite.txt"
+        ],
+        "licenses": [],
+        "links": [
+          {
+            "name": "sqlite3",
+            "path_static": "build/lib/libsqlite3.a"
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_ssl": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.openssl-1.1.txt",
+          "licenses/LICENSE.openssl-3.txt"
+        ],
+        "licenses": [
+          "Apache-2.0",
+          "OpenSSL"
+        ],
+        "links": [
+          {
+            "name": "crypto",
+            "path_static": "build/lib/libcrypto.a"
+          },
+          {
+            "name": "ssl",
+            "path_static": "build/lib/libssl.a"
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_tkinter": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.tcl.txt"
+        ],
+        "licenses": [
+          "TCL"
+        ],
+        "links": [
+          {
+            "name": "tcl9.0",
+            "system": true
+          },
+          {
+            "name": "tcl9tk9.0",
+            "system": true
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "_uuid": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.libuuid.txt"
+        ],
+        "licenses": [
+          "BSD-3-Clause"
+        ],
+        "links": [
+          {
+            "name": "uuid",
+            "path_static": "build/lib/libuuid.a"
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "cmath": [
+      {
+        "links": [
+          {
+            "name": "m",
+            "system": true
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "math": [
+      {
+        "links": [
+          {
+            "name": "m",
+            "system": true
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "pyexpat": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.expat.txt"
+        ],
+        "licenses": [
+          "MIT"
+        ],
+        "links": [
+          {
+            "name": "expat",
+            "path_static": "build/lib/libexpat.a"
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "readline": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.libedit.txt",
+          "licenses/LICENSE.ncurses.txt"
+        ],
+        "licenses": [
+          "BSD-3-Clause",
+          "X11"
+        ],
+        "links": [
+          {
+            "name": "edit",
+            "system": true
+          },
+          {
+            "name": "ncurses",
+            "system": true
+          }
+        ],
+        "variant": "default"
+      }
+    ],
+    "zlib": [
+      {
+        "license_paths": [
+          "licenses/LICENSE.zlib-ng.txt",
+          "licenses/LICENSE.zlib.txt"
+        ],
+        "licenses": [
+          "Zlib"
+        ],
+        "links": [
+          {
+            "name": "z",
+            "system": true
+          }
+        ],
+        "variant": "default"
+      }
+    ]
+  },
+  "observedVersions": {
+    "CPython": "3.12.14",
+    "OpenSSL": "3.5.8",
+    "SQLite": "3.53.1",
+    "Expat": "2.8.3",
+    "bzip2": "1.0.8",
+    "liblzma": "5.4.3"
+  },
+  "systemLibrariesNotCopied": [
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/libedit.3.dylib",
+    "/usr/lib/libncurses.5.4.dylib",
+    "/usr/lib/libpanel.5.4.dylib",
+    "/usr/lib/libSystem.B.dylib",
+    "macOS CoreFoundation/SystemConfiguration frameworks"
+  ]
+}

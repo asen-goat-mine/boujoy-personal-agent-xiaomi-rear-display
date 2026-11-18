@@ -1,0 +1,144 @@
+{
+  "name": "@deepseek-ai/dsh-experimental-inspector",
+  "version": "0.2.1-alpha.2",
+  "declaredLicense": "MIT",
+  "finding": "Official exact-version npm archive omits the package root LICENSE and does not embed a complete root license in README. This supplement provides the complete unmodified project license from fixed official source whose package name/version match.",
+  "archive": {
+    "url": "https://registry.npmjs.org/@deepseek-ai/dsh-experimental-inspector/-/dsh-experimental-inspector-0.2.1-alpha.2.tgz",
+    "lockIntegrity": "sha512-MDhQ4o73zGlIc8aZiaCKPtNsWiH1FyKRjdX5LWb2bg9Fdx6qwInKboTquzzmGVCAY3lsgcNkDPxQkGvYs8IugQ==",
+    "sha256": "17e437e1a5e72b03fc7b01e1bf1af104bfbaafc2c451168f8ad978cd2b97e765",
+    "lockIntegrityAndRegistryShasumVerified": true
+  },
+  "source": {
+    "repository": "https://github.com/deepseek-ai/deepseek-harness",
+    "commit": "1c6078dca6acafc71e8bfcb1ad57ac2e01b604e1",
+    "packageManifestUrl": "https://raw.githubusercontent.com/deepseek-ai/deepseek-harness/1c6078dca6acafc71e8bfcb1ad57ac2e01b604e1/packages/experimental/inspector/package.json",
+    "packageManifestSha256": "d3d7558edd238e5b0b26842f79b5aaaed2841414114db0526ad27dafa690dfac",
+    "nameAndVersionMatch": true,
+    "licenseUrl": "https://raw.githubusercontent.com/deepseek-ai/deepseek-harness/1c6078dca6acafc71e8bfcb1ad57ac2e01b604e1/LICENSE",
+    "licenseSha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be",
+    "provenance": {
+      "kind": "official-source-commit-with-exact-name-and-version",
+      "commitLookupUrl": "https://api.github.com/repos/deepseek-ai/deepseek-harness/commits?path=packages%2Fexperimental%2Finspector%2Fpackage.json&per_page=10&page=2",
+      "installedSameVersionProjectLicenseAlsoMatches": "@deepseek-ai/dsh-sdk-minimal"
+    }
+  },
+  "retainedBundledThirdPartyNotices": [
+    {
+      "installedRelativePath": "lib/devtools/LICENSE",
+      "sha256": "ff11d445fb41a1087c7630e120ab15f1a2cb67c1b707173cb494141805fca35e"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/acorn/package/LICENSE",
+      "sha256": "76a876cf886ff9be2a8b5e2e86514fed06223c8c9f0c1e9ee9606e93841e00b7"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/axe-core/LICENSE",
+      "sha256": "af175b9d96ee93c21a036152e1b905b0b95304d4ae8c2c921c7609100ba8df7e"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/chromium/LICENSE",
+      "sha256": "ff11d445fb41a1087c7630e120ab15f1a2cb67c1b707173cb494141805fca35e"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/codemirror.next/LICENSE",
+      "sha256": "aa8f65819a471c1a25fb3c0816c5a75e45f009b7899d292ee3cc70d9dbdd8f7e"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/codemirror/package/LICENSE",
+      "sha256": "a3f2fe2ac6b471aa80c737c5d283dd049bdc903a73835ee6d4d2cac02fdd53bf"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/csp_evaluator/package/LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/diff/LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/i18n/LICENSE",
+      "sha256": "7ec9661a8afafab1eee3523d6f1a193eff76314a5ab10b4ce96aefd87621b0c3"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/intl-messageformat/LICENSE",
+      "sha256": "0212e9ffd60f4c2e05426ac172b91266256b9ff4c0f0156e85b761a1d6f5e17f"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/json5/LICENSE",
+      "sha256": "53e59feb13058722d977c699eb0407c7bce2f93c949b681bbd2ff31698535927"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/legacy-javascript/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/lighthouse/LICENSE",
+      "sha256": "7ec9661a8afafab1eee3523d6f1a193eff76314a5ab10b4ce96aefd87621b0c3"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/lit/LICENSE",
+      "sha256": "45d31799d0db956cc3eb5469346abbd9b7025babc5ff29fab10d7095da992ef1"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/marked/LICENSE",
+      "sha256": "91968bf678e8c3d94ebf8596e98ca9cb5fca1c6555b53f721a940cb50f1b3d66"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/puppeteer-replay/package/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/puppeteer/LICENSE",
+      "sha256": "a27ca07269b3518550b2e83aed13eadd7d14d924b5864e14889b40cf227530ca"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/puppeteer/third_party/mitt/LICENSE",
+      "sha256": "4687b3b5b6eb3af13be50891dd67dab9e85bdca3f41c63d3e33b3364d6a717b5"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/puppeteer/third_party/parsel/LICENSE",
+      "sha256": "eb0fa16c7452341017d97ac695c737cd19a8a47e8a87edd66db9493017c0d077"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/puppeteer/third_party/rxjs/LICENSE",
+      "sha256": "a8d80f63116de4ec1abd3800ec98f68e0acba524f12db62518868649a722f631"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/source-map-scopes-codec/LICENSE",
+      "sha256": "53b4475d1cda8c46465bbaff85432631f0830cc2c0a4b28234b7e4d12d862e7b"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/source-map-scopes-codec/package/LICENSE",
+      "sha256": "53b4475d1cda8c46465bbaff85432631f0830cc2c0a4b28234b7e4d12d862e7b"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/third-party-web/LICENSE",
+      "sha256": "e1f2a92813d0a7160c8bb0e27da66ec2f6599f2832ae5b4d9f95c108e60af5e6"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/third-party-web/package/LICENSE",
+      "sha256": "e1f2a92813d0a7160c8bb0e27da66ec2f6599f2832ae5b4d9f95c108e60af5e6"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/wasmparser/package/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/web-vitals/package/LICENSE",
+      "sha256": "bfdeded4040e05da31ca9b6239dc83bd23fa26ac8db87342a7ca4363f68916ff"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/intl-messageformat/package/LICENSE.md",
+      "sha256": "ef3882f3b2cf9e1c07172adbf49b7c72a5c75d8a01f3b3ed4777117364ca43fa"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/marked/package/LICENSE.md",
+      "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c"
+    },
+    {
+      "installedRelativePath": "lib/devtools/third_party/vscode.web-custom-data/package/LICENSE.md",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    }
+  ]
+}

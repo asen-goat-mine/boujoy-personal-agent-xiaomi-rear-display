@@ -1,0 +1,59 @@
+{
+  "package": {
+    "edition": "2024",
+    "name": "nalgebra-macros",
+    "version": "0.3.0",
+    "authors": [
+      "Andreas Longva",
+      "Sébastien Crozet <developer@crozet.re>"
+    ],
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Procedural macros for nalgebra",
+    "homepage": "https://nalgebra.rs",
+    "documentation": "https://www.nalgebra.rs/docs",
+    "readme": "README.md",
+    "keywords": [
+      "linear",
+      "algebra",
+      "matrix",
+      "vector",
+      "math"
+    ],
+    "categories": [
+      "science",
+      "mathematics"
+    ],
+    "license": "Apache-2.0",
+    "repository": "https://github.com/dimforge/nalgebra",
+    "resolver": "2"
+  },
+  "lib": {
+    "name": "nalgebra_macros",
+    "path": "src/lib.rs",
+    "proc-macro": true
+  },
+  "dependencies": {
+    "proc-macro2": {
+      "version": "1.0"
+    },
+    "quote": {
+      "version": "1.0"
+    },
+    "syn": {
+      "version": "2.0",
+      "features": [
+        "full"
+      ]
+    }
+  },
+  "dev-dependencies": {
+    "nalgebra": {
+      "version": "0.33"
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.86",
+    "name": "criterion",
+    "version": "0.8.2",
+    "authors": [
+      "Jorge Aparicio <japaricious@gmail.com>",
+      "Brook Heisler <brookheisler@gmail.com>"
+    ],
+    "build": false,
+    "exclude": [
+      "book/*"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Statistics-driven micro-benchmarking library",
+    "homepage": "https://criterion-rs.github.io/book/index.html",
+    "readme": "README.md",
+    "keywords": [
+      "criterion",
+      "benchmark"
+    ],
+    "categories": [
+      "development-tools::profiling"
+    ],
+    "license": "Apache-2.0 OR MIT",
+    "repository": "https://github.com/criterion-rs/criterion.rs",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "features": [
+            "async_futures",
+            "async_smol",
+            "async_tokio"
+          ]
+        }
+      }
+    }
+  },
+  "features": {
+    "async": [],
+    "async_futures": [
+      "dep:futures",
+      "async"
+    ],
+    "async_smol": [
+      "dep:smol",
+      "async"
+    ],
+    "async_tokio": [
+      "dep:tokio",
+      "async"
+    ],
+    "cargo_bench_support": [],
+    "csv_output": [
+      "dep:csv"
+    ],
+    "default": [
+      "rayon",
+      "plotters",
+      "cargo_bench_support"
+    ],
+    "html_reports": [],
+    "plotters": [
+      "dep:plotters"
+    ],
+    "rayon": [
+      "dep:rayon"
+    ],
+    "real_blackbox": [],
+    "stable": [
+      "csv_output",
+      "html_reports",
+      "async_futures",
+      "async_smol",
+      "async_tokio"
+    ]
+  },
+  "lib": {
+    "name": "criterion",
+    "path": "src/lib.rs",
+    "bench": false
+  },
+  "test": [
+    {
+      "name": "criterion_tests",
+      "path": "tests/criterion_tests.rs"
+    }
+  ],
+  "bench": [
+    {
+      "name": "bench_main",
+      "path": "benches/bench_main.rs",
+      "harness": false
+    }
+  ],
+  "dependencies": {
+    "anes": {
+      "version": "0.1.4"
+    },
+    "cast": {
+      "version": "0.3"
+    },
+    "ciborium": {
+      "version": "0.2.0"
+    },
+    "clap": {
+      "version": "4.5",
+      "features": [
+        "std",
+        "help"
+      ],
+      "default-features": false
+    },
+    "criterion-plot": {
+      "version": "0.8.2"
+    },
+    "csv": {
+      "version": "1.1",
+      "optional": true
+    },
+    "futures": {
+      "version": "0.3",
+      "features": [
+        "executor"
+      ],
+      "optional": true,
+      "default-features": false
+    },
+    "itertools": {
+      "version": "0.13"
+    },
+    "num-traits": {
+      "version": "0.2",
+      "features": [
+        "std"
+      ],
+      "default-features": false
+    },
+    "oorandom": {
+      "version": "11.1"
+    },
+    "page_size": {
+      "version": "0.6"
+    },
+    "plotters": {
+      "version": "^0.3.2",
+      "features": [
+        "svg_backend",
+        "area_series",
+        "line_series"
+      ],
+      "optional": true,
+      "default-features": false
+    },
+    "rayon": {
+      "version": "1.3",
+      "optional": true
+    },
+    "regex": {
+      "version": "1.5.1",
+      "features": [
+        "std"
+      ],
+      "default-features": false
+    },
+    "serde": {
+      "version": "1.0.100",
+      "features": [
+        "derive"
+      ]
+    },
+    "serde_json": {
+      "version": "1.0.100"
+    },
+    "smol": {
+      "version": "2.0",
+      "optional": true,
+      "default-features": false
+    },
+    "tinytemplate": {
+      "version": "1.1"
+    },
+    "tokio": {
+      "version": "1.0",
+      "features": [
+        "rt"
+      ],
+      "optional": true,
+      "default-features": false
+    },
+    "walkdir": {
+      "version": "2.3"
+    }
+  },
+  "dev-dependencies": {
+    "approx": {
+      "version": "0.5.0"
+    },
+    "futures": {
+      "version": "0.3"
+    },
+    "quickcheck": {
+      "version": "1.0",
+      "default-features": false
+    },
+    "rand": {
+      "version": "0.8"
+    },
+    "tempfile": {
+      "version": "3.5.0"
+    }
+  },
+  "target": {
+    "cfg(any(windows, unix))": {
+      "dependencies": {
+        "alloca": {
+          "version": "0.4"
+        }
+      }
+    }
+  }
+}

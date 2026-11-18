@@ -1,0 +1,13 @@
+{
+  "package": {
+    "name": "color_quant",
+    "version": "1.1.0",
+    "authors": [
+      "nwin <nwin@users.noreply.github.com>"
+    ],
+    "description": "Color quantization library to reduce n colors to 256 colors.",
+    "readme": "README.md",
+    "license": "MIT",
+    "repository": "https://github.com/image-rs/color_quant.git"
+  }
+}

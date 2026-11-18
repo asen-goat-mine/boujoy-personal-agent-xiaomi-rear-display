@@ -1,0 +1,41 @@
+{
+  "name": "boujoy-personal-agent",
+  "version": "0.4.16",
+  "private": true,
+  "type": "module",
+  "description": "Mac hosted personal agent with DeepSeek Harness and dedicated Markdown memory",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "setup": "node scripts/setup-harness.mjs",
+    "start": "node src/server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "app": "bash scripts/build-app.sh",
+    "service:install": "node scripts/install-service.mjs",
+    "service:uninstall": "node scripts/uninstall-service.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "docx": "9.11.0",
+    "exceljs": "4.4.0",
+    "fast-xml-parser": "5.11.2",
+    "jszip": "3.10.2",
+    "lucide-static": "1.56.0",
+    "pdfjs-dist": "6.4.299",
+    "playwright": "1.64.0",
+    "pptxgenjs": "4.0.1",
+    "qrcode": "1.5.4",
+    "ws": "8.22.0"
+  },
+  "overrides": {
+    "exceljs": {
+      "uuid": "11.1.1"
+    },
+    "pptxgenjs": {
+      "image-size": "2.0.4"
+    }
+  }
+}

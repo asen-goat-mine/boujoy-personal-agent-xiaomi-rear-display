@@ -1,0 +1,198 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.85",
+    "name": "proptest",
+    "version": "1.11.0",
+    "authors": [
+      "Jason Lingle"
+    ],
+    "build": false,
+    "exclude": [
+      "/gen-*.sh",
+      "/readme-*.md"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Hypothesis-like property-based testing and shrinking.\n",
+    "homepage": "https://proptest-rs.github.io/proptest/proptest/index.html",
+    "documentation": "https://docs.rs/proptest/latest/proptest/",
+    "readme": "README.md",
+    "keywords": [
+      "property",
+      "testing",
+      "quickcheck",
+      "fuzz",
+      "hypothesis"
+    ],
+    "categories": [
+      "development-tools::testing"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/proptest-rs/proptest",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "all-features": true,
+          "rustdoc-args": [
+            "--cfg",
+            "docsrs"
+          ]
+        }
+      }
+    }
+  },
+  "features": {
+    "alloc": [],
+    "atomic64bit": [],
+    "attr-macro": [
+      "proptest-macro"
+    ],
+    "bit-set": [
+      "dep:bit-set",
+      "dep:bit-vec"
+    ],
+    "default": [
+      "std",
+      "fork",
+      "timeout",
+      "bit-set"
+    ],
+    "default-code-coverage": [
+      "std",
+      "fork",
+      "timeout",
+      "bit-set"
+    ],
+    "f16": [],
+    "fork": [
+      "std",
+      "rusty-fork",
+      "tempfile"
+    ],
+    "handle-panics": [
+      "std"
+    ],
+    "hardware-rng": [
+      "x86"
+    ],
+    "no_std": [
+      "num-traits/libm"
+    ],
+    "std": [
+      "rand/std",
+      "rand/os_rng",
+      "regex-syntax",
+      "num-traits/std"
+    ],
+    "timeout": [
+      "fork",
+      "rusty-fork/timeout"
+    ],
+    "unstable": [
+      "f16"
+    ]
+  },
+  "lib": {
+    "name": "proptest",
+    "path": "src/lib.rs"
+  },
+  "example": [
+    {
+      "name": "config-defaults",
+      "path": "examples/config-defaults.rs"
+    },
+    {
+      "name": "dateparser_v1",
+      "path": "examples/dateparser_v1.rs"
+    },
+    {
+      "name": "dateparser_v2",
+      "path": "examples/dateparser_v2.rs"
+    },
+    {
+      "name": "fib",
+      "path": "examples/fib.rs"
+    },
+    {
+      "name": "tutorial-simplify-play",
+      "path": "examples/tutorial-simplify-play.rs"
+    },
+    {
+      "name": "tutorial-strategy-play",
+      "path": "examples/tutorial-strategy-play.rs"
+    }
+  ],
+  "test": [
+    {
+      "name": "attr_macro",
+      "path": "tests/attr_macro.rs"
+    }
+  ],
+  "dependencies": {
+    "bit-set": {
+      "version": "0.8.0",
+      "optional": true
+    },
+    "bit-vec": {
+      "version": "0.8.0",
+      "optional": true
+    },
+    "bitflags": {
+      "version": "2.10"
+    },
+    "num-traits": {
+      "version": "0.2.15",
+      "default-features": false
+    },
+    "proptest-macro": {
+      "version": "0.5.0",
+      "optional": true
+    },
+    "rand": {
+      "version": "0.9",
+      "features": [
+        "alloc"
+      ],
+      "default-features": false
+    },
+    "rand_chacha": {
+      "version": "0.9",
+      "default-features": false
+    },
+    "rand_xorshift": {
+      "version": "0.4"
+    },
+    "regex-syntax": {
+      "version": "0.8",
+      "optional": true
+    },
+    "rusty-fork": {
+      "version": "0.3.0",
+      "optional": true,
+      "default-features": false
+    },
+    "tempfile": {
+      "version": "3.0",
+      "optional": true
+    },
+    "unarray": {
+      "version": "0.1.4"
+    },
+    "x86": {
+      "version": "0.52.0",
+      "optional": true
+    }
+  },
+  "dev-dependencies": {
+    "regex": {
+      "version": "1.0"
+    },
+    "trybuild": {
+      "version": "=1.0.115"
+    }
+  }
+}

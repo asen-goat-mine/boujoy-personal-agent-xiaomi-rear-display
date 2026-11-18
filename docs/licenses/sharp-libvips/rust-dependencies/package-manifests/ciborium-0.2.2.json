@@ -1,0 +1,91 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.58",
+    "name": "ciborium",
+    "version": "0.2.2",
+    "authors": [
+      "Nathaniel McCallum <npmccallum@profian.com>"
+    ],
+    "description": "serde implementation of CBOR using ciborium-basic",
+    "homepage": "https://github.com/enarx/ciborium",
+    "readme": "README.md",
+    "keywords": [
+      "cbor",
+      "serde"
+    ],
+    "categories": [
+      "data-structures",
+      "embedded",
+      "encoding",
+      "no-std",
+      "parsing"
+    ],
+    "license": "Apache-2.0",
+    "repository": "https://github.com/enarx/ciborium",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "all-features": true
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "ciborium-io": {
+      "version": "0.2.2",
+      "features": [
+        "alloc"
+      ]
+    },
+    "ciborium-ll": {
+      "version": "0.2.2"
+    },
+    "serde": {
+      "version": "1.0.100",
+      "features": [
+        "alloc",
+        "derive"
+      ],
+      "default-features": false
+    }
+  },
+  "dev-dependencies": {
+    "hex": {
+      "version": "0.4"
+    },
+    "rand": {
+      "version": "0.8"
+    },
+    "rstest": {
+      "version": "0.11"
+    },
+    "serde_bytes": {
+      "version": "0.11"
+    }
+  },
+  "features": {
+    "default": [
+      "std"
+    ],
+    "std": [
+      "ciborium-io/std",
+      "serde/std"
+    ]
+  },
+  "badges": {
+    "github": {
+      "repository": "enarx/ciborium",
+      "workflow": "test"
+    },
+    "is-it-maintained-issue-resolution": {
+      "repository": "enarx/ciborium"
+    },
+    "is-it-maintained-open-issues": {
+      "repository": "enarx/ciborium"
+    },
+    "maintenance": {
+      "status": "actively-developed"
+    }
+  }
+}

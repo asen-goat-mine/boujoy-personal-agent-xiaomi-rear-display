@@ -1,0 +1,147 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.86",
+    "name": "multiversion",
+    "version": "0.9.0",
+    "authors": [
+      "Caleb Zulawski <caleb.zulawski@gmail.com>"
+    ],
+    "build": false,
+    "include": [
+      "/Cargo.toml",
+      "/LICENSE-APACHE",
+      "/LICENSE-MIT",
+      "/README.md",
+      "/src/**",
+      "/tests/**",
+      "/benches/**"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Easy function multiversioning",
+    "readme": "README.md",
+    "categories": [
+      "hardware-support",
+      "no-std"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/calebzulawski/multiversion",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "features": [
+            "target-features"
+          ]
+        }
+      }
+    }
+  },
+  "features": {
+    "default": [
+      "std"
+    ],
+    "nightly": [
+      "multiversion-macros/nightly"
+    ],
+    "std": [
+      "multiversion-macros/std"
+    ],
+    "target-features": [
+      "dep:target-features"
+    ]
+  },
+  "lib": {
+    "name": "multiversion",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "async_fn",
+      "path": "tests/async_fn.rs"
+    },
+    {
+      "name": "attrs",
+      "path": "tests/attrs.rs"
+    },
+    {
+      "name": "cfg",
+      "path": "tests/cfg.rs"
+    },
+    {
+      "name": "choose_dispatcher",
+      "path": "tests/choose_dispatcher.rs"
+    },
+    {
+      "name": "clones",
+      "path": "tests/clones.rs"
+    },
+    {
+      "name": "destructure",
+      "path": "tests/destructure.rs"
+    },
+    {
+      "name": "generics",
+      "path": "tests/generics.rs"
+    },
+    {
+      "name": "helpers",
+      "path": "tests/helpers.rs"
+    },
+    {
+      "name": "hygiene",
+      "path": "tests/hygiene.rs"
+    },
+    {
+      "name": "impl_trait",
+      "path": "tests/impl_trait.rs"
+    },
+    {
+      "name": "safety",
+      "path": "tests/safety.rs"
+    },
+    {
+      "name": "simd",
+      "path": "tests/simd.rs"
+    }
+  ],
+  "bench": [
+    {
+      "name": "benchmark",
+      "path": "benches/benchmark.rs",
+      "harness": false
+    }
+  ],
+  "dependencies": {
+    "multiversion-macros": {
+      "version": "0.9.0",
+      "default-features": false
+    },
+    "target-features": {
+      "version": "0.2",
+      "optional": true
+    }
+  },
+  "dev-dependencies": {
+    "criterion": {
+      "version": "0.4"
+    },
+    "rustversion": {
+      "version": "1"
+    }
+  },
+  "lints": {
+    "rust": {
+      "unexpected_cfgs": {
+        "level": "warn",
+        "priority": 0,
+        "check-cfg": [
+          "cfg(docsrs)"
+        ]
+      }
+    }
+  }
+}

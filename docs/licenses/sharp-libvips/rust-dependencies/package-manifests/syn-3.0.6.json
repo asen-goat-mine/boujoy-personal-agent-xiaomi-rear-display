@@ -1,0 +1,288 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.71",
+    "name": "syn",
+    "version": "3.0.6",
+    "authors": [
+      "David Tolnay <dtolnay@gmail.com>"
+    ],
+    "build": false,
+    "include": [
+      "/benches/**",
+      "/Cargo.toml",
+      "/LICENSE-APACHE",
+      "/LICENSE-MIT",
+      "/README.md",
+      "/src/**",
+      "/tests/**"
+    ],
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Parser for Rust source code",
+    "documentation": "https://docs.rs/syn",
+    "readme": "README.md",
+    "keywords": [
+      "macros",
+      "syn"
+    ],
+    "categories": [
+      "development-tools::procedural-macro-helpers",
+      "parser-implementations"
+    ],
+    "license": "MIT OR Apache-2.0",
+    "repository": "https://github.com/dtolnay/syn",
+    "metadata": {
+      "docs": {
+        "rs": {
+          "all-features": true,
+          "targets": [
+            "x86_64-unknown-linux-gnu"
+          ],
+          "rustdoc-args": [
+            "--generate-link-to-definition",
+            "--generate-macro-expansion",
+            "--extend-css=src/gen/token.css",
+            "--extern-html-root-url=core=https://doc.rust-lang.org",
+            "--extern-html-root-url=alloc=https://doc.rust-lang.org",
+            "--extern-html-root-url=std=https://doc.rust-lang.org",
+            "--extern-html-root-url=proc_macro=https://doc.rust-lang.org"
+          ]
+        }
+      },
+      "playground": {
+        "features": [
+          "full",
+          "visit",
+          "visit-mut",
+          "fold",
+          "extra-traits"
+        ]
+      }
+    }
+  },
+  "features": {
+    "clone-impls": [],
+    "default": [
+      "derive",
+      "parsing",
+      "printing",
+      "clone-impls",
+      "proc-macro"
+    ],
+    "derive": [],
+    "extra-traits": [],
+    "fold": [],
+    "full": [],
+    "parsing": [],
+    "printing": [
+      "dep:quote"
+    ],
+    "proc-macro": [
+      "proc-macro2/proc-macro",
+      "quote?/proc-macro"
+    ],
+    "test": [
+      "syn-test-suite/all-features"
+    ],
+    "visit": [],
+    "visit-mut": []
+  },
+  "lib": {
+    "name": "syn",
+    "path": "src/lib.rs"
+  },
+  "test": [
+    {
+      "name": "regression",
+      "path": "tests/regression.rs"
+    },
+    {
+      "name": "test_attribute",
+      "path": "tests/test_attribute.rs"
+    },
+    {
+      "name": "test_derive_input",
+      "path": "tests/test_derive_input.rs"
+    },
+    {
+      "name": "test_expr",
+      "path": "tests/test_expr.rs"
+    },
+    {
+      "name": "test_generics",
+      "path": "tests/test_generics.rs"
+    },
+    {
+      "name": "test_grouping",
+      "path": "tests/test_grouping.rs"
+    },
+    {
+      "name": "test_ident",
+      "path": "tests/test_ident.rs"
+    },
+    {
+      "name": "test_item",
+      "path": "tests/test_item.rs"
+    },
+    {
+      "name": "test_lit",
+      "path": "tests/test_lit.rs"
+    },
+    {
+      "name": "test_meta",
+      "path": "tests/test_meta.rs"
+    },
+    {
+      "name": "test_parse_buffer",
+      "path": "tests/test_parse_buffer.rs"
+    },
+    {
+      "name": "test_parse_quote",
+      "path": "tests/test_parse_quote.rs"
+    },
+    {
+      "name": "test_parse_stream",
+      "path": "tests/test_parse_stream.rs"
+    },
+    {
+      "name": "test_pat",
+      "path": "tests/test_pat.rs"
+    },
+    {
+      "name": "test_path",
+      "path": "tests/test_path.rs"
+    },
+    {
+      "name": "test_precedence",
+      "path": "tests/test_precedence.rs"
+    },
+    {
+      "name": "test_punctuated",
+      "path": "tests/test_punctuated.rs"
+    },
+    {
+      "name": "test_receiver",
+      "path": "tests/test_receiver.rs"
+    },
+    {
+      "name": "test_round_trip",
+      "path": "tests/test_round_trip.rs"
+    },
+    {
+      "name": "test_shebang",
+      "path": "tests/test_shebang.rs"
+    },
+    {
+      "name": "test_size",
+      "path": "tests/test_size.rs"
+    },
+    {
+      "name": "test_stmt",
+      "path": "tests/test_stmt.rs"
+    },
+    {
+      "name": "test_token_trees",
+      "path": "tests/test_token_trees.rs"
+    },
+    {
+      "name": "test_ty",
+      "path": "tests/test_ty.rs"
+    },
+    {
+      "name": "test_unparenthesize",
+      "path": "tests/test_unparenthesize.rs"
+    },
+    {
+      "name": "test_visibility",
+      "path": "tests/test_visibility.rs"
+    },
+    {
+      "name": "zzz_stable",
+      "path": "tests/zzz_stable.rs"
+    }
+  ],
+  "bench": [
+    {
+      "name": "file",
+      "path": "benches/file.rs",
+      "required-features": [
+        "full",
+        "parsing"
+      ]
+    },
+    {
+      "name": "rust",
+      "path": "benches/rust.rs",
+      "harness": false,
+      "required-features": [
+        "full",
+        "parsing"
+      ]
+    }
+  ],
+  "dependencies": {
+    "proc-macro2": {
+      "version": "1.0.91",
+      "default-features": false
+    },
+    "quote": {
+      "version": "1.0.35",
+      "optional": true,
+      "default-features": false
+    },
+    "unicode-ident": {
+      "version": "1"
+    }
+  },
+  "dev-dependencies": {
+    "anyhow": {
+      "version": "1"
+    },
+    "automod": {
+      "version": "1"
+    },
+    "insta": {
+      "version": "1"
+    },
+    "ref-cast": {
+      "version": "1"
+    },
+    "rustversion": {
+      "version": "1"
+    },
+    "syn-test-suite": {
+      "version": "0"
+    },
+    "termcolor": {
+      "version": "1"
+    }
+  },
+  "target": {
+    "cfg(not(miri))": {
+      "dev-dependencies": {
+        "flate2": {
+          "version": "1"
+        },
+        "rayon": {
+          "version": "1"
+        },
+        "reqwest": {
+          "version": "0.13",
+          "features": [
+            "blocking"
+          ]
+        },
+        "tar": {
+          "version": "0.4.16"
+        },
+        "walkdir": {
+          "version": "2.3.2"
+        }
+      }
+    }
+  }
+}

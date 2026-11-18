@@ -1,0 +1,60 @@
+{
+  "package": {
+    "edition": "2021",
+    "rust-version": "1.71",
+    "name": "cssparser-color",
+    "version": "0.5.0",
+    "authors": [
+      "Emilio Cobos Álvarez <emilio@crisal.io>"
+    ],
+    "build": false,
+    "autolib": false,
+    "autobins": false,
+    "autoexamples": false,
+    "autotests": false,
+    "autobenches": false,
+    "description": "Color implementation based on cssparser",
+    "documentation": "https://docs.rs/cssparser-color/",
+    "readme": false,
+    "license": "MPL-2.0",
+    "repository": "https://github.com/servo/rust-cssparser",
+    "resolver": "1"
+  },
+  "features": {
+    "default": [
+      "cssparser/default"
+    ],
+    "serde": [
+      "cssparser/serde",
+      "dep:serde"
+    ]
+  },
+  "lib": {
+    "name": "cssparser_color",
+    "path": "lib.rs"
+  },
+  "dependencies": {
+    "cssparser": {
+      "version": "0.37",
+      "default-features": false
+    },
+    "serde": {
+      "version": "1.0",
+      "features": [
+        "derive"
+      ],
+      "optional": true
+    }
+  },
+  "dev-dependencies": {
+    "difference": {
+      "version": "2.0"
+    },
+    "encoding_rs": {
+      "version": "0.8"
+    },
+    "serde_json": {
+      "version": "1.0.25"
+    }
+  }
+}
