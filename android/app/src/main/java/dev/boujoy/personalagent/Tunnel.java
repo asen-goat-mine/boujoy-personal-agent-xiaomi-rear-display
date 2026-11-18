@@ -39,6 +39,21 @@ public final class Tunnel implements AutoCloseable {
     }
     public void start() { lanes.values().forEach(Lane::connect); }
     public boolean connected() { return lanes.values().stream().allMatch(lane -> lane.ready&&lane.peerOnline); }
+    // UI evidence only. Relay authentication and peer presence do not grant control.
+    String connectionStage() {
+        Lane data=lanes.get("data"),control=lanes.get("control");
+        boolean d=data.ready,c=control.ready;
+        if(d&&c){
+            boolean dp=data.peerOnline,cp=control.peerOnline;
+            if(dp&&cp)return "syncing";
+            return dp||cp?"computer_partial":"waiting_computer";
+        }
+        String de=d?"":data.problem,ce=c?"":control.problem;
+        if("tls_identity".equals(de)||"tls_identity".equals(ce))return "relay_security";
+        if("relay_rejected".equals(de)||"relay_rejected".equals(ce))return "relay_rejected";
+        if(d||c)return "relay_partial";
+        return de.isEmpty()&&ce.isEmpty()?"relay_connecting":"relay_unavailable";
+    }
     public String status() {
         if (connected()) return "连接已建立";
         for (String name : new String[]{"control", "data"}) {

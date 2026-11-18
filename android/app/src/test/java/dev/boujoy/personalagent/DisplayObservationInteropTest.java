@@ -185,6 +185,14 @@ public class DisplayObservationInteropTest {
         backend.duringScreenshot=()->contentEvent(123);JSONObject observed=observe("screenshot");
         assertEquals("complete",observed.getString("observation_status"));assertEquals("executed",tapFrom(observed).getString("state"));
     }
+    @Test public void backStillRejectsChangedWindowAndAcceptsFreshEvidence()throws Exception{
+        JSONObject old=observe("screenshot");root.setPackageName("replacement.app");
+        JSONObject denied=executor.execute(cmd("back",Tunnel.json("observation_id",old.getString("observation_id"),"expected_window_id",123))).getJSONObject("request");
+        assertFalse("executed".equals(denied.optString("state")));assertEquals(0,backend.effects);
+        JSONObject fresh=observe("screenshot");
+        JSONObject ok=executor.execute(cmd("back",Tunnel.json("observation_id",fresh.getString("observation_id"),"expected_window_id",123))).getJSONObject("request");
+        assertEquals("executed",ok.getString("state"));assertEquals(1,backend.effects);
+    }
     @Test public void rawSwipeStillRejectsProtectedStartAfterTargetComparisonRemoved()throws Exception{
         root.setPassword(true);JSONObject observed=observe("both");
         JSONObject result=executor.execute(cmd("swipe",Tunnel.json("observation_id",observed.getString("observation_id"),"expected_window_id",123,

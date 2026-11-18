@@ -208,3 +208,27 @@ test('missing or foreign edition pairing never consumes the challenge or binds a
  const wrongRetry=await x.call('/v1/pair',{edition:other,androidApplicationId:'dev.boujoy.'+other,pairToken:x.pairing.pairToken});
  assert.equal(wrongRetry.status,400);assert.equal(wrongRetry.body.error.code,'edition_mismatch');assert.equal(Object.keys(x.state.data.devices).length,1);
 });
+
+test('phone state checks unresolved receipts only for this phone’s visible unknown-result tasks',async t=>{
+ const x=await setup(t);await pair(x);
+ const second=randomUUID(),pairing=x.state.issuePairing({deviceId:second});
+ assert.equal((await x.call('/v1/pair',{edition:DISTRIBUTION.edition,androidApplicationId:ANDROID_PACKAGE,pairToken:pairing.pairToken},x.id.other)).status,200);
+ const add=(id,status,remoteDeviceId,tool)=>{
+  x.store.data.tasks.push({id,status,remoteDeviceId,roleId:'concierge',title:id,events:[],messages:[],createdAt:new Date().toISOString()});
+  x.store.data.actions.push({id:randomUUID(),taskId:id,status:'unknown',tool,nativeRequestId:randomUUID(),nativeDeviceId:remoteDeviceId||x.deviceId});
+ };
+ add('shared','completed',null,'phone_open_app');
+ add('private-one','unknown_result',x.deviceId,'phone_open_app');
+ add('private-two','unknown_result',second,'phone_action');
+ // Count reconciliation's full action filters independently of taskProgress, which
+ // intentionally still iterates the log for each task. Do not assert wall time.
+ let scans=0;const actions=x.store.data.actions;
+ Object.defineProperty(actions,'filter',{configurable:true,value(...args){scans++;return Array.prototype.filter.apply(this,args);}});
+ try{
+  for(const [client,id,allowed] of [[x.id.client,'private-one',true],[x.id.other,'private-two',false]]){
+   scans=0;const r=await x.call('/v1/state',undefined,client);assert.equal(r.status,200);
+   assert.deepEqual(Object.fromEntries(r.body.tasks.map(row=>[row.id,row.canReconcile])),{shared:false,[id]:allowed});
+   assert.equal(scans,1,'only the one visible unknown-result task needs a receipt scan');
+  }
+ }finally{delete actions.filter;}
+});

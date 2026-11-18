@@ -120,6 +120,20 @@ public class TunnelTest {
             try(Tunnel.Stream fresh=f.tunnel.openChat(false)){f.bytes(fresh.id,"R");assertEquals('R',fresh.read());}
         }
     }
+    @Test public void statusSeparatesPhoneRelayComputerAndSync()throws Exception{
+        try(Fixture f=new Fixture(300)){
+            assertEquals("syncing",f.tunnel.connectionStage());
+            String off="{\"type\":\"peer\",\"online\":false}";
+            f.sockets.get("data").send(off);
+            eventually(()->"computer_partial".equals(f.tunnel.connectionStage()));
+            f.sockets.get("control").send(off);
+            eventually(()->"waiting_computer".equals(f.tunnel.connectionStage()));
+            f.replyToHello=false;f.tunnel.reconnect();
+            eventually(()->"relay_unavailable".equals(f.tunnel.connectionStage()));
+            f.replyToHello=true;
+            eventually(()->"syncing".equals(f.tunnel.connectionStage()));
+        }
+    }
     @Test public void silentAuthenticationRetiresWssAndRecoversWithoutReplayingStreams()throws Exception{
         try(Fixture f=new Fixture(250);Tunnel.Stream old=f.tunnel.openChat(false)){
             f.event("open");f.events.clear();f.replyToHello=false;f.tunnel.reconnect();

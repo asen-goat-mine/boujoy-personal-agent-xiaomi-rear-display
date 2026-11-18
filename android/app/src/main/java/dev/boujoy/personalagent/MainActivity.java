@@ -33,6 +33,8 @@ public final class MainActivity extends Activity implements GroupPanel.Host {
     private String displayedHandoffId="";
     private TextView shizukuStatus, backgroundExecutorStatus, rearDisplayStatus, rearLockscreenStatus;
     private JSONObject renderedData=new JSONObject();
+    private ConnectionService renderedService;
+    private boolean syncingComposer;
     private AssistantPanel assistantPanel;
     private boolean listVisible=true;
     private ConversationScrollView chatScroll;
@@ -52,6 +54,9 @@ public final class MainActivity extends Activity implements GroupPanel.Host {
     private ChatComposerState chat=new ChatComposerState();
     private JSONObject pendingArtifact;
     private Dialog connectionDialog;
+    private LinearLayout connectionCard;
+    private TextView connectionTitle,connectionDetail;
+    private boolean connectionCardOnline;
     private Dialog menuDialog;
     private Dialog taskDialog;
     private AlertDialog recordingDialog;
@@ -93,7 +98,7 @@ public final class MainActivity extends Activity implements GroupPanel.Host {
         if(state!=null&&state.containsKey("pendingArtifact"))try{pendingArtifact=new JSONObject(state.getString("pendingArtifact"));}catch(Exception ignored){}
         if(state!=null)listVisible=state.getBoolean("listVisible",true);
         buildUi();syncComposer();
-        if(!(retained instanceof ChatComposerState)&&state!=null)try{if(new JSONObject(state.getString("chatComposer","{}")).optBoolean("hadAttachments")&&chat.attachments().length()==0)toast("未发送的附件需要重新选择");}catch(Exception ignored){}
+        if(!(retained instanceof ChatComposerState)&&state!=null)try{if(new JSONObject(state.getString("chatComposer","{}")).optBoolean("hadAttachments")&&!chat.hasAttachments())toast("未发送的附件需要重新选择");}catch(Exception ignored){}
         try{startForegroundService(new Intent(this,ConnectionService.class));}catch(Exception e){toast("请保持 Boujoy 打开以建立连接");}
         handleBindingIntent(getIntent());if(state==null&&!(retained instanceof ChatComposerState))handleTaskIntent(getIntent());
     }
@@ -151,7 +156,7 @@ public final class MainActivity extends Activity implements GroupPanel.Host {
         LinearLayout input=row();input.setGravity(Gravity.BOTTOM);input.setPadding(dp(6),dp(6),dp(6),dp(6));input.setBackground(new SoftSurface(this,27,Color.WHITE,Color.WHITE,0xffe3e1e8,5,3,0x0c302743));
         UiIcon attach=icon("plus","添加附件",this::chooseAttachment);attach.setBackground(background(0xfff2f1f5,22));input.addView(attach,new LinearLayout.LayoutParams(dp(44),dp(44)));
         composer=new EditText(this);composer.setFilters(new android.text.InputFilter[]{new android.text.InputFilter.LengthFilter(50000)});composer.setInputType(android.text.InputType.TYPE_CLASS_TEXT|android.text.InputType.TYPE_TEXT_FLAG_MULTI_LINE|android.text.InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
-        composer.addTextChangedListener(new android.text.TextWatcher(){public void beforeTextChanged(CharSequence s,int start,int count,int after){}public void onTextChanged(CharSequence s,int start,int before,int count){chat.setText(s.toString());updateSend();}public void afterTextChanged(android.text.Editable e){}});
+        composer.addTextChangedListener(new android.text.TextWatcher(){public void beforeTextChanged(CharSequence s,int start,int count,int after){}public void onTextChanged(CharSequence s,int start,int before,int count){if(!syncingComposer){chat.editVisibleText(s.toString());updateSend();}}public void afterTextChanged(android.text.Editable e){}});
         composer.setHint("交给我办什么？");composer.setContentDescription("消息输入框");composer.setTextSize(15);composer.setTextColor(INK);composer.setHintTextColor(0xffaaa5b1);composer.setBackgroundColor(Color.TRANSPARENT);composer.setPadding(dp(10),dp(12),dp(6),dp(12));composer.setIncludeFontPadding(false);composer.setLineSpacing(dp(4),1);composer.setMaxLines(5);composer.setMinLines(1);composer.setMinimumHeight(dp(44));composer.setGravity(Gravity.CENTER_VERTICAL|Gravity.START);input.addView(composer,new LinearLayout.LayoutParams(0,-2,1));
         mic=icon("mic","语音输入：按住说话，或点一下开始、再点一下结束",this::voice);mic.setOnTouchListener(this::micTouch);input.addView(mic);send=icon("send","发送消息",this::submit);send.setInk(Color.WHITE);input.addView(send,new LinearLayout.LayoutParams(dp(44),dp(44)));composeDock.addView(input);newMessages=text("有新消息 ↓",12,0xff8065a7);newMessages.setGravity(Gravity.CENTER);newMessages.setMinHeight(dp(36));newMessages.setVisibility(View.GONE);newMessages.setOnClickListener(v->{chatScroll.fullScroll(View.FOCUS_DOWN);newMessages.setVisibility(View.GONE);});composeDock.addView(newMessages,0);root.addView(composeDock);
         chatScroll.setOnTouchFinishedListener(this::finishChatTouch);
@@ -192,7 +197,7 @@ public final class MainActivity extends Activity implements GroupPanel.Host {
         menuDialog=new UiSheet(this,title,body,null);menuDialog.show();
     }
     private static long actionNow(ConnectionService service){return service==null?System.currentTimeMillis():service.taskActionNow();}
-    private void updateSend(){if(send==null)return;boolean ready=!chat.waiting()&&(!chat.text().isBlank()||chat.attachments().length()>0);send.setEnabled(ready);send.setBackground(background(ready?botAccent():0xffeeedf2,22));send.setInk(ready?Color.WHITE:0xffb1afb8);}
+    private void updateSend(){if(send==null)return;boolean ready=!chat.waiting()&&(!chat.text().isBlank()||chat.hasAttachments());send.setEnabled(ready);send.setBackground(background(ready?botAccent():0xffeeedf2,22));send.setInk(ready?Color.WHITE:0xffb1afb8);}
     private int botAccent(){return assistantPanel==null?INK:BotAvatar.color(assistantPanel.role(chat.roleId()).optString("botColor","violet"));}
     // The pill shows the current bot (breathing) and, while its task runs or waits for you, a short status.
     private void updatePill(JSONObject task){
@@ -204,51 +209,54 @@ public final class MainActivity extends Activity implements GroupPanel.Host {
     }
     private void showAssistantList(boolean show){listVisible=show;assistantPanel.root.setVisibility(show?View.VISIBLE:View.GONE);chatRoot.setVisibility(show?View.GONE:View.VISIBLE);if(show){composer.clearFocus();((android.view.inputmethod.InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(composer.getWindowToken(),0);}ConnectionService service=ConnectionService.current;if(service!=null){assistantPanel.update(service.snapshot());service.chatHistoryVisible(visible&&!show,chat.conversationId());}}
     private void selectRole(String id){
-        try{chat.selectRole(id);if(chat.conversationId().isBlank()&&chat.text().isBlank()&&chat.attachments().length()==0&&!chat.waiting()){JSONObject last=assistantPanel.role(id).optJSONObject("lastActivity");if(ConversationIdentity.privateTask(last)&&!last.optString("id").isBlank())chat.selectConversation(last.optString("id"));}chat.identifyRole(id);showAssistantList(false);lastRender="";syncComposer();render();}catch(IllegalStateException e){toast(e.getMessage());}
+        try{chat.selectRole(id);if(chat.conversationId().isBlank()&&chat.text().isBlank()&&!chat.hasAttachments()&&!chat.waiting()){JSONObject last=assistantPanel.role(id).optJSONObject("lastActivity");if(ConversationIdentity.privateTask(last)&&!last.optString("id").isBlank())chat.selectConversation(last.optString("id"));}chat.identifyRole(id);showAssistantList(false);lastRender="";syncComposer();render();}catch(IllegalStateException e){toast(e.getMessage());}
     }
     @Override public void onBackPressed(){if(!listVisible){showAssistantList(true);return;}super.onBackPressed();}
     private void submit(){
         ConnectionService service=ConnectionService.current;if(service==null){toast("连接服务正在启动");return;}
-        String value=composer.getText().toString().trim();if(value.isEmpty()&&chat.attachments().length()==0){composer.setError("写一句你想让我做什么");return;}
-        JSONObject snapshot=service.snapshot();if(!snapshot.optBoolean("paired")){showConnection();return;}
+        String value=composer.getText().toString().trim();if(value.isEmpty()&&!chat.hasAttachments()){composer.setError("写一句你想让我做什么");return;}
+        String pairedDevice=service.pairedDeviceId();
+        if(pairedDevice.isBlank()){showConnection();return;}
+        JSONObject snapshot=deferredRender==null?renderedData:deferredRender.data();
+        if((deferredRender==null?renderedService:deferredRender.service())!=service||!pairedDevice.equals(snapshot.optString("pairedDeviceId"))){scheduleRender();toast("连接状态正在更新，请稍后再发送");return;}
         final ChatComposerState.Submission submitted;
         try{submitted=chat.begin();}catch(IllegalStateException e){toast(e.getMessage());return;}
         followNextRender=true;send.setEnabled(false);
         // Show the message at once; the encrypted outbox write and delivery follow.
-        showProvisional(submitted);
+        showProvisional(submitted,snapshot,service);
         service.submit(value,submitted.conversationId(),submitted.attachments(),submitted.messageId(),submitted.roleId(),(id,error)->main.post(()->{
-            provisional.remove(submitted.messageId());
-            if(error!=null&&chat.text().isBlank()&&!submitted.text().isBlank())chat.setText(submitted.text()); // never lose a failed message
+            if(error!=null)chat.provisional.remove(submitted.messageId());
             boolean current=error==null?chat.saved(submitted):chat.failed(submitted);
-            if(!current||isDestroyed())return;
+            if(!current)return;
+            if(isDestroyed()){sendBroadcast(new Intent(ConnectionService.UPDATE).setPackage(getPackageName()));return;}
             syncComposer();if(error!=null)toast("消息未保存："+(error.getMessage()==null?"请再试一次":error.getMessage()));
-            render();
+            scheduleRender();
         }));
         // The target app can take the foreground when the accepted task needs it. No fake completion.
     }
     /** Display-only rows for messages the service has not yet written to the outbox. */
-    private final JSONObject provisional=new JSONObject();
-    private void showProvisional(ChatComposerState.Submission submitted){
+    private void showProvisional(ChatComposerState.Submission submitted,JSONObject snapshot,ConnectionService service){
         try{
             JSONObject message=Tunnel.json("messageId",submitted.messageId(),"text",submitted.text().isBlank()?"（附件）":submitted.text().trim(),"createdAt",java.time.Instant.now().toString(),"attachments",submitted.attachments(),"roleId",submitted.roleId());
             if(!submitted.conversationId().isBlank())message.put("conversationId",submitted.conversationId());
-            provisional.put(submitted.messageId(),Tunnel.json("message",message,"status","sending","everSent",false));
+            chat.provisional.put(submitted.messageId(),Tunnel.json("message",message,"status","sending","everSent",false,"pairedDeviceId",snapshot.optString("pairedDeviceId")));
         }catch(JSONException ignored){return;}
-        if(composer.length()>0)composer.setText("");
-        render();
+        renderSnapshot(snapshot,service);
     }
     private static String[] keys(JSONObject object){JSONArray names=object==null?null:object.names();String[] out=new String[names==null?0:names.length()];for(int i=0;i<out.length;i++)out[i]=names.optString(i);return out;}
     private JSONObject withProvisional(JSONObject data){
+        JSONObject provisional=chat.provisional;
         if(provisional.length()==0||data==null)return data;
         try{
             JSONObject merged=new JSONObject(data,keys(data)),outbox=data.optJSONObject("outbox"),rows=outbox==null?new JSONObject():new JSONObject(outbox,keys(outbox));
-            for(String key:keys(provisional))if(!rows.has(key))rows.put(key,provisional.get(key));
+            for(String key:keys(provisional)){JSONObject row=provisional.getJSONObject(key);if(!rows.has(key)&&data.optString("pairedDeviceId").equals(row.optString("pairedDeviceId")))rows.put(key,row);}
             merged.put("outbox",rows);return merged;
         }catch(JSONException e){return data;}
     }
     private void syncComposer(){
-        if(!composer.getText().toString().equals(chat.text())){composer.setText(chat.text());composer.setSelection(composer.length());}
-        JSONArray selected=chat.attachments();JSONObject first=selected.optJSONObject(0);
+        String draft=chat.visibleText();
+        if(!composer.getText().toString().equals(draft)){syncingComposer=true;try{composer.setText(draft);composer.setSelection(composer.length());}finally{syncingComposer=false;}}
+        JSONArray selected=chat.visibleAttachments();JSONObject first=selected.optJSONObject(0);
         attachmentLabel.setText(first==null?"":"已选 "+selected.length()+" 个附件 · "+first.optString("name","附件")+" · 管理");
         attachmentLabel.setOnClickListener(v->manageAttachments());
         attachmentLabel.setVisibility(first==null?View.GONE:View.VISIBLE);updateSend();
@@ -290,8 +298,15 @@ public final class MainActivity extends Activity implements GroupPanel.Host {
         if(chatTouchActive||chatScroll!=null&&chatScroll.isTouchActive()){deferredRender=new DeferredRender(raw,service,now);return;}
         deferredRender=null;
         renderHandoff(handoffLocked());
+        renderedData=raw;renderedService=service;chat.reconcile(raw);
+        JSONObject savedRows=raw.optJSONObject("outbox");
+        if(savedRows!=null)for(String id:keys(chat.provisional))if(savedRows.has(id))chat.provisional.remove(id);
         JSONObject data=withProvisional(raw);
-        renderedData=data;chat.reconcile(data);assistantPanel.update(data);assistantPanel.selectedRole(chat.roleId());if(service!=null)service.chatHistoryVisible(visible&&!listVisible,chat.conversationId());syncComposer();String status=data.optString("status");
+        assistantPanel.update(data);assistantPanel.selectedRole(chat.roleId());if(service!=null)service.chatHistoryVisible(visible&&!listVisible,chat.conversationId());syncComposer();
+        ConnectionCopy connectionCopy=connectionCopy(data);
+        if(connectionDialog!=null&&connectionDialog.isShowing())updateConnectionCard(connectionCopy,data.optBoolean("online"));
+        String status=data.optBoolean("online")&&!data.optBoolean("paused")?data.optString("status"):connectionCopy.title();
+        if(status.isBlank())status=connectionCopy.title();
         connection.setText(getString(R.string.connection_status,data.optBoolean("online")?"●":"○",status));connection.setTextColor(data.optBoolean("online")?MUTED:0xffa07936);
         String selected=chat.conversationId(),title=selected.isBlank()?"新对话":"当前对话";JSONObject selectedTask=null;JSONObject currentState=data.optJSONObject("state");JSONArray all=currentState==null?null:currentState.optJSONArray("tasks");if(all!=null)for(int n=0;n<all.length();n++){JSONObject task=all.optJSONObject(n);if(ConversationIdentity.privateTask(task)&&!selected.isBlank()&&(selected.equals(ChatPresenter.string(task,"id"))||selected.equals(ChatPresenter.string(task,"conversationId")))){title=ChatPresenter.string(task,"title");selectedTask=task;}}if(selectedTask!=null)chat.identifyRole(selectedTask.optString("roleId","concierge"));threadTitle.setText(assistantPanel.role(chat.roleId()).optString("name","boujoy"));composer.setContentDescription("给 "+assistantPanel.role(chat.roleId()).optString("name","boujoy")+" 发消息");updatePill(selectedTask);threadTitle.setMaxLines(1);threadTitle.setEllipsize(android.text.TextUtils.TruncateAt.END);
         ChatPresenter.Presentation presentation=ChatPresenter.present(data,selected,chat.displayedMessageId());
@@ -475,7 +490,8 @@ public final class MainActivity extends Activity implements GroupPanel.Host {
         TextView progress=text("",12,MUTED);box.addView(progress);WrapLayout choices=new WrapLayout(this,dp(8));
         Button allow=button("允许这次操作",()->{}),deny=button("拒绝",()->{});UiSheet.primary(this,allow);
         choices.addView(allow,new ViewGroup.LayoutParams(-2,dp(44)));choices.addView(deny,new ViewGroup.LayoutParams(-2,dp(44)));box.addView(choices);
-        String status=ApprovalRequests.status(ConnectionService.current==null?renderedData:ConnectionService.current.snapshot(),approval);
+        ConnectionService current=ConnectionService.current;
+        String status=current==null?ApprovalRequests.status(renderedData,approval):current.approvalStatus(approval);
         boolean busy=Set.of("sending","accepted").contains(status);allow.setEnabled(!busy&&!ApprovalPresentation.expired(approval,now));deny.setEnabled(!busy);
         progress.setText("sending".equals(status)?"正在提交，请稍候…":"accepted".equals(status)?"电脑已收到这项决定":"unconfirmed".equals(status)?"上次提交结果未确认，请先刷新任务核实":"");
         allow.setOnClickListener(v->decideApproval(taskId,approval,true,allow,deny,progress));deny.setOnClickListener(v->decideApproval(taskId,approval,false,allow,deny,progress));return box;
@@ -519,15 +535,45 @@ public final class MainActivity extends Activity implements GroupPanel.Host {
             });
     }
 
+    private record ConnectionCopy(String title,String detail){}
+    /** Present only what this phone has observed; a missing relay is not evidence that the Mac is off. */
+    private static ConnectionCopy connectionCopy(JSONObject data){
+        if(data.optBoolean("online"))return data.optBoolean("paused")
+            ?new ConnectionCopy("电脑已连接 · 手机控制已暂停","可以继续聊天。需要 Boujoy 操作手机时，在对话顶部点「继续」。")
+            :new ConnectionCopy("电脑已连接","你可以直接在对话里交代事情。");
+        String stage=data.optString("connectionStage");
+        if(!data.optBoolean("paired")&&(stage.isBlank()||"unconfigured".equals(stage)))
+            return new ConnectionCopy("连接你的电脑","在电脑端打开 Boujoy 的异地连接，获取连接码或连接文件。");
+        return switch(stage){
+            case "relay_connecting" -> new ConnectionCopy("正在连接中继","连接后才能确认电脑状态。");
+            case "relay_unavailable" -> new ConnectionCopy("手机与中继连接中断","暂时无法确认电脑状态。请检查手机网络和中继服务；Boujoy 会自动重连。");
+            case "relay_partial" -> new ConnectionCopy("中继连接尚未完全就绪","手机正恢复与中继的连接，暂时无法确认电脑状态。");
+            case "relay_rejected" -> new ConnectionCopy("中继未接受手机连接","请在电脑端核对 Boujoy 的设备绑定，再重试连接。");
+            case "relay_security" -> new ConnectionCopy("中继证书校验失败","请核对中继地址与证书，再重试连接。");
+            case "waiting_computer" -> new ConnectionCopy("已连上中继，等待电脑连接","请确认电脑已联网，并已打开 Boujoy 的异地连接。");
+            case "computer_partial" -> new ConnectionCopy("电脑连接尚未完全就绪","中继已连通，正在等电脑建立其余连接。");
+            case "syncing" -> new ConnectionCopy("正在向电脑确认状态","中继已连通，正在等待电脑响应。");
+            default -> new ConnectionCopy("正在确认连接状态","暂时无法确认电脑状态。可以稍候或重试连接。");
+        };
+    }
+    private void updateConnectionCard(ConnectionCopy copy,boolean online){
+        if(!copy.title().contentEquals(connectionTitle.getText()))connectionTitle.setText(copy.title());
+        if(!copy.detail().contentEquals(connectionDetail.getText()))connectionDetail.setText(copy.detail());
+        if(connectionCard.getBackground()==null||connectionCardOnline!=online){
+            connectionCardOnline=online;
+            connectionCard.setBackground(UiSheet.surface(this,online?0xfff4f7ef:0xfffaf8f2,14,online?0xffe2e9d8:0xffeee6d7));
+        }
+    }
     private void showConnection(){showConnection("");}
     private void showConnection(String initial){ConnectionService service=ConnectionService.current;showConnection(initial,service==null?renderedData:service.snapshot());}
     private void showConnection(String initial,JSONObject data){
         if(connectionDialog!=null)connectionDialog.dismiss();
         boolean paired=data.optBoolean("paired"),online=data.optBoolean("online");
         LinearLayout body=UiSheet.column(this);body.setPadding(dp(20),dp(16),dp(20),dp(24));
-        LinearLayout status=UiSheet.column(this);status.setPadding(dp(14),dp(14),dp(14),dp(14));status.setBackground(UiSheet.surface(this,online?0xfff4f7ef:0xfffaf8f2,14,online?0xffe2e9d8:0xffeee6d7));
-        TextView state=text(paired?(online?"电脑已连接":"电脑暂不可用"):"连接你的电脑",16,INK);state.setTypeface(Typeface.create(Typeface.DEFAULT,600,false));status.addView(state);
-        TextView explanation=text(paired?(online?"你可以直接在对话里交代事情。":"连接已保存，电脑恢复可用后会自动重连。"):"在电脑端打开 Boujoy 的异地连接，获取连接码或连接文件。",13,MUTED);explanation.setPadding(0,dp(7),0,0);status.addView(explanation);body.addView(status);
+        connectionCard=UiSheet.column(this);connectionCard.setPadding(dp(14),dp(14),dp(14),dp(14));
+        connectionTitle=text("",16,INK);connectionTitle.setTypeface(Typeface.create(Typeface.DEFAULT,600,false));connectionCard.addView(connectionTitle);
+        connectionDetail=text("",13,MUTED);connectionDetail.setPadding(0,dp(7),0,0);connectionCard.addView(connectionDetail);body.addView(connectionCard);
+        updateConnectionCard(connectionCopy(data),online);
         if(paired)UiSheet.spaced(body,UiSheet.actionRow(this,"重试连接","连接异常时重新连接电脑",()->{
             ConnectionService current=ConnectionService.current;if(current==null){toast("连接服务正在启动");return;}
             current.reconnectTransport();if(connectionDialog!=null)connectionDialog.dismiss();toast("正在重新连接电脑");
@@ -587,7 +633,7 @@ public final class MainActivity extends Activity implements GroupPanel.Host {
         if(rearLockscreenStatus!=null)rearLockscreenStatus.setText(RearLockscreenPermission.statusText(RearLockscreenPermission.read(this)));
     }
     private void chooseAttachment(){showChoices("添加附件",new String[]{"照片或视频","文件"},which->{Intent intent=new Intent(Intent.ACTION_OPEN_DOCUMENT).addCategory(Intent.CATEGORY_OPENABLE).setType("*/*");if(which==0)intent.putExtra(Intent.EXTRA_MIME_TYPES,new String[]{"image/*","video/*"});intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE,true);startActivityForResult(intent,ATTACH);});}
-    private void manageAttachments(){JSONArray selected=chat.attachments();String[] names=new String[selected.length()];for(int i=0;i<names.length;i++)names[i]="移除 · "+AttachmentDrafts.label(selected.optJSONObject(i));showChoices("已选附件",names,which->{selected.remove(which);chat.setAttachments(selected);syncComposer();});}
+    private void manageAttachments(){JSONArray selected=chat.visibleAttachments();String[] names=new String[selected.length()];for(int i=0;i<names.length;i++)names[i]="移除 · "+AttachmentDrafts.label(selected.optJSONObject(i));showChoices("已选附件",names,which->{selected.remove(which);chat.setAttachments(selected);syncComposer();});}
     private void artifactCard(String encoded){try{feed.addView(artifactView(new JSONObject(encoded)));}catch(JSONException ignored){}}
     public View artifactView(JSONObject artifact){LinearLayout card=new LinearLayout(this);card.setOrientation(LinearLayout.VERTICAL);card.setPadding(dp(14),dp(12),dp(14),dp(12));card.setBackground(UiSheet.surface(this,0xfff7f6fa,14,0xffebe8f0));
         String mime=ImagePreviews.mime(artifact),kind=mime.startsWith("image/")?"照片":mime.startsWith("video/")?"视频":"文件";
@@ -689,13 +735,13 @@ public final class MainActivity extends Activity implements GroupPanel.Host {
         catch(Exception e){discardRecording();toast("录音太短或未能保存，请重新录制");return;}
         discardRecording();ConnectionService service=ConnectionService.current;if(service==null)return;
         // The words go straight into the input box: edit them there and send, no extra dialogs.
-        transcribing=true;resetMic();
+        long draftGeneration=chat.generation();transcribing=true;resetMic();
         service.transcribeVoice(bytes,(draft,error)->main.post(()->{
             transcribing=false;resetMic();
-            if(!visible||isFinishing())return;
+            if(!visible||isFinishing()||draftGeneration!=chat.generation())return;
             if(error!=null){toast("转写未完成："+error.getMessage());return;}
             String words=draft.optString("text").trim();if(words.isEmpty()){toast("没听清，再说一次试试");return;}
-            String before=chat.text();chat.setText(before.isBlank()?words:before.endsWith(" ")||before.endsWith("\n")?before+words:before+" "+words);
+            chat.appendTranscription(words);
             syncComposer();composer.requestFocus();composer.setSelection(composer.length());
         }));
     }
@@ -734,9 +780,12 @@ public final class MainActivity extends Activity implements GroupPanel.Host {
         }
         if(request==ATTACH){
             List<Uri> uris=new ArrayList<>();if(data.getClipData()!=null){for(int i=0;i<data.getClipData().getItemCount();i++)uris.add(data.getClipData().getItemAt(i).getUri());}else if(data.getData()!=null)uris.add(data.getData());
-            JSONArray selected=chat.attachments();if(selected.length()+uris.size()>10){toast("每条消息最多 10 个附件");return;}
+            if(chat.visibleAttachments().length()+uris.size()>10){toast("每条消息最多 10 个附件");return;}
             ChatComposerState.AttachmentTicket ticket=chat.beginAttachmentRead();toast("正在准备附件…");new Thread(()->{
-                try{for(Uri uri:uris)selected.put(AttachmentDrafts.read(this,uri));main.post(()->{if(chat.acceptAttachment(ticket,selected)&&!isDestroyed())syncComposer();});}
+                try{
+                    JSONArray additions=new JSONArray();for(Uri uri:uris)additions.put(AttachmentDrafts.read(this,uri));
+                    main.post(()->{try{if(chat.acceptAttachment(ticket,additions)&&!isDestroyed())syncComposer();}catch(IllegalStateException e){toast(e.getMessage());}});
+                }
                 catch(Exception e){main.post(()->toast(e.getMessage()==null?"附件读取失败":e.getMessage()));}
             },"attachment-reader").start();
         }

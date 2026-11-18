@@ -25,13 +25,33 @@ public class NativeSheetVisualTest {
     static boolean locallyVisible(View root,View view){for(View v=view;;v=(View)v.getParent()){if(v.getVisibility()!=View.VISIBLE)return false;if(v==root)return true;if(!(v.getParent() instanceof View))return false;}}
     static void readableControls(View root){for(View v:descendants(root))if(locallyVisible(root,v)&&v instanceof Button b){assertTrue("Button touch height "+b.getText(),b.getHeight()>=44);assertTrue("Button label clipped "+b.getText(),b.getLayout().getHeight()<=b.getHeight()-b.getPaddingTop()-b.getPaddingBottom());}}
     @Test public void connectionSheetGroupsSettingsAndExpandsConfigurationWithoutChangingState()throws Exception{
-        JSONObject data=fixture().put("online",false).put("status","电脑暂不可用").put("error","电脑暂不可用");String before=data.toString();MainActivity a=main(data,"concierge","");
+        JSONObject data=fixture().put("online",false).put("connectionStage","relay_unavailable").put("status","电脑暂不可用").put("error","电脑暂不可用");String before=data.toString();MainActivity a=main(data,"concierge","");
         assertFalse("No duplicate offline caption in conversation",ChatPresenter.present(data,"","").rows().stream().anyMatch(row->row.key().equals("error")));
         capture((View)field(a,"chatRoot"),"03-empty-offline-clean",390,844);
         invoke(a,"showConnection",new Class[]{String.class,JSONObject.class},"",data);UiSheet dialog=(UiSheet)field(a,"connectionDialog");FrameLayout root=frame(dialog,390,844);capture(root,"06-connection",390,844);readableControls(root);
-        assertFalse(locallyVisible(root,label(root,"电脑连接码")));assertNotNull(label(root,"连接已保存，电脑恢复可用后会自动重连。"));click(root,"重新配置连接");
+        assertFalse(locallyVisible(root,label(root,"电脑连接码")));assertNotNull(label(root,"手机与中继连接中断"));click(root,"重新配置连接");
         root=frame(dialog,390,500);capture(root,"06-connection-code-keyboard",390,500);assertTrue(locallyVisible(root,label(root,"电脑连接码")));readableControls(root);assertEquals(before,data.toString());dialog.dismiss();
-        JSONObject unpaired=new JSONObject(data.toString()).put("paired",false);invoke(a,"showConnection",new Class[]{String.class,JSONObject.class},"",unpaired);dialog=(UiSheet)field(a,"connectionDialog");root=frame(dialog,390,844);capture(root,"06-first-connection",390,844);readableControls(root);assertTrue(locallyVisible(root,label(root,"电脑连接码")));dialog.dismiss();a.finish();
+        JSONObject unpaired=new JSONObject(data.toString()).put("paired",false).put("connectionStage","unconfigured");invoke(a,"showConnection",new Class[]{String.class,JSONObject.class},"",unpaired);dialog=(UiSheet)field(a,"connectionDialog");root=frame(dialog,390,844);capture(root,"06-first-connection",390,844);readableControls(root);assertTrue(locallyVisible(root,label(root,"电脑连接码")));dialog.dismiss();a.finish();
+    }
+    @Test public void openSettingsFollowsRecoveryWithoutReplacingDraftOrResumingControl()throws Exception{
+        JSONObject data=fixture().put("online",false).put("paused",true).put("connectionStage","relay_unavailable");
+        MainActivity a=main(data,"concierge","");
+        invoke(a,"showConnection",new Class[]{String.class,JSONObject.class},"",data);
+        UiSheet dialog=(UiSheet)field(a,"connectionDialog");View root=dialog.shell;
+        TextView strip=(TextView)field(a,"connection");
+        assertTrue(strip.getText().toString().contains("手机与中继连接中断"));
+        click(root,"重新配置连接");EditText code=(EditText)label(root,"电脑连接码");code.setText("尚未提交");code.setSelection(2);
+        for(String[] state:new String[][]{{"waiting_computer","已连上中继，等待电脑连接"},{"syncing","正在向电脑确认状态"},{"online","电脑已连接 · 手机控制已暂停"}}){
+            data.put("connectionStage",state[0]).put("online",state[0].equals("online"));
+            invoke(a,"renderSnapshot",new Class[]{JSONObject.class,ConnectionService.class},data,null);
+            assertTrue(strip.getText().toString().contains(state[1]));assertNotNull(label(root,state[1]));
+        }
+        assertTrue(dialog.isShowing());assertEquals("继续",((TextView)field(a,"controlButton")).getText().toString());
+        assertSame(code,label(root,"电脑连接码"));assertTrue(locallyVisible(root,code));assertEquals("尚未提交",code.getText().toString());assertEquals(2,code.getSelectionStart());
+        assertTrue(data.getBoolean("paused"));
+        data.put("paused",false).put("status","正在继续任务");invoke(a,"renderSnapshot",new Class[]{JSONObject.class,ConnectionService.class},data,null);
+        assertTrue(strip.getText().toString().contains("正在继续任务"));assertNotNull(label(root,"电脑已连接"));
+        dialog.dismiss();a.finish();
     }
     @Test public void assistantFormsKeepSaveVisibleWhenKeyboardReducesHeight()throws Exception{
         AssistantPanel panel=panel();panel.edit(null);UiSheet editor=(UiSheet)field(panel,"editor");FrameLayout root=frame(editor,390,844);capture(root,"07-new-assistant",390,844);readableControls(root);

@@ -44,6 +44,32 @@ public class ChatPresenterTest {
         JSONObject state=snapshot(task,detail);state.getJSONObject("outbox").put("three",object("status","queued","message",object("messageId","three","conversationId","same-task","text","问题三","createdAt","2026-10-15T02:00:00Z")));
         assertEquals(List.of("问题一","回答一","问题二","回答二","问题三"),conversation(state));
     }
+    @Test public void newContinuationsStayBelowAllEarlierExecutionsUntilReceiptedOrConfirmed()throws Exception{
+        JSONObject root=summary("root","v1").put("result","根回复"),later=summary("later","v2").put("conversationId","root").put("result","后续回复");
+        JSONObject state=snapshot(root,new JSONObject(root.toString()).put("messages",new JSONArray().put(message("u1","user","根问题","initial"))));
+        state.getJSONObject("state").getJSONArray("tasks").put(later).put(summary("other","v1"));
+        JSONObject history=new JSONObject(later.toString()).put("messages",new JSONArray().put(message("u2","user","后续问题","follow").put("at","2026-10-15T02:00:00Z")));
+        state.getJSONObject("taskDetails").put("later",object("detail",history));
+        JSONObject local=new JSONObject();state.put("outbox",local);
+        for(String key:List.of("m1","m2","m3","other-message")){
+            String target=key.equals("other-message")?"other":"root";
+            local.put(key,object("status","queued","message",object("messageId",key,"conversationId",target,"text",key,"createdAt","2026-10-15T03:00:0"+(local.length()+1)+"Z")));
+        }
+        local.getJSONObject("m1").put("receipt",object("taskId","not-synced-yet")).put("status","received");
+        var rows=ChatPresenter.present(state,"later","m3").rows();
+        assertEquals(List.of("根问题","根回复","后续问题","后续回复","m1","m2","m3"),rows.stream().filter(r->Set.of(ChatPresenter.Kind.USER,ChatPresenter.Kind.ASSISTANT).contains(r.kind())).map(ChatPresenter.Row::text).toList());
+        assertEquals(List.of("local:m1","delivery:m1","local:m2","delivery:m2","local:m3","delivery:m3"),rows.subList(rows.size()-6,rows.size()).stream().map(ChatPresenter.Row::key).toList());
+        // A confirmed user message is authoritative even when the local receipt is missing.
+        history.getJSONArray("messages").put(message("u3","user","m2","m2"));
+        rows=ChatPresenter.present(state,"root","m3").rows();
+        assertEquals(1,rows.stream().filter(r->r.kind()==ChatPresenter.Kind.USER&&r.text().equals("m2")).count());
+        assertFalse(rows.stream().anyMatch(r->r.key().equals("local:m2")||r.key().equals("delivery:m2")));
+        assertEquals(List.of("m1","m3"),rows.stream().filter(r->r.key().startsWith("local:")).map(ChatPresenter.Row::text).toList());
+        // Once the receipt target is known, its conversation owns the row.
+        state.getJSONObject("state").getJSONArray("tasks").put(summary("not-synced-yet","v3").put("conversationId","root"));
+        assertTrue(ChatPresenter.present(state,"root","").rows().stream().anyMatch(r->r.key().equals("local:m1")&&r.taskId().equals("not-synced-yet")));
+        assertFalse(ChatPresenter.present(state,"other","").rows().stream().anyMatch(r->r.key().equals("local:m1")));
+    }
     @Test public void serverClientRequestIdReconcilesLostReceiptWithoutInventingDuplicateUser()throws Exception{
         JSONObject task=summary("same-task","v1"),state=snapshot(task,detail(task));state.getJSONObject("outbox").getJSONObject("two").remove("receipt");state.getJSONObject("outbox").getJSONObject("two").put("status","unconfirmed");
         assertEquals(List.of("问题一","回答一","问题二","回答二"),conversation(state));

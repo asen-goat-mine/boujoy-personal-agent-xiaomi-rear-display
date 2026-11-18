@@ -35,6 +35,21 @@ public class AssistantPanelNavigationTest {
             assertEquals(1,settings.get());assertTrue(((Dialog)profile(panel)).isShowing());
         }finally{panel.close();activity.finish();}
     }
+    @Test public void taskOnlySyncKeepsRoleViewAndSearchUsesLatestTitles()throws Exception{
+        Activity activity=Robolectric.buildActivity(Activity.class).setup().get();activity.setTheme(R.style.AppTheme);
+        AssistantPanel panel=new AssistantPanel(activity,new AssistantPanel.Navigation(){public void openRole(String id){}public void openTask(String id){}public void settings(){}});
+        activity.setContentView(panel.root);
+        try{
+            Field f=AssistantPanel.class.getDeclaredField("rows");f.setAccessible(true);
+            ViewGroup rows=(ViewGroup)f.get(panel);
+            java.util.function.Function<String,org.json.JSONObject> withTask=title->Tunnel.json("state",Tunnel.json("tasks",new org.json.JSONArray().put(Tunnel.json("id","task-1","title",title))));
+            panel.update(withTask.apply("旧标题"));View roleView=rows.getChildAt(0);assertNotNull(roleView);
+            panel.update(withTask.apply("更新标题"));assertSame(roleView,rows.getChildAt(0));
+            Field sf=AssistantPanel.class.getDeclaredField("search");sf.setAccessible(true);
+            ((android.widget.EditText)sf.get(panel)).setText("标题");assertNotNull(button(rows,"更新标题"));
+            panel.update(withTask.apply("又一标题"));assertNotNull(button(rows,"又一标题"));assertNull(button(rows,"更新标题"));
+        }finally{panel.close();activity.finish();}
+    }
     @Test public void separateFooterActionsRemainUsableInNarrowLayout(){
         Activity activity=Robolectric.buildActivity(Activity.class).setup().get();activity.setTheme(R.style.AppTheme);
         AssistantPanel panel=new AssistantPanel(activity,new AssistantPanel.Navigation(){public void openRole(String id){}public void openTask(String id){}public void settings(){}});

@@ -201,7 +201,8 @@ public final class DisplayExecutor implements AutoCloseable {
                     return merge(receipt(id,"executed",true,null,expectedSession),result);
                 }
                 BoujoyDisplayService.setSessionDisplay(session.getInt("displayId"));
-                try(BoujoyDisplayService.Frame frame=BoujoyDisplayService.snapshot(session.getInt("displayId"),true)) {
+                // Back has no target element or coordinates. Still verify the live window, session and epoch.
+                try(BoujoyDisplayService.Frame frame=BoujoyDisplayService.snapshot(session.getInt("displayId"),!"back".equals(op))) {
                     String failure=guard.checkObservation(session,args,frame.windowId,frame.packageName,frame.uiVersion);
                     if(failure!=null)throw new BackendException(failure,false);
                     if(Set.of("long_press","scroll","input_text").contains(op)&&!nodeIds.contains(args.optString("element_id","")))throw new BackendException("TARGET_MISSING",false);

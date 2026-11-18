@@ -72,8 +72,9 @@ function restartGoal(task,store){
  const goal=String(checked.contract.goal||'').replace(/^(?:重新执行[：:]\s*)+/,'').trim();return goal&&goal.length<=199990?goal:null;
 }
 function canReconcile(task,store){
+ if(task.status!=='unknown_result')return false;
  const unresolved=store?.data.actions.filter(a=>a.taskId===task.id&&['unknown','executing'].includes(a.status)&&!a.resolution)||[];
- return task.status==='unknown_result'&&unresolved.length>0&&unresolved.every(a=>a.status==='unknown'&&(a.tool==='phone_open_app'&&a.nativeRequestId&&a.nativeDeviceId||inputVerificationTarget(task,a)));
+ return unresolved.length>0&&unresolved.every(a=>a.status==='unknown'&&(a.tool==='phone_open_app'&&a.nativeRequestId&&a.nativeDeviceId||inputVerificationTarget(task,a)));
 }
 function conversationTask(store,id){const selected=store.task(id);return (selected.conversationId||selected.id)===selected.id?store.data.tasks.filter(t=>(t.conversationId||t.id)===selected.id).at(-1)||selected:selected;}
 function conversationMessages(store,task){const key=task.conversationId||task.id;return store.data.tasks.filter(t=>(t.conversationId||t.id)===key).flatMap(t=>t.messages||[]);}

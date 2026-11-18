@@ -9,7 +9,7 @@
 ```sh
 npm ci
 npm run setup      # 安装 DeepSeek Harness 到 .runtime/harness
-npm start          # http://127.0.0.1:18791
+npm start          # http://127.0.0.1:18892
 ```
 
 开发时建议用单独的数据目录和端口，避免影响你日常在用的那一份：
@@ -31,7 +31,7 @@ node --test tests/live-draft.test.mjs      # 单个文件
 
 依赖本机环境的测试（macOS 沙箱、Vision OCR、本地语音、Harness 运行时、Bok 记忆核心）在环境不具备时会自动跳过，并写明原因。提 PR 前请确认 `npm test` 没有失败项。
 
-当前 0.4.15 / Android 1.0.30 的发布验证见 [验证报告](docs/releases/0.4.15-validation.md)。Android 聊天界面变更应覆盖刷新时的滚动位置；自动测试与真实设备操作分别记录，不把宿主测试通过写成真机验收。
+Android 聊天界面变更应覆盖刷新时的滚动位置；自动测试与真实设备操作分别记录，不把宿主测试通过写成真机验收。
 
 ## 提 PR
 
@@ -50,7 +50,3 @@ node --test tests/live-draft.test.mjs      # 单个文件
 - 暂停、停止、接管立即生效；
 - 付款、发送这类最后一步默认留给用户确认；
 - 服务只监听本机 `127.0.0.1`。
-
-## 接下来要做什么
-
-见 [docs/roadmap-2026-11-08.md](docs/roadmap-2026-11-08.md) 和 [docs/tech-debt-2026-11-08.md](docs/tech-debt-2026-11-08.md)。想认领其中一项，先开个 Issue 说一声。

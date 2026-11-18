@@ -98,7 +98,8 @@ final class AssistantPanel {
     JSONArray array(JSONObject o,String key){JSONArray a=o==null?null:o.optJSONArray(key);return a==null?new JSONArray():a;}
     JSONObject state(){JSONObject s=snapshot.optJSONObject("state");return s==null?new JSONObject():s;}
     JSONObject role(String id){JSONArray roles=array(state(),"roles");for(int i=0;i<roles.length();i++){JSONObject r=roles.optJSONObject(i);if(r!=null&&id.equals(r.optString("id")))return r;}return Tunnel.json("id",id,"name",id.equals("concierge")?"boujoy":"助理","botColor","violet");}
-    void update(JSONObject value){snapshot=value;groups.update(value);status.setText(activity.getString(R.string.connection_status,value.optBoolean("online")?"●":"○",value.optString("status","正在连接…")));status.setVisibility(value.optBoolean("online")?View.GONE:View.VISIBLE);String next=array(state(),"roles").toString()+array(state(),"tasks").toString();if(!next.equals(version)){version=next;draw();}}
+    void update(JSONObject value){snapshot=value;groups.update(value);status.setText(activity.getString(R.string.connection_status,value.optBoolean("online")?"●":"○",value.optString("status","正在连接…")));status.setVisibility(value.optBoolean("online")?View.GONE:View.VISIBLE);// Conversation rows are shown only during search. Keep the latest snapshot either way.
+        String next=array(state(),"roles").toString()+(search.getText().toString().trim().isEmpty()?"":array(state(),"tasks").toString());if(!next.equals(version)){version=next;draw();}}
     private String activityTitle(JSONObject role,String key,String fallback){JSONObject first=array(role,key).optJSONObject(0);return first==null?fallback:first.optString("title",fallback);}
     void draw(){
         rows.removeAllViews();String query=search.getText().toString().trim().toLowerCase(Locale.ROOT);JSONArray roles=array(state(),"roles");

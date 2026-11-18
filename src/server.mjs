@@ -28,7 +28,7 @@ import { Engine } from './core/engine.mjs';
 import { Approvals } from './core/approvals.mjs';
 import { Scheduler,createRoutine,updateRoutine,routineTaskInput } from './core/scheduler.mjs';
 import {watchSummary} from './core/watches.mjs';
-import {pruneOldImages} from './core/model-context.mjs';
+import {prepareModelImages} from './core/model-context.mjs';
 import {briefSettings,removeNote,workbench} from './core/bots.mjs';
 import { compareQuotes,PLATFORMS } from './core/compare.mjs';
 import { Secrets } from './adapters/secrets.mjs';
@@ -211,7 +211,7 @@ async function modelProxy(req,res,token){
   // Full mode passes the Harness's own output size through; a request without one gets the normal size instead of failing.
   if(!(Number.isSafeInteger(data.max_tokens)&&data.max_tokens>0))data.max_tokens=MAX_OUTPUT_TOKENS;
   // Full Harness mode keeps the last four screens so the model can compare steps.
-  const prunedImages=store.data.settings.keepAllScreenshots===true?0:pruneOldImages(data,{keep:4});
+  const frameStats=prepareModelImages(data,{keep:4,keepAllScreenshots:store.data.settings.keepAllScreenshots===true});
   const requestBody=JSON.stringify(data),requestStats=modelRequestStats(data,requestBody);
   const errorChunks=[];let errorBytes=0;
   const started=Date.now();let firstByteMs=null,httpStatus=null,errorCode=null,usageMeter=null,transportComplete=false;
@@ -246,7 +246,7 @@ async function modelProxy(req,res,token){
     // task: it does not use up the turn's step budget, and the chat says what is going on.
     const upstreamBusy=httpStatus>=500||httpStatus===429||silent;
     if(upstreamBusy){a.requests=Math.max(0,a.requests-1);try{store.updateTask(t.id,row=>{row.requests=Math.max(0,(row.requests||0)-1);const last=(row.events||[]).findLast(e=>e.type==='model_busy');if(!last||Date.now()-Date.parse(last.at)>60000)row.events.push({id:randomUUID(),at:now(),type:'model_busy',text:'DeepSeek 暂时繁忙，正在自动重试',httpStatus:httpStatus||null});});}catch{}try{liveDrafts.update(t.id,'DeepSeek 暂时繁忙，正在自动重试…');}catch{}}
-    if(httpStatus>=400)log('model_error',JSON.stringify({taskId:t.id,requestNumber,httpStatus,...requestStats,responsePreview:modelErrorPreview(Buffer.concat(errorChunks))}));a.controller.signal.removeEventListener('abort',cancel);res.off('close',cancel);commitModelUsage(store,t.id,requestId,(usageMeter||new AnthropicUsageMeter()).finish({transportComplete}));store.event(t.id,'model_timing','模型请求耗时',{requestNumber,attempt:t.attempt,durationMs:Date.now()-started,prunedImages,firstByteMs,httpStatus,errorCode,...requestStats});}
+    if(httpStatus>=400)log('model_error',JSON.stringify({taskId:t.id,requestNumber,httpStatus,...requestStats,responsePreview:modelErrorPreview(Buffer.concat(errorChunks))}));a.controller.signal.removeEventListener('abort',cancel);res.off('close',cancel);commitModelUsage(store,t.id,requestId,(usageMeter||new AnthropicUsageMeter()).finish({transportComplete}));store.event(t.id,'model_timing','模型请求耗时',{requestNumber,attempt:t.attempt,durationMs:Date.now()-started,...frameStats,firstByteMs,httpStatus,errorCode,...requestStats});}
 }
 async function api(req,res,url){
   const pathname=url.pathname;

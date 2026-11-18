@@ -24,6 +24,21 @@ export function normalizePhoneRecognition(data){
   }
   return {width:data.width,height:data.height,lines:entries.map((n,i)=>({...n,id:'text-'+(i+1),center:{x:Math.round((n.bounds[0]+n.bounds[2])/2),y:Math.round((n.bounds[1]+n.bounds[3])/2)}}))};
 }
+// Create one per sampling operation. Only raw recognition is reused: current
+// native state and the mapping from image pixels to display pixels stay fresh.
+export function recognizeWithinObservation(recognize=recognizePhoneImage){
+  let last=null;
+  return async frame=>{
+    const image=frame?.content?.find(item=>item.type==='image');
+    const cacheable=typeof image?.mimeType==='string'&&image.mimeType.trim()&&typeof image.data==='string'&&image.data.length>0;
+    if(cacheable&&last&&last.mime===image.mimeType&&last.data===image.data)return last.ocr;
+    last=null;
+    const ocr=await recognize(frame);
+    if(cacheable&&ocr)last={mime:image.mimeType,data:image.data,ocr};
+    return ocr;
+  };
+}
+
 export async function recognizePhoneImage(result){
   const image=result?.content?.find(c=>c.type==='image');
   if(process.platform!=='darwin'||!image)return null;

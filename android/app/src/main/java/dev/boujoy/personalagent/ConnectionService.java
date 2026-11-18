@@ -938,14 +938,19 @@ public final class ConnectionService extends Service {
         long bytes=file.length();file.delete();callback.done(bytes,null);
     });}
     private String safeId(String id){if(id==null||!id.matches("[A-Za-z0-9_-]{1,128}"))throw new IllegalArgumentException("Invalid task");return id;}
+    String pairedDeviceId(){Binding active=binding;return !destroyed&&paired&&active!=null?active.deviceId:"";}
+    String approvalStatus(JSONObject approval){return ApprovalRequests.status(Tunnel.json("approvalRequests",approvalRequests.snapshot()),approval);}
     public JSONObject snapshot(){
         ControlState state=gate;
         ControlState.Snapshot control=state==null?new ControlState.Snapshot(-1,true):state.snapshot();
+        Tunnel active=tunnel;
+        boolean online=authenticatedOnline();
+        String stage=online?"online":binding==null?"unconfigured":active==null?"relay_connecting":active.connectionStage();
         JSONObject backend=displayBackendStatus();JSONObject handoff=displayBridge==null?null:displayBridge.handoff();
         DisplayExecutor executor=displayExecutor;String displayTaskId=executor==null?"":executor.activeTaskId();
         // The state object is replaced, never edited, so its text is built once per sync rather than on every read.
         try{synchronized(dataLock){if(snapshotSource!=cachedState){snapshotText=cachedState.toString();snapshotSource=cachedState;}return Tunnel.json("state",new JSONObject(snapshotText),"outbox",new JSONObject(outbox.toString()),"taskDetails",taskDetailCache.snapshot(),"groupRequests",new JSONObject(groupRequests.toString()),
-                "paired",paired,"online",authenticatedOnline(),"stateSyncedAtElapsedMs",stateSyncedAtElapsedMs,"locked",keyguard==null||keyguard.isKeyguardLocked(),"displayBackend",backend,"displayTaskId",displayTaskId,"displayHandoff",handoff==null?JSONObject.NULL:handoff,
+                "paired",paired,"pairedDeviceId",pairedDeviceId(),"online",online,"connectionStage",stage,"stateSyncedAtElapsedMs",stateSyncedAtElapsedMs,"locked",keyguard==null||keyguard.isKeyguardLocked(),"displayBackend",backend,"displayTaskId",displayTaskId,"displayHandoff",handoff==null?JSONObject.NULL:handoff,
                 "approvalRequests",approvalRequests.snapshot(),"pendingTaskActions",new JSONArray(taskActions.snapshot()),"paused",control.paused(),"controlEpoch",control.epoch(),"status",displayStatus(),"error",error);}}
         catch(Exception e){return Tunnel.json("status","本地状态无法读取","error",e.getClass().getSimpleName());}
     }

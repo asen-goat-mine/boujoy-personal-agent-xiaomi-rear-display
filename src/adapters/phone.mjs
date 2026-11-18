@@ -19,7 +19,7 @@ import {systemSurface,rangeControl,rangePercent} from './phone-system.mjs';
 import {verifyCheckout} from '../core/checkout.mjs';
 import {paymentSubmissionTarget,inspectPaymentHandoff} from '../core/payment-handoff.mjs';
 import {phoneFingerprint,samePhoneTarget,sameNavigationTarget,samePhoneContext} from './phone-observation.mjs';
-import {recognizePhoneImage,sameTextTarget,sameNativeTextTarget,sameText} from './phone-ocr.mjs';
+import {recognizePhoneImage,recognizeWithinObservation,sameTextTarget,sameNativeTextTarget,sameText} from './phone-ocr.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
@@ -137,7 +137,7 @@ export class Phone {
       const t0=this.clock(),reused=initial&&Number.isFinite(age)&&age>=0&&age<=5000;
       const frame=reused?initial:await this.withinBudget(()=>this.phoneUse.capture(this.phoneUseDevice(),{signal:options.signal,timeout:Math.max(1,options.deadline-this.clock()),screenshotFallback:options.screenshotFallback===true}),options);
       const t1=this.clock();
-      const ocr=await this.withinBudget(()=>this.phoneUse.recognize(frame.image,frame.mapping,this.recognize),options);
+      const ocr=await this.withinBudget(()=>this.phoneUse.recognize(frame.image,frame.mapping,options.sampleOcr||this.recognize),options);
       // Per-read timing (no page content): phone read incl. transport and retries, then local OCR.
       const timing={captureMs:reused?0:t1-t0,ocrMs:this.clock()-t1,...(Number.isSafeInteger(frame.readAttempts)?{readAttempts:frame.readAttempts}:{}),...(frame.native?.display?.id>0?{backend:'display'}:{})};
       return {taskId,timing,at:this.clock(),tree:frame.tree,image:frame.image,mapping:frame.mapping||null,ocr,native:frame.native||null,hash:frame.screenshotOnly?imageHash(frame.image):phoneFingerprint(frame.tree),imageHash:imageHash(frame.image),screenshotOnly:frame.screenshotOnly===true,windowFailure:frame.windowFailure,aligned:true};
@@ -146,7 +146,7 @@ export class Phone {
     // Read-only RPCs can overlap. The next sample and pre-action fresh guard
     // recheck native context; an ad's tree mutations are not page transitions.
     const [tree,image]=await Promise.all([read('ui_tree',{display:'main'}),read('screenshot',{display:'main'})]);
-    const ocr=await this.withinBudget(()=>this.recognize(image),options);
+    const ocr=await this.withinBudget(()=>options.sampleOcr?options.sampleOcr(image):this.recognize(image),options);
     return {taskId,at:this.clock(),tree,image,ocr,hash:phoneFingerprint(tree),imageHash:imageHash(image),aligned:true};
   }
   observationResult(frame,{taskId,meta={},actionable=true}={}){
@@ -165,6 +165,7 @@ export class Phone {
     const cache=this.observation;const previousFull=!afterAction&&cache?.taskId===taskId&&cache.stability==='stable'&&cache.stabilityScope==='full'&&this.clock()-cache.at>=0&&this.clock()-cache.at<=15000?cache:null;
     this.actionBaseline=null;this.observation=null;
     const started=this.clock(),deadline=started+(this.isPhoneUse()&&this.phoneUse.client?.remoteTransport?16000:STABILITY_BUDGET_MS),options={signal,deadline};let idle=null,previous=previousFull,last=null,consecutive=previousFull?1:0,attempts=0,reason='screen_changing',failureCode=null;
+    if(this.recognize===recognizePhoneImage)options.sampleOcr=recognizeWithinObservation();
     try{
       if(afterAction&&!this.isPhoneUse()){const result=await this.withinBudget(()=>this.settle(Math.min(1200,deadline-this.clock())),options);idle=resultData(result)?.settled===true;}
       const needed=idle===false?3:2;
@@ -199,6 +200,7 @@ export class Phone {
     const grant=validateQueryGrant(inputGrant);requireValue(grant,'本任务尚未授权手机查询','query_scope_changed');
     this.acquire(taskId);const baseline=afterAction?this.actionBaseline:null;this.actionBaseline=null;this.observation=null;
     const started=this.clock(),options={signal,deadline:started+(this.isPhoneUse()&&this.phoneUse.client?.remoteTransport?12000:QUERY_OBSERVATION_BUDGET_MS)};let last=null,attempts=0,reason='query_observation_failed',failureCode=null;
+    if(this.recognize===recognizePhoneImage)options.sampleOcr=recognizeWithinObservation();
     try{
       for(let attempt=0;attempt<2;attempt++){
         if(attempt)await this.withinBudget(()=>this.wait(160),options);

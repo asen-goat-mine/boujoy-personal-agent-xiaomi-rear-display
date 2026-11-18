@@ -60,19 +60,30 @@ public final class ChatPresenter {
     public static Presentation present(JSONObject snapshot){return present(snapshot,null,"");}
     public static Presentation present(JSONObject snapshot,String selected,String pendingMessageId){
         JSONObject state=snapshot.optJSONObject("state"),outbox=snapshot.optJSONObject("outbox"),details=snapshot.optJSONObject("taskDetails");
-        JSONArray source=array(state,"tasks");final String canonical=ConversationIdentity.resolve(source,selected);
+        JSONArray source=array(state,"tasks");
+        Map<String,String> aliases=new HashMap<>();for(int i=0;i<source.length();i++){JSONObject task=source.optJSONObject(i);if(task!=null)aliases.put(string(task,"id"),string(task,"conversationId"));}
+        final String canonical=ConversationIdentity.resolve(aliases,selected);
         List<JSONObject> local=localRows(outbox),tasks=new ArrayList<>();Set<String> consumed=new HashSet<>();
-        if(selected!=null)local.removeIf(row->{JSONObject message=row.optJSONObject("message");String target=string(row.optJSONObject("receipt"),"taskId");if(target.isBlank())target=string(message,"conversationId");return !string(message,"messageId").equals(pendingMessageId)&&(selected.isBlank()||!canonical.equals(ConversationIdentity.resolve(source,target)));});
         Map<String,String> owners=new HashMap<>();
-        for(int i=0;i<source.length();i++){JSONObject task=source.optJSONObject(i);if(!ConversationIdentity.privateTask(task)||string(task,"id").isBlank()||selected!=null&&(selected.isBlank()||!canonical.equals(ConversationIdentity.resolve(source,string(task,"id")))))continue;tasks.add(task);
+        for(int i=0;i<source.length();i++){JSONObject task=source.optJSONObject(i);if(!ConversationIdentity.privateTask(task)||string(task,"id").isBlank()||selected!=null&&(selected.isBlank()||!canonical.equals(ConversationIdentity.resolve(aliases,string(task,"id")))))continue;tasks.add(task);
             JSONObject cached=details==null?null:details.optJSONObject(string(task,"id")),detail=cached==null?null:cached.optJSONObject("detail");
-            for(int n=0;n<array(detail,"messages").length();n++){JSONObject message=array(detail,"messages").optJSONObject(n);if(message!=null&&!string(message,"clientRequestId").isBlank())owners.put(string(message,"clientRequestId"),string(task,"id"));}
+            for(int n=0;n<array(detail,"messages").length();n++){JSONObject message=array(detail,"messages").optJSONObject(n);if(message!=null&&"user".equals(string(message,"role"))&&!string(message,"clientRequestId").isBlank())owners.put(string(message,"clientRequestId"),string(task,"id"));}
         }
+        // The request names its conversation, not necessarily the execution task that will receive it.
+        // A receipt can arrive before its task appears in state; keep the row in its submitted conversation in that gap.
+        if(selected!=null)local.removeIf(row->{
+            JSONObject message=row.optJSONObject("message");String key=string(message,"messageId");
+            if(selected.isBlank())return !key.equals(pendingMessageId);
+            String target=owners.getOrDefault(key,string(row.optJSONObject("receipt"),"taskId"));
+            if(!target.isBlank()&&(aliases.containsKey(target)||canonical.equals(target)))return !canonical.equals(ConversationIdentity.resolve(aliases,target));
+            String conversation=string(message,"conversationId");
+            return conversation.isBlank()?!key.equals(pendingMessageId):!canonical.equals(ConversationIdentity.resolve(aliases,conversation));
+        });
         // Stable conversation order follows the earliest actual message/local submission, not polling time.
         Map<String,Long> started=new HashMap<>();
         for(JSONObject task:tasks){String id=string(task,"id");JSONObject cached=details==null?null:details.optJSONObject(id),detail=cached==null?null:cached.optJSONObject("detail");long at=Long.MAX_VALUE;
             JSONArray history=array(detail,"messages");for(int i=0;i<history.length();i++){JSONObject message=history.optJSONObject(i);if(message!=null){long value=Binding.parseTime(message.opt("at"));if(value>0)at=Math.min(at,value);}}
-            for(JSONObject row:local){JSONObject message=row.optJSONObject("message");String target=owners.getOrDefault(string(message,"messageId"),string(row.optJSONObject("receipt"),"taskId"));if(target.isBlank())target=string(message,"conversationId");if(id.equals(target)){long value=Binding.parseTime(message.opt("createdAt"));if(value>0)at=Math.min(at,value);}}
+            for(JSONObject row:local){JSONObject message=row.optJSONObject("message");String target=owners.getOrDefault(string(message,"messageId"),string(row.optJSONObject("receipt"),"taskId"));if(id.equals(target)){long value=Binding.parseTime(message.opt("createdAt"));if(value>0)at=Math.min(at,value);}}
             if(at==Long.MAX_VALUE){at=Binding.parseTime(task.opt("createdAt"));if(at<=0)at=Binding.parseTime(task.opt("updatedAt"));}started.put(id,at);
         }
         tasks.sort(Comparator.<JSONObject>comparingLong(t->started.get(string(t,"id"))).thenComparing(t->string(t,"id")));
@@ -96,7 +107,7 @@ public final class ChatPresenter {
             // A confirmed task result belongs before any newer phone message still awaiting receipt.
             if(hasHistory){String result=string(detail,"result");if(!ACTIVE.contains(string(detail,"status"))&&!result.isBlank()&&(lastUser||!result.equals(lastAssistant)))add(rows,id+":result",id,Kind.ASSISTANT,result);}
             for(JSONObject row:local){JSONObject message=row.optJSONObject("message");String messageId=string(message,"messageId");
-                String target=owners.getOrDefault(messageId,string(row.optJSONObject("receipt"),"taskId"));if(target.isBlank())target=string(message,"conversationId");
+                String target=owners.getOrDefault(messageId,string(row.optJSONObject("receipt"),"taskId"));
                 if(!id.equals(target))continue;consumed.add(messageId);if(confirmed.contains(messageId))continue;
                 add(rows,"local:"+messageId,id,Kind.USER,localText(message));add(rows,"delivery:"+messageId,id,Kind.NOTICE,delivery(string(row,"status")));
             }

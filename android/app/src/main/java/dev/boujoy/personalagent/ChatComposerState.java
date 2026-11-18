@@ -13,7 +13,9 @@ public final class ChatComposerState {
     private final LinkedHashMap<String,Draft> drafts=new LinkedHashMap<>();
     private String conversationId="",roleId="concierge",text="",displayedMessageId="";
     private JSONArray attachments=new JSONArray();
-    private long generation,textVersion,attachmentVersion;
+    private long generation,textVersion,attachmentVersion,attachmentReadSerial;
+    // Retained across configuration changes, never written to the durable outbox or Binder.
+    final JSONObject provisional=new JSONObject();
     private Submission pending;
     private static boolean uuid(String value){return value!=null&&value.matches("[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}");}
     private static JSONArray copy(JSONArray value){try{return new JSONArray(value.toString());}catch(JSONException e){throw new IllegalArgumentException("附件格式无效",e);}}
@@ -33,11 +35,20 @@ public final class ChatComposerState {
     private String draftKey(){return conversationId.isBlank()?"role:"+roleId:conversationId;}
     public String text(){return text;}
     public JSONArray attachments(){return copy(attachments);}
+    boolean hasAttachments(){return attachments.length()>0;}
     public long generation(){return generation;}
     public boolean waiting(){return pending!=null;}
     public String displayedMessageId(){return displayedMessageId;}
+    private boolean submittedTextHidden(){return pending!=null&&provisional.has(pending.messageId())&&pending.textVersion()==textVersion;}
+    String visibleText(){return submittedTextHidden()?"":text;}
+    JSONArray visibleAttachments(){return pending!=null&&provisional.has(pending.messageId())&&pending.attachmentVersion()==attachmentVersion?new JSONArray():attachments();}
+    void editVisibleText(String value){if(submittedTextHidden()&&text.equals(value))textVersion++;else setText(value);}
+    void appendTranscription(String words){
+        String before=visibleText();
+        editVisibleText(before.isBlank()?words:before.endsWith(" ")||before.endsWith("\n")?before+words:before+" "+words);
+    }
     public void setText(String value){Objects.requireNonNull(value);if(!text.equals(value)){text=value;textVersion++;}}
-    public void setAttachments(JSONArray value){attachments=copy(value);attachmentVersion++;}
+    public void setAttachments(JSONArray value){attachments=copy(value);attachmentVersion++;attachmentReadSerial++;}
     private Draft current(){return new Draft(roleId,text,attachments,pending,textVersion,attachmentVersion,displayedMessageId);}
     private static boolean dirty(Draft draft){return !draft.text().isBlank()||draft.attachments().length()>0||draft.pending()!=null;}
     private void stash(String target){
@@ -106,8 +117,14 @@ public final class ChatComposerState {
             else if(dirty(updated)||entry.getKey().startsWith("role:")&&!updated.displayedMessageId().isBlank())drafts.put(entry.getKey(),updated);else drafts.remove(entry.getKey());
         }
     }
-    public AttachmentTicket beginAttachmentRead(){return new AttachmentTicket(generation,++attachmentVersion);}
-    public boolean acceptAttachment(AttachmentTicket ticket,JSONArray value){if(ticket.generation()!=generation||ticket.version()!=attachmentVersion)return false;setAttachments(value);return true;}
+    public AttachmentTicket beginAttachmentRead(){return new AttachmentTicket(generation,++attachmentReadSerial);}
+    public boolean acceptAttachment(AttachmentTicket ticket,JSONArray additions){
+        if(ticket.generation()!=generation||ticket.version()!=attachmentReadSerial)return false;
+        JSONArray selected=visibleAttachments();
+        if(selected.length()+additions.length()>10)throw new IllegalStateException("每条消息最多 10 个附件");
+        for(int i=0;i<additions.length();i++)selected.put(additions.opt(i));
+        setAttachments(selected);return true;
+    }
     /** Only the active draft goes in Binder state. Other drafts/bytes remain in the retained object. */
     public JSONObject snapshot(){
         JSONObject result=Tunnel.json("conversationId",conversationId,"roleId",roleId,"text",text,"generation",generation,"textVersion",textVersion,"attachmentVersion",attachmentVersion,"hadAttachments",attachments.length()>0,"attachments",AttachmentDrafts.persistable(attachments),"displayedMessageId",displayedMessageId);
